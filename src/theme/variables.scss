@@ -42,7 +42,10 @@ $app-direction: ltr;
 // );
 
 $colors: (
-  primary:    #ffc107,
+  primary:   (
+    base: #ffc107,
+    contrast: #ffffff
+  ),
   prymaryLight: #fff350,
   primaryDarkColor: #c79100,
   secondary:  #00bcd4,
@@ -68,6 +71,8 @@ $colors: (
 // App Material Design Variables
 // --------------------------------------------------
 // Material Design only Sass variables can go here
+
+$toolbar-background: color($colors, secondary);
 
 
 

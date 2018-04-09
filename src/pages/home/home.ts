@@ -1,17 +1,19 @@
-import { Component, ViewChild } from '@angular/core';
-import { NavController } from 'ionic-angular';
+import { Component, ViewChild} from '@angular/core';
+import { NavController, Searchbar } from 'ionic-angular';
 import { RightNavPage } from './../right-nav/right-nav';
 import { SongsService } from './../../services/songs.service';
 import { Songs } from './../../models/songs';
+
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage {
+export class HomePage{
 
   searching:boolean = false;
   type:string = "text";
+  placeHolder:string = "Search"
   songs:Songs[] = this.songsService.getSongs();
 
   constructor(public navCtrl: NavController, public songsService: SongsService) {
@@ -28,8 +30,10 @@ export class HomePage {
 
     if(type == 1){
       this.type = "number";
+      this.placeHolder = "Digite o numero:";
     }else if(type == 2){
       this.type = "text";
+      this.placeHolder = "Digite o nome ou um trecho:";
     }
   }
 

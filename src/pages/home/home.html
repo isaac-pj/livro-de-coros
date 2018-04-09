@@ -12,12 +12,12 @@
   </ion-navbar>
  
    <ion-navbar *ngIf="searching">
-    <ion-searchbar [type]="type" (input)="getItems($event.target.value)"></ion-searchbar>
-    <ion-buttons start>
+    <ion-searchbar (ionCancel)="search()" [showCancelButton]="true" [placeholder]="placeHolder" [type]="type" (ionInput)="getItems($event.target.value)"></ion-searchbar>
+    <!--<ion-buttons start>
       <button (click)="search()" ion-button icon-only color="royal">
         <ion-icon name="close"></ion-icon>
       </button>
-    </ion-buttons>
+    </ion-buttons>-->
   </ion-navbar>
 </ion-header>
 
