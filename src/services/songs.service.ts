@@ -19,4 +19,49 @@ export class SongsService {
   getSong(index: number) {
     return (this.songs[index]);
   }
+
+  searchByNumber(value:number){
+    let searchResult:Songs[] = [];
+    
+    for(let i in this.songs){
+      if(this.songs[i].numero.toString().indexOf(value.toString()) != -1){
+        searchResult.push(this.getSong(parseInt(i)));
+      }
+    }
+
+    return searchResult;
+  }
+
+  searchByString(value:string){
+    let searchResult:Songs[] = [];
+    
+    for(let i in this.songs){
+      if(this.songs[i].titulo.toLowerCase().indexOf(value.toLowerCase()) != -1){
+        searchResult.push(this.getSong(parseInt(i)));
+      }
+    }
+
+    if(searchResult.length > 0){
+      return searchResult;
+    }else{
+      for(let i in this.songs){
+        if(this.songs[i].letra.toLowerCase().indexOf(value.toLowerCase()) != -1){
+          searchResult.push(this.getSong(parseInt(i)));
+        }
+      }
+    }
+
+    if(searchResult.length > 0){
+      return searchResult;
+    }else{
+      
+    }
+
+  }
 }
+
+
+// var str = "Desculpe! Nada encontrado :(";
+// searchResult = this.songs.filter((item) => {
+//   return (item.letra.toLowerCase().indexOf(value.toLowerCase()) > -1);
+// })
