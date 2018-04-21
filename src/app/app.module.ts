@@ -36,4 +36,6 @@ import { SongsService } from './../services/songs.service';
     {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
-export class AppModule {}
+export class AppModule {
+
+}

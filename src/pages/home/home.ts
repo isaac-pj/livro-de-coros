@@ -1,5 +1,5 @@
-import { Component, ViewChild} from '@angular/core';
-import { NavController, Searchbar } from 'ionic-angular';
+import { Component, ViewChild } from '@angular/core';
+import { NavController} from 'ionic-angular';
 import { RightNavPage } from './../right-nav/right-nav';
 import { SongsService } from './../../services/songs.service';
 import { Songs } from './../../models/songs';
@@ -10,6 +10,8 @@ import { Songs } from './../../models/songs';
   templateUrl: 'home.html'
 })
 export class HomePage{
+
+  @ViewChild('searchbar') searchbar;
 
   searching:boolean = false;
   type:string = "text";
@@ -35,6 +37,11 @@ export class HomePage{
       this.type = "text";
       this.placeHolder = "Digite o nome ou um trecho:";
     }
+
+    setTimeout(() => {
+      this.searchbar.setFocus();
+    },150);
+
   }
 
   getItems(value:any){

@@ -51,8 +51,8 @@ $colors: (
   secondary:  #00bcd4,
   secondaryLightColor: #62efff,
   secondaryDarkColor: #008ba3,
-  primaryTextColor: #000000,
-  secondaryTextColor:#000000,
+  primaryTextColor: #212121,
+  secondaryTextColor:#737373,
 
   danger:     #f53d3d,
   light:      #f4f4f4,
@@ -73,6 +73,7 @@ $colors: (
 // Material Design only Sass variables can go here
 
 $toolbar-background: color($colors, secondary);
+
 
 
 
