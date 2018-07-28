@@ -1,12 +1,38 @@
+<!--
+  Generated template for the ListsPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
 <ion-header>
+
   <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
-    </button>
-    <ion-title>Listas</ion-title>
+    <ion-title>{{list.name}}</ion-title>
   </ion-navbar>
+
 </ion-header>
 
-<ion-content>
-  
+
+<ion-content padding>
+
+  <ion-list no-lines>
+    <ion-item *ngFor="let song of songs; let i = index;">
+      <ion-label (tap)="pushPageMusic(song.ID)">
+        {{song.numero}}. {{song.titulo}}
+      </ion-label>
+      <ion-checkbox item-end color="dark" (tap)="check(song)" checked="false"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+  <ion-list no-lines *ngIf="checked.length > 0" >
+    <ion-list-header>cantadas</ion-list-header>
+    <ion-item class="cantadas" *ngFor="let song of checked; let i = index;">
+      <ion-label>
+        {{song.numero}}. {{song.titulo}}
+      </ion-label>
+      <!--<ion-checkbox item-end color="dark" [(ngModel)]="checked[song.ID]" (ionChange)="isChecked()" ></ion-checkbox>-->
+      <ion-checkbox item-end color="dark" (tap)="uncheck(i)" checked="true" ></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
 </ion-content>

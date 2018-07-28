@@ -1,25 +1,29 @@
+import { SelectPage } from './../select/select';
 import { Component, ViewChild } from '@angular/core';
-import { NavController} from 'ionic-angular';
+import { NavController, AlertController } from 'ionic-angular';
 import { RightNavPage } from './../right-nav/right-nav';
 import { SongsService } from './../../services/songs.service';
-import { Songs } from './../../models/songs';
+import { Songs } from './../../models/songs.model';
 
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.html'
 })
-export class HomePage{
+export class HomePage {
 
   @ViewChild('searchbar') searchbar;
 
   searching:boolean = false;
+  // checked:boolean[] = [];
   type:string = "text";
-  placeHolder:string = "Search"
+  placeHolder:string = "Search";
   songs:Songs[] = this.songsService.getSongs();
+  list:Songs[] = [];
 
-  constructor(public navCtrl: NavController, public songsService: SongsService) {
-    
+  constructor(public navCtrl: NavController,private alertCtrl: AlertController, public songsService: SongsService) {
+    // this.listsDaoProvider.reset();
+    // this.checked = this.inicialize(this.checked, this.songs.length, false);
   }
 
   search(type:number){
@@ -56,8 +60,23 @@ export class HomePage{
     }
   }
 
-  pushPage(index:number){
-    this.navCtrl.push(RightNavPage, {index: index});
+  inicialize(vector, size, value){
+    for(let i = 0; i < size; i++) {
+      vector[i] = value;
+    }
+    return vector;
+  }
+  
+  pushPageSelect(){
+    this.navCtrl.push(SelectPage, {});
     this.search(null);
+    return false;
+  }
+
+  pushPageMusic(index:number){
+    this.navCtrl.push(RightNavPage, {index: index});
+    this.searchbar.value = "";
+    this.search(null);
+    return false;
   }
 }
