@@ -1,3 +1,4 @@
+import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
 import { ListsPage } from './../lists/lists';
 import { Lists } from './../../models/lists.model';
 
@@ -33,10 +34,10 @@ export class SelectPage {
   checked:boolean[] = [];
   type:string = "text";
   placeHolder:string = "Search"
-  songs:Songs[] = this.songsService.getSongs();
+  songs:Songs[] = this.songsDao.getSongs();
   list:Songs[] = [];
 
-  constructor(public navCtrl: NavController,private alertCtrl: AlertController, public songsService: SongsService, public listsDaoProvider: ListsDaoProvider, private datePipe: DatePipe) {
+  constructor(public navCtrl: NavController,private alertCtrl: AlertController, public songsService: SongsService, public songsDao: SongsDaoProvider, public listsDaoProvider: ListsDaoProvider, private datePipe: DatePipe) {
     this.checked = this.inicialize(this.checked, this.songs.length, false);
   }
 
@@ -47,7 +48,7 @@ export class SelectPage {
   search(type:number){
     if(type == null){
       this.searching = false;
-      this.songs = this.songsService.getSongs();
+      this.songs = this.songsDao.getSongs();
     }else{
       this.searching = true;
     }
@@ -71,12 +72,12 @@ export class SelectPage {
   getItems(value:any){
     if(value && value.trim() != ''){
       if(this.type == "number"){
-        this.songs = this.songsService.searchByNumber(value);
+        this.songs = this.songsDao.searchByNumber(value);
       }else{
-        this.songs = this.songsService.searchByString(value);
+        this.songs = this.songsDao.searchByString(value);
       }
     }else{
-      this.songs = this.songsService.getSongs();
+      this.songs = this.songsDao.getSongs();
     }
   }
 
@@ -95,7 +96,7 @@ export class SelectPage {
   }
 
   addInList(){
-    let songs:Songs[] = this.songsService.getSongs();
+    let songs:Songs[] = this.songsDao.getSongs();
     let founded:boolean = false;
 
     for(let i in this.checked) {
@@ -109,7 +110,7 @@ export class SelectPage {
 
   createList() {
     if(this.addInList()){
-      let alertPopup = this.alertCtrl.create({
+      let alert = this.alertCtrl.create({
       title: 'Como devo Chamar?',
       inputs: [
         {
@@ -147,7 +148,7 @@ export class SelectPage {
         }
       ]
     });
-    alertPopup.present();
+    alert.present();
     }
   }
 
@@ -169,6 +170,9 @@ export class SelectPage {
   }
 
   generateList(size){
+    
+    this.checked = this.inicialize(this.checked, this.songs.length, false);
+
     for(let i = 0; i < size; i++){
       let index = this.getRandomInt(0, this.songs.length-1);
       this.checked[index] = true;

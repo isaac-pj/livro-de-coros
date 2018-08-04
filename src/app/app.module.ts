@@ -1,3 +1,5 @@
+import { SlidesPage } from './../pages/slides/slides';
+import { CifrasPage } from './../pages/cifras/cifras';
 import { BrowserModule } from '@angular/platform-browser';
 import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
@@ -10,11 +12,15 @@ import { ListPage } from '../pages/list/list';
 import { ListsPage } from './../pages/lists/lists';
 import { RightNavPage } from './../pages/right-nav/right-nav';
 import { SelectPage } from './../pages/select/select';
+import { ContatoPage } from './../pages/contato/contato';
+import { SobrePage } from './../pages/sobre/sobre';
+import { FavoritesPage } from './../pages/favorites/favorites';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 import { SongsService } from './../services/songs.service';
 import { ListsDaoProvider } from '../providers/general-dao/lists-dao';
+import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
 
 @NgModule({
   declarations: [
@@ -23,7 +29,12 @@ import { ListsDaoProvider } from '../providers/general-dao/lists-dao';
     ListPage,
     ListsPage,
     RightNavPage,
-    SelectPage
+    SelectPage,
+    FavoritesPage,
+    SobrePage,
+    ContatoPage,
+    CifrasPage,
+    SlidesPage,
   ],
   imports: [
     BrowserModule,
@@ -37,7 +48,12 @@ import { ListsDaoProvider } from '../providers/general-dao/lists-dao';
     ListPage,
     ListsPage,
     RightNavPage,
-    SelectPage
+    SelectPage,
+    FavoritesPage,
+    SobrePage,
+    ContatoPage,
+    CifrasPage,
+    SlidesPage,
   ],
   providers: [
     StatusBar,
@@ -45,7 +61,8 @@ import { ListsDaoProvider } from '../providers/general-dao/lists-dao';
     SongsService,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ListsDaoProvider,
-    DatePipe
+    SongsDaoProvider,
+    DatePipe,
   ]
 })
 export class AppModule {

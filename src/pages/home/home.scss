@@ -1,14 +1,17 @@
 page-home {
-    
-}
 
-.hide{
-    max-width: 0px;
-    max-height: 0px;
-}
+    .favorit { 
+        color: red !important;  
+    }
 
-.off{
-    transform: scale(0.0);
+    .hide{
+        max-width: 0px;
+        max-height: 0px;
+    }
+
+    .off{
+        transform: scale(0.0);
+    }
 }
 
 // .negativeAction > span{

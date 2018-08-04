@@ -23,29 +23,26 @@ export class ListsDaoProvider {
     });
   }
 
-  public insert(list:Lists){
-    this.lists.push(list);
-    this.save("Lists", this.lists);
-  }
-
-  public update(value:any){
-    this.storage.set("Lists", value);
-  }
-
-  public remove(index:number){
-    this.lists.splice(index,1);
-    this.update(this.lists);
-  }
-
-  public clear(){
-    this.storage.remove("Lists");
-  }
-
   public save(key:string, lists:Lists[]){
     this.storage.set(key, lists);
   }
 
-  public getAll(variable:any){
+  public insert(list:Lists){
+    this.lists.unshift(list);
+    this.save("Lists", this.lists);
+  }
+
+  public update(index:number, list:Lists){
+    this.lists[index] = list;    
+    this.save("Lists", this.lists);
+  }
+
+  public remove(index:number){
+    this.lists.splice(index,1);
+    this.save("Lists", this.lists);
+  }
+
+  // public getAll(variable:any){
     // this.storage.forEach((value:any, key:string, itarator:number) => {
     //   variable.key = key;
     //   variable.value = value;
@@ -55,6 +52,10 @@ export class ListsDaoProvider {
     // }).catch((error) => {
     //   return Promise.reject(error);
     // });
+  // }
+
+  public clear(){
+    this.storage.remove("Lists");
   }
 
   public reset(){

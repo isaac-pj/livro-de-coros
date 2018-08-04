@@ -46,14 +46,22 @@
         </ion-col>
       </ion-row>
     </ion-card-header>
+    
     <ion-card-content>
-      <ion-list>
-        <ion-item *ngFor="let song of list.songs" >
+      <ion-list class="expand-wrapper" [class.collapsed]="!expanded[i]" [class.expanded]="expanded[i]" >
+        <ion-item *ngFor="let song of list.songs; let i = index" >
           {{song.numero}}. {{song.titulo}}
         </ion-item>
       </ion-list>
     </ion-card-content>
+    
     <ion-toolbar color="white">
+      <ion-buttons>
+        <button [class.rotate]="expanded[i]" ion-button icon-only color="secondaryTextColor" (click)="expandItem(i); $event.stopPropagation();">
+          <ion-icon name="arrow-dropdown"></ion-icon>
+        </button>
+      </ion-buttons>
+
       <ion-buttons start>
         <button ion-button icon-only color="secondaryTextColor" (click)="deleteList(i);  $event.stopPropagation();">
           <ion-icon name="trash"></ion-icon>

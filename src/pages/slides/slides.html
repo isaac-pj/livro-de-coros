@@ -6,10 +6,31 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>slides</ion-title>
+  <ion-navbar >
+    <button *ngIf="!searching" ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title *ngIf="!searching" >Slides</ion-title>
+    <ion-searchbar #searchbar [class.hide]="!searching" (ionCancel)="search()" [showCancelButton]="true" [placeholder]="placeHolder" [type]="type" (ionInput)="getItems($event.target.value)"></ion-searchbar>
+    <ion-buttons *ngIf="!searching" start>
+      <button (click)="search(2)" ion-button icon-only color="royal">
+        <ion-icon name="search"></ion-icon>
+      </button>
+    </ion-buttons>
   </ion-navbar>
-
+  <ion-toolbar>
+    <ion-segment color="white" [(ngModel)]="content">
+      <ion-segment-button (tap)="navCtrl.setRoot(inicio)" value="canticos">
+        Cânticos
+      </ion-segment-button>
+      <ion-segment-button (tap)="navCtrl.setRoot(cifras)" value="cifras">
+        Cifras
+      </ion-segment-button>
+      <ion-segment-button (tap)="navCtrl.setRoot(slides)" value="slides">
+        Slides
+      </ion-segment-button>
+    </ion-segment>
+  </ion-toolbar>
 </ion-header>
 
 

@@ -3,7 +3,7 @@
     <button *ngIf="!searching" ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title *ngIf="!searching" >Home</ion-title>
+    <ion-title *ngIf="!searching" >Início</ion-title>
     <ion-searchbar #searchbar [class.hide]="!searching" (ionCancel)="search()" [showCancelButton]="true" [placeholder]="placeHolder" [type]="type" (ionInput)="getItems($event.target.value)"></ion-searchbar>
     <ion-buttons *ngIf="!searching" start>
       <button (click)="search(2)" ion-button icon-only color="royal">
@@ -11,21 +11,32 @@
       </button>
     </ion-buttons>
   </ion-navbar>
+  <ion-toolbar>
+    <ion-segment color="white" [(ngModel)]="content">
+      <ion-segment-button (tap)="navCtrl.setRoot(inicio)" value="canticos">
+        Cânticos
+      </ion-segment-button>
+      <ion-segment-button (tap)="navCtrl.setRoot(cifras)" value="cifras">
+        Cifras
+      </ion-segment-button>
+      <ion-segment-button (tap)="navCtrl.setRoot(slides)" value="slides">
+        Slides
+      </ion-segment-button>
+    </ion-segment>
+    
+  </ion-toolbar>
+  
 </ion-header>
 
-<ion-content padding>
+<ion-content>
 
-  
-  <ion-list [virtualScroll]="songs" (press)="pushPageSelect()" no-lines virtualTrackBy>
-    <ion-item *virtualItem="let song; let i = index" (tap)="pushPageMusic(song.ID)">
-      
-      <ion-icon color="light" item-start name="heart"></ion-icon>
-
+  <ion-list [virtualScroll]="start()" (press)="pushPageSelect()" no-lines virtualTrackBy>
+    <ion-item *virtualItem="let song; let i = index" (click)="pushPageMusic(song.ID)">
+      <ion-icon item-start name="heart" color="light" [class.favorit]="song.favorit" (click)="favorit(i); $event.stopPropagation();"></ion-icon>
       <ion-label>
         <h2>{{song.numero+". "}}{{song.titulo}}</h2>
         <p>{{song.tags}}</p>
       </ion-label>
-      <!--<ion-checkbox item-end color="dark" [(ngModel)]="checked[song.ID]" ></ion-checkbox>-->
     </ion-item>
   </ion-list>
 

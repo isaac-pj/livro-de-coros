@@ -1,3 +1,6 @@
+import { SobrePage } from './../pages/sobre/sobre';
+import { ContatoPage } from './../pages/contato/contato';
+import { FavoritesPage } from './../pages/favorites/favorites';
 import { Component, ViewChild } from '@angular/core';
 import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
@@ -21,14 +24,14 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Home', component: HomePage, icon: 'home'},
+      { title: 'Início', component: HomePage, icon: 'home'},
       { title: 'Listas', component: ListsPage, icon: 'list-box' },
       { title: 'Historico', component: HomePage, icon: 'bookmark' },
-      { title: 'Favoritos', component: HomePage, icon: 'heart' },
-      { title: 'Contato', component: HomePage, icon: 'call' },
+      { title: 'Favoritos', component: FavoritesPage, icon: 'heart' },
+      { title: 'Contato', component: ContatoPage, icon: 'call' },
       { title: 'Configurações', component: HomePage, icon: 'settings' },
       { title: 'Ajuda', component: HomePage, icon: 'help-circle' },
-      { title: 'Sobre', component: HomePage, icon: 'information-circle' },
+      { title: 'Sobre', component: SobrePage, icon: 'information-circle' },
     ];
 
   }

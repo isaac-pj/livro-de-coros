@@ -1,8 +1,8 @@
 <?xml version='1.0' encoding='utf-8'?>
 <widget id="io.ionic.starter" version="0.0.1" xmlns="http://www.w3.org/ns/widgets" xmlns:cdv="http://cordova.apache.org/ns/1.0">
-    <name>ldc</name>
-    <description>An awesome Ionic/Cordova app.</description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">Ionic Framework Team</author>
+    <name>Livro de Coros</name>
+    <description>Livro base ultilizado pelas igrejas bíblicas para condução do louvor</description>
+    <author email="isaac-pj@hotmail.com" href="http://ionicframework.com/">Judah's Lion Studio</author>
     <content src="index.html" />
     <access origin="*" />
     <allow-intent href="http://*/*" />
@@ -83,4 +83,6 @@
     <plugin name="cordova-plugin-ionic-keyboard" spec="^2.0.5" />
     <plugin name="cordova-sqlite-storage" spec="^2.3.3" />
     <engine name="android" spec="7.0.0" />
+    <engine name="windows" spec="5.0.0" />
+    <engine name="browser" spec="5.0.3" />
 </widget>

@@ -31,9 +31,9 @@
 
     <!--lista com ngFor e caixas de seleção-->
     <ion-list no-lines>
-      <ion-item *ngFor="let song of songs; let i = index" (press)="openMusic(song.ID)">
+      <ion-item *ngFor="let song of songs; let i = index" (click)="openMusic(song.ID)">
         
-        <ion-icon color="light" item-start name="heart"></ion-icon>
+        <ion-icon item-start name="heart" color="light" [class.favorit]="song.favorit"></ion-icon>
 
         <ion-label>
           <h2>{{song.numero+". "}}{{song.titulo}}</h2>
@@ -53,15 +53,13 @@
 
 
 <ion-footer>
-  <ion-toolbar color="light">
-    <ion-buttons end>
-      <button ion-button color="royal" clear (tap)="cancel()">
+  <ion-toolbar color="light" text-right>
+      <button ion-button color="secondaryTextColor" clear (tap)="cancel()">
         Cancelar
       </button>
       <button ion-button color="secondary" clear [disabled]="isEmpty" (tap)="createList()">
         Criar Lista
       </button>
-    </ion-buttons>
   </ion-toolbar>
 </ion-footer>
 

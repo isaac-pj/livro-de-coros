@@ -8,6 +8,11 @@
 
   <ion-navbar>
       <ion-title>{{song.titulo}}</ion-title>
+      <ion-buttons start>
+        <button (click)="navCtrl.pop()" ion-button icon-only *ngIf="modal" >
+          <ion-icon name="close"></ion-icon>
+        </button>
+      </ion-buttons>
   </ion-navbar>
 
 </ion-header>
@@ -16,18 +21,35 @@
 <ion-content padding>
   <h2>{{song.titulo}}</h2>
   <p [innerHTML]="song.letra"></p>
+  <ion-fab *ngIf="list"  right bottom>
+    <button (tap)="checker()" ion-fab><ion-icon name="checkmark"></ion-icon></button>
+  </ion-fab>
 </ion-content>
 
 <ion-footer>
-      <ion-row>
+
+      <!--<ion-row>
         <ion-col>
-          <button (tap)="next()" ion-button color="dark" clear>anterior</button>
+          <button (tap)="prev()" [disabled]="canPrev() == false" ion-button color="dark" clear>anterior</button>
         </ion-col>
         <ion-col text-center>
           <h4>{{song.numero}}</h4>
         </ion-col>
         <ion-col text-right>
-          <button (tap)="next()" ion-button color="dark" clear>próximo</button>
+          <button (tap)="next()" [disabled]="canNext() == false" ion-button color="dark" clear>próximo</button>
         </ion-col>
-      </ion-row>
+      </ion-row>-->
+      <ion-toolbar color="light">
+        <ion-row>
+          <ion-col class="no-padding">
+            <button (tap)="prev()" [disabled]="canPrev() == false" ion-button color="dark" clear>anterior</button>
+          </ion-col>
+          <ion-col text-center class="no-padding">
+            <button (tap)="showInfo()" ion-button clear color="dark">{{song.numero}}</button>
+          </ion-col>
+          <ion-col text-right class="no-padding">
+            <button (tap)="next()" [disabled]="canNext() == false" ion-button color="dark" clear>próximo</button>
+          </ion-col>
+        </ion-row>
+      </ion-toolbar>
 </ion-footer>
