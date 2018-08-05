@@ -22,20 +22,12 @@ export class HomePage {
   placeHolder:string = "Search";
   songs:Songs[] = [];
   list:Songs[] = [];
-  content:string = "canticos";
-
-  inicio:any;
-  cifras:any;
-  slides:any;
 
 
   constructor(public songsDao: SongsDaoProvider, public modalCtrl: ModalController, public navCtrl: NavController,private alertCtrl: AlertController, public songsService: SongsService) {
     // this.listsDaoProvider.reset();
     // this.songsService.changeSongs();
     this.start();
-    this.inicio = HomePage;
-    this.cifras = CifrasPage;
-    this.slides = SlidesPage;
   }
 
   start(){
@@ -96,9 +88,9 @@ export class HomePage {
 
   //mudar para a pagina de musica  
   pushPageMusic(index:number){
-    this.presentProfileModal(index);
+    // this.presentProfileModal(index);
 
-    // this.navCtrl.push(RightNavPage, {index: index});
+    this.navCtrl.push(RightNavPage, {index: index});
     this.searchbar.value = "";
     this.search(null);
     return false;

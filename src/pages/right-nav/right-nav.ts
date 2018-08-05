@@ -1,9 +1,14 @@
+import { ViewController } from 'ionic-angular';
+import { PopoverComponent } from './../../components/popover/popover';
+import { FavoritesPage } from './../favorites/favorites';
+import { SlidesPage } from './../slides/slides';
 import { Lists } from './../../models/lists.model';
 import { ListPage } from './../list/list';
 import { Component, Input } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, IonicApp } from 'ionic-angular';
 import { Songs } from './../../models/songs.model';
 import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
+import { PopoverController } from 'ionic-angular';
 
 /**
  * Generated class for the RightNavPage page.
@@ -17,6 +22,7 @@ import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
   selector: 'page-right-nav',
   templateUrl: 'right-nav.html',
 })
+
 export class RightNavPage {
 
   list:Songs[] = [];
@@ -25,7 +31,7 @@ export class RightNavPage {
   song:Songs;
   modal:boolean = false;
 
-  constructor(public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, private songsDao: SongsDaoProvider) {
+  constructor(public viewCtrl: ViewController, public popoverCtrl: PopoverController, public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, private songsDao: SongsDaoProvider) {
     this.index = navParams.get("index");
     this.list = navParams.get("lista");
     this.modal = navParams.get("modal");
@@ -39,6 +45,18 @@ export class RightNavPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RightNavPage');
+  }
+
+  close(event){
+    this.viewCtrl.dismiss();
+  }
+
+  more(event) {
+    const popover = this.popoverCtrl.create(PopoverComponent, {
+      data:['slides', 'cifras', 'fonte', 'cor', 'outros']
+    });
+    popover.present({ev:event});
+    popover.onDidDismiss(data => console.log(data));
   }
 
   canNext(){

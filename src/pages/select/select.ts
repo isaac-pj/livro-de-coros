@@ -1,3 +1,4 @@
+import { RandomPage } from './../random/random';
 import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
 import { ListsPage } from './../lists/lists';
 import { Lists } from './../../models/lists.model';
@@ -9,7 +10,7 @@ import { SongsService } from './../../services/songs.service';
 import { Songs } from './../../models/songs.model';
 import { ListsDaoProvider } from './../../providers/general-dao/lists-dao';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController, ModalController, ToastController } from 'ionic-angular';
 import { DatePipe } from '@angular/common';
 
 /**
@@ -37,12 +38,30 @@ export class SelectPage {
   songs:Songs[] = this.songsDao.getSongs();
   list:Songs[] = [];
 
-  constructor(public navCtrl: NavController,private alertCtrl: AlertController, public songsService: SongsService, public songsDao: SongsDaoProvider, public listsDaoProvider: ListsDaoProvider, private datePipe: DatePipe) {
+  constructor(public toastCtrl: ToastController, public navCtrl: NavController, public modalCtrl: ModalController,
+   private alertCtrl: AlertController, public songsService: SongsService,
+   public songsDao: SongsDaoProvider, public listsDaoProvider: ListsDaoProvider,
+   private datePipe: DatePipe) {
+     
     this.checked = this.inicialize(this.checked, this.songs.length, false);
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad SelectPage');
+  }
+
+  showToast(msg, time, position){
+    let toast = this.toastCtrl.create({
+      message: msg,
+      duration: time,
+      position: position
+    });
+
+    toast.onDidDismiss(() => {
+      console.log('Dismissed toast');
+    });
+
+    toast.present();
   }
 
   search(type:number){
@@ -148,13 +167,32 @@ export class SelectPage {
         }
       ]
     });
-    alert.present();
+    this.list.length < 5 || this.list.length > 20 ? this.showToast("A lista precisa ter entre 5 e 20 músicas", 3000, "bottom") :  alert.present();
     }
   }
-
-  openMusic(index:number){
-    this.navCtrl.push(RightNavPage, {index: index});
+   //mudar para a pagina de gerae lista  
+  pushPageGenerate(){
+    let gerarLista = this.modalCtrl.create(RandomPage, {songs:this.songs});
+    gerarLista.present();
+    gerarLista.onDidDismiss((data)=>{
+      data.list ? this.check(data.list) : null ;
+      // console.log(data.list);
+    });
     return false;
+  }
+
+   //mudar para a pagina de musica  
+  pushPageMusic(index:number){
+    // this.navCtrl.push(RightNavPage, {index: index});
+    this.presentMusicModal(index);
+    return false;
+  }
+
+
+  //mudar para a pagina de musica por modal  
+  presentMusicModal(index:number) {
+    let musicModal = this.modalCtrl.create(RightNavPage, {index: index, modal:true});
+    musicModal.present();
   }
 
   //retorna true se existir pelo menos um item selecionado, caso contrário retorna false
@@ -169,6 +207,7 @@ export class SelectPage {
     return false;
   }
 
+  //gerar lista aleatoriamente
   generateList(size){
     
     this.checked = this.inicialize(this.checked, this.songs.length, false);
@@ -182,10 +221,25 @@ export class SelectPage {
     this.createList();
   }
 
+  //random entre dois numeros
   getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
+  }
+
+  //marca uma lista com uma lista nova e cria a lista
+  check(songs:Songs[]){
+    this.checked = this.inicialize(this.checked, this.songs.length, false);
+
+    for(let i in songs){
+      let index = songs[i].ID;
+      this.checked[index] = true;
+    }
+
+    this.isChecked(0);
+    this.createList();
+
   }
 
 }

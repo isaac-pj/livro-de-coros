@@ -1,3 +1,5 @@
+import { RandomPage } from './../pages/random/random';
+import { PopoverComponent } from './../components/popover/popover';
 import { SlidesPage } from './../pages/slides/slides';
 import { CifrasPage } from './../pages/cifras/cifras';
 import { BrowserModule } from '@angular/platform-browser';
@@ -35,6 +37,8 @@ import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
     ContatoPage,
     CifrasPage,
     SlidesPage,
+    PopoverComponent,
+    RandomPage,        
   ],
   imports: [
     BrowserModule,
@@ -54,6 +58,8 @@ import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
     ContatoPage,
     CifrasPage,
     SlidesPage,
+    PopoverComponent,
+    RandomPage,    
   ],
   providers: [
     StatusBar,

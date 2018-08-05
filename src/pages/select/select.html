@@ -12,7 +12,8 @@
     </button>
     <ion-title *ngIf="!searching" >Select</ion-title>
     <ion-buttons *ngIf="!searching" start>
-      <button (tap)="generateList(7)" ion-button icon-only color="royal">
+      <button (tap)="pushPageGenerate()" ion-button icon-only color="royal">
+        <!--random-->
         <ion-icon name="shuffle"></ion-icon>
       </button>
       <button (tap)="search(2)" ion-button icon-only color="royal">
@@ -31,7 +32,7 @@
 
     <!--lista com ngFor e caixas de seleção-->
     <ion-list no-lines>
-      <ion-item *ngFor="let song of songs; let i = index" (click)="openMusic(song.ID)">
+      <ion-item *ngFor="let song of songs; let i = index" (click)="pushPageMusic(song.ID)">
         
         <ion-icon item-start name="heart" color="light" [class.favorit]="song.favorit"></ion-icon>
 

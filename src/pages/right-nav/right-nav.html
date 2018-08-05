@@ -9,8 +9,11 @@
   <ion-navbar>
       <ion-title>{{song.titulo}}</ion-title>
       <ion-buttons start>
-        <button (click)="navCtrl.pop()" ion-button icon-only *ngIf="modal" >
+        <button (tap)="close($event)" ion-button icon-only *ngIf="modal" >
           <ion-icon name="close"></ion-icon>
+        </button>
+        <button (tap)="more($event)" ion-button icon-only *ngIf="!modal" >
+          <ion-icon name="more"></ion-icon>
         </button>
       </ion-buttons>
   </ion-navbar>

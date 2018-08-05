@@ -34,6 +34,7 @@ export class ListPage {
     this.start();
      
     this.editing = this.list.comments ? false : true;
+    console.log(this.input);
   }
 
   save(msg:string){
@@ -47,8 +48,8 @@ export class ListPage {
     this.editing = true;
   }
 
-  cancel(){
-    this.editing = false;
+  cancel(value){
+    this.editing = value ? false : true;
     this.expanded = false;
   }
 

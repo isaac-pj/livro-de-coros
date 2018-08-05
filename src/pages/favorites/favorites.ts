@@ -35,8 +35,9 @@ export class FavoritesPage {
 
   //remover item dos favoritos
   remove(index:number){
-    this.songs.splice(index, 1);
+    // this.songs.splice(index, 1);
     this.songsDao.favorit(index, true);
+    this.start();
   }
 
   //mudar para a pagina de musica  

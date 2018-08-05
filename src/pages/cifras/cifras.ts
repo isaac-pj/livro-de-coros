@@ -1,5 +1,3 @@
-import { SlidesPage } from './../slides/slides';
-import { HomePage } from './../home/home';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -17,16 +15,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class CifrasPage {
 
-  content:string = "cifras";
-
-  inicio:any;
-  cifras:any;
-  slides:any;
-
   constructor(public navCtrl: NavController, public navParams: NavParams) {
-    this.inicio = HomePage;
-    this.cifras = CifrasPage;
-    this.slides = SlidesPage;
+
   }
 
   ionViewDidLoad() {

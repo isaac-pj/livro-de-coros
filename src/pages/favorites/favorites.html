@@ -34,7 +34,7 @@
   <ion-list [virtualScroll]="start()" no-lines virtualTrackBy>
     <ion-item *virtualItem="let song; let i = index" (click)="pushPageMusic(song.ID)">
       <!--<ion-icon item-start name="heart" color="red"></ion-icon>-->
-      <ion-icon item-start name="remove-circle" color="secondaryTextColor" (click)="remove(i); $event.stopPropagation();"></ion-icon>
+      <ion-icon item-start name="remove-circle" color="secondaryTextColor" (click)="remove(song.ID); $event.stopPropagation();"></ion-icon>
       <ion-label>
         <h2>{{song.numero+". "}}{{song.titulo}}</h2>
         <p>{{song.tags}}</p>

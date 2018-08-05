@@ -1,3 +1,5 @@
+import { CifrasPage } from './../pages/cifras/cifras';
+import { SlidesPage } from './../pages/slides/slides';
 import { SobrePage } from './../pages/sobre/sobre';
 import { ContatoPage } from './../pages/contato/contato';
 import { FavoritesPage } from './../pages/favorites/favorites';
@@ -26,6 +28,8 @@ export class MyApp {
     this.pages = [
       { title: 'Início', component: HomePage, icon: 'home'},
       { title: 'Listas', component: ListsPage, icon: 'list-box' },
+      { title: 'Slides', component: SlidesPage, icon: 'browsers' },
+      { title: 'Cifras', component: CifrasPage, icon: 'musical-note' },
       { title: 'Historico', component: HomePage, icon: 'bookmark' },
       { title: 'Favoritos', component: FavoritesPage, icon: 'heart' },
       { title: 'Contato', component: ContatoPage, icon: 'call' },

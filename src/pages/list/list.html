@@ -33,13 +33,13 @@
   <div class="expand-wrapper" [class.collapsed]="!expanded" [class.expanded]="expanded">
 
     <!--<ion-input type="text-area" placeholder="Escreva um lembrete ou comentário!  :)"></ion-input>-->
-    <ion-textarea #input [disabled]="!editing" [value]="comments" rows="3" maxLength="500" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
+    <ion-textarea #input [disabled]="!editing" [value]="comments" rows="3" maxLength="250" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
     <ion-toolbar color="light" text-right>
 
         <button *ngIf="!editing" ion-button color="secondary" clear (tap)="edit();">
           Editar
         </button>
-        <button *ngIf="editing" ion-button color="secondaryTextColor" clear (tap)="cancel(); input.value = comments;">
+        <button *ngIf="editing" ion-button color="secondaryTextColor" clear (tap)="cancel(input.value); input.value = comments;">
           Cancelar
         </button>
         <button *ngIf="editing" ion-button color="secondary" clear (tap)="save(input.value);">
