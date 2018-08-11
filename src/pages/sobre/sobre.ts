@@ -22,4 +22,8 @@ export class SobrePage {
     console.log('ionViewDidLoad SobrePage');
   }
 
+  load(url){
+    window.open(url, '_blank')
+  }
+
 }

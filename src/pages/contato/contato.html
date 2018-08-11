@@ -10,12 +10,84 @@
     <button ion-button menuToggle>
       <ion-icon name="menu"></ion-icon>
     </button>
-    <ion-title>contato</ion-title>
+    <ion-title>Contato</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-row>
+    <h1 text-center ion-col col-12>Judah's Lion Studio</h1>
+  </ion-row>
+  
+  <ion-list>
+    <ion-item>
+      <p (tap)="expand()" class="expand-wrapper" [class.collapsed]="!expanded" [class.expanded]="expanded">
+        O Judah's Lion Studio, é uma empresa fundada e administrada pelo designer digital 
+        Isaac Brandão Lima, que atua nas áreas de design e desenvolvimento de softawre,
+        desenvolvendo soluções de design digitais e impressas, para seus clientes. Entre 
+        os serviços disponíveis estão: a criação de artes gráficas em geral como, marca, 
+        idetidade visual, cartazes, cartão de visita, etc.. Edição de Imagens, Audio e Video.
+        Illustração manual, vetorial e pintura digital e animação 2D. Modelagem e animação 3D.
+        UX design, criação de web sites, aplicativos mobile e desktop, desenvolvimento de 
+        jogos 2D e 3D, entre outros.
+      </p>
+    </ion-item>
+    <ion-item>
+      <h5 ion-col col-12>email:</h5>
+      <h2 text-style-bold ion-col>judahslionstudio@gmail.com</h2>
+    </ion-item>
+    <ion-item>
+      <h5 ion-col col-12>Responsável:</h5>
+      <h2 ion-col >Isaac Brandão Lima</h2>
+      <p ion-col>Designer Digital - Universidade Federal do Ceará</p>
+    </ion-item>
+    <ion-item>
+      <h5 ion-col col-12>Contato:</h5>
+      <h2 ion-col >isaac-pj@hotmail.com</h2>
+      <h2 ion-col >+55 88 997.138.594</h2>
+      <h2 ion-col >www.facebook.com/isaac.lima.7549</h2>
+      <h2 ion-col >www.instagram.com/isaac_pj</h2>
+    </ion-item>
+    <ion-item>
+      <h5 ion-col col-12>Github:</h5>
+      <h2 ion-col >isaac-pj.github.io</h2>
+    </ion-item>
+    <ion-item>
+      <h5 ion-col col-12>Behance:</h5>
+      <h2 ion-col >www.behance.net/isaac-pjcf95</h2>
+    </ion-item>
+  </ion-list>
+
+  <!--<ion-row>
+    <button ion-col col-4 color="whatsapp" ion-button full>
+      <ion-icon padding name="logo-whatsapp" > </ion-icon>
+      whatsapp
+    </button>
+    <button ion-col col-4 color="facebook" ion-button full>
+      <ion-icon padding name="logo-facebook" > </ion-icon>
+      facebook
+    </button>
+    <button ion-col col-4 color="e-mail" ion-button full>
+      <ion-icon padding name="mail" > </ion-icon>
+      e-mail
+    </button>
+  </ion-row>-->
+
+  <ion-row>
+    <button (tap)="load('tel:88997138594')" icon-only ion-col col-4 color="whatsapp" ion-button full>
+      <ion-icon name="logo-whatsapp" > </ion-icon>
+      <label *ngIf="orientation == 'horizontal'"  for="">whatsapp</label>
+    </button>
+    <button (tap)="load('https://www.facebook.com/isaac.lima.7549')" icon-only ion-col col-4 color="facebook" ion-button full>
+      <ion-icon name="logo-facebook" > </ion-icon>
+      <label *ngIf="orientation == 'horizontal'" for="">facebook</label>      
+    </button>
+    <button (tap)="load('mailto:isaac-pj@hotmail.com')" icon-only ion-col col-4 color="e-mail" ion-button full>
+      <ion-icon name="mail" > </ion-icon>
+      <label *ngIf="orientation == 'horizontal'" for="">e-mail</label>            
+    </button>
+  </ion-row>
 
 </ion-content>

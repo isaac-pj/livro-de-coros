@@ -1,5 +1,6 @@
-import { CifrasPage } from './../pages/cifras/cifras';
-import { SlidesPage } from './../pages/slides/slides';
+import { SettingsPage } from './../pages/settings/settings';
+// import { CifrasPage } from './../pages/cifras/cifras';
+// import { SlidesPage } from './../pages/slides/slides';
 import { SobrePage } from './../pages/sobre/sobre';
 import { ContatoPage } from './../pages/contato/contato';
 import { FavoritesPage } from './../pages/favorites/favorites';
@@ -28,13 +29,13 @@ export class MyApp {
     this.pages = [
       { title: 'Início', component: HomePage, icon: 'home'},
       { title: 'Listas', component: ListsPage, icon: 'list-box' },
-      { title: 'Slides', component: SlidesPage, icon: 'browsers' },
-      { title: 'Cifras', component: CifrasPage, icon: 'musical-note' },
-      { title: 'Historico', component: HomePage, icon: 'bookmark' },
+      // { title: 'Slides', component: SlidesPage, icon: 'browsers' },
+      // { title: 'Cifras', component: CifrasPage, icon: 'musical-note' },
+      // { title: 'Historico', component: HomePage, icon: 'bookmark' },
       { title: 'Favoritos', component: FavoritesPage, icon: 'heart' },
+      { title: 'Configurações', component: SettingsPage, icon: 'settings' },
       { title: 'Contato', component: ContatoPage, icon: 'call' },
-      { title: 'Configurações', component: HomePage, icon: 'settings' },
-      { title: 'Ajuda', component: HomePage, icon: 'help-circle' },
+      // { title: 'Ajuda', component: HomePage, icon: 'help-circle' },
       { title: 'Sobre', component: SobrePage, icon: 'information-circle' },
     ];
 
@@ -44,7 +45,12 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      // this.statusBar.styleDefault(); 
+      // this.statusBar.styleBlackTranslucent()
+
+      this.statusBar.overlaysWebView(false);
+      this.statusBar.backgroundColorByHexString('#008ba3');
+
       this.splashScreen.hide();
     });
   }

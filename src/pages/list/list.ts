@@ -38,10 +38,12 @@ export class ListPage {
   }
 
   save(msg:string){
-    this.list.comments = msg;
-    this.listsDaoProvider.update(this.index, this.list);
-    this.comments = this.list.comments;
-    this.editing = false;    
+    if(msg){
+      this.list.comments = msg;
+      this.listsDaoProvider.update(this.index, this.list);
+      this.comments = this.list.comments;
+      this.editing = false;   
+    }
   }
 
   edit(){
@@ -49,8 +51,16 @@ export class ListPage {
   }
 
   cancel(value){
-    this.editing = value ? false : true;
+    this.editing = this.list.comments ? false : true;
     this.expanded = false;
+  }
+
+  clear(){
+    if(!this.list.comments) return false;
+      this.listsDaoProvider.update(this.index, this.list);
+      this.list.comments = "";
+      this.comments = this.list.comments;
+      this.editing = true;
   }
 
   expandItem(){

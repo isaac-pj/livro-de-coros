@@ -1,5 +1,6 @@
+import { PopoverPage } from './../pages/popover/popover';
+import { SettingsPage } from './../pages/settings/settings';
 import { RandomPage } from './../pages/random/random';
-import { PopoverComponent } from './../components/popover/popover';
 import { SlidesPage } from './../pages/slides/slides';
 import { CifrasPage } from './../pages/cifras/cifras';
 import { BrowserModule } from '@angular/platform-browser';
@@ -28,17 +29,18 @@ import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
   declarations: [
     MyApp,
     HomePage,
-    ListPage,
-    ListsPage,
-    RightNavPage,
-    SelectPage,
-    FavoritesPage,
-    SobrePage,
-    ContatoPage,
-    CifrasPage,
-    SlidesPage,
-    PopoverComponent,
-    RandomPage,        
+    // ListPage,
+    // ListsPage,
+    // RightNavPage,
+    // SelectPage,
+    // FavoritesPage,
+    // SobrePage,
+    // ContatoPage,
+    // CifrasPage,
+    // SlidesPage,
+    // PopoverPage,
+    // RandomPage,
+    // SettingsPage, 
   ],
   imports: [
     BrowserModule,
@@ -58,8 +60,9 @@ import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
     ContatoPage,
     CifrasPage,
     SlidesPage,
-    PopoverComponent,
-    RandomPage,    
+    PopoverPage,
+    RandomPage,
+    SettingsPage,
   ],
   providers: [
     StatusBar,

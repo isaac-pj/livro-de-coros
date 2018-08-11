@@ -2,4 +2,63 @@ page-right-nav {
     .no-padding{
         padding: 0 !important;
     }
+
+    .translucent{
+        opacity: 0.2;
+    }
+
+    // .translucent .toolbar-background, .translucent .toolbar-background:hover,{
+    //     background-color: white !important;
+    //     color: black !important;
+    // }
+
+    .translucent .bar-button-default-md:hover:not(.disable-hover), 
+    .translucent .bar-button-clear-md-default:hover:not(.disable-hover), 
+    .translucent .bar-button-md-default:hover:not(.disable-hover){
+         color: black !important;
+    }
+    .xxx-small{
+        font-size: 1.2rem !important;
+    }
+    .xx-small{
+        font-size:  1.4rem !important;        
+    }
+    .small{
+        font-size:  1.6rem !important;
+    }
+    .medium{
+        font-size:  1.8rem !important;        
+    }
+    .large{
+        font-size:  2.0rem !important;
+    }
+    .xx-large{
+        font-size:  2.2rem !important;        
+    }
+    .xxx-large{
+        font-size:  2.5rem !important;
+    }
+
+    ion-slides .xxx-small{
+        font-size: 2.4rem !important;
+    }
+    ion-slides .xx-small{
+        font-size:  2.6rem !important;        
+    }
+    ion-slides .small{
+        font-size:  3.0rem !important;
+    }
+    ion-slides .medium{
+        font-size:  4.5rem !important;        
+    }
+    ion-slides .large{
+        font-size:  6.0rem !important;
+    }
+    ion-slides .xx-large{
+        font-size:  7.0rem !important;        
+    }
+    ion-slides .xxx-large{
+        font-size:  8.0rem !important;
+    }
+
 }

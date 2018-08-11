@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, Platform } from 'ionic-angular';
 
 /**
  * Generated class for the ContatoPage page.
@@ -15,11 +15,30 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 })
 export class ContatoPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  expanded:boolean = false;
+  orientation:string = "";
+
+  constructor(
+    public platform: Platform,
+    public navCtrl: NavController, 
+    public navParams: NavParams
+    ) {
+
+      platform.ready().then((readySource) => {
+        this.orientation = platform.width() > platform.height() ? 'horizontal' : 'vertical';
+      });
   }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ContatoPage');
+  }
+
+  load(url){
+    window.open(url, '_blank')
+  }
+
+  expand(){
+    this.expanded = this.expanded ? false : true;
   }
 
 }

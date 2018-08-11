@@ -1,4 +1,13 @@
 page-lists {
+
+    .no-margin-bottom{
+        margin-block-end: 0 !important;
+    }
+
+    .scroll-content{
+        padding-bottom: 88px !important;
+    }
+    
     .rotate{
         transform: rotate(180deg);
     }

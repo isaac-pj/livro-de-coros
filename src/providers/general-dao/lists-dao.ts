@@ -1,5 +1,4 @@
 import { Lists } from './../../models/lists.model';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 

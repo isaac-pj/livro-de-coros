@@ -48,7 +48,12 @@
       <ion-icon item-end name="remove-circle" (tap)="remove(i)"></ion-icon>
     </ion-item>
   </ion-list>
-  <button ion-button text-right (tap)="generateList(musicas)" >gerar</button>
+  <ion-buttons start>
+    <button ion-button (tap)="generateList(musicas)" >gerar lista</button>
+    <button ion-button icon-only outline (tap)="add()" >
+      <ion-icon name="add"></ion-icon>
+    </button>
+  </ion-buttons>
 </ion-content>
 <ion-footer>
   <ion-toolbar color="light" text-right>

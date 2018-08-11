@@ -1,8 +1,8 @@
-import { SlidesPage } from './../slides/slides';
-import { CifrasPage } from './../cifras/cifras';
+import { ListsDaoProvider } from './../../providers/general-dao/lists-dao';
+import { Storage } from '@ionic/storage';
 import { SelectPage } from './../select/select';
 import { Component, ViewChild } from '@angular/core';
-import { NavController, AlertController, ModalController, Content } from 'ionic-angular';
+import { NavController, ModalController} from 'ionic-angular';
 import { RightNavPage } from './../right-nav/right-nav';
 import { SongsService } from './../../services/songs.service';
 import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
@@ -16,7 +16,7 @@ import { Songs } from './../../models/songs.model';
 export class HomePage {
 
   @ViewChild('searchbar') searchbar;
-
+  
   searching:boolean = false;
   type:string = "text";
   placeHolder:string = "Search";
@@ -24,15 +24,32 @@ export class HomePage {
   list:Songs[] = [];
 
 
-  constructor(public songsDao: SongsDaoProvider, public modalCtrl: ModalController, public navCtrl: NavController,private alertCtrl: AlertController, public songsService: SongsService) {
+  constructor(
+    public listsDaoProvider: ListsDaoProvider, 
+    public storage: Storage, 
+    public songsDao: SongsDaoProvider, 
+    public modalCtrl: ModalController, 
+    public navCtrl: NavController,
+    public songsService: SongsService
+  ) {
     // this.listsDaoProvider.reset();
     // this.songsService.changeSongs();
     this.start();
   }
 
+  // start(){
+  //   this.songs = this.songsDao.getSongs();
+  //   return this.songs;
+  // }
   start(){
-    this.songs = this.songsDao.getSongs();
-    return this.songs;
+    this.storage.get("Songs").then((value) => {
+      if(value){
+        this.songs = value;
+      }else{
+        this.songs = this.songsService.getSongs();
+        this.storage.set("Songs", this.songs);
+      }
+    });
   }
 
   // ajustes do front na busca

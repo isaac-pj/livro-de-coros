@@ -15,7 +15,11 @@
 
 <ion-content>
 
-  <ion-list [virtualScroll]="start()" (press)="pushPageSelect()" no-lines virtualTrackBy>
+  <ion-list [virtualScroll]="songs" (press)="pushPageSelect()" no-lines virtualTrackBy>
+    <section padding *ngIf="songs == 0" >
+      <h2>Sinto muito! Nenhum resultado correspondente :(</h2>
+      <p>Tente novamente. Você pode buscar por número, título ou mesmo por um trecho na musica</p>      
+    </section>
     <ion-item *virtualItem="let song; let i = index" (click)="pushPageMusic(song.ID)">
       <ion-icon item-start name="heart" color="light" [class.favorit]="song.favorit" (click)="favorit(i); $event.stopPropagation();"></ion-icon>
       <ion-label>

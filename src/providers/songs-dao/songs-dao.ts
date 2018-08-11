@@ -1,6 +1,5 @@
 import { Songs } from './../../models/songs.model';
 import { SongsService } from './../../services/songs.service';
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
@@ -12,7 +11,7 @@ import { Storage } from '@ionic/storage';
 */
 @Injectable()
 export class SongsDaoProvider {
-
+  
   songs:Songs[] = [];
   
   constructor(private storage:Storage, public songsService: SongsService) {
@@ -81,20 +80,24 @@ export class SongsDaoProvider {
       }
     }
 
-    if(searchResult.length > 0){
-      return searchResult;
-    }else{
-      for(let i in this.songs){
-        if(this.songs[i].letra.toLowerCase().indexOf(value.toLowerCase()) != -1){
-          searchResult.push(this.getSong(parseInt(i)));
-        }
+    for(let i in this.songs){
+      if(JSON.stringify(this.songs[i].letra).toLowerCase().indexOf(value.toLowerCase()) != -1){
+        searchResult.push(this.getSong(parseInt(i)));
       }
     }
 
+    // if(searchResult.length > 0){
+    //   return searchResult;
+    // }else{
+    //   for(let i in this.songs){
+    //     if(JSON.stringify(this.songs[i].letra).toLowerCase().indexOf(value.toLowerCase()) != -1){
+    //       searchResult.push(this.getSong(parseInt(i)));
+    //     }
+    //   }
+    // }
+
     if(searchResult.length > 0){
       return searchResult;
-    }else{
-      var str = "Desculpe! Nada encontrado :(";
     }
 
   }

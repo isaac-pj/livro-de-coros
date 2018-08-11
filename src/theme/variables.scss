@@ -51,14 +51,35 @@ $colors: (
   secondary:  #00bcd4,
   secondaryLightColor: #62efff,
   secondaryDarkColor: #008ba3,
+  // secondary:  #800000,
+  // secondaryLightColor: #c10000,
+  // secondaryDarkColor: #800000,
   primaryTextColor: #212121,
   secondaryTextColor:#737373,
 
   danger:     #f53d3d,
   light:      #f4f4f4,
   dark:       #222,
-  white:    #fff,
-  black:    #000,
+  white:    (
+    base: #fff,
+    contrast: #222
+  ),
+  black:    (
+    base: #000,
+    contrast: #f4f4f4
+  ),
+  whatsapp:    (
+    base: #25d366,
+    contrast: #fff
+  ),
+  facebook:    (
+    base: #3b5998,
+    contrast: #fff
+  ),
+  e-mail:    (
+    base: #dc4b3e,
+    contrast: #fff
+  )
 );
 
 
@@ -76,8 +97,7 @@ $colors: (
 
 $toolbar-background: color($colors, secondary);
 
-
-
+$fab-content-margin: 16px;
 
 
 // App Windows Variables

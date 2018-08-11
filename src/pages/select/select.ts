@@ -3,14 +3,12 @@ import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
 import { ListsPage } from './../lists/lists';
 import { Lists } from './../../models/lists.model';
 
-import { ListPage } from './../list/list';
-import { HomePage } from './../home/home';
 import { RightNavPage } from './../right-nav/right-nav';
 import { SongsService } from './../../services/songs.service';
 import { Songs } from './../../models/songs.model';
 import { ListsDaoProvider } from './../../providers/general-dao/lists-dao';
 import { Component, ViewChild } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, ModalController, ToastController } from 'ionic-angular';
+import { IonicPage, NavController, AlertController, ModalController, ToastController } from 'ionic-angular';
 import { DatePipe } from '@angular/common';
 
 /**
@@ -38,10 +36,16 @@ export class SelectPage {
   songs:Songs[] = this.songsDao.getSongs();
   list:Songs[] = [];
 
-  constructor(public toastCtrl: ToastController, public navCtrl: NavController, public modalCtrl: ModalController,
-   private alertCtrl: AlertController, public songsService: SongsService,
-   public songsDao: SongsDaoProvider, public listsDaoProvider: ListsDaoProvider,
-   private datePipe: DatePipe) {
+  constructor(
+    public toastCtrl: ToastController, 
+    public navCtrl: NavController, 
+    public modalCtrl: ModalController,
+    private alertCtrl: AlertController, 
+    public songsService: SongsService,
+    public songsDao: SongsDaoProvider, 
+    public listsDaoProvider: ListsDaoProvider,
+    private datePipe: DatePipe
+  ) {
      
     this.checked = this.inicialize(this.checked, this.songs.length, false);
   }
@@ -115,6 +119,7 @@ export class SelectPage {
   }
 
   addInList(){
+    this.list = [];
     let songs:Songs[] = this.songsDao.getSongs();
     let founded:boolean = false;
 

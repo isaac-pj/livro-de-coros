@@ -1,5 +1,5 @@
-import { Component, Input } from '@angular/core';
-import { ViewController, NavParams } from "ionic-angular";
+import { Component } from '@angular/core';
+import { ViewController, NavParams, IonicPage } from "ionic-angular";
 
 /**
  * Generated class for the PopoverComponent component.
@@ -7,11 +7,12 @@ import { ViewController, NavParams } from "ionic-angular";
  * See https://angular.io/api/core/Component for more info on Angular
  * Components.
  */
+@IonicPage()
 @Component({
   selector: 'popover',
   templateUrl: 'popover.html'
 })
-export class PopoverComponent {
+export class PopoverPage {
 
   
   collection: string[];

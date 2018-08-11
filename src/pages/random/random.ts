@@ -41,6 +41,10 @@ export class RandomPage {
     this.range[index] = this.songs[this.getRandomInt(0, this.songs.length-1)];
   }
 
+  add(){
+    this.range.length < 20 ? this.range.push(this.songs[this.getRandomInt(0, this.songs.length-1)]) : this.showToast("A lista deve ter no máximo 20 músicas", 3000, "bottom");
+  }
+
   remove(index:number){
     this.range.length > 5 ? this.range.splice(index, 1) : this.showToast("A lista precisa de no mínimo 5 músicas", 3000, "bottom");
   }

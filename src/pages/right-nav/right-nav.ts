@@ -1,14 +1,10 @@
-import { ViewController } from 'ionic-angular';
-import { PopoverComponent } from './../../components/popover/popover';
-import { FavoritesPage } from './../favorites/favorites';
-import { SlidesPage } from './../slides/slides';
-import { Lists } from './../../models/lists.model';
-import { ListPage } from './../list/list';
-import { Component, Input } from '@angular/core';
-import { IonicPage, NavController, NavParams, AlertController, IonicApp } from 'ionic-angular';
+import { PopoverPage } from './../popover/popover';
+import { ViewController, Content } from 'ionic-angular';
+import { Component, ViewChild, ChangeDetectorRef, HostListener} from '@angular/core';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 import { Songs } from './../../models/songs.model';
 import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
-import { PopoverController } from 'ionic-angular';
+import { PopoverController, Slides } from 'ionic-angular';
 
 /**
  * Generated class for the RightNavPage page.
@@ -25,38 +21,139 @@ import { PopoverController } from 'ionic-angular';
 
 export class RightNavPage {
 
+  @ViewChild(Content) content: Content;
+  @ViewChild(Slides) slides: Slides;
+
   list:Songs[] = [];
   index:number;
   inListIndex:number;
   song:Songs;
   modal:boolean = false;
+  sliding: boolean = false;
+  color="secondary";
+  number: number;
+  current: number;
+  fontSize:number = 1;
+  fontSizeSlide:number = 4;
+  size:string[] = ['xxx-small','xx-small', 'small', 'medium', 'large', 'xx-large', 'xxx-large'];
+  
 
-  constructor(public viewCtrl: ViewController, public popoverCtrl: PopoverController, public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, private songsDao: SongsDaoProvider) {
+  constructor(private changeDetector : ChangeDetectorRef, public viewCtrl: ViewController, public popoverCtrl: PopoverController, public alertCtrl: AlertController,public navCtrl: NavController, public navParams: NavParams, private songsDao: SongsDaoProvider) {
     this.index = navParams.get("index");
     this.list = navParams.get("lista");
     this.modal = navParams.get("modal");
-
     if(!this.list){
       this.song = this.songsDao.getSong(this.index);
     }else{
       this.song = this.findSongInList(this.index);
-    }   
+    }  
+
   }
+  @HostListener('document:keydown', ['$event'])
+    onKeyDown(e: KeyboardEvent) {
+      if(!this.sliding) return false;
+      this.slides.enableKeyboardControl(false);
+      // e.key == 'ArrowLeft' && this.slides.isBeginning() ? this.prev() : null;
+      // e.key == 'ArrowRight' && this.slides.isEnd() ? this.next() : null;
+      
+      e.key == 'ArrowLeft' ? this.slidePrev() : null;
+      e.key == 'ArrowRight' ? this.slideNext() : null;
+
+      //sem condição
+      e.key == 'ArrowDown' ? this.prev() : null;
+      e.key == 'ArrowUp' ? this.next() : null;
+      
+      // console.log(e.key);
+    }
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad RightNavPage');
+  }
+
+  smallText(){
+    if(this.sliding){
+      this.fontSizeSlide > 0 ? this.fontSizeSlide-- : null;
+    }else{
+      this.fontSize > 0 ? this.fontSize-- : null;      
+    }
+  }
+
+  bigText(){
+    if(this.sliding){
+      this.fontSizeSlide < 6 ? this.fontSizeSlide++ : null;
+    }else{    
+      this.fontSize < 6 ? this.fontSize++ : null;
+    }
+  }
+
+  getLetra(){
+    let letra:string = "";
+    for(let i in this.song.letra){
+      letra = letra.concat(this.song.letra[i]);
+    }
+    return letra;
+  }
+
+  slideMode(){
+    this.sliding = this.sliding ? false : true;
+    this.color = this.sliding ? "white" : "secondary";
+    this.changeDetector.detectChanges();
+    this.content.resize();
+  }
+
+  goToSlide(index:number, time:number){
+    this.slides.slideTo(index, time);
+    this.slides.update();
+  }
+
+  slideNext(){
+    if(this.slides.isEnd()){
+      this.next();
+    }else{
+      this.slides.slideNext();
+      this.slides.update();    
+    }
+  }
+
+  slidePrev(){
+    if(this.slides.isBeginning()){
+      this.prev();
+    }else{
+      this.slides.slidePrev();
+      this.slides.update();
+    }
+  }
+
+  getCurrentSlide(){
+    return this.slides ? this.slides.getActiveIndex() : null;
+  }
+  getNumberSlide(){
+    return this.slides ? this.slides.length() : null;
   }
 
   close(event){
     this.viewCtrl.dismiss();
   }
 
-  more(event) {
-    const popover = this.popoverCtrl.create(PopoverComponent, {
-      data:['slides', 'cifras', 'fonte', 'cor', 'outros']
-    });
+  more(event, options:string[]) {
+    const popover = this.popoverCtrl.create(PopoverPage, {data:options});
     popover.present({ev:event});
-    popover.onDidDismiss(data => console.log(data));
+    popover.onDidDismiss((data) => this.popoverResponse(data ? data.idx : null));
+  }
+
+  popoverResponse(value:number){
+    if(value != 0 && !value) return false;
+    switch(value){
+      case 0:
+        this.slideMode();
+      break;
+      case 1:
+        alert("opção: "+value);
+      break;
+      default:
+        alert("opção: "+value);
+      break;
+    }
   }
 
   canNext(){
@@ -73,9 +170,10 @@ export class RightNavPage {
       this.index++;
       this.inListIndex++;
       this.getSong();
+      this.sliding ? this.goToSlide(0, 0) : null;
     }else{
-      this.index--;
-      this.inListIndex--;
+      // this.index--;
+      // this.inListIndex--;
     }
   }
 
@@ -93,9 +191,10 @@ export class RightNavPage {
       this.index--;
       this.inListIndex--;      
       this.getSong();
+      this.sliding ? this.goToSlide(0, 0) : null;
     }else{
-      this.index++;
-      this.inListIndex++;            
+      // this.index++;
+      // this.inListIndex++;            
     }
   }
 
