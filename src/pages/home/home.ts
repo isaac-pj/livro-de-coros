@@ -23,7 +23,6 @@ export class HomePage {
   songs:Songs[] = [];
   list:Songs[] = [];
 
-
   constructor(
     public listsDaoProvider: ListsDaoProvider, 
     public storage: Storage, 
@@ -41,6 +40,7 @@ export class HomePage {
   //   this.songs = this.songsDao.getSongs();
   //   return this.songs;
   // }
+
   start(){
     this.storage.get("Songs").then((value) => {
       if(value){
