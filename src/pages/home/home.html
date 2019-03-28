@@ -16,7 +16,7 @@
 <ion-content>
 
   <ion-list [virtualScroll]="songs" (press)="pushPageSelect()" no-lines virtualTrackBy>
-    <section padding *ngIf="songs == 0" >
+    <section padding *ngIf="songs.length == 0" >
       <h2>Sinto muito! Nenhum resultado correspondente :(</h2>
       <p>Tente novamente. Você pode buscar por número, título ou mesmo por um trecho na música</p>      
     </section>

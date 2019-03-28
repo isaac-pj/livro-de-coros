@@ -172,10 +172,11 @@ export class SelectPage {
         }
       ]
     });
-    this.list.length < 5 || this.list.length > 20 ? this.showToast("A lista precisa ter entre 5 e 20 músicas", 3000, "bottom") :  alert.present();
+    this.list.length < 2 || this.list.length > 20 ? this.showToast("A lista precisa ter entre 2 e 20 músicas", 3000, "bottom") :  alert.present();
     }
   }
-   //mudar para a pagina de gerae lista  
+
+  //mudar para a pagina de gerar lista  
   pushPageGenerate(){
     let gerarLista = this.modalCtrl.create(RandomPage, {songs:this.songs});
     gerarLista.present();

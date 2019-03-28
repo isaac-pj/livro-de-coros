@@ -101,9 +101,7 @@ export class SongsDaoProvider {
     //   }
     // }
 
-    if(searchResult.length > 0){
-      return searchResult;
-    }
+    return searchResult.length > 0 ? searchResult : [];
 
   }
 
