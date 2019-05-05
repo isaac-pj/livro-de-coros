@@ -50,8 +50,45 @@ export class SelectPage {
     this.checked = this.inicialize(this.checked, this.songs.length, false);
   }
 
+  // #INICIALIZAÇÂO
   ionViewDidLoad() {
     console.log('ionViewDidLoad SelectPage');
+  }
+
+  inicialize(vector, size, value){
+    for(let i = 0; i < size; i++) {
+      vector[i] = value;
+    }
+    return vector;
+  }
+
+  // #NAVEGAÇÂO
+
+  //mudar para a pagina de gerae lista  
+  pushPageGenerate(){
+    let gerarLista = this.modalCtrl.create(RandomPage, {songs:this.songs});
+    gerarLista.present();
+    gerarLista.onDidDismiss((data)=>{
+      data.list ? this.check(data.list) : null ;
+      // console.log(data.list);
+    });
+    return false;
+  }
+
+  //mudar para a pagina de musica  
+  pushPageMusic(index:number){
+    // this.navCtrl.push(RightNavPage, {index: index});
+    this.presentMusicModal(index);
+    return false;
+  }
+
+
+  // #INTERFACE
+
+  //mudar para a pagina de musica por modal  
+  presentMusicModal(index:number) {
+    let musicModal = this.modalCtrl.create(RightNavPage, {index: index, modal:true});
+    musicModal.present();
   }
 
   showToast(msg, time, position){
@@ -68,6 +105,17 @@ export class SelectPage {
     toast.present();
   }
 
+  cancel(event:any){
+    this.search(null);
+    if(this.searchbar) this.searchbar.value = "";
+    this.navCtrl.pop();
+    return false;
+  }
+
+
+  // #AÇÕES
+
+  //apenas decide qual tipo de busca irá ser feito
   search(type:number){
     if(type == null){
       this.searching = false;
@@ -92,6 +140,7 @@ export class SelectPage {
 
   }
 
+  // buscar itens no banco
   getItems(value:any){
     if(value && value.trim() != ''){
       if(this.type == "number"){
@@ -104,18 +153,44 @@ export class SelectPage {
     }
   }
 
-  cancel(event:any){
-    this.search(null);
-    if(this.searchbar) this.searchbar.value = "";
-    this.navCtrl.pop();
-    return false;
+  //gerar lista aleatoriamente
+  generateList(size){
+    
+    this.checked = this.inicialize(this.checked, this.songs.length, false);
+
+    for(let i = 0; i < size; i++){
+      let index = this.getRandomInt(0, this.songs.length-1);
+      this.checked[index] = true;
+      // alert(this.getRandomInt(0, this.songs.length-1));
+    }
+    this.isChecked(0);
+    this.createList();
   }
 
-  inicialize(vector, size, value){
-    for(let i = 0; i < size; i++) {
-      vector[i] = value;
+  //marca uma lista com uma lista nova e cria a lista
+  check(songs:Songs[]){
+    this.checked = this.inicialize(this.checked, this.songs.length, false);
+
+    for(let i in songs){
+      let index = songs[i].ID;
+      this.checked[index] = true;
     }
-    return vector;
+
+    this.isChecked(0);
+    this.createList();
+
+  }
+
+  //retorna true se existir pelo menos um item selecionado, caso contrário retorna false
+  isChecked(index:number){
+    for (let i in this.checked){
+      if(this.checked[i] == true){
+        this.isEmpty = false;
+        return true;
+      }
+    }
+    this.isEmpty = true;
+    return false;
   }
 
   addInList(){
@@ -175,76 +250,14 @@ export class SelectPage {
     this.list.length < 5 || this.list.length > 20 ? this.showToast("A lista precisa ter entre 5 e 20 músicas", 3000, "bottom") :  alert.present();
     }
   }
-   //mudar para a pagina de gerae lista  
-  pushPageGenerate(){
-    let gerarLista = this.modalCtrl.create(RandomPage, {songs:this.songs});
-    gerarLista.present();
-    gerarLista.onDidDismiss((data)=>{
-      data.list ? this.check(data.list) : null ;
-      // console.log(data.list);
-    });
-    return false;
-  }
 
-   //mudar para a pagina de musica  
-  pushPageMusic(index:number){
-    // this.navCtrl.push(RightNavPage, {index: index});
-    this.presentMusicModal(index);
-    return false;
-  }
-
-
-  //mudar para a pagina de musica por modal  
-  presentMusicModal(index:number) {
-    let musicModal = this.modalCtrl.create(RightNavPage, {index: index, modal:true});
-    musicModal.present();
-  }
-
-  //retorna true se existir pelo menos um item selecionado, caso contrário retorna false
-  isChecked(index:number){
-    for (let i in this.checked){
-      if(this.checked[i] == true){
-        this.isEmpty = false;
-        return true;
-      }
-    }
-    this.isEmpty = true;
-    return false;
-  }
-
-  //gerar lista aleatoriamente
-  generateList(size){
-    
-    this.checked = this.inicialize(this.checked, this.songs.length, false);
-
-    for(let i = 0; i < size; i++){
-      let index = this.getRandomInt(0, this.songs.length-1);
-      this.checked[index] = true;
-      // alert(this.getRandomInt(0, this.songs.length-1));
-    }
-    this.isChecked(0);
-    this.createList();
-  }
+  // #ULTILIDADE
 
   //random entre dois numeros
   getRandomInt(min, max) {
     min = Math.ceil(min);
     max = Math.floor(max);
     return Math.floor(Math.random() * (max - min)) + min;
-  }
-
-  //marca uma lista com uma lista nova e cria a lista
-  check(songs:Songs[]){
-    this.checked = this.inicialize(this.checked, this.songs.length, false);
-
-    for(let i in songs){
-      let index = songs[i].ID;
-      this.checked[index] = true;
-    }
-
-    this.isChecked(0);
-    this.createList();
-
   }
 
 }

@@ -104,7 +104,5 @@ export class ListPage {
 // ES6
 // array.filter( ( elem, index, arr ) => arr.indexOf( elem ) === index );
 
-
-
 }
 
