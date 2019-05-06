@@ -2,7 +2,7 @@ import { PopoverPage } from './../popover/popover';
 import { SongsService } from './../../services/songs.service';
 import { ListsDaoProvider } from './../../providers/general-dao/lists-dao';
 import { ListPage } from './../list/list';
-import { Lists } from './../../models/lists.model';
+import { List } from '../../models/list.model';
 import { SelectPage } from './../select/select';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, PopoverController, ToastController, AlertController } from 'ionic-angular';
@@ -22,7 +22,7 @@ import { Storage } from '@ionic/storage';
 })
 export class ListsPage {
   
-  lists:Lists[] = [];
+  lists:List[] = [];
   expanded:boolean[] = [];
 
   constructor(
@@ -38,34 +38,9 @@ export class ListsPage {
     this.start();
   }
 
+  // #metodos de inicialização
   ionViewDidLoad() {
     console.log('ionViewDidLoad ListPage');
-  }
-
-  expandItem(index:number){   
-      this.expanded[index] = this.expanded[index] ? false : true;
-  }
-
-  pushPageLists(index:number){
-    this.navCtrl.push(ListPage, {lista: this.lists[index], index:index});
-  }
-
-  newList(){
-    this.navCtrl.push(SelectPage, {});
-  }
-
-  deleteList(index:number){
-    this.listsDaoProvider.remove(index);
-    this.expanded.splice(index, 1);
-    this.updateList();
-    return false;
-  }
-
-  inicialize(vector, size, value){
-    for(let i = 0; i < size; i++) {
-      vector[i] = value;
-    }
-    return vector;
   }
 
   start(){
@@ -79,12 +54,34 @@ export class ListsPage {
     });
   }
 
+  // #metodos de navegação
+  pushPageLists(index:number){
+    this.navCtrl.push(ListPage, {lista: this.lists[index], index:index});
+  }
+
+  newList(){
+    this.navCtrl.push(SelectPage, {});
+  }
+
+
+  // #ações da lista
+  deleteList(index:number){
+    this.listsDaoProvider.remove(index);
+    this.expanded.splice(index, 1);
+    this.updateList();
+    return false;
+  }
+
   updateList(){
     this.lists = this.listsDaoProvider.lists;
   }
 
   clearAll(){
     this.listsDaoProvider.clear();
+  }
+  
+  expandItem(index:number){   
+    this.expanded[index] = this.expanded[index] ? false : true;
   }
 
   more(event, options:string[]) {
@@ -93,6 +90,15 @@ export class ListsPage {
     popover.onDidDismiss((data) => this.popoverResponse(data ? data.idx : null));
   }
 
+  // #metodos de ultilidade
+  inicialize(vector, size, value){
+    for(let i = 0; i < size; i++) {
+      vector[i] = value;
+    }
+    return vector;
+  }
+
+  // #comportamentos de interface
   popoverResponse(value:number){
     if(value != 0 && !value) return false;
     switch(value){

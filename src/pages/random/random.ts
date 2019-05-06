@@ -18,10 +18,16 @@ import { IonicPage, NavController, NavParams, ToastController } from 'ionic-angu
 export class RandomPage {
   songs:Songs[] = [];
   range:Songs[] = [];
-  musicas:number = 8;
+  musics:number = 8;
   categories:string[] = ["Oração", "Adoração", "Natal", "Pascoa", "Cristo", "Deus"];
 
-  constructor(public alertCtrl: AlertController, public toastCtrl: ToastController, public viewCtrl: ViewController, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public alertCtrl: AlertController,
+    public toastCtrl: ToastController, 
+    public viewCtrl: ViewController, 
+    public navCtrl: NavController, 
+    public navParams: NavParams,
+  ){
     this.songs = this.navParams.get("songs");
   }
 
@@ -80,7 +86,6 @@ export class RandomPage {
       this.range.push(this.songs[index]);
       // alert(this.getRandomInt(0, this.songs.length-1));
     }
-    
   }
 
   getRandomInt(min, max) {
