@@ -75,9 +75,14 @@ export class SongsDaoProvider {
     let searchResult:Songs[] = [];
     
     for(let i in this.songs){
-      if(this.songs[i].titulo.toLowerCase().indexOf(value.toLowerCase()) != -1){
+      if(this.songs[i].titulo.toLowerCase().indexOf(value.toLowerCase()) != -1 ||
+      this.songs[i].numero.toString().indexOf(value.toLowerCase()) != -1){
         searchResult.push(this.getSong(parseInt(i)));
       }
+    }
+
+    if(searchResult.length > 0){
+      return searchResult;
     }
 
     for(let i in this.songs){
@@ -96,9 +101,7 @@ export class SongsDaoProvider {
     //   }
     // }
 
-    if(searchResult.length > 0){
-      return searchResult;
-    }
+    return searchResult.length > 0 ? searchResult : [];
 
   }
 
@@ -110,9 +113,10 @@ export class SongsDaoProvider {
     return vector;
   }
 
+  // grava uma música favorita no banco
   public favorit(index:number,favorit:boolean){
-    this.songs[index].favorit = this.songs[index].favorit ? false : true;
+    this.songs[index].favorit = !this.songs[index].favorit;
     this.save("Songs", this.songs);
-  }
+  } 
 
 }

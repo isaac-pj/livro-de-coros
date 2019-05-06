@@ -4,7 +4,7 @@ import { RandomPage } from './../pages/random/random';
 import { SlidesPage } from './../pages/slides/slides';
 import { CifrasPage } from './../pages/cifras/cifras';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule } from '@angular/core';
+import { ErrorHandler, NgModule, LOCALE_ID } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { IonicStorageModule } from '@ionic/storage';
 import { DatePipe } from '@angular/common';
@@ -25,10 +25,15 @@ import { SongsService } from './../services/songs.service';
 import { ListsDaoProvider } from '../providers/general-dao/lists-dao';
 import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
 
+import localePtBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+registerLocaleData(localePtBr);
+
 @NgModule({
   declarations: [
     MyApp,
     HomePage,
+    //para gerar um build de production comente os modulos abaixo
     ListPage,
     ListsPage,
     RightNavPage,
@@ -72,6 +77,7 @@ import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
     ListsDaoProvider,
     SongsDaoProvider,
     DatePipe,
+    { provide: LOCALE_ID, useValue: 'pt-BR' }
   ]
 })
 export class AppModule {
