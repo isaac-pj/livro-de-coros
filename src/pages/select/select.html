@@ -41,7 +41,7 @@
           <p>{{song.tags}}</p>
         </ion-label>
 
-        <ion-checkbox item-end color="dark" [(ngModel)]="checked[song.ID]" (ionChange)="isChecked()" ></ion-checkbox>
+        <ion-checkbox item-end color="dark" (tap)="check(song)" [(ngModel)]="checked[song.ID]" (ionChange)="isEmpty()" ></ion-checkbox>
       
       </ion-item>
     </ion-list>
@@ -58,7 +58,7 @@
       <button ion-button color="secondaryTextColor" clear (tap)="cancel()">
         Cancelar
       </button>
-      <button ion-button color="secondary" clear [disabled]="isEmpty" (tap)="createList()">
+      <button ion-button color="secondary" clear [disabled]="isEmpty()" (tap)="createList()">
         Criar Lista
       </button>
   </ion-toolbar>

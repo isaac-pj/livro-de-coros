@@ -1,7 +1,7 @@
 import { RandomPage } from './../random/random';
 import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
 import { ListsPage } from './../lists/lists';
-import { Lists } from './../../models/lists.model';
+import { List } from './../../models/list.model';
 
 import { RightNavPage } from './../right-nav/right-nav';
 import { SongsService } from './../../services/songs.service';
@@ -27,14 +27,13 @@ export class SelectPage {
 
   @ViewChild('searchbar') searchbar;
 
-  isEmpty:boolean = true;
   searching:boolean = false;
   selecting:boolean = false;
-  checked:boolean[] = [];
   type:string = "text";
   placeHolder:string = "Search"
   songs:Songs[] = this.songsDao.getSongs();
   list:Songs[] = [];
+  checked:boolean[] = [];
 
   constructor(
     public toastCtrl: ToastController, 
@@ -55,22 +54,17 @@ export class SelectPage {
     console.log('ionViewDidLoad SelectPage');
   }
 
-  inicialize(vector, size, value){
-    for(let i = 0; i < size; i++) {
-      vector[i] = value;
-    }
-    return vector;
-  }
-
   // #NAVEGAÇÂO
 
   //mudar para a pagina de gerae lista  
   pushPageGenerate(){
-    let gerarLista = this.modalCtrl.create(RandomPage, {songs:this.songs});
-    gerarLista.present();
-    gerarLista.onDidDismiss((data)=>{
-      data.list ? this.check(data.list) : null ;
-      // console.log(data.list);
+    let generateList = this.modalCtrl.create(RandomPage, {songs:this.songs});
+    generateList.present();
+    generateList.onDidDismiss((data)=>{
+      if(data.list){
+        this.list = data.list
+        this.createList();
+      }
     });
     return false;
   }
@@ -89,6 +83,35 @@ export class SelectPage {
   presentMusicModal(index:number) {
     let musicModal = this.modalCtrl.create(RightNavPage, {index: index, modal:true});
     musicModal.present();
+  }
+  
+  // axibe o modal para o usuario entra com as informações
+  showCreateListAlert(nagativeAction, positiveAction) {
+    return this.alertCtrl.create({
+    title: 'Como devo Chamar?',
+    inputs: [
+      {
+        name: 'listname',
+        placeholder: 'Nome'
+      }
+    ],
+    buttons: [
+      {
+        text: 'Cancelar',
+        role: 'cancel',
+        cssClass: 'negativeAction',
+        handler: data => {
+          nagativeAction()
+        }
+      },
+      {
+        text: 'Salvar',
+        handler: data => {
+          positiveAction(data.listname)
+        }
+      }
+    ]
+    });
   }
 
   showToast(msg, time, position){
@@ -153,105 +176,56 @@ export class SelectPage {
     }
   }
 
-  //gerar lista aleatoriamente
-  generateList(size){
-    
-    this.checked = this.inicialize(this.checked, this.songs.length, false);
-
-    for(let i = 0; i < size; i++){
-      let index = this.getRandomInt(0, this.songs.length-1);
-      this.checked[index] = true;
-      // alert(this.getRandomInt(0, this.songs.length-1));
-    }
-    this.isChecked(0);
-    this.createList();
+  // adiciona uma música na lista
+  check(song:Songs){
+    let index = this.list.indexOf(song)
+    index === -1 ? this.add(song) : this.remove(index)
   }
 
-  //marca uma lista com uma lista nova e cria a lista
-  check(songs:Songs[]){
-    this.checked = this.inicialize(this.checked, this.songs.length, false);
-
-    for(let i in songs){
-      let index = songs[i].ID;
-      this.checked[index] = true;
-    }
-
-    this.isChecked(0);
-    this.createList();
-
+  add(song){
+    this.list.push(song)
   }
 
-  //retorna true se existir pelo menos um item selecionado, caso contrário retorna false
-  isChecked(index:number){
-    for (let i in this.checked){
-      if(this.checked[i] == true){
-        this.isEmpty = false;
-        return true;
-      }
-    }
-    this.isEmpty = true;
-    return false;
+  remove(index:number){
+    this.list.splice(index, 1)
   }
 
-  addInList(){
-    this.list = [];
-    let songs:Songs[] = this.songsDao.getSongs();
-    let founded:boolean = false;
+  // cria uma nova lista e exibe o alert
+  createList(){
 
-    for(let i in this.checked) {
-      if(this.checked[i] == true){
-        this.list.push(songs[i]);
-        founded = true;
-      }
-    }
-    return founded;
-  }
-
-  createList() {
-    if(this.addInList()){
-      let alert = this.alertCtrl.create({
-      title: 'Como devo Chamar?',
-      inputs: [
-        {
-          name: 'listname',
-          placeholder: 'Nome'
+    if(!this.isEmpty()){
+      const alert = this.showCreateListAlert( 
+      () => null, 
+      (listname) => {
+        if(listname){
+          let list = new List(listname,
+          this.datePipe.transform(new Date(), "dd 'de' MMMM 'de' yyyy"),
+          this.datePipe.transform(new Date(), "HH:mm"), "", this.list);
+          
+          this.listsDaoProvider.insert(list);
+          this.navCtrl.setRoot(ListsPage, {});
         }
-      ],
-      buttons: [
-        {
-          text: 'Cancelar',
-          role: 'cancel',
-          cssClass: 'negativeAction',
-          handler: data => {
+      });
 
-            console.log('Cancel clicked');
-            this.list = [];
-
-          }
-        },
-        {
-          text: 'Salvar',
-          handler: data => {
-
-            console.log('Create clicked');
-            if(data.listname && this.list.length > 0){
-
-              let list = new Lists(data.listname,
-              this.datePipe.transform(new Date(), "dd 'de' MMMM 'de' yyyy"),
-              this.datePipe.transform(new Date(), "HH:mm"), "", this.list);
-              this.listsDaoProvider.insert(list);
-              this.navCtrl.setRoot(ListsPage, {});
-
-            }
-          }
-        }
-      ]
-    });
-    this.list.length < 5 || this.list.length > 20 ? this.showToast("A lista precisa ter entre 5 e 20 músicas", 3000, "bottom") :  alert.present();
+      this.list.length < 5 || this.list.length > 20 ?
+      this.showToast(
+        "A lista precisa ter entre 5 e 20 músicas", 3000, "bottom") :
+      alert.present();
     }
   }
 
-  // #ULTILIDADE
+  // #SUPORTE
+
+  isEmpty(){
+    return this.list.length > 0 ? false : true
+  }
+
+  inicialize(vector, size, value){
+    for(let i = 0; i < size; i++) {
+      vector[i] = value;
+    }
+    return vector;
+  }
 
   //random entre dois numeros
   getRandomInt(min, max) {

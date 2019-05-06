@@ -1,7 +1,7 @@
 import { ListsDaoProvider } from './../../providers/general-dao/lists-dao';
 import { RightNavPage } from './../right-nav/right-nav';
 import { Songs } from './../../models/songs.model';
-import { Lists } from './../../models/lists.model';
+import { List } from '../../models/list.model';
 import { Component, ViewChild, ElementRef } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
@@ -21,7 +21,7 @@ export class ListPage {
 
   @ViewChild('input') input: ElementRef;
   index:number;
-  list:Lists;
+  list:List;
   songs:Songs[] = [];
   checked:Songs[] = [];
   expanded:boolean = false;

@@ -2,7 +2,7 @@ import { PopoverPage } from './../popover/popover';
 import { SongsService } from './../../services/songs.service';
 import { ListsDaoProvider } from './../../providers/general-dao/lists-dao';
 import { ListPage } from './../list/list';
-import { Lists } from './../../models/lists.model';
+import { List } from '../../models/list.model';
 import { SelectPage } from './../select/select';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, PopoverController, ToastController, AlertController } from 'ionic-angular';
@@ -22,7 +22,7 @@ import { Storage } from '@ionic/storage';
 })
 export class ListsPage {
   
-  lists:Lists[] = [];
+  lists:List[] = [];
   expanded:boolean[] = [];
 
   constructor(

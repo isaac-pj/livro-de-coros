@@ -1,4 +1,4 @@
-import { Lists } from './../../models/lists.model';
+import { List } from '../../models/list.model';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
@@ -6,7 +6,7 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class ListsDaoProvider {
 
-  lists:Lists[] = [];
+  lists:List[] = [];
   
   //inicializa o arquivo
   constructor(private storage:Storage) {
@@ -28,18 +28,18 @@ export class ListsDaoProvider {
 
   //grava dados no banco a partir 
   // de uma chave e um valor
-  public save(key:string, lists:Lists[]){
+  public save(key:string, lists:List[]){
     this.storage.set(key, lists);
   }
 
   //inseri dados na lista
-  public insert(list:Lists){
+  public insert(list:List){
     this.lists.unshift(list);
     this.save("Lists", this.lists);
   }
 
   // atualiza algo na lista
-  public update(index:number, list:Lists){
+  public update(index:number, list:List){
     this.lists[index] = list;    
     this.save("Lists", this.lists);
   }
