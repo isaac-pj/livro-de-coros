@@ -1,4 +1,4 @@
-import { Lists } from './../../models/lists.model';
+import { List } from '../../models/list.model';
 import { Injectable } from '@angular/core';
 import { Storage } from '@ionic/storage';
 
@@ -6,12 +6,16 @@ import { Storage } from '@ionic/storage';
 @Injectable()
 export class ListsDaoProvider {
 
-  lists:Lists[] = [];
+  lists:List[] = [];
   
+  //inicializa o arquivo
   constructor(private storage:Storage) {
     this.start();
   }
 
+  // verifica se os dados já existem 
+  // no banco se sim, ele os busca
+  // se não, cria e depois busca
   public start(){
     this.storage.get("Lists").then((value) => {
       if(value){
@@ -22,20 +26,25 @@ export class ListsDaoProvider {
     });
   }
 
-  public save(key:string, lists:Lists[]){
+  //grava dados no banco a partir 
+  // de uma chave e um valor
+  public save(key:string, lists:List[]){
     this.storage.set(key, lists);
   }
 
-  public insert(list:Lists){
+  //inseri dados na lista
+  public insert(list:List){
     this.lists.unshift(list);
     this.save("Lists", this.lists);
   }
 
-  public update(index:number, list:Lists){
+  // atualiza algo na lista
+  public update(index:number, list:List){
     this.lists[index] = list;    
     this.save("Lists", this.lists);
   }
 
+  // remove algo da lista
   public remove(index:number){
     this.lists.splice(index,1);
     this.save("Lists", this.lists);
@@ -53,10 +62,12 @@ export class ListsDaoProvider {
     // });
   // }
 
+  // apaga todas as listas
   public clear(){
     this.storage.remove("Lists");
   }
 
+  // reseta todas as configurações do app
   public reset(){
     this.storage.clear().then((value) => {
       console.log("Banco Apagado!!!");
