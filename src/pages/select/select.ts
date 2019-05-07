@@ -213,17 +213,6 @@ export class SelectPage {
       alert.present();
     }
   }
-  
-  //mudar para a pagina de gerar lista  
-  pushPageGenerate(){
-    let gerarLista = this.modalCtrl.create(RandomPage, {songs:this.songs});
-    gerarLista.present();
-    gerarLista.onDidDismiss((data)=>{
-      data.list ? this.check(data.list) : null ;
-      // console.log(data.list);
-    });
-    return false;
-  }
 
   // #SUPORTE
 
