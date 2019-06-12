@@ -27,6 +27,8 @@ import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
 
 import localePtBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
+import { DataStorageProvider } from '../providers/data-storage/data-storage';
+import { SetupProvider } from '../providers/setup/setup';
 registerLocaleData(localePtBr);
 
 @NgModule({
@@ -77,7 +79,9 @@ registerLocaleData(localePtBr);
     ListsDaoProvider,
     SongsDaoProvider,
     DatePipe,
-    { provide: LOCALE_ID, useValue: 'pt-BR' }
+    { provide: LOCALE_ID, useValue: 'pt-BR' },
+    DataStorageProvider,
+    SetupProvider
   ]
 })
 export class AppModule {

@@ -4,9 +4,17 @@
       <ion-icon name="menu"></ion-icon>
     </button>
     <ion-title *ngIf="!searching" >Início</ion-title>
-    <ion-searchbar #searchbar [class.hide]="!searching" (ionCancel)="search()" [showCancelButton]="true" [placeholder]="placeHolder" [type]="type" (ionInput)="getItems($event.target.value)"></ion-searchbar>
+    <ion-searchbar 
+      #searchbar 
+      [placeholder]="placeHolder" 
+      [class.hide]="!searching" 
+      [type]="type" 
+      [showCancelButton]="true" 
+      (ionCancel)="searchClose()" 
+      (ionInput)="getItems($event.target.value)">
+    </ion-searchbar>
     <ion-buttons *ngIf="!searching" start>
-      <button (click)="search(2)" ion-button icon-only color="royal">
+      <button (click)="searchByString()" ion-button icon-only color="royal">
         <ion-icon name="search"></ion-icon>
       </button>
     </ion-buttons>
@@ -15,13 +23,29 @@
 
 <ion-content>
 
-  <ion-list [virtualScroll]="songs" (press)="pushPageSelect()" no-lines virtualTrackBy>
-    <section padding *ngIf="songs.length == 0" >
+  <ion-list 
+    [virtualScroll]="songs" 
+    (press)="pushPageSelect()" 
+    approxItemHeight="67px" 
+    no-lines 
+    virtualTrackBy>
+
+    <section padding *ngIf="songs.length == 0 && searching" >
       <h2>Sinto muito! Nenhum resultado correspondente :(</h2>
-      <p>Tente novamente. Você pode buscar por número, título ou mesmo por um trecho na música</p>      
+      <p>Tente novamente. Você pode buscar por número, 
+        título ou mesmo por um trecho na música</p>      
     </section>
-    <ion-item *virtualItem="let song; let i = index" (click)="pushPageMusic(song.ID)">
-      <ion-icon item-start name="heart" color="light" [class.favorit]="song.favorit" (click)="favorit(song.ID); $event.stopPropagation();"></ion-icon>
+    
+    <ion-item 
+      *virtualItem="let song; let i = index" 
+      (click)="pushPageMusic(song.ID)">
+      <ion-icon 
+        [class.favorit]="song.favorit"
+        (click)="$event.stopPropagation(); favorit(song.ID);"
+        item-start 
+        name="heart" 
+        color="light">
+      </ion-icon>
       <ion-label>
         <h2>{{song.numero+". "}}{{song.titulo}}</h2>
         <p>{{song.tags}}</p>
@@ -30,7 +54,11 @@
   </ion-list>
 
   <ion-fab right bottom>
-    <button (tap)="search(1)" ion-fab><ion-icon name="keypad"></ion-icon></button>
+    <button 
+      (tap)="searchByNumber()" 
+      ion-fab><ion-icon 
+      name="keypad">
+    </ion-icon></button>
   </ion-fab>
 
 </ion-content>

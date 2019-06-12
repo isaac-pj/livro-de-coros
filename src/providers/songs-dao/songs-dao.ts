@@ -1,7 +1,9 @@
 import { Songs } from './../../models/songs.model';
 import { SongsService } from './../../services/songs.service';
 import { Injectable } from '@angular/core';
-import { Storage } from '@ionic/storage';
+
+// import { Storage } from '@ionic/storage';
+import { DataStorageProvider } from '../data-storage/data-storage';
 
 /*
   Generated class for the FavoritesDaoProvider provider.
@@ -11,43 +13,30 @@ import { Storage } from '@ionic/storage';
 */
 @Injectable()
 export class SongsDaoProvider {
+
+  // //inicializa a primeira vez pegando do arquivo
+  // start(){
+  //   // this.storage.get("Songs").then((value) => {
+  //   //   if(value){
+  //   //     this.songs = value;
+  //   //   }else{
+  //   //     this.songs = this.songsService.getSongs();
+  //   //     this.storage.set("Songs", this.songs);
+  //   //   }
+  //   // });
+  // }
   
-  songs:Songs[] = [];
+  private songs:Songs[] = [];
   
-  constructor(private storage:Storage, public songsService: SongsService) {
-      this.start();
+  constructor(
+    private dataStorageProvider: DataStorageProvider, 
+    public songsService: SongsService) {}
+
+  private start(){
+    return this.update()
   }
 
-  //inicializa a primeira vez pegando do arquivo
-  start(){
-    this.storage.get("Songs").then((value) => {
-      if(value){
-        this.songs = value;
-      }else{
-        this.songs = this.songsService.getSongs();
-        this.storage.set("Songs", this.songs);
-      }
-    });
-  }
-
-  //recebe uma chave e salva algo no banco de dados
-  public save(key:string, value:any[]){
-    this.storage.set(key, value);
-  }
-
-  //apaga a chave Songs
-  public clear(){
-    this.storage.remove("Songs");
-  }
-
-  //apaga todo o banco de dados
-  public reset(){
-    this.storage.clear().then((value) => {
-      console.log("Banco Apagado!!!");
-    });
-  }
-
-  // retorna todos os coros
+  // retorna todos os coros this.update() aqui gera loop infinito
   getSongs() {
     return this.songs;
   }
@@ -56,9 +45,44 @@ export class SongsDaoProvider {
   getSong(index: number) {
     return (this.songs[index]);
   }
+  
+
+  // #ACTIONS
+  
+  public update(){
+    return this.dataStorageProvider.get("Songs")
+    .then((value) => {console.log(value); return this.songs = value ? value : []})
+  }
+
+  //apaga a chave Songs
+  public clear(){
+    this.dataStorageProvider.remove("Songs");
+  }
+
+  // grava uma música favorita no banco
+  public favorit(index:number){
+    console.log('foi chamado')
+    this.songs[index].favorit = !this.songs[index].favorit;
+    return this.dataStorageProvider.insert("Songs", this.songs)
+    .then(() => this.update());
+  } 
+
+  // #SEARCH
+  isDuplicated(searchResult:Array<Songs>, song:Songs){
+    let test = false;
+    for(let i in searchResult){
+      test = searchResult[i].ID == song.ID ? true : test;
+    }
+    return test;
+  }
+
+  isValid(value){
+    return value && value.trim() !== '' ? true : false;
+  }
 
   //retorno o resultado de uma busca que bater com o numero passado
   searchByNumber(value:number){
+    if(!this.isValid(value)) return this.songs;
     let searchResult:Songs[] = [];
     
     for(let i in this.songs){
@@ -72,6 +96,7 @@ export class SongsDaoProvider {
 
   //retorno o resultado de uma busca que bater com a string passada  
   searchByString(value:string){
+    if(!this.isValid(value)) return this.songs;
     let searchResult:Songs[] = [];
     
     for(let i in this.songs){
@@ -81,42 +106,14 @@ export class SongsDaoProvider {
       }
     }
 
-    if(searchResult.length > 0){
-      return searchResult;
-    }
-
     for(let i in this.songs){
-      if(JSON.stringify(this.songs[i].letra).toLowerCase().indexOf(value.toLowerCase()) != -1){
+      if(JSON.stringify(this.songs[i].letra).toLowerCase().indexOf(value.toLowerCase()) != -1
+      && !this.isDuplicated(searchResult, this.songs[i])){
         searchResult.push(this.getSong(parseInt(i)));
       }
     }
 
-    // if(searchResult.length > 0){
-    //   return searchResult;
-    // }else{
-    //   for(let i in this.songs){
-    //     if(JSON.stringify(this.songs[i].letra).toLowerCase().indexOf(value.toLowerCase()) != -1){
-    //       searchResult.push(this.getSong(parseInt(i)));
-    //     }
-    //   }
-    // }
-
     return searchResult.length > 0 ? searchResult : [];
-
   }
-
-  //inicializa um vetor com o valor recebido
-  inicialize(vector:any[], size:number, value:any){
-    for(let i = 0; i < size; i++) {
-      vector[i] = value;
-    }
-    return vector;
-  }
-
-  // grava uma música favorita no banco
-  public favorit(index:number,favorit:boolean){
-    this.songs[index].favorit = !this.songs[index].favorit;
-    this.save("Songs", this.songs);
-  } 
 
 }
