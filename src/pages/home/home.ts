@@ -19,7 +19,6 @@ export class HomePage {
   searching:boolean = false;
   type:string = "text";
   placeHolder:string = "Search";
-  songs:Songs[] = [];
 
   constructor(
     public songsService: SongsService,
@@ -35,62 +34,52 @@ export class HomePage {
 
   // #LIFECYCLE
   ionViewDidEnter(){
-    this.start()
+    this.songsDao.update();
   }
 
   // #ACTIONS
 
-  start(){
-    this.list();
-  }
-
   list(){
-    this.songsDao.update().then(()=>{
-      this.songs = this.getSongs();
-    })
-  }
-
-  // retorna lista de songs
-  private getSongs(){
-    return this.songsDao.getSongs();
+    return !this.searching ? 
+    this.songsDao.getSongs() :
+    this.getSearchItems();
   }
   
   //realizar busca passando o tipo
-  getItems(value:any){
-    this.songs = this.type == "number" ?
-    this.songsDao.searchByNumber(value) :
-    this.songsDao.searchByString(value);
+  private getSearchItems(){
+    return this.type == "number" ?
+    this.songsDao.searchByNumber(this.searchbar.value) :
+    this.songsDao.searchByString(this.searchbar.value);
   }
-
-  searchByNumber(){
-    this.type = "number";
-    this.placeHolder = "Digite o numero:";
-    this.search();
-  }
-
-  searchByString(){
-    this.type = "text";
-    this.placeHolder = "Digite o nome ou um trecho:";
-    this.search();
-  }
-
-  search(){
+  
+  private search(){
     this.searching = true;
     setTimeout(() => {
       this.searchbar.setFocus();
     },150);
   }
 
-  searchClose(){
+  public changeSearchToNumber(){
+    this.type = "number";
+    this.placeHolder = "Digite o numero:";
+    this.search();
+  }
+
+  public changeSearchToString(){
+    this.type = "text";
+    this.placeHolder = "Digite o nome ou um trecho:";
+    this.search();
+  }
+
+  public searchClose(){
     this.searching = false;
-    this.songs = this.getSongs();
-    console.log('cancelei')
+    this.searchbar.value = "";
+    this.songsDao.update();
   }
 
    //favoritar uma musica
   favorit(index:number){
-    this.songsDao.favorit(index)
-    .then(()=> this.getSongs());
+    this.songsDao.favorit(index);
   }
 
   // #NAVIGATION
@@ -105,10 +94,9 @@ export class HomePage {
   //mudar para a pagina de musica  
   pushPageMusic(index:number){
     // this.presentProfileModal(index);
-
+    
     this.navCtrl.push(RightNavPage, {index: index});
-    this.searchbar.value = "";
-    this.searchClose();
+    if(this.type == 'number') this.searchClose();
     return false;
   }
 

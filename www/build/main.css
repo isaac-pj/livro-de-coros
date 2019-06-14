@@ -65460,6 +65460,10 @@ page-home .favorit {
   color: red !important;
 }
 
+page-home .color {
+  color: #f4f4f4 !important;
+}
+
 page-home .hide {
   max-width: 0px;
   max-height: 0px;

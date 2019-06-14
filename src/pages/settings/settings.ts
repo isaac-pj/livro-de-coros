@@ -1,4 +1,4 @@
-import { DataStorageProvider } from './../../providers/data-storage/data-storage.ts';
+import { DataStorageProvider } from './../../providers/data-storage/data-storage';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 

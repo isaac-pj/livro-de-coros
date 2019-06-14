@@ -29,12 +29,10 @@ export class SongsDaoProvider {
   private songs:Songs[] = [];
   
   constructor(
-    private dataStorageProvider: DataStorageProvider, 
+    private dataStorageProvider: DataStorageProvider,
     public songsService: SongsService) {}
 
-  private start(){
-    return this.update()
-  }
+  // #ACTIONS
 
   // retorna todos os coros this.update() aqui gera loop infinito
   getSongs() {
@@ -46,26 +44,23 @@ export class SongsDaoProvider {
     return (this.songs[index]);
   }
   
-
-  // #ACTIONS
-  
-  public update(){
-    return this.dataStorageProvider.get("Songs")
-    .then((value) => {console.log(value); return this.songs = value ? value : []})
+  //atualiza a lista de musicas
+  update(){
+    return this.dataStorageProvider.get("Songs").then(
+      (songs) => this.songs = songs);
   }
+
+  // grava uma música favorita no banco
+  public favorit(index:number){
+    this.songs[index].favorit = !this.songs[index].favorit;
+    return this.dataStorageProvider.insert("Songs", this.songs)
+    .then(() => this.update());
+  } 
 
   //apaga a chave Songs
   public clear(){
     this.dataStorageProvider.remove("Songs");
   }
-
-  // grava uma música favorita no banco
-  public favorit(index:number){
-    console.log('foi chamado')
-    this.songs[index].favorit = !this.songs[index].favorit;
-    return this.dataStorageProvider.insert("Songs", this.songs)
-    .then(() => this.update());
-  } 
 
   // #SEARCH
   isDuplicated(searchResult:Array<Songs>, song:Songs){
