@@ -1,4 +1,4 @@
-import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
+import { DataStorageProvider } from './../../providers/data-storage/data-storage';
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController, ToastController } from 'ionic-angular';
 
@@ -16,7 +16,12 @@ import { IonicPage, NavController, NavParams, AlertController, ToastController }
 })
 export class SettingsPage {
 
-  constructor(public toastCtrl:ToastController, public alertCtrl: AlertController, public songsDao: SongsDaoProvider, public navCtrl: NavController, public navParams: NavParams) {
+  constructor(
+    public toastCtrl:ToastController,
+    public alertCtrl: AlertController, 
+    public dataStorageProvider: DataStorageProvider, 
+    public navCtrl: NavController, 
+    public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
@@ -24,7 +29,14 @@ export class SettingsPage {
   }
 
   reset(){
-    this.showConfirm("Deseja apagar tudo?", "Todos os dados serão apagados incluindo as listas criadas e os favoritos");
+    this.showConfirm("Deseja apagar tudo?", 
+    "Todos os dados serão apagados incluindo as listas criadas e os favoritos");
+  }
+
+
+  //apaga todo o banco de dados
+  private clear(){
+    this.dataStorageProvider.clear();
   }
 
   showConfirm(title:string, msg:string) {
@@ -42,12 +54,15 @@ export class SettingsPage {
           text: 'Sim',
           handler: (positive) => {
             console.log('Agree clicked');
-            this.songsDao.reset();
-            this.showToast("Todos os dados foram apagados!", 3000, "bottom");
+            this.dataStorageProvider.clear();
+            this.showToast("Todos os dados foram apagados!", 1000, "bottom");
             setTimeout(() => {
-              window.location.reload();
+              window.location.reload(true);
+              // window.location.href = 'index.html';
+              // navigator.app.loadUrl("file:///android_asset/www/index.html");
               // document.location.href = 'index.html';
-            },3000);
+              // window.location.href = 'index.html'
+            },1000);
           }
         }
       ]

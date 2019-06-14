@@ -11,6 +11,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { ListsPage } from './../pages/lists/lists';
+import { SetupProvider } from '../providers/setup/setup';
 
 @Component({
   templateUrl: 'app.html'
@@ -22,7 +23,11 @@ export class MyApp {
 
   pages: Array<{title: string, component: any, icon:string}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(
+    public platform: Platform,
+    public statusBar: StatusBar,
+    public splashScreen: SplashScreen,
+    private setupProvider: SetupProvider) {
     this.initializeApp();
 
     // used for an example of ngFor and navigation
@@ -47,10 +52,9 @@ export class MyApp {
       // Here you can do any higher level native things you might need.
       // this.statusBar.styleDefault(); 
       // this.statusBar.styleBlackTranslucent()
-
+      this.setupProvider.start();
       this.statusBar.overlaysWebView(false);
       this.statusBar.backgroundColorByHexString('#008ba3');
-
       this.splashScreen.hide();
     });
   }
