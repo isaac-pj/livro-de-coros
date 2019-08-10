@@ -1,5 +1,4 @@
 import { Songs } from './../models/songs.model';
-import { Storage } from '@ionic/storage';
 
 export class SongsService {
   private songs: Songs[] = 
