@@ -1,0 +1,95 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Contato</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-grid>
+    <ion-row>
+      <ion-col size="12">
+        <span class="title">Judah's Lion Studio</span>    
+      </ion-col>
+      <ion-col>
+        <span 
+          (click)="expand()" 
+          class="expand-wrapper">
+          {{expanded ? text : short}}
+        </span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <span class="label">
+          e-mail:
+        </span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="primary">judahslionstudio@gmail.com</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <span class="label">Responsável:</span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="primary">Isaac Brandão Lima</span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="secondary">Designer Digital - Universidade Federal do Ceará</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <span class="label">Contato:</span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="primary">isaac-pj@hotmail.com</span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="primary">+55 88 997.138.594</span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="secondary">www.facebook.com/isaac.lima.7549</span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="secondary">www.instagram.com/isaac_pj</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <span class="label">Github:</span>
+      </ion-col>
+      <ion-col size="12">
+        <span class="primary">isaac-pj.github.io</span>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col size="12">
+        <span class="label">Behance:</span>
+      </ion-col>
+      <ion-col>
+        <span class="primary">www.behance.net/isaac-pjcf95</span>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+  <ion-row>
+    <ion-button class="whatsapp" (click)="load(phone)" color="whatsapp" shape="round" size="small" expand="full">
+      <ion-icon name="logo-whatsapp" > </ion-icon>
+      <!-- <label *ngIf="orientation == 'horizontal'"  for="">whatsapp</label> -->
+    </ion-button>
+    <ion-button class="facebook" (click)="load(facebook)" color="facebook" shape="round" size="small" expand="full">
+      <ion-icon name="logo-facebook" > </ion-icon>
+      <!-- <label *ngIf="orientation == 'horizontal'" for="">facebook</label>       -->
+    </ion-button>
+    <ion-button class="email" (click)="load(mail)" color="email" shape="round" size="small" expand="full">
+      <ion-icon name="mail" > </ion-icon>
+      <!-- <label *ngIf="orientation == 'horizontal'" for="">e-mail</label> -->
+    </ion-button>
+  </ion-row>
+  
+</ion-content>

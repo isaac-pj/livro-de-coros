@@ -1,0 +1,86 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{list.name}}</ion-title>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content>
+
+  <ion-toolbar color="light">
+    <ion-item lines="none" color="light" (click)="expandItem($event)">
+      <ion-label color="dark">
+        COMENTÀRIOS
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button [class.rotate]="expanded" icon-only color="dark" (click)="expandItem($event)">
+          <ion-icon name="arrow-dropdown"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-toolbar>
+
+  <div class="expand-wrapper" [class.collapsed]="!expanded" [class.expanded]="expanded">
+
+    <!--<ion-input type="text-area" placeholder="Escreva um lembrete ou comentário!  :)"></ion-input>-->
+    <ion-textarea #input [disabled]="!editing" [value]="comments" rows="3" maxLength="250" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
+    <ion-toolbar color="light" text-right>
+      <ion-button *ngIf="!editing" color="dark" fill="clear" (click)="clear()">
+        Limapar
+      </ion-button>
+      <ion-button *ngIf="!editing" color="secondary" fill="clear" (click)="edit();">
+        Editar
+      </ion-button>
+      <ion-button *ngIf="editing" color="dark" fill="clear" (click)="cancel(input.value); input.value = comments;">
+        Cancelar
+      </ion-button>
+      <ion-button *ngIf="editing" color="secondary" fill="clear" (click)="save(input.value);">
+        Salvar
+      </ion-button>
+    </ion-toolbar>
+
+  </div>
+
+  <ion-list lines="none">
+    <ion-item 
+      *ngFor="let song of songs; let i = index;"
+      (click)="goToMusic(song.ID)"
+      [routerLink]="['/music/'+song.ID]"
+      [routerDirection]="'forward'"
+      routerLinkActive="router-link-active">
+      <ion-label>
+        {{song.numero}}. {{song.titulo}}
+      </ion-label>
+      <ion-button class="wrapper" fill="clear">
+        <ion-checkbox
+          color="dark" 
+          (click)="check($event, song)" 
+          [checked]="desmarcado">
+        </ion-checkbox>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+  <ion-list lines="none" *ngIf="checked.length > 0" >
+    <ion-list-header>
+        <ion-label color="medium">cantadas</ion-label>
+    </ion-list-header>
+    <ion-item class="cantadas" *ngFor="let song of checked; let i = index;">
+      <ion-label>
+        {{song.numero}}. {{song.titulo}}
+      </ion-label>
+      <!--<ion-checkbox item-end color="dark" [(ngModel)]="checked[song.ID]" (ionChange)="isChecked()" ></ion-checkbox>-->
+      <ion-button 
+        class="wrapper" 
+        fill="clear" 
+        (click)="uncheck(i); $event.stopPropagation();">
+        <ion-checkbox item-end color="dark" [checked]="marcado" ></ion-checkbox>
+      </ion-button>
+    </ion-item>
+  </ion-list>
+
+</ion-content>

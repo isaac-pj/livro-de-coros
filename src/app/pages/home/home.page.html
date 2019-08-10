@@ -1,0 +1,64 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start" *ngIf="!searching">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title *ngIf="!searching" >Início</ion-title>
+    <ion-searchbar 
+      #searchbar 
+      [placeholder]="placeHolder"
+      [class.hide]="!searching"
+      [type]="type"
+      [showCancelButton]="true" 
+      (keyup)="getSearchItems()"
+      (ionClear)="searchClear()"
+      (ionCancel)="searchClose()">
+    </ion-searchbar>
+    <ion-buttons *ngIf="!searching" slot="end">
+      <ion-button (click)="changeSearchToString()">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>  
+</ion-header>
+
+<ion-content class="scroll-content">
+
+  <section padding *ngIf="searching && songs.length == 0" >
+    <h2>Sinto muito! Nenhum resultado correspondente :(</h2>
+    <p>Tente novamente. Você pode buscar por número, 
+      título ou mesmo por um trecho na música</p>      
+  </section>
+  
+  <ion-virtual-scroll 
+    [items]="songs"
+    approxItemHeight="65px">
+    <ion-item
+      *virtualItem="let song; let i = index" 
+      (click)="goToMusic(song.ID)"
+      lines="none"
+      [routerLink]="['/music/'+song.ID]"
+      [routerDirection]="'forward'"
+      routerLinkActive="router-link-active" >
+      <ion-icon
+        #icon
+        id="{{i}}"
+        [ngClass]="song.favorit ? 'favorite-color' : 'normal-color'"
+        (click)="favorit($event, song.ID)"
+        slot="start"
+        name="heart">
+      </ion-icon>
+      <ion-label>
+        <h2>{{song.numero+". "}}{{song.titulo}}</h2>
+        <p>{{song.tags}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-virtual-scroll>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="changeSearchToNumber()">       
+        <ion-icon name="keypad"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

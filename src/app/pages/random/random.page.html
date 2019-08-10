@@ -1,0 +1,65 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Gerar Lista</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()" ion-button icon-only>
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+  <ion-list>
+    <ion-item lines="none">
+      <ion-label>Quantida de Musicas</ion-label>
+      <ion-badge item-end>{{musics}}</ion-badge>
+    </ion-item>
+    <ion-item lines="none">
+      <ion-range min="5" max="20" step="1" snaps="true" pin="true" [(ngModel)]="musics" color="primary">
+        <ion-label range-left>5</ion-label>
+        <ion-label range-right>20</ion-label>
+      </ion-range>
+    </ion-item>
+    <!--<ion-item>
+      <ion-label>Categorias</ion-label>
+      <ion-select [(ngModel)]="categoria" multiple="true">
+        <ion-option *ngFor="let category of categories; let i = index;"  value="i">{{category}}</ion-option>
+      </ion-select>
+    </ion-item>-->
+  </ion-list>
+  <ion-list>
+    <p *ngIf="range.length == 0">
+      Toque no botão abaixo para criar uma lista aleátoriamente
+    </p>
+    <ion-item lines="none" *ngFor="let song of range; let i = index" >
+      <ion-buttons slot="start">
+        <ion-button (click)="update(i)" color="dark" fill="clear" slot="icon-only">
+          <ion-icon name="refresh"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-label>
+        {{song.numero}}. {{song.titulo}}
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button (click)="remove(i)" color="dark" fill="clear" slot="icon-only">
+          <ion-icon name="remove-circle"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-button fill="solid" (click)="generateList(musics)" >gerar lista</ion-button>
+  <ion-button fill="outline" (click)="add()" >
+    <ion-icon name="add"></ion-icon>
+  </ion-button>
+</ion-content>
+<ion-footer>
+  <ion-toolbar color="light" text-right>
+      <ion-button color="dark" fill="clear" (click)="close()">
+        Cancelar
+      </ion-button>
+      <ion-button color="secondary" fill="clear" [disabled]="range.length < 5" (click)="createList()">
+        Criar Lista
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>
