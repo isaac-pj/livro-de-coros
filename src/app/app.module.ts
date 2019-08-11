@@ -17,6 +17,12 @@ import { registerLocaleData } from '@angular/common';
 import { PopoverPage } from './pages/shared/popover/popover';
 registerLocaleData(localePtBr);
 
+import localePtBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+import { DataStorageProvider } from '../providers/data-storage/data-storage';
+import { SetupProvider } from '../providers/setup/setup';
+registerLocaleData(localePtBr);
+
 @NgModule({
   declarations: [
     AppComponent,
