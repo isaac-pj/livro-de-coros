@@ -1,0 +1,30 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{song.numero}}. {{song.titulo}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()" icon-only>
+        <ion-icon name="close"></ion-icon>
+      </ion-button>      
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content padding>
+
+  <div>
+    <h2>{{song.titulo}}</h2>
+    <p [innerHTML]="getLetra()" [style.font-size]="getFontSize()"></p>
+  </div>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="showInfo()">
+      <ion-icon name="information-circle"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

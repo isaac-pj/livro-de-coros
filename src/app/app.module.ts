@@ -1,29 +1,21 @@
-import { PopoverPage } from './../pages/popover/popover';
-import { SettingsPage } from './../pages/settings/settings';
-import { RandomPage } from './../pages/random/random';
-import { SlidesPage } from './../pages/slides/slides';
-import { CifrasPage } from './../pages/cifras/cifras';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { ErrorHandler, NgModule, LOCALE_ID } from '@angular/core';
-import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
+import { RouteReuseStrategy } from '@angular/router';
 import { IonicStorageModule } from '@ionic/storage';
-import { DatePipe } from '@angular/common';
 
-import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { ListPage } from '../pages/list/list';
-import { ListsPage } from './../pages/lists/lists';
-import { RightNavPage } from './../pages/right-nav/right-nav';
-import { SelectPage } from './../pages/select/select';
-import { ContatoPage } from './../pages/contato/contato';
-import { SobrePage } from './../pages/sobre/sobre';
-import { FavoritesPage } from './../pages/favorites/favorites';
+import { IonicModule, IonicRouteStrategy } from '@ionic/angular';
+import { SplashScreen } from '@ionic-native/splash-screen/ngx';
+import { StatusBar } from '@ionic-native/status-bar/ngx';
 
-import { StatusBar } from '@ionic-native/status-bar';
-import { SplashScreen } from '@ionic-native/splash-screen';
-import { SongsService } from './../services/songs.service';
-import { ListsDaoProvider } from '../providers/general-dao/lists-dao';
-import { SongsDaoProvider } from '../providers/songs-dao/songs-dao';
+import { AppComponent } from './app.component';
+import { AppRoutingModule } from './app-routing.module';
+
+import { SongsService } from './services/songs.service';
+
+import localePtBr from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+import { PopoverPage } from './pages/shared/popover/popover';
+registerLocaleData(localePtBr);
 
 import localePtBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
@@ -33,57 +25,25 @@ registerLocaleData(localePtBr);
 
 @NgModule({
   declarations: [
-    MyApp,
-    HomePage,
-    //para gerar um build de production comente os modulos abaixo
-    ListPage,
-    ListsPage,
-    RightNavPage,
-    SelectPage,
-    FavoritesPage,
-    SobrePage,
-    ContatoPage,
-    CifrasPage,
-    SlidesPage,
-    PopoverPage,
-    RandomPage,
-    SettingsPage, 
+    AppComponent,
+    PopoverPage
+  ],
+  entryComponents: [
+    PopoverPage
   ],
   imports: [
     BrowserModule,
-    IonicModule.forRoot(MyApp),
-    IonicStorageModule.forRoot()
-  ],
-  bootstrap: [IonicApp],
-  entryComponents: [
-    MyApp,
-    HomePage,
-    ListPage,
-    ListsPage,
-    RightNavPage,
-    SelectPage,
-    FavoritesPage,
-    SobrePage,
-    ContatoPage,
-    CifrasPage,
-    SlidesPage,
-    PopoverPage,
-    RandomPage,
-    SettingsPage,
+    IonicModule.forRoot(),
+    IonicStorageModule.forRoot(),
+    AppRoutingModule,
   ],
   providers: [
     StatusBar,
     SplashScreen,
-    SongsService,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ListsDaoProvider,
-    SongsDaoProvider,
-    DatePipe,
+    { provide: RouteReuseStrategy, useClass: IonicRouteStrategy },
     { provide: LOCALE_ID, useValue: 'pt-BR' },
-    DataStorageProvider,
-    SetupProvider
-  ]
+    SongsService
+  ],
+  bootstrap: [AppComponent]
 })
-export class AppModule {
-
-}
+export class AppModule {}

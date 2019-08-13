@@ -1,0 +1,58 @@
+.expand-wrapper {
+    transition: 0.3s linear;
+    overflow: hidden;
+    white-space: normal !important;
+}   
+
+.collapsed {
+    height: auto !important;
+    // max-height: 64px !important;
+}
+
+.expanded {
+    // height: 400px !important;
+    max-height: 1000px !important;
+}
+
+// stylling page
+span.title{
+    font-size: 32px;
+}
+
+span.label{
+    font-size: 14px;
+    color: var(--ion-color-medium)
+}
+
+span.primary{
+    color: var(--ion-color-dark);
+    font-weight: 600;
+}
+
+// span.secondary{
+//     color: var(--ion-color-gray);
+// }
+
+ion-row{
+    padding: 16px 0;
+    border-bottom: solid 1px var(--ion-color-light);
+}
+
+ion-row:last-child{
+    border-bottom: none;
+}
+
+// ion-button.whatsapp{
+//     // --color: #25d366;
+//     --background: #25d366;
+// }
+
+// ion-button.facebook{
+//     // --color: #3b5998;
+//     --background: #3b5998;
+// }
+
+// ion-button.email{
+//     // --color: #dc4b3e;
+//     --background: #dc4b3e;
+// }

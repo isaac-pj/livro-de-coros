@@ -1,0 +1,34 @@
+ion-searchbar{
+    transition: .1s;
+}
+
+// .scroll-content{
+//     padding-bottom: 88px !important;
+// }
+
+.hide{
+    transition: 0s;
+    transform: scale(0.0);
+    max-height: 0;
+    padding: 0;
+    visibility: hidden;
+}
+
+.favorite-color{
+    color: #f54257 !important;
+}
+
+.normal-color{
+    color: #f4f4f4;
+}
+
+// .negativeAction > span{
+//     color: color($colors, dark);
+// }
+// .footer{
+//     transform: translate(0px, 52px);
+// }
+
+// .animate{
+//     transform: translate(0px, 0px);
+// }

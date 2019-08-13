@@ -1,0 +1,29 @@
+.no-margin-bottom{
+    margin-block-end: 0 !important;
+}
+
+// .scroll-content{
+//     padding-bottom: 88px !important;
+// }
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.expand-wrapper {
+    transition: 0.3s linear;
+    overflow: hidden;
+}   
+
+.collapsed {
+    height: auto !important;
+    max-height: 150px !important;
+}
+
+.expanded {
+    // height: 400px !important;
+    max-height: 1000px !important;
+}
+
+
+ 
