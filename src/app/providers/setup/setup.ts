@@ -3,12 +3,6 @@ import { DataStorageProvider } from '../data-storage/data-storage';
 import { Songs } from '../../models/songs.model';
 import { SongsService } from '../../services/songs.service';
 
-/*
-  Generated class for the SetupProvider provider.
-
-  See https://angular.io/guide/dependency-injection for more info on providers
-  and Angular DI.
-*/
 @Injectable({ providedIn: 'root' })
 export class SetupProvider {
 
