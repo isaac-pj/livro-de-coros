@@ -2,7 +2,7 @@ import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { Songs } from '../../models/songs.model';
 import { List } from '../../models/list.model';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, IonReorderGroup } from '@ionic/angular';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { ActivatedRoute } from '@angular/router';
 
@@ -32,11 +32,14 @@ export class ListPage implements OnInit {
   marcado = true;
   props: any = undefined;
 
+
+  @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
+
   constructor(
     public navCtrl: NavController,
     private listsDaoProvider: ListsDaoProvider,
     private dataSetService: DataSetService,
-    public route: ActivatedRoute,
+    public route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
@@ -132,6 +135,23 @@ export class ListPage implements OnInit {
 
   // ES6
   // array.filter( ( elem, index, arr ) => arr.indexOf( elem ) === index );
+
+  doReorder(ev: any) {
+    // The `from` and `to` properties contain the index of the item
+    // when the drag started and ended, respectively
+    const temp: Songs = this.list.songs[ev.detail.from];
+    this.list.songs[ev.detail.from] = this.list.songs[ev.detail.to];
+    this.list.songs[ev.detail.to] = temp;
+    this.listsDaoProvider.update(this.index, this.list);
+    // Finish the reorder and position the item in the DOM based on
+    // where the gesture ended. This method can also be called directly
+    // by the reorder group
+    ev.detail.complete();
+  }
+
+  toggleReorderGroup() {
+    this.reorderGroup.disabled = !this.reorderGroup.disabled;
+  }
 
 }
 

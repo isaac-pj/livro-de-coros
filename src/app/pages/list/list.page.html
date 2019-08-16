@@ -44,26 +44,31 @@
     </ion-toolbar>
 
   </div>
-
   <ion-list lines="none">
-    <ion-item 
-      *ngFor="let song of songs; let i = index;"
-      (click)="goToMusic(song.ID)"
-      [routerLink]="['/music/'+song.ID]"
-      [routerDirection]="'forward'"
-      routerLinkActive="router-link-active">
-      <ion-label>
-        {{song.numero}}. {{song.titulo}}
-      </ion-label>
-      <ion-button class="wrapper" fill="clear">
-        <ion-checkbox
-          color="dark" 
-          (click)="check($event, song)" 
-          [checked]="desmarcado">
-        </ion-checkbox>
-      </ion-button>
-    </ion-item>
+    <ion-reorder-group 
+      (ionItemReorder)="doReorder($event)" 
+      disabled="false">
+      <ion-item 
+        *ngFor="let song of songs; let i = index;"
+        (click)="goToMusic(song.ID)"
+        [routerLink]="['/music/'+song.ID]"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
+        <ion-reorder slot="start"></ion-reorder>
+        <ion-label>
+          {{song.numero}}. {{song.titulo}}
+        </ion-label>
+        <ion-button class="wrapper" fill="clear">
+          <ion-checkbox
+            color="dark" 
+            (click)="check($event, song)" 
+            [checked]="desmarcado">
+          </ion-checkbox>
+        </ion-button>
+      </ion-item>
+    </ion-reorder-group>
   </ion-list>
+
 
   <ion-list lines="none" *ngIf="checked.length > 0" >
     <ion-list-header>

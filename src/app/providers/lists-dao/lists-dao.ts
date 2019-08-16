@@ -46,7 +46,7 @@ export class ListsDaoProvider {
     this.dataStorageProvider.remove('Lists');
   }
 
-  // atualiza algo na lista
+  // atualiza algo na lista recebendo o index da lista
   public update(index: number, list: List) {
     this.lists[index] = list;
     this.dataStorageProvider.insert('Lists', this.lists);
