@@ -132,8 +132,13 @@
     right: 16px;
   }
 
+  //paddind in scroll contents
   ion-content.scroll-content{
     --padding-bottom: 88px;
+  }
+
+  ion-list-header{
+    border-bottom: solid 1px #e2e2e2;
   }
 
 }

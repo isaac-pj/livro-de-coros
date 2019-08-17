@@ -5,6 +5,14 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title>{{list.name}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="editing" (click)="saveList($event)">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="!editing" (click)="editList($event)">
+        <ion-icon name="create"></ion-icon>
+      </ion-button>
+    </ion-buttons>
   </ion-toolbar>
   
 </ion-header>
@@ -17,7 +25,7 @@
         COMENTÀRIOS
       </ion-label>
       <ion-buttons slot="end">
-        <ion-button [class.rotate]="expanded" icon-only color="dark" (click)="expandItem($event)">
+        <ion-button [class.rotate]="expanded" color="dark" (click)="expandItem($event)">
           <ion-icon name="arrow-dropdown"></ion-icon>
         </ion-button>
       </ion-buttons>
@@ -27,18 +35,18 @@
   <div class="expand-wrapper" [class.collapsed]="!expanded" [class.expanded]="expanded">
 
     <!--<ion-input type="text-area" placeholder="Escreva um lembrete ou comentário!  :)"></ion-input>-->
-    <ion-textarea #input [disabled]="!editing" [value]="comments" rows="3" maxLength="250" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
+    <ion-textarea #input [disabled]="!commentsEditing" [value]="comments" rows="3" maxLength="250" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
     <ion-toolbar color="light" text-right>
-      <ion-button *ngIf="!editing" color="dark" fill="clear" (click)="clear()">
+      <ion-button *ngIf="!commentsEditing" color="dark" fill="clear" (click)="clear()">
         Limapar
       </ion-button>
-      <ion-button *ngIf="!editing" color="secondary" fill="clear" (click)="edit();">
+      <ion-button *ngIf="!commentsEditing" color="secondary" fill="clear" (click)="edit();">
         Editar
       </ion-button>
-      <ion-button *ngIf="editing" color="dark" fill="clear" (click)="cancel(input.value); input.value = comments;">
+      <ion-button *ngIf="commentsEditing" color="dark" fill="clear" (click)="cancel(input.value); input.value = comments;">
         Cancelar
       </ion-button>
-      <ion-button *ngIf="editing" color="secondary" fill="clear" (click)="save(input.value);">
+      <ion-button *ngIf="commentsEditing" color="secondary" fill="clear" (click)="save(input.value);">
         Salvar
       </ion-button>
     </ion-toolbar>
@@ -55,17 +63,22 @@
       <ion-label>
         {{song.numero}}. {{song.titulo}}
       </ion-label>
-      <ion-button class="wrapper" fill="clear">
-        <ion-checkbox
-          color="dark" 
-          (click)="check($event, song)" 
-          [checked]="desmarcado">
-        </ion-checkbox>
-      </ion-button>
+      <ion-buttons slot="end">
+        <ion-button *ngIf="editing">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+        <ion-button *ngIf="!editing" class="wrapper" fill="clear">
+          <ion-checkbox
+            color="dark" 
+            (click)="check($event, song)" 
+            [checked]="desmarcado">
+          </ion-checkbox>
+        </ion-button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
 
-  <ion-list lines="none" *ngIf="checked.length > 0" >
+  <ion-list lines="none" *ngIf="checked.length > 0 && !editing" >
     <ion-list-header>
         <ion-label color="medium">cantadas</ion-label>
     </ion-list-header>

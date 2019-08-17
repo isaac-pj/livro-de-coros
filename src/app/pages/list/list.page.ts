@@ -26,7 +26,8 @@ export class ListPage implements OnInit {
   songs: Songs[] = [];
   checked: Songs[] = [];
   expanded = false;
-  editing: boolean;
+  commentsEditing: boolean;
+  editing = false;
   comments: string;
   desmarcado = false;
   marcado = true;
@@ -41,7 +42,7 @@ export class ListPage implements OnInit {
 
   ngOnInit(): void {
     this.start();
-    this.editing = this.list.comments ? false : true;
+    this.commentsEditing = this.list.comments ? false : true;
     console.log(this.input);
   }
 
@@ -59,21 +60,29 @@ export class ListPage implements OnInit {
     this.index = this.props.index;
   }
 
+  editList() {
+    this.editing = !this.editing;
+  }
+
+  saveList() {
+    this.editList();
+  }
+
   save(msg: string) {
     if (msg) {
       this.list.comments = msg;
       this.listsDaoProvider.update(this.index, this.list);
       this.comments = this.list.comments;
-      this.editing = false;
+      this.commentsEditing = false;
     }
   }
 
   edit() {
-    this.editing = true;
+    this.commentsEditing = true;
   }
 
   cancel(value) {
-    this.editing = this.list.comments ? false : true;
+    this.commentsEditing = this.list.comments ? false : true;
     this.expanded = false;
   }
 
@@ -82,7 +91,7 @@ export class ListPage implements OnInit {
     this.listsDaoProvider.update(this.index, this.list);
     this.list.comments = '';
     this.comments = this.list.comments;
-    this.editing = true;
+    this.commentsEditing = true;
   }
 
   expandItem(event) {
