@@ -6,6 +6,9 @@
     </ion-buttons>
     <ion-title>{{list.name}}</ion-title>
     <ion-buttons slot="end">
+      <ion-button *ngIf="editing" (click)="cancelChange($event)">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
       <ion-button *ngIf="editing" (click)="saveList($event)">
         <ion-icon name="checkmark"></ion-icon>
       </ion-button>
@@ -52,30 +55,39 @@
     </ion-toolbar>
 
   </div>
-
   <ion-list lines="none">
-    <ion-item 
-      *ngFor="let song of songs; let i = index;"
-      (click)="goToMusic(song.ID)"
-      [routerLink]="['/music/'+song.ID]"
-      [routerDirection]="'forward'"
-      routerLinkActive="router-link-active">
-      <ion-label>
-        {{song.numero}}. {{song.titulo}}
-      </ion-label>
-      <ion-buttons slot="end">
-        <ion-button *ngIf="editing">
-          <ion-icon name="close"></ion-icon>
-        </ion-button>
-        <ion-button *ngIf="!editing" class="wrapper" fill="clear">
-          <ion-checkbox
-            color="dark" 
-            (click)="check($event, song)" 
-            [checked]="desmarcado">
-          </ion-checkbox>
-        </ion-button>
-      </ion-buttons>
-    </ion-item>
+    <ion-reorder-group 
+      (ionItemReorder)="reorderMusic($event)" 
+      [disabled]="editing">
+      <ion-item 
+        *ngFor="let song of editing ? songsTemp : songs; let i = index;"
+        (click)="goToMusic(song.ID)"
+        [routerLink]="['/music/'+song.ID]"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
+        <ion-buttons slot="start">
+          <ion-reorder slot="start"></ion-reorder>
+          <ion-button *ngIf="editing" (click)="removeMusic($event, i)">
+            <ion-icon name="remove-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>
+          {{song.numero}}. {{song.titulo}}
+        </ion-label>
+        <ion-buttons slot="end">
+          <ion-button *ngIf="editing" (click)="updateMusic($event, i)">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+          <ion-button *ngIf="!editing">
+            <ion-checkbox
+              color="dark" 
+              (click)="check($event, song)" 
+              [checked]="desmarcado">
+            </ion-checkbox>
+          </ion-button> 
+        </ion-buttons>
+      </ion-item>
+    </ion-reorder-group>
   </ion-list>
 
   <ion-list lines="none" *ngIf="checked.length > 0 && !editing" >
@@ -87,13 +99,25 @@
         {{song.numero}}. {{song.titulo}}
       </ion-label>
       <!--<ion-checkbox item-end color="dark" [(ngModel)]="checked[song.ID]" (ionChange)="isChecked()" ></ion-checkbox>-->
-      <ion-button 
-        class="wrapper" 
-        fill="clear" 
-        (click)="uncheck(i); $event.stopPropagation();">
-        <ion-checkbox item-end color="dark" [checked]="marcado" ></ion-checkbox>
-      </ion-button>
+      <ion-buttons slot="end">
+        <ion-button
+          (click)="uncheck(i); $event.stopPropagation();">
+          <ion-checkbox item-end color="dark" [checked]="marcado" ></ion-checkbox>
+        </ion-button>
+      </ion-buttons>
     </ion-item>
   </ion-list>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="null"><ion-icon name="checkbox-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="null"><ion-icon name="heart-empty"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="addMusic()"><ion-icon name="shuffle"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="null"><ion-icon name="search"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
 
 </ion-content>

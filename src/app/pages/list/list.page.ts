@@ -2,16 +2,12 @@ import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { Songs } from '../../models/songs.model';
 import { List } from '../../models/list.model';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { NavController } from '@ionic/angular';
+import { NavController, IonReorderGroup } from '@ionic/angular';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { ActivatedRoute } from '@angular/router';
-
-/**
- * Generated class for the ListPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { getRandomInt } from 'src/app/utils/utils';
+import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
+import { isEquals, cloneArray } from 'src/app/utils/utils';
 
 @Component({
   selector: 'page-list',
@@ -24,6 +20,7 @@ export class ListPage implements OnInit {
   index: number;
   list: List;
   songs: Songs[] = [];
+  songsTemp: Songs[] = [];
   checked: Songs[] = [];
   expanded = false;
   commentsEditing: boolean;
@@ -33,17 +30,19 @@ export class ListPage implements OnInit {
   marcado = true;
   props: any = undefined;
 
+  @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
+
   constructor(
     public navCtrl: NavController,
     private listsDaoProvider: ListsDaoProvider,
+    private songsDaoProvider: SongsDaoProvider,
     private dataSetService: DataSetService,
-    public route: ActivatedRoute,
+    public route: ActivatedRoute
   ) {}
 
   ngOnInit(): void {
     this.start();
     this.commentsEditing = this.list.comments ? false : true;
-    console.log(this.input);
   }
 
   getParams() {
@@ -54,18 +53,74 @@ export class ListPage implements OnInit {
       this.props = this.route.snapshot.data['data'];
     }
 
-    console.log(this.props);
-
     this.list = this.props.lista;
     this.index = this.props.index;
   }
 
+  start() {
+    this.getParams();
+    this.songs = this.list.songs;
+    this.comments = this.list.comments;
+  }
+
+  // #ACTIONS_LIST
+
   editList() {
-    this.editing = !this.editing;
+    this.editing = true;
+    this.songsTemp = cloneArray(this.songs);
+  }
+
+  addMusic() {
+    if (this.songsTemp.length < 20) {
+      this.songsTemp = cloneArray(this.songs);
+      this.songsTemp.push(this.songsDaoProvider.getSong(
+        getRandomInt(0, this.songsDaoProvider.getAmountOfSongs())));
+      this.saveList();
+    }
+  }
+
+  updateMusic(event: Event, index: number) {
+    event.preventDefault();
+    event.stopPropagation();
+    this.songsTemp[index] = this.songsDaoProvider.getSong(
+      getRandomInt(0, this.songsDaoProvider.getAmountOfSongs()));
+  }
+
+  removeMusic(event: Event, index: number) {
+    event.preventDefault();
+    event.stopPropagation();
+    if (this.songsTemp.length > 2) {
+      // this.songs.splice(index, 1);
+      this.songsTemp = this.songsTemp.filter(
+        (song, idx, arr) => arr.indexOf( song ) !== index );
+    } else {
+      // implement toast msg
+    }
+  }
+
+  reorderMusic(ev: any) {
+    this.list.songs.splice(ev.detail.to, 0, this.list.songs.splice(ev.detail.from, 1)[0]);
+    this.listsDaoProvider.update(this.index, this.list);
+    ev.detail.complete();
+  }
+
+  cancelChange() {
+    this.editing = false;
+    // this.songs = this.songsTemp;
   }
 
   saveList() {
-    this.editList();
+    this.editing = false;
+    if (!isEquals(this.songs, this.songsTemp)) {
+      this.songs = this.list.songs = cloneArray(this.songsTemp);
+      this.listsDaoProvider.update(this.index, this.list);
+    }
+  }
+
+  // #ACTIONS_COMMENTS
+
+  edit() {
+    this.commentsEditing = true;
   }
 
   save(msg: string) {
@@ -75,10 +130,6 @@ export class ListPage implements OnInit {
       this.comments = this.list.comments;
       this.commentsEditing = false;
     }
-  }
-
-  edit() {
-    this.commentsEditing = true;
   }
 
   cancel(value) {
@@ -94,23 +145,13 @@ export class ListPage implements OnInit {
     this.commentsEditing = true;
   }
 
+  // #ITERFACE
   expandItem(event) {
     event.stopPropagation();
-    this.expanded = this.expanded ? false : true;
+    this.expanded = !this.expanded;
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad ListsPage');
-  }
-
-  pushPageMusic(index: number) {
-    // this.navCtrl.push(RightNavPage, {index: index, lista:this.list.songs});
-  }
-
-  // mudar para a pagina de musica
-  goToMusic(index: number) {
-    this.dataSetService.setData(index, {index});
-  }
+  // #ACTIONS
 
   check(event, song: Songs) {
     event.preventDefault();
@@ -125,22 +166,25 @@ export class ListPage implements OnInit {
   }
 
   updateList() {
-
     this.songs = this.list.songs.filter((elem, index, songs) => {
       // return array.indexOf( elem ) === index;
-      return (this.checked.indexOf(elem) == -1);
+      return (this.checked.indexOf(elem) === -1);
     });
-
   }
 
-  start() {
-    this.getParams();
-    this.songs = this.list.songs;
-    this.comments = this.list.comments;
-  }
+  // #NAVIGATION
 
-  // ES6
-  // array.filter( ( elem, index, arr ) => arr.indexOf( elem ) === index );
+  // mudar para a pagina de musica
+  goToMusic(index: number) {
+    this.dataSetService.setData(index, {index});
+  }
 
 }
+
+/*
+
+  ES6
+  array.filter( ( elem, index, arr ) => arr.indexOf( elem ) === index );
+
+*/
 

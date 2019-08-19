@@ -12,6 +12,7 @@ export function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min)) + min;
 }
 
+// manipula animações com animate css
 export function animateCSS(element, animationName, callback?, infinite?) {
 
   const node = typeof element === 'string' ?
@@ -29,4 +30,14 @@ export function animateCSS(element, animationName, callback?, infinite?) {
       if (typeof callback === 'function') { callback(); }
   }
   node.addEventListener('animationend', handleAnimationEnd);
+}
+
+// verifica se dois objetos são iguais
+export function isEquals(A, B) {
+  return JSON.stringify(A) === JSON.stringify(B);
+}
+
+// clona um array retornanda um novo em outro endereço de memoria
+export function cloneArray(arr) {
+  return arr.map( elem => elem );
 }

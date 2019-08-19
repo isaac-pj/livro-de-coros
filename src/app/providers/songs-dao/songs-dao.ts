@@ -27,6 +27,13 @@ export class SongsDaoProvider {
     return (this.songs[index]);
   }
 
+  // retorna a quantidade de musicas na lista
+  getAmountOfSongs() {
+    if (this.songs) {
+      return this.songs.length;
+    }
+  }
+
   // atualiza a lista de musicas
   async updateSongs() {
     return await this.dataStorageProvider.get('Songs');
