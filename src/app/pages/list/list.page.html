@@ -4,7 +4,8 @@
     <ion-buttons slot="start">
       <ion-back-button></ion-back-button>
     </ion-buttons>
-    <ion-title>{{list.name}}</ion-title>
+    <ion-title *ngIf="!editing">{{list.name}}</ion-title>
+    <ion-input *ngIf="editing" placeholder="Como devo chamar?" type="text" [(ngModel)]="listName"></ion-input>
     <ion-buttons slot="end">
       <ion-button *ngIf="editing" (click)="cancelChange($event)">
         <ion-icon name="close"></ion-icon>

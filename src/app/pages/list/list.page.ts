@@ -19,6 +19,7 @@ export class ListPage implements OnInit {
   @ViewChild('input') input: ElementRef;
   index: number;
   list: List;
+  listName: string;
   songs: Songs[] = [];
   songsTemp: Songs[] = [];
   checked: Songs[] = [];
@@ -46,9 +47,6 @@ export class ListPage implements OnInit {
   }
 
   getParams() {
-    // this.list = this.navParams.get("lista");
-    // this.index = this.navParams.get("index");
-
     if (this.route.snapshot.data['data']) {
       this.props = this.route.snapshot.data['data'];
     }
@@ -67,6 +65,7 @@ export class ListPage implements OnInit {
 
   editList() {
     this.editing = true;
+    this.listName = this.list.name;
     this.songsTemp = cloneArray(this.songs);
   }
 
@@ -106,15 +105,20 @@ export class ListPage implements OnInit {
 
   cancelChange() {
     this.editing = false;
+    this.listName = this.list.name;
     // this.songs = this.songsTemp;
   }
 
   saveList() {
-    this.editing = false;
     if (!isEquals(this.songs, this.songsTemp)) {
       this.songs = this.list.songs = cloneArray(this.songsTemp);
       this.listsDaoProvider.update(this.index, this.list);
     }
+    if (this.list.name !== this.listName) {
+      this.list.name = this.listName;
+      this.listsDaoProvider.update(this.index, this.list);
+    }
+    this.editing = false;
   }
 
   // #ACTIONS_COMMENTS
