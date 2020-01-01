@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { AlertController, ToastController, NavController, NavParams, ModalController } from '@ionic/angular';
 import { ViewController } from '@ionic/core';
 import { Songs } from 'src/app/models/songs.model';
+import { getRandomInt } from 'src/app/utils/utils';
 
 @Component({
   selector: 'app-random',
@@ -32,23 +33,23 @@ export class RandomPage implements OnInit {
   createList() {
     this.range.length > 2 ?
     this.modalCtrl.dismiss({ list: this.range }) :
-    this.showToast('A lista precisa de no mínimo 2 músicas', 3000, 'bottom');
+    this.showToast('A lista precisa ter no mínimo 2 músicas', 3000, 'bottom');
   }
 
   update(index: number) {
-    this.range[index] = this.songs[this.getRandomInt(0, this.songs.length - 1)];
+    this.range[index] = this.songs[getRandomInt(0, this.songs.length - 1)];
   }
 
   add() {
     this.range.length < 20 ?
-    this.range.push(this.songs[this.getRandomInt(0, this.songs.length - 1)]) :
+    this.range.push(this.songs[getRandomInt(0, this.songs.length - 1)]) :
      this.showToast('A lista deve ter no máximo 20 músicas', 3000, 'bottom');
   }
 
   remove(index: number) {
     this.range.length > 5 ?
     this.range.splice(index, 1) :
-    this.showToast('A lista precisa de no mínimo 5 músicas', 3000, 'bottom');
+    this.showToast('A lista precisa ter no mínimo 2 músicas', 3000, 'bottom');
   }
 
   async showAlert(title, msg) {
@@ -78,16 +79,10 @@ export class RandomPage implements OnInit {
     this.range = [];
 
     for (let i = 0; i < size; i++) {
-      const index = this.getRandomInt(0, this.songs.length - 1);
+      const index = getRandomInt(0, this.songs.length - 1);
       this.range.push(this.songs[index]);
       // alert(this.getRandomInt(0, this.songs.length-1));
     }
-  }
-
-  getRandomInt(min, max) {
-    min = Math.ceil(min);
-    max = Math.floor(max);
-    return Math.floor(Math.random() * (max - min)) + min;
   }
 
 }

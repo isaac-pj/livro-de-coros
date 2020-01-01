@@ -29,6 +29,11 @@ const routes: Routes = [
     loadChildren: './pages/modal-music/modal-music.module#ModalMusicPageModule' 
   },
   {
+    path: 'list/:key',
+    resolve: { data: DataResolverService },
+    loadChildren: './pages/list/list.module#ListPageModule'
+  },
+  {
     path: 'list/:id',
     resolve: { data: DataResolverService },
     loadChildren: './pages/list/list.module#ListPageModule'
@@ -45,8 +50,14 @@ const routes: Routes = [
     path: 'settings',
     loadChildren: './pages/settings/settings.module#SettingsPageModule'
   },
-  { path: 'contact', loadChildren: './pages/contact/contact.module#ContactPageModule' },
-  { path: 'about', loadChildren: './pages/about/about.module#AboutPageModule' },
+  {
+    path: 'contact',
+    loadChildren: './pages/contact/contact.module#ContactPageModule'
+  },
+  {
+    path: 'about',
+    loadChildren: './pages/about/about.module#AboutPageModule'
+  },
 
 ];
 

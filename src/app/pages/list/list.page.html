@@ -5,23 +5,31 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
     <ion-title *ngIf="!editing">{{list.name}}</ion-title>
-    <ion-input *ngIf="editing" placeholder="Como devo chamar?" type="text" [(ngModel)]="listName"></ion-input>
+    <ion-input *ngIf="editing" placeholder="Como devo chamar?" type="text" [(ngModel)]="listName" autofocus></ion-input>
     <ion-buttons slot="end">
-      <ion-button *ngIf="editing" (click)="cancelChange($event)">
+      <ion-button *ngIf="editing && list.name" (click)="cancelChanges($event)">
         <ion-icon name="close"></ion-icon>
       </ion-button>
-      <ion-button *ngIf="editing" (click)="saveList($event)">
+      <ion-button *ngIf="editing" (click)="saveChanges($event)" [disabled]="!listName">
         <ion-icon name="checkmark"></ion-icon>
       </ion-button>
       <ion-button *ngIf="!editing" (click)="editList($event)">
         <ion-icon name="create"></ion-icon>
+      </ion-button>
+      <ion-button
+        *ngIf="creating && !editing"
+        (click)="saveList()"
+        [routerLink]="['/lists']"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
+          salvar
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
   
 </ion-header>
 
-<ion-content>
+<ion-content class="scroll-content">
 
   <ion-toolbar color="light">
     <ion-item lines="none" color="light" (click)="expandItem($event)">
@@ -83,7 +91,7 @@
             <ion-checkbox
               color="dark" 
               (click)="check($event, song)" 
-              [checked]="desmarcado">
+              [checked]="unchecked">
             </ion-checkbox>
           </ion-button> 
         </ion-buttons>
@@ -91,19 +99,19 @@
     </ion-reorder-group>
   </ion-list>
 
-  <ion-list lines="none" *ngIf="checked.length > 0 && !editing" >
+  <ion-list lines="none" *ngIf="songsCheckeds.length > 0 && !editing" >
     <ion-list-header>
         <ion-label color="medium">cantadas</ion-label>
     </ion-list-header>
-    <ion-item class="cantadas" *ngFor="let song of checked; let i = index;">
+    <ion-item class="cantadas" *ngFor="let song of songsCheckeds; let i = index;">
       <ion-label>
         {{song.numero}}. {{song.titulo}}
       </ion-label>
-      <!--<ion-checkbox item-end color="dark" [(ngModel)]="checked[song.ID]" (ionChange)="isChecked()" ></ion-checkbox>-->
+      <!--<ion-checkbox item-end color="dark" [(ngModel)]="songsCheckeds[song.ID]" (ionChange)="isChecked()" ></ion-checkbox>-->
       <ion-buttons slot="end">
         <ion-button
           (click)="uncheck(i); $event.stopPropagation();">
-          <ion-checkbox item-end color="dark" [checked]="marcado" ></ion-checkbox>
+          <ion-checkbox item-end color="dark" [checked]="checked" ></ion-checkbox>
         </ion-button>
       </ion-buttons>
     </ion-item>

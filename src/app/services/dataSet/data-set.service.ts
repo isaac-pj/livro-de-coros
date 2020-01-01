@@ -5,15 +5,15 @@ import { Injectable } from '@angular/core';
 })
 export class DataSetService {
 
-  private data = [];
+  private data = {};
 
   constructor() { }
 
-  setData(id, data) {
-    this.data[id] = data;
+  setData(key, data) {
+    this.data[key] = data;
   }
 
-  getData(id) {
-    return this.data[id];
+  getData(key) {
+    return this.data[key];
   }
 }

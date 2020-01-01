@@ -97,7 +97,10 @@
         color="secondary"
         fill="clear"
         [disabled]="isEmpty()"
-        (click)="createList()">
+        (click)="goToList()"
+        [routerLink]="['/list/temp']"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
         Criar Lista
       </ion-button>
   </ion-toolbar>
