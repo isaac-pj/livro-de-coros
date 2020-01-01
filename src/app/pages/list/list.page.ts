@@ -2,7 +2,7 @@ import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { Songs } from '../../models/songs.model';
 import { List } from '../../models/list.model';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { NavController, IonReorderGroup } from '@ionic/angular';
+import { NavController, IonReorderGroup, ToastController } from '@ionic/angular';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { ActivatedRoute } from '@angular/router';
 import { getRandomInt } from 'src/app/utils/utils';
@@ -22,13 +22,14 @@ export class ListPage implements OnInit {
   listName: string;
   songs: Songs[] = [];
   songsTemp: Songs[] = [];
-  checked: Songs[] = [];
+  songsCheckeds: Songs[] = [];
   expanded = false;
   commentsEditing: boolean;
   editing = false;
+  creating = false;
   comments: string;
-  desmarcado = false;
-  marcado = true;
+  unchecked = false;
+  checked = true;
   props: any = undefined;
 
   @ViewChild(IonReorderGroup) reorderGroup: IonReorderGroup;
@@ -38,7 +39,8 @@ export class ListPage implements OnInit {
     private listsDaoProvider: ListsDaoProvider,
     private songsDaoProvider: SongsDaoProvider,
     private dataSetService: DataSetService,
-    public route: ActivatedRoute
+    public route: ActivatedRoute,
+    public toastCtrl: ToastController
   ) {}
 
   ngOnInit(): void {
@@ -59,6 +61,8 @@ export class ListPage implements OnInit {
     this.getParams();
     this.songs = this.list.songs;
     this.comments = this.list.comments;
+
+    if (this.index === null ) { this.creating = true; this.editList(); }
   }
 
   // #ACTIONS_LIST
@@ -74,7 +78,7 @@ export class ListPage implements OnInit {
       this.songsTemp = cloneArray(this.songs);
       this.songsTemp.push(this.songsDaoProvider.getSong(
         getRandomInt(0, this.songsDaoProvider.getAmountOfSongs())));
-      this.saveList();
+      this.saveChanges();
     }
   }
 
@@ -93,7 +97,7 @@ export class ListPage implements OnInit {
       this.songsTemp = this.songsTemp.filter(
         (song, idx, arr) => arr.indexOf( song ) !== index );
     } else {
-      // implement toast msg
+      this.showToast('A lista precisa ter no mínimo 2 músicas', 3000, 'bottom');
     }
   }
 
@@ -103,22 +107,32 @@ export class ListPage implements OnInit {
     ev.detail.complete();
   }
 
-  cancelChange() {
+  cancelChanges() {
     this.editing = false;
     this.listName = this.list.name;
     // this.songs = this.songsTemp;
   }
 
-  saveList() {
+  saveChanges() {
+
+    let hasChanges = false;
+
     if (!isEquals(this.songs, this.songsTemp)) {
       this.songs = this.list.songs = cloneArray(this.songsTemp);
-      this.listsDaoProvider.update(this.index, this.list);
+      hasChanges = true;
     }
     if (this.list.name !== this.listName) {
       this.list.name = this.listName;
+      hasChanges = true;
+    }
+    if (!!this.index && hasChanges) {
       this.listsDaoProvider.update(this.index, this.list);
     }
     this.editing = false;
+  }
+
+  saveList() {
+    this.listsDaoProvider.createList(this.list);
   }
 
   // #ACTIONS_COMMENTS
@@ -155,24 +169,38 @@ export class ListPage implements OnInit {
     this.expanded = !this.expanded;
   }
 
+  async showToast(msg, time, position) {
+    const toast = await this.toastCtrl.create({
+      message: msg,
+      duration: time,
+      position
+    });
+
+    toast.onDidDismiss().then(() => {
+      console.log('Dismissed toast');
+    });
+
+    await toast.present();
+  }
+
   // #ACTIONS
 
   check(event, song: Songs) {
     event.preventDefault();
     event.stopPropagation();
-    this.checked.unshift(song);
+    this.songsCheckeds.unshift(song);
     this.updateList();
   }
 
   uncheck(index) {
-    this.checked.splice(index, 1);
+    this.songsCheckeds.splice(index, 1);
     this.updateList();
   }
 
   updateList() {
     this.songs = this.list.songs.filter((elem, index, songs) => {
       // return array.indexOf( elem ) === index;
-      return (this.checked.indexOf(elem) === -1);
+      return (this.songsCheckeds.indexOf(elem) === -1);
     });
   }
 

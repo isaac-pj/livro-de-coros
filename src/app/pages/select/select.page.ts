@@ -12,13 +12,7 @@ import { DatePipe } from '@angular/common';
 import { inicialize } from 'src/app/utils/utils';
 import { ModalMusicPage } from '../modal-music/modal-music.page';
 import { Router } from '@angular/router';
-
-/**
- * Generated class for the SelectPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 
 @Component({
   selector: 'page-select',
@@ -33,7 +27,6 @@ export class SelectPage implements OnInit {
   selecting = false;
   type = 'text';
   placeHolder = 'Search';
-  // songs:Songs[] = this.songsDao.getSongs();
   songs: Songs[] = [];
   list: Songs[] = [];
   checked: boolean[] = [];
@@ -48,6 +41,7 @@ export class SelectPage implements OnInit {
     public listsDaoProvider: ListsDaoProvider,
     private datePipe: DatePipe,
     public router: Router,
+    public dataSetService: DataSetService,
   ) {
 
     this.checked = inicialize(this.checked, this.songs.length, false);
@@ -62,7 +56,7 @@ export class SelectPage implements OnInit {
 
   // #NAVEGAÇÂO
 
-  // mudar para a pagina de gerae lista
+  // mudar para a pagina de gerar lista
   async pushPageGenerate() {
     const generateList = await this.modalCtrl.create({
       component: RandomPage,
@@ -229,6 +223,14 @@ export class SelectPage implements OnInit {
         'A lista precisa ter entre 2 e 20 músicas', 3000, 'bottom') :
         await alert.present();
     }
+  }
+
+  goToList() {
+    const list = new List(null,
+      this.datePipe.transform(new Date(), 'longDate'),
+      this.datePipe.transform(new Date(), 'HH:mm'),
+      this.list);
+    this.dataSetService.setData('temp', {index: null, lista: list});
   }
 
   // #SUPORTE
