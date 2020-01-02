@@ -65,10 +65,11 @@ export class SelectPage implements OnInit {
 
     generateList.present();
     generateList.onDidDismiss().then((props) => {
-      console.log(props.data);
       if (props.data.list) {
         this.list = props.data.list;
-        this.createList();
+        this.updateCheckeds(this.list);
+        this.goToList();
+        this.router.navigateByUrl('/list/temp');
       }
     });
     return false;
@@ -76,13 +77,26 @@ export class SelectPage implements OnInit {
 
   // mudar para a pagina de musica
   pushPageMusic(index: number) {
-    // this.navCtrl.push(MusicPage, {index: index});
     this.presentMusicModal(index);
     return false;
   }
 
+  // cria uma nova lista e seta os dados dessa lista para o dataSetService
+  goToList() {
+    const list = new List(null,
+      this.datePipe.transform(new Date(), 'longDate'),
+      this.datePipe.transform(new Date(), 'HH:mm'),
+      this.list);
+    this.dataSetService.setData('temp', {index: null, list});
+  }
+
 
   // #INTERFACE
+
+  // recebe uma lista de músiacs e exibe os checkbox delas como checked
+  updateCheckeds(songsList: Songs[]) {
+    songsList.forEach(song => this.checked[song.ID] = true);
+  }
 
   // mudar para a pagina de musica por modal
   async presentMusicModal(index: number) {
@@ -91,35 +105,6 @@ export class SelectPage implements OnInit {
       componentProps: { index }
     });
     musicModal.present();
-  }
-
-  // axibe o modal para o usuario entra com as informações
-  showCreateListAlert(nagativeAction, positiveAction) {
-    return this.alertCtrl.create({
-      header: 'Como devo Chamar?',
-      inputs: [
-        {
-          name: 'listname',
-          placeholder: 'Nome'
-        }
-      ],
-      buttons: [
-        {
-          text: 'Cancelar',
-          role: 'cancel',
-          cssClass: 'negativeAction',
-          handler: data => {
-            nagativeAction();
-          }
-        },
-        {
-          text: 'Salvar',
-          handler: data => {
-            positiveAction(data.listname);
-          }
-        }
-      ]
-    });
   }
 
   async showToast(msg, time, position) {
@@ -185,7 +170,7 @@ export class SelectPage implements OnInit {
   }
 
   // adiciona uma música na lista
-  check(event, song: Songs) {
+  check(song: Songs, event?) {
     event.preventDefault();
     event.stopPropagation();
     const index = this.list.indexOf(song);
@@ -198,39 +183,6 @@ export class SelectPage implements OnInit {
 
   remove(index: number) {
     this.list.splice(index, 1);
-  }
-
-  // cria uma nova lista e exibe o alert
-  async createList() {
-
-    if (!this.isEmpty()) {
-      const alert = await this.showCreateListAlert(
-        () => null,
-        (listname) => {
-          if (listname) {
-            const list = new List(listname,
-              this.datePipe.transform(new Date(), 'longDate'),
-              this.datePipe.transform(new Date(), 'HH:mm'),
-              this.list);
-
-            this.listsDaoProvider.createList(list);
-            this.router.navigateByUrl('/lists');
-          }
-        });
-
-      this.list.length < 2 || this.list.length > 20 ?
-      this.showToast(
-        'A lista precisa ter entre 2 e 20 músicas', 3000, 'bottom') :
-        await alert.present();
-    }
-  }
-
-  goToList() {
-    const list = new List(null,
-      this.datePipe.transform(new Date(), 'longDate'),
-      this.datePipe.transform(new Date(), 'HH:mm'),
-      this.list);
-    this.dataSetService.setData('temp', {index: null, lista: list});
   }
 
   // #SUPORTE

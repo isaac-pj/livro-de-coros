@@ -54,7 +54,7 @@ export class ListsPage implements OnInit {
 
   // #NAVIGATION
   goToList(index: number) {
-    this.dataSetService.setData(index, {index, lista: this.lists[index]});
+    this.dataSetService.setData(index, {index, list: this.lists[index]});
   }
 
   // #ACTIONS

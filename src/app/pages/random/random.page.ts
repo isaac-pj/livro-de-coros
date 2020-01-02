@@ -12,7 +12,7 @@ import { getRandomInt } from 'src/app/utils/utils';
 export class RandomPage implements OnInit {
   songs: Songs[] = [];
   range: Songs[] = [];
-  musics = 8;
+  musics = 7;
   categories: string[] = ['Oração', 'Adoração', 'Natal', 'Pascoa', 'Cristo', 'Deus'];
 
   constructor(

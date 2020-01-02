@@ -70,7 +70,7 @@
         <ion-checkbox
           slot="end"
           color="dark"
-          (click)="check($event, song)"
+          (click)="check(song, $event)"
           [(ngModel)]="checked[song.ID]"
           (ionChange)="isEmpty()">
         </ion-checkbox>          

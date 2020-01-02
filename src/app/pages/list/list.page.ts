@@ -53,7 +53,7 @@ export class ListPage implements OnInit {
       this.props = this.route.snapshot.data['data'];
     }
 
-    this.list = this.props.lista;
+    this.list = this.props.list;
     this.index = this.props.index;
   }
 
