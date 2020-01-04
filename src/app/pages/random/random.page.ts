@@ -31,7 +31,7 @@ export class RandomPage implements OnInit {
   }
 
   createList() {
-    this.range.length > 2 ?
+    this.range.length >= 2 ?
     this.modalCtrl.dismiss({ list: this.range }) :
     this.showToast('A lista precisa ter no mínimo 2 músicas', 3000, 'bottom');
   }
@@ -47,7 +47,7 @@ export class RandomPage implements OnInit {
   }
 
   remove(index: number) {
-    this.range.length > 5 ?
+    this.range.length > 2 ?
     this.range.splice(index, 1) :
     this.showToast('A lista precisa ter no mínimo 2 músicas', 3000, 'bottom');
   }

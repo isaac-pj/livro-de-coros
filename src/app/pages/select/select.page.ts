@@ -66,7 +66,7 @@ export class SelectPage implements OnInit {
     generateList.present();
     generateList.onDidDismiss().then((props) => {
       if (props.data.list) {
-        this.list = props.data.list;
+        props.data.list.forEach(song => this.check(song));
         this.updateCheckeds(this.list);
         this.goToList();
         this.router.navigateByUrl('/list/temp');
@@ -171,8 +171,10 @@ export class SelectPage implements OnInit {
 
   // adiciona uma música na lista
   check(song: Songs, event?) {
-    event.preventDefault();
-    event.stopPropagation();
+    if (event) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
     const index = this.list.indexOf(song);
     index === -1 ? this.add(song) : this.remove(index);
   }
