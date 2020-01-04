@@ -71,7 +71,10 @@
         </ion-buttons>
 
         <ion-buttons slot="end">
-          <ion-button slot="icon-only" color="secondaryTextColor" (click)="deleteList($event, i);">
+          <ion-button 
+            slot="icon-only" 
+            color="secondaryTextColor" 
+            (click)="deleteListConfirm(i, $event)">
             <ion-icon name="trash"></ion-icon>
           </ion-button>
           <!--<ion-button slot="icon-only" color="secondaryTextColor">

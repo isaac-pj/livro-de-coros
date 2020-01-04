@@ -58,21 +58,20 @@ export class ListsPage implements OnInit {
   }
 
   // #ACTIONS
-  deleteList(event: Event, index: number) {
-    event.stopPropagation();
-    event.preventDefault();
+  deleteList(index: number) {
     this.listsDaoProvider.removeList(index);
     this.expanded.splice(index, 1);
-    this.updateList();
-    return false;
+    this.updateLists();
   }
 
-  updateList() {
+  updateLists() {
     this.lists = this.listsDaoProvider.lists;
   }
 
   clearAll() {
     this.listsDaoProvider.clearLists();
+    this.showToast('Todos as listas foram apagadas!', 3000, 'bottom');
+    setTimeout(() => window.location.reload(), 3000);
   }
 
   expandItem(event: Event, index: number) {
@@ -106,7 +105,10 @@ export class ListsPage implements OnInit {
     if (value != 0 && !value) { return false; }
     switch (value) {
       case 0:
-        this.showConfirm('Deseja mesmo apagar?', 'todas as listas serão apagadas e não poderão mais ser recuperadas');
+        this.showConfirm(
+          'Deseja mesmo apagar?',
+          'todas as listas serão apagadas e não poderão mais ser recuperadas',
+          () => this.clearAll());
         break;
       case 1:
         // alert("opção: "+value);
@@ -118,28 +120,19 @@ export class ListsPage implements OnInit {
   }
 
   // show confirm alert
-  async showConfirm(title: string, msg: string) {
+  async showConfirm(title: string, msg: string, positiveAction: any, negativeAction?: any) {
+
     const confirm = await this.alertCtrl.create({
       header: title,
       message: msg,
       buttons: [
         {
           text: 'Não',
-          handler: (negative) => {
-            console.log('Disagree clicked');
-          }
+          handler: negativeAction
         },
         {
           text: 'Sim',
-          handler: (positive) => {
-            console.log('Agree clicked');
-            this.clearAll();
-            this.showToast('Todos as listas foram apagadas!', 3000, 'bottom');
-            setTimeout(() => {
-              window.location.reload();
-              // document.location.href = 'index.html';
-            }, 3000);
-          }
+          handler: positiveAction
         }
       ]
     });
@@ -154,10 +147,26 @@ export class ListsPage implements OnInit {
       position,
     });
 
-    await toast.onDidDismiss().then(() => {
+    toast.onDidDismiss().then(() => {
       console.log('Dismissed toast');
     });
 
-    await toast.present();
+    toast.present();
+  }
+
+  // exibir modal de confirmação ao deletar lista
+  deleteListConfirm(i, event) {
+    this.noBubble(event);
+    this.showConfirm(
+      'Apagar a lista?',
+      'A lista será apagada e não será possível desfazer esta ação',
+      () => this.deleteList(i));
+  }
+
+  // #SUPORTE
+
+  noBubble(event: Event) {
+    event.stopPropagation();
+    event.preventDefault();
   }
 }
