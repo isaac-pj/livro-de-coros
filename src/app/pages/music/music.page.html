@@ -24,7 +24,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content class="ion-padding">
 
   <div *ngIf="!sliding">
     <h2>{{song.titulo}}</h2>
@@ -53,10 +53,10 @@
           <ion-col class="no-padding">
             <ion-button (click)="prev()" [disabled]="canPrev() == false" color="dark" fill="clear">anterior</ion-button>
           </ion-col>
-          <ion-col text-center class="no-padding">
+          <ion-col class="ion-text-center no-padding">
             <ion-button (click)="showInfo()" color="dark" fill="clear" >{{song.numero}}</ion-button>
           </ion-col>
-          <ion-col text-right class="no-padding">
+          <ion-col class="ion-text-right no-padding">
             <ion-button (click)="next()" [disabled]="canNext() == false" color="dark" fill="clear">próximo</ion-button>
           </ion-col>
         </ion-row>
@@ -71,23 +71,23 @@
               <ion-icon name="skip-backward"></ion-icon>
             </ion-button>
           </ion-col>
-          <ion-col text-right class="no-padding">
+          <ion-col class="ion-text-right no-padding">
             <ion-button (click)="prev()" [disabled]="canPrev() == false" icon-only color="dark" clear>
               <ion-icon name="rewind"></ion-icon>
             </ion-button>
           </ion-col>
-          <ion-col text-center class="no-padding">
+          <ion-col class="ion-text-center no-padding">
             <!--<ion-button (click)="showInfo()" clear color="dark">{{song.numero}}</ion-button>-->
             <ion-button (click)="slideMode()"  icon-only clear color="dark">
               <ion-icon name="close"></ion-icon>
             </ion-button>
           </ion-col>
-          <ion-col text-left class="no-padding">
+          <ion-col class="ion-text-left no-padding">
             <ion-button (click)="next()" [disabled]="canNext() == false" icon-only color="dark" clear>
               <ion-icon name="fastforward"></ion-icon>
             </ion-button>
           </ion-col>
-          <ion-col text-right class="no-padding">
+          <ion-col class="ion-text-right no-padding">
             <ion-button (click)="slideNext()" color="dark" icon-only clear>
               <ion-icon name="skip-forward"></ion-icon>              
             </ion-button>

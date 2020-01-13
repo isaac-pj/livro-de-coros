@@ -9,7 +9,7 @@
       [placeholder]="placeHolder"
       [class.hide]="!searching"
       [type]="type"
-      [showCancelButton]="true" 
+      showCancelButton="aways" 
       (keyup)="getSearchItems()"
       (ionClear)="searchClear()"
       (ionCancel)="searchClose()">
@@ -24,7 +24,7 @@
 
 <ion-content class="scroll-content">
 
-  <section padding *ngIf="searching && songs.length == 0" >
+  <section class="ion-padding" *ngIf="searching && songs.length == 0" >
     <h2>Sinto muito! Nenhum resultado correspondente :(</h2>
     <p>Tente novamente. Você pode buscar por número, 
       título ou mesmo por um trecho na música</p>      
