@@ -18,7 +18,7 @@
       [placeholder]="placeHolder" 
       [class.hide]="!searching"
       [type]="type" 
-      [showCancelButton]="true"
+      showCancelButton="aways"
       (ionInput)="getItems($event.target.value)"
       (ionCancel)="search()">
     </ion-searchbar>
@@ -89,7 +89,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="light" text-right>
+  <ion-toolbar color="light" class="ion-text-right">
       <ion-button color="dark" fill="clear" (click)="cancel()">
         Cancelar
       </ion-button>

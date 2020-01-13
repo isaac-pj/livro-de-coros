@@ -48,7 +48,7 @@
 
     <!--<ion-input type="text-area" placeholder="Escreva um lembrete ou comentário!  :)"></ion-input>-->
     <ion-textarea #input [disabled]="!commentsEditing" [value]="comments" rows="3" maxLength="250" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
-    <ion-toolbar color="light" text-right>
+    <ion-toolbar color="light" class="ion-text-right">
       <ion-button *ngIf="!commentsEditing" color="dark" fill="clear" (click)="clear()">
         Limapar
       </ion-button>

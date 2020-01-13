@@ -23,7 +23,7 @@
 
 <ion-content class="scroll-content">
 
-  <section padding *ngIf="lists.length == 0" >
+  <section class="ion-padding" *ngIf="lists.length == 0" >
     <h2>Ainda não há listas! :(</h2>
     <p>Vá em frente, toque no botão de + para criar uma lista com músicas de sua escolha</p>      
   </section>
@@ -49,7 +49,7 @@
           <ion-col left>
             <p>{{list.date}}</p>
           </ion-col>
-          <ion-col text-right>
+          <ion-col class="ion-text-right">
             <p>{{list.time}}</p>
           </ion-col>
         </ion-row>
