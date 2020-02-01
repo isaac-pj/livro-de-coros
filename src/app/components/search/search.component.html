@@ -1,0 +1,13 @@
+<ion-searchbar 
+  #searchbar
+  showCancelButton="aways"
+  autocomplete="on"
+  autocorrect="on"
+  spellcheck="true"
+  [inputmode]="type"
+  [placeholder]="setPlaceholder()"
+  [class.hide]="!active"
+  (ionChange)="getSearchItems()"
+  (ionClear)="searchClear()"
+  (ionCancel)="searchClose()"
+></ion-searchbar>
