@@ -4,18 +4,16 @@
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
     <ion-title *ngIf="!searching" >Início</ion-title>
-    <ion-searchbar 
-      #searchbar 
-      [placeholder]="placeHolder"
-      [class.hide]="!searching"
+
+    <app-search
+      [songs]="songs" 
+      [active]="searching"
       [type]="type"
-      showCancelButton="aways" 
-      (keyup)="getSearchItems()"
-      (ionClear)="searchClear()"
-      (ionCancel)="searchClose()">
-    </ion-searchbar>
+      (result)="onSearch($event)"
+    ></app-search>
+
     <ion-buttons *ngIf="!searching" slot="end">
-      <ion-button (click)="changeSearchToString()">
+      <ion-button (click)="search('search')">
         <ion-icon name="search"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -35,8 +33,8 @@
     approxItemHeight="65px">
     <ion-item
       *virtualItem="let song; let i = index" 
-      (click)="goToMusic(song.ID)"
       lines="none"
+      (click)="goToMusic(song.ID)"
       [routerLink]="['/music/'+song.ID]"
       [routerDirection]="'forward'"
       routerLinkActive="router-link-active" >
@@ -56,7 +54,7 @@
   </ion-virtual-scroll>
 
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="changeSearchToNumber()">       
+    <ion-fab-button (click)="search('numeric')">       
         <ion-icon name="keypad"></ion-icon>
     </ion-fab-button>
   </ion-fab>
