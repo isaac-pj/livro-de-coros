@@ -55,7 +55,7 @@ export class SongsDaoProvider {
   isDuplicated(searchResult: Array<Songs>, song: Songs) {
     let test = false;
 // tslint:disable-next-line: forin
-    for(const i in searchResult) {
+    for (const i in searchResult) {
       test = searchResult[i].ID === song.ID ? true : test;
     }
     return test;
