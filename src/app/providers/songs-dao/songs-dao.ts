@@ -53,13 +53,8 @@ export class SongsDaoProvider {
 
   // #SEARCH
   isDuplicated(arr: Array<Songs>, song: Songs) {
-    let test = false;
-
-    arr.forEach((value) => {
-      test = value.ID === song.ID ? true : false;
-    });
-
-    return test;
+    arr = arr.filter(value => value.ID === song.ID);
+    return !!arr.length;
   }
 
   isValid(value) {
