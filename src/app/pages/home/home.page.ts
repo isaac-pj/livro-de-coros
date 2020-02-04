@@ -1,8 +1,5 @@
-// import { ListsDaoProvider } from '../../providers/general-dao/lists-dao';
-// import { SelectPage } from './../select/select';
-import { Component, ViewChild, OnInit, QueryList, ElementRef, ViewChildren } from '@angular/core';
-import { NavController, ModalController, LoadingController} from '@ionic/angular';
-import { MusicPage } from '../music/music.page';
+import { Component, ViewChild, OnInit } from '@angular/core';
+import { NavController, ModalController } from '@ionic/angular';
 import { SongsService } from '../../services/songs.service';
 import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
 import { ActivatedRoute, Router } from '@angular/router';
@@ -20,24 +17,18 @@ export class HomePage implements OnInit {
   @ViewChild('searchbar') searchbar;
 
   searching = false;
-  type = 'text';
-  placeHolder = 'Search';
+  type = 'search';
   songs: Songs[] = [];
 
   constructor(
     public songsService: SongsService,
     public songsDaoProvider: SongsDaoProvider,
-    // public listsDaoProvider: ListsDaoProvider,
     public navCtrl: NavController,
     public modalCtrl: ModalController,
-    // public loadingCtlr: LoadingController,
     public router: Router,
     public route: ActivatedRoute,
-    public dataSetService: DataSetService
-  ) {
-    // this.listsDaoProvider.reset();
-    // this.songsService.changeSongs();
-  }
+    public dataSetService: DataSetService,
+  ) { }
 
   // #LIFECYCLE
 
@@ -52,49 +43,22 @@ export class HomePage implements OnInit {
     this.songs = await this.songsDaoProvider.getSongs();
   }
 
-  // realizar busca passando o tipo
-  public getSearchItems() {
-    this.songs = this.type === 'number' ?
-    this.songsDaoProvider.searchByNumber(this.searchbar.value) :
-    this.songsDaoProvider.searchByString(this.searchbar.value);
-  }
-
   // ativar o modo de busca
-  private search() {
+  public search(type) {
+    this.type = type;
     this.searching = true;
-    setTimeout(() => {
-      this.searchbar.setFocus();
-    }, 150);
   }
 
-  // alterar interface para buscar por numero
-  public changeSearchToNumber() {
-    this.type = 'number';
-    this.placeHolder = 'Digite o numero:';
-    this.search();
-  }
-
-  // alterar interface para buscar por string
-  public changeSearchToString() {
-    this.type = 'text';
-    this.placeHolder = 'Digite o nome ou um trecho:';
-    this.search();
-
-    // console.log(this.searchbar.el.classList);
-    // const element = this.searchbar.el;
-    // animateCSS(element, 'zoomIn');
+  // tratar resultado da busca
+  onSearch(event) {
+    const { result } = event;
+    result ? this.songs = result : this.searchClose();
   }
 
   // encerrar todas as atividades de busca
-  public searchClose() {
-    this.searching = false;
-    this.searchbar.value = '';
-    this.searchClear();
-  }
-
-  // apenas limpar o campo de busca
-  public searchClear() {
+  private searchClose() {
     this.list();
+    this.searching = false;
   }
 
    // favoritar uma musica
@@ -116,19 +80,12 @@ export class HomePage implements OnInit {
 
   // #NAVIGATION
 
-  // mudar para a pagina de seleção
-  pushPageSelect() {
-    // this.navCtrl.push(SelectPage, {});
-    this.searchClose();
-    return false;
-  }
-
   // mudar para a pagina de musica
   goToMusic(index: number) {
     this.dataSetService.setData(index, {index});
     // this.router.navigate(['/music/', index], {relativeTo: this.route});
 
-    if (this.type === 'number') { this.searchClose(); }
+    if (this.type === 'numeric') { this.searchClose(); }
     return false;
   }
 

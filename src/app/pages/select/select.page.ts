@@ -1,13 +1,12 @@
 import { RandomPage } from '../random/random.page';
 import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
-import { ListsPage } from '../lists/lists.page';
 import { List } from '../../models/list.model';
 
 import { SongsService } from '../../services/songs.service';
 import { Songs } from '../../models/songs.model';
 import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { NavController, AlertController, ModalController, ToastController } from '@ionic/angular';
+import { NavController, ModalController, ToastController } from '@ionic/angular';
 import { DatePipe } from '@angular/common';
 import { inicialize } from 'src/app/utils/utils';
 import { ModalMusicPage } from '../modal-music/modal-music.page';
@@ -24,34 +23,30 @@ export class SelectPage implements OnInit {
   @ViewChild('searchbar') searchbar;
 
   searching = false;
-  selecting = false;
-  type = 'text';
-  placeHolder = 'Search';
+  type = 'search';
   songs: Songs[] = [];
-  list: Songs[] = [];
+  songsList: Songs[] = [];
   checked: boolean[] = [];
 
   constructor(
     public toastCtrl: ToastController,
     public navCtrl: NavController,
     public modalCtrl: ModalController,
-    private alertCtrl: AlertController,
     public songsService: SongsService,
-    public songsDao: SongsDaoProvider,
     public listsDaoProvider: ListsDaoProvider,
+    public songsDaoProvider: SongsDaoProvider,
+    public dataSetService: DataSetService,
     private datePipe: DatePipe,
     public router: Router,
-    public dataSetService: DataSetService,
   ) {
 
     this.checked = inicialize(this.checked, this.songs.length, false);
   }
 
   // #INICIALIZAÇÂO
+
   ngOnInit() {
-    this.songsDao.getSongs().then((songs) => {
-      this.songs = songs;
-    });
+    this.list();
   }
 
   // #NAVEGAÇÂO
@@ -67,7 +62,7 @@ export class SelectPage implements OnInit {
     generateList.onDidDismiss().then((props) => {
       if (props.data.list) {
         props.data.list.forEach(song => this.check(song));
-        this.updateCheckeds(this.list);
+        this.updateCheckeds(this.songsList);
         this.goToList();
         this.router.navigateByUrl('/list/temp');
       }
@@ -86,7 +81,7 @@ export class SelectPage implements OnInit {
     const list = new List(null,
       this.datePipe.transform(new Date(), 'longDate'),
       this.datePipe.transform(new Date(), 'HH:mm'),
-      this.list);
+      this.songsList);
     this.dataSetService.setData('temp', {index: null, list});
   }
 
@@ -122,51 +117,34 @@ export class SelectPage implements OnInit {
   }
 
   cancel(event: any) {
-    this.search(null);
-    if (this.searchbar) { this.searchbar.value = ''; }
+    this.searchClose();
     this.navCtrl.pop();
     return false;
   }
 
-
   // #AÇÕES
 
-  // apenas decide qual tipo de busca irá ser feito
-  search(type: number) {
-    if (type == null) {
-      this.searching = false;
-      // this.songs = this.songsDao.getSongs();
-    } else {
-      this.searching = true;
-    }
-
-    if (type == 1) {
-      this.type = 'number';
-      this.placeHolder = 'Digite o numero:';
-    } else if (type == 2) {
-      this.type = 'text';
-      this.placeHolder = 'Digite o nome ou um trecho:';
-    }
-
-    if (this.searching == true) {
-      setTimeout(() => {
-        this.searchbar.setFocus();
-      }, 150);
-    }
-
+  // recuperar lista de musicas
+  public async list() {
+    this.songs = await this.songsDaoProvider.getSongs();
   }
 
-  // buscar itens no banco
-  getItems(value: any) {
-    if (value && value.trim() != '') {
-      if (this.type == 'number') {
-        this.songs = this.songsDao.searchByNumber(value);
-      } else {
-        this.songs = this.songsDao.searchByString(value);
-      }
-    } else {
-      // this.songs = this.songsDao.getSongs();
-    }
+  // ativar o modo de busca
+  public search(type) {
+    this.type = type;
+    this.searching = true;
+  }
+
+  // tratar resultado da busca
+  onSearch(event) {
+    const { result } = event;
+    result ? this.songs = result : this.searchClose();
+  }
+
+  // encerrar todas as atividades de busca
+  private searchClose() {
+    this.list();
+    this.searching = false;
   }
 
   // adiciona uma música na lista
@@ -175,22 +153,22 @@ export class SelectPage implements OnInit {
       event.preventDefault();
       event.stopPropagation();
     }
-    const index = this.list.indexOf(song);
+    const index = this.songsList.indexOf(song);
     index === -1 ? this.add(song) : this.remove(index);
   }
 
   add(song) {
-    this.list.push(song);
+    this.songsList.push(song);
   }
 
   remove(index: number) {
-    this.list.splice(index, 1);
+    this.songsList.splice(index, 1);
   }
 
   // #SUPORTE
 
   isEmpty() {
-    return this.list.length > 0 ? false : true;
+    return this.songsList.length > 0 ? false : true;
   }
 
 }

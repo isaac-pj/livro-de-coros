@@ -11,34 +11,20 @@
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title *ngIf="!searching" >Nova Lista ({{list.length}})</ion-title>
+    <ion-title *ngIf="!searching" >Nova Lista ({{songsList.length}})</ion-title>
 
-    <ion-searchbar 
-      #searchbar 
-      [placeholder]="placeHolder" 
-      [class.hide]="!searching"
-      [type]="type" 
-      [showCancelButton]="true"
-      (ionInput)="getItems($event.target.value)"
-      (ionCancel)="search()">
-    </ion-searchbar>
-
-    <!-- <ion-searchbar 
-      #searchbar 
-      [placeholder]="placeHolder"
-      [class.hide]="!searching"
+    <app-search
+      [songs]="songs" 
+      [active]="searching"
       [type]="type"
-      [showCancelButton]="true" 
-      (keyup)="getSearchItems()"
-      (ionClear)="searchClear()"
-      (ionCancel)="searchClose()">
-    </ion-searchbar> -->
+      (result)="onSearch($event)"
+    ></app-search>
 
     <ion-buttons *ngIf="!searching" slot="end">
       <ion-button (click)="pushPageGenerate()" icon-only color="royal">
         <ion-icon name="shuffle"></ion-icon>
       </ion-button>
-      <ion-button (click)="search(2)" ion-button icon-only color="royal">
+      <ion-button (click)="search('search')" ion-button icon-only color="royal">
         <ion-icon name="search"></ion-icon>
       </ion-button>
     </ion-buttons>
@@ -81,7 +67,7 @@
   </ion-virtual-scroll>
   
   <ion-fab vertical="bottom" horizontal="end" slot="fixed">
-    <ion-fab-button (click)="search(1)">
+    <ion-fab-button (click)="search('numeric')">
       <ion-icon name="keypad"></ion-icon>
     </ion-fab-button>
   </ion-fab>
@@ -89,7 +75,7 @@
 </ion-content>
 
 <ion-footer>
-  <ion-toolbar color="light" text-right>
+  <ion-toolbar color="light" class="ion-text-right">
       <ion-button color="dark" fill="clear" (click)="cancel()">
         Cancelar
       </ion-button>

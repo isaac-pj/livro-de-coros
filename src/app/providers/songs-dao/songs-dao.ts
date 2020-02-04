@@ -52,29 +52,31 @@ export class SongsDaoProvider {
   }
 
   // #SEARCH
-  isDuplicated(searchResult: Array<Songs>, song: Songs) {
-    let test = false;
-// tslint:disable-next-line: forin
-    for(const i in searchResult) {
-      test = searchResult[i].ID === song.ID ? true : test;
-    }
-    return test;
+  isDuplicated(arr: Array<Songs>, song: Songs) {
+    arr = arr.filter(value => value.ID === song.ID);
+    return !!arr.length;
   }
 
   isValid(value) {
     return value && value.trim() !== '' ? true : false;
   }
 
+  nomalizeQuery(query): string {
+    return query.toLowerCase()
+    .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
+    .replace(/[^\s\w#]/, ' ')
+    .replace(/[^\s\w#]/g, '');
+  }
+
   // retorno o resultado de uma busca que bater com o numero passado
   searchByNumber(value: number) {
     if (!this.isValid(value)) { return this.songs; }
-    const searchResult: Songs[] = [];
 
-    for (const i in this.songs) {
-      if (this.songs[i].numero.toString().indexOf(value.toString()) !== -1) {
-        searchResult.push(this.getSong(parseInt(i, 10)));
+    const searchResult: Songs[] = this.songs.filter( song => {
+      if (song.numero.toString().indexOf(value.toString()) !== -1) {
+        return true;
       }
-    }
+    });
 
     return searchResult;
   }
@@ -82,23 +84,27 @@ export class SongsDaoProvider {
   // retorno o resultado de uma busca que bater com a string passada
   searchByString(value: string) {
     if (!this.isValid(value)) { return this.songs; }
-    const searchResult: Songs[] = [];
+    const query = this.nomalizeQuery(value);
 
-    for (const i in this.songs) {
-      if (this.songs[i].titulo.toLowerCase().indexOf(value.toLowerCase()) !== -1 ||
-      this.songs[i].numero.toString().indexOf(value.toLowerCase()) !== -1) {
-        searchResult.push(this.getSong(parseInt(i, 10)));
+    const inTitle = this.songs.filter( song => {
+      const titulo = this.nomalizeQuery(song.titulo);
+      const numero = this.nomalizeQuery(song.numero.toString());
+
+      if (titulo.indexOf(query) !== -1 || numero.indexOf(query) !== -1) {
+        return true;
       }
-    }
+    });
 
-    for (const i in this.songs) {
-      if (JSON.stringify(this.songs[i].letra).toLowerCase().indexOf(value.toLowerCase()) !== -1
-      && !this.isDuplicated(searchResult, this.songs[i])) {
-        searchResult.push(this.getSong(parseInt(i, 10)));
+    const inLyrics = this.songs.filter( song => {
+      const letra = this.nomalizeQuery(JSON.stringify(song.letra));
+
+      if (letra.indexOf(query) !== -1
+      && !this.isDuplicated(inTitle, song)) {
+        return true;
       }
-    }
+    });
 
-    return searchResult;
+    return [...inTitle, ...inLyrics];
   }
 
 }
