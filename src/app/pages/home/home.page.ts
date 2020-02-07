@@ -78,6 +78,13 @@ export class HomePage implements OnInit {
     animateCSS(element, 'bounceIn');
   }
 
+  // #INTERFACE
+
+  getSubtitle(letra: any) {
+    return letra.estrofes[0]
+    .reduce((line, next) => line.concat(` ${next}`));
+  }
+
   // #NAVIGATION
 
   // mudar para a pagina de musica

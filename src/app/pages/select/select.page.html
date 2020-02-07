@@ -49,10 +49,15 @@
 
       <ion-label>
         <h2>{{song.numero+". "}}{{song.titulo}}</h2>
-        <p>{{song.tags}}</p>
+        <p>{{getSubtitle(song.letra)}}</p>
       </ion-label>
 
-      <ion-button class="wrapper" fill="clear">
+      <ion-button 
+        class="wrapper" 
+        slot="end" 
+        shape="round"
+        color="dark" 
+        fill="clear">
         <ion-checkbox
           slot="end"
           color="dark"

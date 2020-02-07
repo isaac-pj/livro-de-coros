@@ -122,6 +122,11 @@ export class SelectPage implements OnInit {
     return false;
   }
 
+  getSubtitle(letra: any) {
+    return letra.estrofes[0]
+    .reduce((line, next) => line.concat(` ${next}`));
+  }
+
   // #AÇÕES
 
   // recuperar lista de musicas
