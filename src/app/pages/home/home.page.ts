@@ -1,6 +1,5 @@
 import { Component, ViewChild, OnInit } from '@angular/core';
 import { NavController, ModalController } from '@ionic/angular';
-import { SongsService } from '../../services/songs.service';
 import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
@@ -21,7 +20,6 @@ export class HomePage implements OnInit {
   songs: Songs[] = [];
 
   constructor(
-    public songsService: SongsService,
     public songsDaoProvider: SongsDaoProvider,
     public navCtrl: NavController,
     public modalCtrl: ModalController,
