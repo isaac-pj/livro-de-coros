@@ -28,8 +28,11 @@
 
   <div *ngIf="!sliding">
     <h2>{{song.titulo}}</h2>
-    <!-- <p [innerHTML]="getLetra()" [class]="size[fontSize]"></p> -->
-    <p [innerHTML]="getLetra()" [style.font-size]="getFontSize()"></p>
+    <section [style.font-size]="getFontSize()">
+      <p *ngFor="let estrofe of song.letra.estrofes">
+        <span *ngFor="let linha of estrofe">{{linha}}<br/></span>
+      </p>
+    </section>
   </div>
   <ion-fab *ngIf="!sliding" vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="checker()">       
