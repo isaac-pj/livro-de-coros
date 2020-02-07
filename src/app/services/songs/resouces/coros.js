@@ -2,7 +2,7 @@ const coros = [
   {
     "ID": 0,
     "numero": 1,
-    "titulo": "A bíblia é para mim",
+    "titulo": "#LDC - A bíblia é para mim",
     "letra": {
       "estrofes": [
         [
@@ -25,7 +25,7 @@ const coros = [
   {
     "ID": 1,
     "numero": 2,
-    "titulo": "Alegrei-me",
+    "titulo": "#LDC - Alegrei-me",
     "letra": {
       "estrofes": [
         [
@@ -50,7 +50,7 @@ const coros = [
   {
     "ID": 2,
     "numero": 3,
-    "titulo": "A porta é uma só",
+    "titulo": "#LDC - A porta é uma só",
     "letra": {
       "estrofes": [
         [
@@ -73,7 +73,7 @@ const coros = [
   {
     "ID": 3,
     "numero": 4,
-    "titulo": "A Tua Palavra",
+    "titulo": "#LDC - A Tua Palavra",
     "letra": {
       "estrofes": [
         [
@@ -100,7 +100,7 @@ const coros = [
   {
     "ID": 4,
     "numero": 5,
-    "titulo": "Porque Cristo vive",
+    "titulo": "#LDC - Porque Cristo vive",
     "letra": {
       "estrofes": [
         [
@@ -121,7 +121,7 @@ const coros = [
   {
     "ID": 5,
     "numero": 6,
-    "titulo": "Com Cristo no barco",
+    "titulo": "#LDC - Com Cristo no barco",
     "letra": {
       "estrofes": [
         [
@@ -158,7 +158,7 @@ const coros = [
   {
     "ID": 6,
     "numero": 7,
-    "titulo": "Cuidado olhinho",
+    "titulo": "#LDC - Cuidado olhinho",
     "letra": {
       "estrofes": [
         [
@@ -198,7 +198,7 @@ const coros = [
   {
     "ID": 7,
     "numero": 8,
-    "titulo": "Pare! Eu vou contar-lhe",
+    "titulo": "#LDC - Pare! Eu vou contar-lhe",
     "letra": {
       "estrofes": [
         [
@@ -223,7 +223,7 @@ const coros = [
   {
     "ID": 8,
     "numero": 9,
-    "titulo": "Eu do meu Rei sou soldado",
+    "titulo": "#LDC - Eu do meu Rei sou soldado",
     "letra": {
       "estrofes": [
         [
@@ -249,7 +249,7 @@ const coros = [
   {
     "ID": 9,
     "numero": 10,
-    "titulo": "Céu é um lugar maravilhoso",
+    "titulo": "#LDC - Céu é um lugar maravilhoso",
     "letra": {
       "estrofes": [
         [
@@ -271,7 +271,7 @@ const coros = [
   {
     "ID": 10,
     "numero": 11,
-    "titulo": "Com a armadura de meu Deus",
+    "titulo": "#LDC - Com a armadura de meu Deus",
     "letra": {
       "estrofes": [
         [
@@ -294,7 +294,7 @@ const coros = [
   {
     "ID": 11,
     "numero": 12,
-    "titulo": "Jesus ama as criancinhas",
+    "titulo": "#LDC - Jesus ama as criancinhas",
     "letra": {
       "estrofes": [
         [
@@ -319,7 +319,7 @@ const coros = [
   {
     "ID": 12,
     "numero": 13,
-    "titulo": "Alelu, alelu, alelu, aleluia",
+    "titulo": "#LDC - Alelu, alelu, alelu, aleluia",
     "letra": {
       "estrofes": [
         [
@@ -342,7 +342,7 @@ const coros = [
   {
     "ID": 13,
     "numero": 14,
-    "titulo": "Mais vasto que o mundo",
+    "titulo": "#LDC - Mais vasto que o mundo",
     "letra": {
       "estrofes": [
         [
@@ -363,7 +363,7 @@ const coros = [
   {
     "ID": 14,
     "numero": 15,
-    "titulo": "Num berço de palha",
+    "titulo": "#LDC - Num berço de palha",
     "letra": {
       "estrofes": [
         [
@@ -390,7 +390,7 @@ const coros = [
   {
     "ID": 15,
     "numero": 16,
-    "titulo": "Pedro, Tiago e João",
+    "titulo": "#LDC - Pedro, Tiago e João",
     "letra": {
       "estrofes": [
         [
@@ -421,7 +421,7 @@ const coros = [
   {
     "ID": 16,
     "numero": 17,
-    "titulo": "Quem fez as lindas estrelas?",
+    "titulo": "#LDC - Quem fez as lindas estrelas?",
     "letra": {
       "estrofes": [
         [
@@ -466,7 +466,7 @@ const coros = [
   {
     "ID": 17,
     "numero": 18,
-    "titulo": "Sobre a rocha",
+    "titulo": "#LDC - Sobre a rocha",
     "letra": {
       "estrofes": [
         [
@@ -505,7 +505,7 @@ const coros = [
   {
     "ID": 18,
     "numero": 19,
-    "titulo": "Eu tenho um tesouro",
+    "titulo": "#LDC - Eu tenho um tesouro",
     "letra": {
       "estrofes": [
         [
@@ -526,7 +526,7 @@ const coros = [
   {
     "ID": 19,
     "numero": 20,
-    "titulo": "Meu barco é pequeno",
+    "titulo": "#LDC - Meu barco é pequeno",
     "letra": {
       "estrofes": [
         [
@@ -547,7 +547,7 @@ const coros = [
   {
     "ID": 20,
     "numero": 21,
-    "titulo": "O que você faz",
+    "titulo": "#LDC - O que você faz",
     "letra": {
       "estrofes": [
         [
@@ -568,7 +568,7 @@ const coros = [
   {
     "ID": 21,
     "numero": 22,
-    "titulo": "Três palavrinhas",
+    "titulo": "#LDC - Três palavrinhas",
     "letra": {
       "estrofes": [
         [
@@ -595,7 +595,7 @@ const coros = [
   {
     "ID": 22,
     "numero": 23,
-    "titulo": "A Bíblia é qual martelo",
+    "titulo": "#LDC - A Bíblia é qual martelo",
     "letra": {
       "estrofes": [
         [
@@ -622,7 +622,7 @@ const coros = [
   {
     "ID": 23,
     "numero": 24,
-    "titulo": "De Moisés ouvimos",
+    "titulo": "#LDC - De Moisés ouvimos",
     "letra": {
       "estrofes": [
         [
@@ -655,7 +655,7 @@ const coros = [
   {
     "ID": 24,
     "numero": 25,
-    "titulo": "Desanimados? Não, não, não",
+    "titulo": "#LDC - Desanimados? Não, não, não",
     "letra": {
       "estrofes": [
         [
@@ -676,7 +676,7 @@ const coros = [
   {
     "ID": 25,
     "numero": 26,
-    "titulo": "Posso ser um missionariozinho",
+    "titulo": "#LDC - Posso ser um missionariozinho",
     "letra": {
       "estrofes": [
         [
@@ -709,7 +709,7 @@ const coros = [
   {
     "ID": 26,
     "numero": 27,
-    "titulo": "Cristo ama as criancinhas",
+    "titulo": "#LDC - Cristo ama as criancinhas",
     "letra": {
       "estrofes": [
         [
@@ -734,7 +734,7 @@ const coros = [
   {
     "ID": 27,
     "numero": 28,
-    "titulo": "Eu na Bíblia creio",
+    "titulo": "#LDC - Eu na Bíblia creio",
     "letra": {
       "estrofes": [
         [
@@ -769,7 +769,7 @@ const coros = [
   {
     "ID": 28,
     "numero": 29,
-    "titulo": "Meu coração era sujo",
+    "titulo": "#LDC - Meu coração era sujo",
     "letra": {
       "estrofes": [
         [
@@ -790,7 +790,7 @@ const coros = [
   {
     "ID": 29,
     "numero": 30,
-    "titulo": "Fiel, ser fiel",
+    "titulo": "#LDC - Fiel, ser fiel",
     "letra": {
       "estrofes": [
         [
@@ -813,7 +813,7 @@ const coros = [
   {
     "ID": 30,
     "numero": 31,
-    "titulo": "Cristo tem amor por mim",
+    "titulo": "#LDC - Cristo tem amor por mim",
     "letra": {
       "estrofes": [
         [
@@ -848,7 +848,7 @@ const coros = [
   {
     "ID": 31,
     "numero": 32,
-    "titulo": "Minha pequena luz",
+    "titulo": "#LDC - Minha pequena luz",
     "letra": {
       "estrofes": [
         [
@@ -879,7 +879,7 @@ const coros = [
   {
     "ID": 32,
     "numero": 33,
-    "titulo": "Eu vou crescer",
+    "titulo": "#LDC - Eu vou crescer",
     "letra": {
       "estrofes": [
         [
@@ -910,7 +910,7 @@ const coros = [
   {
     "ID": 33,
     "numero": 34,
-    "titulo": "Se és salvo e tens certeza",
+    "titulo": "#LDC - Se és salvo e tens certeza",
     "letra": {
       "estrofes": [
         [
@@ -944,7 +944,7 @@ const coros = [
   {
     "ID": 34,
     "numero": 35,
-    "titulo": "Leia a Bíblia e sempre orar",
+    "titulo": "#LDC - Leia a Bíblia e sempre orar",
     "letra": {
       "estrofes": [
         [
@@ -975,7 +975,7 @@ const coros = [
   {
     "ID": 35,
     "numero": 36,
-    "titulo": "Eu tenho paz, paz, paz, paz",
+    "titulo": "#LDC - Eu tenho paz, paz, paz, paz",
     "letra": {
       "estrofes": [
         [
@@ -1020,7 +1020,7 @@ const coros = [
   {
     "ID": 36,
     "numero": 37,
-    "titulo": "Grande e largo, grande e largo",
+    "titulo": "#LDC - Grande e largo, grande e largo",
     "letra": {
       "estrofes": [
         [
@@ -1039,7 +1039,7 @@ const coros = [
   {
     "ID": 37,
     "numero": 38,
-    "titulo": "Dê a sua vida",
+    "titulo": "#LDC - Dê a sua vida",
     "letra": {
       "estrofes": [
         [
@@ -1060,7 +1060,7 @@ const coros = [
   {
     "ID": 38,
     "numero": 39,
-    "titulo": "Estou alegre, alegre, mui alegre",
+    "titulo": "#LDC - Estou alegre, alegre, mui alegre",
     "letra": {
       "estrofes": [
         [
@@ -1093,7 +1093,7 @@ const coros = [
   {
     "ID": 39,
     "numero": 40,
-    "titulo": "Achei alegria",
+    "titulo": "#LDC - Achei alegria",
     "letra": {
       "estrofes": [
         [
@@ -1115,7 +1115,7 @@ const coros = [
   {
     "ID": 40,
     "numero": 41,
-    "titulo": "Acordar bem cedo",
+    "titulo": "#LDC - Acordar bem cedo",
     "letra": {
       "estrofes": [
         [
@@ -1143,7 +1143,7 @@ const coros = [
   {
     "ID": 41,
     "numero": 42,
-    "titulo": "Agradeço ao meu Salvador",
+    "titulo": "#LDC - Agradeço ao meu Salvador",
     "letra": {
       "estrofes": [
         [
@@ -1168,7 +1168,7 @@ const coros = [
   {
     "ID": 42,
     "numero": 43,
-    "titulo": "Alegria do Senhor",
+    "titulo": "#LDC - Alegria do Senhor",
     "letra": {
       "estrofes": [
         [
@@ -1200,7 +1200,7 @@ const coros = [
   {
     "ID": 43,
     "numero": 44,
-    "titulo": "Além do céu azul",
+    "titulo": "#LDC - Além do céu azul",
     "letra": {
       "estrofes": [
         [
@@ -1227,7 +1227,7 @@ const coros = [
   {
     "ID": 44,
     "numero": 45,
-    "titulo": "Alguns pensam",
+    "titulo": "#LDC - Alguns pensam",
     "letra": {
       "estrofes": [
         [
@@ -1252,7 +1252,7 @@ const coros = [
   {
     "ID": 45,
     "numero": 46,
-    "titulo": "A minha maior alegria",
+    "titulo": "#LDC - A minha maior alegria",
     "letra": {
       "estrofes": [
         [
@@ -1279,7 +1279,7 @@ const coros = [
   {
     "ID": 46,
     "numero": 47,
-    "titulo": "Ando com Cristo",
+    "titulo": "#LDC - Ando com Cristo",
     "letra": {
       "estrofes": [
         [
@@ -1307,7 +1307,7 @@ const coros = [
   {
     "ID": 47,
     "numero": 48,
-    "titulo": "Ao orarmos Senhor",
+    "titulo": "#LDC - Ao orarmos Senhor",
     "letra": {
       "estrofes": [
         [
@@ -1332,7 +1332,7 @@ const coros = [
   {
     "ID": 48,
     "numero": 49,
-    "titulo": "Aquele que habita",
+    "titulo": "#LDC - Aquele que habita",
     "letra": {
       "estrofes": [
         [
@@ -1353,7 +1353,7 @@ const coros = [
   {
     "ID": 49,
     "numero": 50,
-    "titulo": "Buscai primeiro",
+    "titulo": "#LDC - Buscai primeiro",
     "letra": {
       "estrofes": [
         [
@@ -1380,7 +1380,7 @@ const coros = [
   {
     "ID": 50,
     "numero": 51,
-    "titulo": "Cada dia com Cristo",
+    "titulo": "#LDC - Cada dia com Cristo",
     "letra": {
       "estrofes": [
         [
@@ -1401,7 +1401,7 @@ const coros = [
   {
     "ID": 51,
     "numero": 52,
-    "titulo": "Cada dia me dirige",
+    "titulo": "#LDC - Cada dia me dirige",
     "letra": {
       "estrofes": [
         [
@@ -1422,7 +1422,7 @@ const coros = [
   {
     "ID": 52,
     "numero": 53,
-    "titulo": "Cada dia sou feliz",
+    "titulo": "#LDC - Cada dia sou feliz",
     "letra": {
       "estrofes": [
         [
@@ -1443,7 +1443,7 @@ const coros = [
   {
     "ID": 53,
     "numero": 54,
-    "titulo": "Cantai ao Senhor",
+    "titulo": "#LDC - Cantai ao Senhor",
     "letra": {
       "estrofes": [
         [
@@ -1470,7 +1470,7 @@ const coros = [
   {
     "ID": 54,
     "numero": 55,
-    "titulo": "Cantarei das bênçãos",
+    "titulo": "#LDC - Cantarei das bênçãos",
     "letra": {
       "estrofes": [
         [
@@ -1497,7 +1497,7 @@ const coros = [
   {
     "ID": 55,
     "numero": 56,
-    "titulo": "Eu tenho um amigo",
+    "titulo": "#LDC - Eu tenho um amigo",
     "letra": {
       "estrofes": [
         [
@@ -1522,7 +1522,7 @@ const coros = [
   {
     "ID": 56,
     "numero": 57,
-    "titulo": "Meu Jesus me ampara",
+    "titulo": "#LDC - Meu Jesus me ampara",
     "letra": {
       "estrofes": [
         [
@@ -1547,7 +1547,7 @@ const coros = [
   {
     "ID": 57,
     "numero": 58,
-    "titulo": "Damos graças",
+    "titulo": "#LDC - Damos graças",
     "letra": {
       "estrofes": [
         [
@@ -1574,7 +1574,7 @@ const coros = [
   {
     "ID": 58,
     "numero": 59,
-    "titulo": "Desde o dia",
+    "titulo": "#LDC - Desde o dia",
     "letra": {
       "estrofes": [
         [
@@ -1601,7 +1601,7 @@ const coros = [
   {
     "ID": 59,
     "numero": 60,
-    "titulo": "A graça de Jesus",
+    "titulo": "#LDC - A graça de Jesus",
     "letra": {
       "estrofes": [
         [
@@ -1624,7 +1624,7 @@ const coros = [
   {
     "ID": 60,
     "numero": 61,
-    "titulo": "Deus é tão bom",
+    "titulo": "#LDC - Deus é tão bom",
     "letra": {
       "estrofes": [
         [
@@ -1655,7 +1655,7 @@ const coros = [
   {
     "ID": 61,
     "numero": 62,
-    "titulo": "Ebenézer",
+    "titulo": "#LDC - Ebenézer",
     "letra": {
       "estrofes": [
         [
@@ -1686,7 +1686,7 @@ const coros = [
   {
     "ID": 62,
     "numero": 63,
-    "titulo": "Ele pode",
+    "titulo": "#LDC - Ele pode",
     "letra": {
       "estrofes": [
         [
@@ -1717,7 +1717,7 @@ const coros = [
   {
     "ID": 63,
     "numero": 64,
-    "titulo": "Então se verá",
+    "titulo": "#LDC - Então se verá",
     "letra": {
       "estrofes": [
         [
@@ -1741,7 +1741,7 @@ const coros = [
   {
     "ID": 64,
     "numero": 65,
-    "titulo": "Eis-me aqui",
+    "titulo": "#LDC - Eis-me aqui",
     "letra": {
       "estrofes": [
         [
@@ -1760,7 +1760,7 @@ const coros = [
   {
     "ID": 65,
     "numero": 66,
-    "titulo": "É só Jesus",
+    "titulo": "#LDC - É só Jesus",
     "letra": {
       "estrofes": [
         [
@@ -1782,7 +1782,7 @@ const coros = [
   {
     "ID": 66,
     "numero": 67,
-    "titulo": "Estou alegre, estou alegre",
+    "titulo": "#LDC - Estou alegre, estou alegre",
     "letra": {
       "estrofes": [
         [
@@ -1807,7 +1807,7 @@ const coros = [
   {
     "ID": 67,
     "numero": 68,
-    "titulo": "Estou alegre e lhe direi por que",
+    "titulo": "#LDC - Estou alegre e lhe direi por que",
     "letra": {
       "estrofes": [
         [
@@ -1832,7 +1832,7 @@ const coros = [
   {
     "ID": 68,
     "numero": 69,
-    "titulo": "Estou alegre porque sou da família de Deus",
+    "titulo": "#LDC - Estou alegre porque sou da família de Deus",
     "letra": {
       "estrofes": [
         [
@@ -1853,7 +1853,7 @@ const coros = [
   {
     "ID": 69,
     "numero": 70,
-    "titulo": "Estou no caminho",
+    "titulo": "#LDC - Estou no caminho",
     "letra": {
       "estrofes": [
         [
@@ -1883,7 +1883,7 @@ const coros = [
   {
     "ID": 70,
     "numero": 71,
-    "titulo": "Eu me levantarei",
+    "titulo": "#LDC - Eu me levantarei",
     "letra": {
       "estrofes": [
         [
@@ -1906,7 +1906,7 @@ const coros = [
   {
     "ID": 71,
     "numero": 72,
-    "titulo": "Eu louvarei",
+    "titulo": "#LDC - Eu louvarei",
     "letra": {
       "estrofes": [
         [
@@ -1935,7 +1935,7 @@ const coros = [
   {
     "ID": 72,
     "numero": 73,
-    "titulo": "Estou seguindo a Jesus Cristo",
+    "titulo": "#LDC - Estou seguindo a Jesus Cristo",
     "letra": {
       "estrofes": [
         [
@@ -1974,7 +1974,7 @@ const coros = [
   {
     "ID": 73,
     "numero": 74,
-    "titulo": "Eu quero ser",
+    "titulo": "#LDC - Eu quero ser",
     "letra": {
       "estrofes": [
         [
@@ -1999,7 +1999,7 @@ const coros = [
   {
     "ID": 74,
     "numero": 75,
-    "titulo": "Eu nunca estou sozinho",
+    "titulo": "#LDC - Eu nunca estou sozinho",
     "letra": {
       "estrofes": [
         [
@@ -2032,7 +2032,7 @@ const coros = [
   {
     "ID": 75,
     "numero": 76,
-    "titulo": "Eu só confio no Senhor",
+    "titulo": "#LDC - Eu só confio no Senhor",
     "letra": {
       "estrofes": [
         [
@@ -2059,7 +2059,7 @@ const coros = [
   {
     "ID": 76,
     "numero": 77,
-    "titulo": "Guiado pela mão de Cristo",
+    "titulo": "#LDC - Guiado pela mão de Cristo",
     "letra": {
       "estrofes": [
         [
@@ -2082,7 +2082,7 @@ const coros = [
   {
     "ID": 77,
     "numero": 78,
-    "titulo": "Eu sou a Videira verdadeira",
+    "titulo": "#LDC - Eu sou a Videira verdadeira",
     "letra": {
       "estrofes": [
         [
@@ -2111,7 +2111,7 @@ const coros = [
   {
     "ID": 78,
     "numero": 79,
-    "titulo": "Há momentos",
+    "titulo": "#LDC - Há momentos",
     "letra": {
       "estrofes": [
         [
@@ -2140,7 +2140,7 @@ const coros = [
   {
     "ID": 79,
     "numero": 80,
-    "titulo": "Maravilhoso é",
+    "titulo": "#LDC - Maravilhoso é",
     "letra": {
       "estrofes": [
         [
@@ -2167,7 +2167,7 @@ const coros = [
   {
     "ID": 80,
     "numero": 81,
-    "titulo": "Ele é realidade",
+    "titulo": "#LDC - Ele é realidade",
     "letra": {
       "estrofes": [
         [
@@ -2190,7 +2190,7 @@ const coros = [
   {
     "ID": 81,
     "numero": 82,
-    "titulo": "Eu vou ali buscando",
+    "titulo": "#LDC - Eu vou ali buscando",
     "letra": {
       "estrofes": [
         [
@@ -2226,7 +2226,7 @@ const coros = [
   {
     "ID": 82,
     "numero": 83,
-    "titulo": "Hoje guia-me Senhor",
+    "titulo": "#LDC - Hoje guia-me Senhor",
     "letra": {
       "estrofes": [
         [
@@ -2247,7 +2247,7 @@ const coros = [
   {
     "ID": 83,
     "numero": 84,
-    "titulo": "Adoração (C.C.#08)",
+    "titulo": "#LDC - Adoração (C.C.#08)",
     "letra": {
       "estrofes": [
         [
@@ -2268,7 +2268,7 @@ const coros = [
   {
     "ID": 84,
     "numero": 85,
-    "titulo": "Eu vou lhe falar",
+    "titulo": "#LDC - Eu vou lhe falar",
     "letra": {
       "estrofes": [
         [
@@ -2316,7 +2316,7 @@ const coros = [
   {
     "ID": 85,
     "numero": 86,
-    "titulo": "Meu coração transborda de amor",
+    "titulo": "#LDC - Meu coração transborda de amor",
     "letra": {
       "estrofes": [
         [
@@ -2350,7 +2350,7 @@ const coros = [
   {
     "ID": 86,
     "numero": 87,
-    "titulo": "Nossa esperança é Sua vinda",
+    "titulo": "#LDC - Nossa esperança é Sua vinda",
     "letra": {
       "estrofes": [
         [
@@ -2371,7 +2371,7 @@ const coros = [
   {
     "ID": 87,
     "numero": 88,
-    "titulo": "Eis o Cordeiro de Deus",
+    "titulo": "#LDC - Eis o Cordeiro de Deus",
     "letra": {
       "estrofes": [
         [
@@ -2396,7 +2396,7 @@ const coros = [
   {
     "ID": 88,
     "numero": 89,
-    "titulo": "Estamos muito alegres",
+    "titulo": "#LDC - Estamos muito alegres",
     "letra": {
       "estrofes": [
         [
@@ -2419,7 +2419,7 @@ const coros = [
   {
     "ID": 89,
     "numero": 90,
-    "titulo": "O amor de Jesus",
+    "titulo": "#LDC - O amor de Jesus",
     "letra": {
       "estrofes": [
         [
@@ -2442,7 +2442,7 @@ const coros = [
   {
     "ID": 90,
     "numero": 91,
-    "titulo": "Oh, eu amo a Cristo",
+    "titulo": "#LDC - Oh, eu amo a Cristo",
     "letra": {
       "estrofes": [
         [
@@ -2468,7 +2468,7 @@ const coros = [
   {
     "ID": 91,
     "numero": 92,
-    "titulo": "Oh, oh, oh, oh",
+    "titulo": "#LDC - Oh, oh, oh, oh",
     "letra": {
       "estrofes": [
         [
@@ -2494,7 +2494,7 @@ const coros = [
   {
     "ID": 92,
     "numero": 93,
-    "titulo": "Que a beleza de Cristo",
+    "titulo": "#LDC - Que a beleza de Cristo",
     "letra": {
       "estrofes": [
         [
@@ -2515,7 +2515,7 @@ const coros = [
   {
     "ID": 93,
     "numero": 94,
-    "titulo": "O importante é amar",
+    "titulo": "#LDC - O importante é amar",
     "letra": {
       "estrofes": [
         [
@@ -2543,7 +2543,7 @@ const coros = [
   {
     "ID": 94,
     "numero": 95,
-    "titulo": "Pai eu Te adoro",
+    "titulo": "#LDC - Pai eu Te adoro",
     "letra": {
       "estrofes": [
         [
@@ -2570,7 +2570,7 @@ const coros = [
   {
     "ID": 95,
     "numero": 96,
-    "titulo": "Pastos bem verdejantes",
+    "titulo": "#LDC - Pastos bem verdejantes",
     "letra": {
       "estrofes": [
         [
@@ -2603,7 +2603,7 @@ const coros = [
   {
     "ID": 96,
     "numero": 97,
-    "titulo": "Santo Espírito",
+    "titulo": "#LDC - Santo Espírito",
     "letra": {
       "estrofes": [
         [
@@ -2634,7 +2634,7 @@ const coros = [
   {
     "ID": 97,
     "numero": 98,
-    "titulo": "O caminho é Jesus",
+    "titulo": "#LDC - O caminho é Jesus",
     "letra": {
       "estrofes": [
         [
@@ -2653,7 +2653,7 @@ const coros = [
   {
     "ID": 98,
     "numero": 99,
-    "titulo": "Quem traz almas",
+    "titulo": "#LDC - Quem traz almas",
     "letra": {
       "estrofes": [
         [
@@ -2682,7 +2682,7 @@ const coros = [
   {
     "ID": 99,
     "numero": 100,
-    "titulo": "Se confessarmos",
+    "titulo": "#LDC - Se confessarmos",
     "letra": {
       "estrofes": [
         [
@@ -2703,7 +2703,7 @@ const coros = [
   {
     "ID": 100,
     "numero": 101,
-    "titulo": "Tens problemas",
+    "titulo": "#LDC - Tens problemas",
     "letra": {
       "estrofes": [
         [
@@ -2724,7 +2724,7 @@ const coros = [
   {
     "ID": 101,
     "numero": 102,
-    "titulo": "Deus está aqui",
+    "titulo": "#LDC - Deus está aqui",
     "letra": {
       "estrofes": [
         [
@@ -2751,7 +2751,7 @@ const coros = [
   {
     "ID": 102,
     "numero": 103,
-    "titulo": "Quero muitas almas",
+    "titulo": "#LDC - Quero muitas almas",
     "letra": {
       "estrofes": [
         [
@@ -2784,7 +2784,7 @@ const coros = [
   {
     "ID": 103,
     "numero": 104,
-    "titulo": "Seu nome é maravilhoso",
+    "titulo": "#LDC - Seu nome é maravilhoso",
     "letra": {
       "estrofes": [
         [
@@ -2816,7 +2816,7 @@ const coros = [
   {
     "ID": 104,
     "numero": 105,
-    "titulo": "Tenho paz como o rio",
+    "titulo": "#LDC - Tenho paz como o rio",
     "letra": {
       "estrofes": [
         [
@@ -2839,7 +2839,7 @@ const coros = [
   {
     "ID": 105,
     "numero": 106,
-    "titulo": "Satisfação é ter a Cristo",
+    "titulo": "#LDC - Satisfação é ter a Cristo",
     "letra": {
       "estrofes": [
         [
@@ -2876,7 +2876,7 @@ const coros = [
   {
     "ID": 106,
     "numero": 107,
-    "titulo": "Satisfação é ter a Cristo",
+    "titulo": "#LDC - Satisfação é ter a Cristo",
     "letra": {
       "estrofes": [
         [
@@ -2897,7 +2897,7 @@ const coros = [
   {
     "ID": 107,
     "numero": 108,
-    "titulo": "Os que esperam no Senhor",
+    "titulo": "#LDC - Os que esperam no Senhor",
     "letra": {
       "estrofes": [
         [
@@ -2918,7 +2918,7 @@ const coros = [
   {
     "ID": 108,
     "numero": 109,
-    "titulo": "Vencedor serei",
+    "titulo": "#LDC - Vencedor serei",
     "letra": {
       "estrofes": [
         [
@@ -2943,7 +2943,7 @@ const coros = [
   {
     "ID": 109,
     "numero": 110,
-    "titulo": "Visitante seja bem-vindo",
+    "titulo": "#LDC - Visitante seja bem-vindo",
     "letra": {
       "estrofes": [
         [
@@ -2970,7 +2970,7 @@ const coros = [
   {
     "ID": 110,
     "numero": 111,
-    "titulo": "Vou trabalhar, servir, velar",
+    "titulo": "#LDC - Vou trabalhar, servir, velar",
     "letra": {
       "estrofes": [
         [
@@ -2995,7 +2995,7 @@ const coros = [
   {
     "ID": 111,
     "numero": 112,
-    "titulo": "Agradecer a Deus",
+    "titulo": "#LDC - Agradecer a Deus",
     "letra": {
       "estrofes": [
         [
@@ -3018,7 +3018,7 @@ const coros = [
   {
     "ID": 112,
     "numero": 113,
-    "titulo": "A minha alma",
+    "titulo": "#LDC - A minha alma",
     "letra": {
       "estrofes": [
         [
@@ -3050,7 +3050,7 @@ const coros = [
   {
     "ID": 113,
     "numero": 114,
-    "titulo": "Não me importa",
+    "titulo": "#LDC - Não me importa",
     "letra": {
       "estrofes": [
         [
@@ -3076,7 +3076,7 @@ const coros = [
   {
     "ID": 114,
     "numero": 115,
-    "titulo": "Quão bom e quão maravilhoso",
+    "titulo": "#LDC - Quão bom e quão maravilhoso",
     "letra": {
       "estrofes": [
         [
@@ -3105,7 +3105,7 @@ const coros = [
   {
     "ID": 115,
     "numero": 116,
-    "titulo": "Dádiva",
+    "titulo": "#LDC - Dádiva",
     "letra": {
       "estrofes": [
         [
@@ -3133,7 +3133,7 @@ const coros = [
   {
     "ID": 116,
     "numero": 117,
-    "titulo": "Jesus sabe bem o caminho",
+    "titulo": "#LDC - Jesus sabe bem o caminho",
     "letra": {
       "estrofes": [
         [
@@ -3160,7 +3160,7 @@ const coros = [
   {
     "ID": 117,
     "numero": 118,
-    "titulo": "Jesus é meu guia",
+    "titulo": "#LDC - Jesus é meu guia",
     "letra": {
       "estrofes": [
         [
@@ -3185,7 +3185,7 @@ const coros = [
   {
     "ID": 118,
     "numero": 119,
-    "titulo": "Água viva",
+    "titulo": "#LDC - Água viva",
     "letra": {
       "estrofes": [
         [
@@ -3223,7 +3223,7 @@ const coros = [
   {
     "ID": 119,
     "numero": 120,
-    "titulo": "Domingo eu vou à igreja",
+    "titulo": "#LDC - Domingo eu vou à igreja",
     "letra": {
       "estrofes": [
         [
@@ -3249,7 +3249,7 @@ const coros = [
   {
     "ID": 120,
     "numero": 121,
-    "titulo": "Se estais sozinho",
+    "titulo": "#LDC - Se estais sozinho",
     "letra": {
       "estrofes": [
         [
@@ -3281,7 +3281,7 @@ const coros = [
   {
     "ID": 121,
     "numero": 122,
-    "titulo": "O Teu amor",
+    "titulo": "#LDC - O Teu amor",
     "letra": {
       "estrofes": [
         [
@@ -3310,7 +3310,7 @@ const coros = [
   {
     "ID": 122,
     "numero": 123,
-    "titulo": "Reina hoje!",
+    "titulo": "#LDC - Reina hoje!",
     "letra": {
       "estrofes": [
         [
@@ -3335,7 +3335,7 @@ const coros = [
   {
     "ID": 123,
     "numero": 124,
-    "titulo": "Cantai ao SENHOR um cântico novo",
+    "titulo": "#LDC - Cantai ao SENHOR um cântico novo",
     "letra": {
       "estrofes": [
         [
@@ -3367,7 +3367,7 @@ const coros = [
   {
     "ID": 124,
     "numero": 125,
-    "titulo": "Quem pode livrar como o SENHOR?",
+    "titulo": "#LDC - Quem pode livrar como o SENHOR?",
     "letra": {
       "estrofes": [
         [
@@ -3394,7 +3394,7 @@ const coros = [
   {
     "ID": 125,
     "numero": 126,
-    "titulo": "Se conversarmos com Jesus",
+    "titulo": "#LDC - Se conversarmos com Jesus",
     "letra": {
       "estrofes": [
         [
@@ -3414,7 +3414,7 @@ const coros = [
   {
     "ID": 126,
     "numero": 127,
-    "titulo": "A vitória",
+    "titulo": "#LDC - A vitória",
     "letra": {
       "estrofes": [
         [
@@ -3447,7 +3447,7 @@ const coros = [
   {
     "ID": 127,
     "numero": 128,
-    "titulo": "Jesus, Te entronizamos",
+    "titulo": "#LDC - Jesus, Te entronizamos",
     "letra": {
       "estrofes": [
         [
@@ -3470,7 +3470,7 @@ const coros = [
   {
     "ID": 128,
     "numero": 129,
-    "titulo": "Seja engrandecido",
+    "titulo": "#LDC - Seja engrandecido",
     "letra": {
       "estrofes": [
         [
@@ -3497,7 +3497,7 @@ const coros = [
   {
     "ID": 129,
     "numero": 130,
-    "titulo": "Sobre as ondas",
+    "titulo": "#LDC - Sobre as ondas",
     "letra": {
       "estrofes": [
         [
@@ -3535,7 +3535,7 @@ const coros = [
   {
     "ID": 130,
     "numero": 131,
-    "titulo": "Eu creio",
+    "titulo": "#LDC - Eu creio",
     "letra": {
       "estrofes": [
         [
@@ -3561,7 +3561,7 @@ const coros = [
   {
     "ID": 131,
     "numero": 132,
-    "titulo": "Ele é o Leão da Tribo de Judá",
+    "titulo": "#LDC - Ele é o Leão da Tribo de Judá",
     "letra": {
       "estrofes": [
         [
@@ -3587,7 +3587,7 @@ const coros = [
   {
     "ID": 132,
     "numero": 133,
-    "titulo": "Ele é exaltado",
+    "titulo": "#LDC - Ele é exaltado",
     "letra": {
       "estrofes": [
         [
@@ -3613,7 +3613,7 @@ const coros = [
   {
     "ID": 133,
     "numero": 134,
-    "titulo": "Terra e céu",
+    "titulo": "#LDC - Terra e céu",
     "letra": {
       "estrofes": [
         [
@@ -3638,7 +3638,7 @@ const coros = [
   {
     "ID": 134,
     "numero": 135,
-    "titulo": "Meu Deus é Pai",
+    "titulo": "#LDC - Meu Deus é Pai",
     "letra": {
       "estrofes": [
         [
@@ -3663,7 +3663,7 @@ const coros = [
   {
     "ID": 135,
     "numero": 136,
-    "titulo": "Há um só Deus",
+    "titulo": "#LDC - Há um só Deus",
     "letra": {
       "estrofes": [
         [
@@ -3688,7 +3688,7 @@ const coros = [
   {
     "ID": 136,
     "numero": 137,
-    "titulo": "Espírito enche a minha vida",
+    "titulo": "#LDC - Espírito enche a minha vida",
     "letra": {
       "estrofes": [
         [
@@ -3715,7 +3715,7 @@ const coros = [
   {
     "ID": 137,
     "numero": 138,
-    "titulo": "Ó estou muito feliz",
+    "titulo": "#LDC - Ó estou muito feliz",
     "letra": {
       "estrofes": [
         [
@@ -3741,7 +3741,7 @@ const coros = [
   {
     "ID": 138,
     "numero": 139,
-    "titulo": "Reina o Senhor",
+    "titulo": "#LDC - Reina o Senhor",
     "letra": {
       "estrofes": [
         [
@@ -3776,7 +3776,7 @@ const coros = [
   {
     "ID": 139,
     "numero": 140,
-    "titulo": "Modo lindo de viver",
+    "titulo": "#LDC - Modo lindo de viver",
     "letra": {
       "estrofes": [
         [
@@ -3808,7 +3808,7 @@ const coros = [
   {
     "ID": 140,
     "numero": 141,
-    "titulo": "Formosa é Tua presença Senhor",
+    "titulo": "#LDC - Formosa é Tua presença Senhor",
     "letra": {
       "estrofes": [
         [
@@ -3835,7 +3835,7 @@ const coros = [
   {
     "ID": 141,
     "numero": 142,
-    "titulo": "Nosso Deus é soberano",
+    "titulo": "#LDC - Nosso Deus é soberano",
     "letra": {
       "estrofes": [
         [
@@ -3869,7 +3869,7 @@ const coros = [
   {
     "ID": 142,
     "numero": 143,
-    "titulo": "Conheci um grande amigo",
+    "titulo": "#LDC - Conheci um grande amigo",
     "letra": {
       "estrofes": [
         [
@@ -3908,7 +3908,7 @@ const coros = [
   {
     "ID": 143,
     "numero": 144,
-    "titulo": "Grande, grande, grande é o Senhor",
+    "titulo": "#LDC - Grande, grande, grande é o Senhor",
     "letra": {
       "estrofes": [
         [
@@ -3935,7 +3935,7 @@ const coros = [
   {
     "ID": 144,
     "numero": 145,
-    "titulo": "Ao único",
+    "titulo": "#LDC - Ao único",
     "letra": {
       "estrofes": [
         [
@@ -3962,7 +3962,7 @@ const coros = [
   {
     "ID": 145,
     "numero": 146,
-    "titulo": "Minh'alma engrandece ao Senhor",
+    "titulo": "#LDC - Minh'alma engrandece ao Senhor",
     "letra": {
       "estrofes": [
         [
@@ -3994,7 +3994,7 @@ const coros = [
   {
     "ID": 146,
     "numero": 147,
-    "titulo": "Coroado Senhor",
+    "titulo": "#LDC - Coroado Senhor",
     "letra": {
       "estrofes": [
         [
@@ -4017,7 +4017,7 @@ const coros = [
   {
     "ID": 147,
     "numero": 148,
-    "titulo": "Jesus em Tua presença",
+    "titulo": "#LDC - Jesus em Tua presença",
     "letra": {
       "estrofes": [
         [
@@ -4050,7 +4050,7 @@ const coros = [
   {
     "ID": 148,
     "numero": 149,
-    "titulo": "Adorarei",
+    "titulo": "#LDC - Adorarei",
     "letra": {
       "estrofes": [
         [
@@ -4078,7 +4078,7 @@ const coros = [
   {
     "ID": 149,
     "numero": 150,
-    "titulo": "Aleluia, salvação e glória",
+    "titulo": "#LDC - Aleluia, salvação e glória",
     "letra": {
       "estrofes": [
         [
@@ -4099,7 +4099,7 @@ const coros = [
   {
     "ID": 150,
     "numero": 151,
-    "titulo": "Reunidos aqui",
+    "titulo": "#LDC - Reunidos aqui",
     "letra": {
       "estrofes": [
         [
@@ -4127,7 +4127,7 @@ const coros = [
   {
     "ID": 151,
     "numero": 152,
-    "titulo": "Deus é o nosso refúgio",
+    "titulo": "#LDC - Deus é o nosso refúgio",
     "letra": {
       "estrofes": [
         [
@@ -4148,7 +4148,7 @@ const coros = [
   {
     "ID": 152,
     "numero": 153,
-    "titulo": "Alto preço",
+    "titulo": "#LDC - Alto preço",
     "letra": {
       "estrofes": [
         [
@@ -4184,7 +4184,7 @@ const coros = [
   {
     "ID": 153,
     "numero": 154,
-    "titulo": "Quero louvar-Te",
+    "titulo": "#LDC - Quero louvar-Te",
     "letra": {
       "estrofes": [
         [
@@ -4216,7 +4216,7 @@ const coros = [
   {
     "ID": 154,
     "numero": 155,
-    "titulo": "O domínio e o poder",
+    "titulo": "#LDC - O domínio e o poder",
     "letra": {
       "estrofes": [
         [
@@ -4239,7 +4239,7 @@ const coros = [
   {
     "ID": 155,
     "numero": 156,
-    "titulo": "Vamos adorar a Deus",
+    "titulo": "#LDC - Vamos adorar a Deus",
     "letra": {
       "estrofes": [
         [
@@ -4272,7 +4272,7 @@ const coros = [
   {
     "ID": 156,
     "numero": 157,
-    "titulo": "Aliança",
+    "titulo": "#LDC - Aliança",
     "letra": {
       "estrofes": [
         [
@@ -4303,7 +4303,7 @@ const coros = [
   {
     "ID": 157,
     "numero": 158,
-    "titulo": "Pai de amor",
+    "titulo": "#LDC - Pai de amor",
     "letra": {
       "estrofes": [
         [
@@ -4333,7 +4333,7 @@ const coros = [
   {
     "ID": 158,
     "numero": 159,
-    "titulo": "Ao que está sentado no trono",
+    "titulo": "#LDC - Ao que está sentado no trono",
     "letra": {
       "estrofes": [
         [
@@ -4353,7 +4353,7 @@ const coros = [
   {
     "ID": 159,
     "numero": 160,
-    "titulo": "Conheci o mundo mau",
+    "titulo": "#LDC - Conheci o mundo mau",
     "letra": {
       "estrofes": [
         [
@@ -4385,7 +4385,7 @@ const coros = [
   {
     "ID": 160,
     "numero": 161,
-    "titulo": "Glória pra sempre ao Cordeiro",
+    "titulo": "#LDC - Glória pra sempre ao Cordeiro",
     "letra": {
       "estrofes": [
         [
@@ -4416,7 +4416,7 @@ const coros = [
   {
     "ID": 161,
     "numero": 162,
-    "titulo": "Celebrarei com júbilo ao Senhor",
+    "titulo": "#LDC - Celebrarei com júbilo ao Senhor",
     "letra": {
       "estrofes": [
         [
@@ -4442,7 +4442,7 @@ const coros = [
   {
     "ID": 162,
     "numero": 163,
-    "titulo": "É bastante para mim a Tua graça",
+    "titulo": "#LDC - É bastante para mim a Tua graça",
     "letra": {
       "estrofes": [
         [
@@ -4477,7 +4477,7 @@ const coros = [
   {
     "ID": 163,
     "numero": 164,
-    "titulo": "Cristo Jesus",
+    "titulo": "#LDC - Cristo Jesus",
     "letra": {
       "estrofes": [
         [
@@ -4508,7 +4508,7 @@ const coros = [
   {
     "ID": 164,
     "numero": 165,
-    "titulo": "Do Senhor é a terra",
+    "titulo": "#LDC - Do Senhor é a terra",
     "letra": {
       "estrofes": [
         [
@@ -4535,7 +4535,7 @@ const coros = [
   {
     "ID": 165,
     "numero": 166,
-    "titulo": "Deus eterno",
+    "titulo": "#LDC - Deus eterno",
     "letra": {
       "estrofes": [
         [
@@ -4557,7 +4557,7 @@ const coros = [
   {
     "ID": 166,
     "numero": 167,
-    "titulo": "Hosana",
+    "titulo": "#LDC - Hosana",
     "letra": {
       "estrofes": [
         [
@@ -4596,7 +4596,7 @@ const coros = [
   {
     "ID": 167,
     "numero": 168,
-    "titulo": "Jesus não faltará",
+    "titulo": "#LDC - Jesus não faltará",
     "letra": {
       "estrofes": [
         [
@@ -4623,7 +4623,7 @@ const coros = [
   {
     "ID": 168,
     "numero": 169,
-    "titulo": "Deus está presente",
+    "titulo": "#LDC - Deus está presente",
     "letra": {
       "estrofes": [
         [
@@ -4649,7 +4649,7 @@ const coros = [
   {
     "ID": 169,
     "numero": 170,
-    "titulo": "Calmo, sereno e tranqüilo",
+    "titulo": "#LDC - Calmo, sereno e tranqüilo",
     "letra": {
       "estrofes": [
         [
@@ -4682,7 +4682,7 @@ const coros = [
   {
     "ID": 170,
     "numero": 171,
-    "titulo": "Vem louvar",
+    "titulo": "#LDC - Vem louvar",
     "letra": {
       "estrofes": [
         [
@@ -4714,7 +4714,7 @@ const coros = [
   {
     "ID": 171,
     "numero": 172,
-    "titulo": "Tudo Ele é pra mim",
+    "titulo": "#LDC - Tudo Ele é pra mim",
     "letra": {
       "estrofes": [
         [
@@ -4749,7 +4749,7 @@ const coros = [
   {
     "ID": 172,
     "numero": 173,
-    "titulo": "É fácil de entender",
+    "titulo": "#LDC - É fácil de entender",
     "letra": {
       "estrofes": [
         [
@@ -4771,7 +4771,7 @@ const coros = [
   {
     "ID": 173,
     "numero": 174,
-    "titulo": "Cristo vem me buscar",
+    "titulo": "#LDC - Cristo vem me buscar",
     "letra": {
       "estrofes": [
         [
@@ -4806,7 +4806,7 @@ const coros = [
   {
     "ID": 174,
     "numero": 175,
-    "titulo": "Eu te louvarei Senhor",
+    "titulo": "#LDC - Eu te louvarei Senhor",
     "letra": {
       "estrofes": [
         [
@@ -4829,7 +4829,7 @@ const coros = [
   {
     "ID": 175,
     "numero": 176,
-    "titulo": "Porque Ele vive",
+    "titulo": "#LDC - Porque Ele vive",
     "letra": {
       "estrofes": [
         [
@@ -4862,7 +4862,7 @@ const coros = [
   {
     "ID": 176,
     "numero": 177,
-    "titulo": "Eu sou a ressurreição",
+    "titulo": "#LDC - Eu sou a ressurreição",
     "letra": {
       "estrofes": [
         [
@@ -4884,7 +4884,7 @@ const coros = [
   {
     "ID": 177,
     "numero": 178,
-    "titulo": "Há vitória para mim",
+    "titulo": "#LDC - Há vitória para mim",
     "letra": {
       "estrofes": [
         [
@@ -4906,7 +4906,7 @@ const coros = [
   {
     "ID": 178,
     "numero": 179,
-    "titulo": "Exaltar-Te-ei",
+    "titulo": "#LDC - Exaltar-Te-ei",
     "letra": {
       "estrofes": [
         [
@@ -4950,7 +4950,7 @@ const coros = [
   {
     "ID": 179,
     "numero": 180,
-    "titulo": "Salmos de louvor",
+    "titulo": "#LDC - Salmos de louvor",
     "letra": {
       "estrofes": [
         [
@@ -4982,7 +4982,7 @@ const coros = [
   {
     "ID": 180,
     "numero": 181,
-    "titulo": "Andam procurando",
+    "titulo": "#LDC - Andam procurando",
     "letra": {
       "estrofes": [
         [
@@ -5015,7 +5015,7 @@ const coros = [
   {
     "ID": 181,
     "numero": 182,
-    "titulo": "Na viagem desta vida",
+    "titulo": "#LDC - Na viagem desta vida",
     "letra": {
       "estrofes": [
         [
@@ -5039,7 +5039,7 @@ const coros = [
   {
     "ID": 182,
     "numero": 183,
-    "titulo": "Faz-me chegar",
+    "titulo": "#LDC - Faz-me chegar",
     "letra": {
       "estrofes": [
         [
@@ -5066,7 +5066,7 @@ const coros = [
   {
     "ID": 183,
     "numero": 184,
-    "titulo": "Rendei graças ao Senhor",
+    "titulo": "#LDC - Rendei graças ao Senhor",
     "letra": {
       "estrofes": [
         [
@@ -5092,7 +5092,7 @@ const coros = [
   {
     "ID": 184,
     "numero": 185,
-    "titulo": "Eu pertenço a Cristo",
+    "titulo": "#LDC - Eu pertenço a Cristo",
     "letra": {
       "estrofes": [
         [
@@ -5113,7 +5113,7 @@ const coros = [
   {
     "ID": 185,
     "numero": 186,
-    "titulo": "A alegria está no coração",
+    "titulo": "#LDC - A alegria está no coração",
     "letra": {
       "estrofes": [
         [
@@ -5146,7 +5146,7 @@ const coros = [
   {
     "ID": 186,
     "numero": 187,
-    "titulo": "Mas os que esperam",
+    "titulo": "#LDC - Mas os que esperam",
     "letra": {
       "estrofes": [
         [
@@ -5171,7 +5171,7 @@ const coros = [
   {
     "ID": 187,
     "numero": 188,
-    "titulo": "De todas as tribos",
+    "titulo": "#LDC - De todas as tribos",
     "letra": {
       "estrofes": [
         [
@@ -5210,7 +5210,7 @@ const coros = [
   {
     "ID": 188,
     "numero": 189,
-    "titulo": "Somos um pequeno povo mui feliz",
+    "titulo": "#LDC - Somos um pequeno povo mui feliz",
     "letra": {
       "estrofes": [
         [
@@ -5230,7 +5230,7 @@ const coros = [
   {
     "ID": 189,
     "numero": 190,
-    "titulo": "Tu és soberano",
+    "titulo": "#LDC - Tu és soberano",
     "letra": {
       "estrofes": [
         [
@@ -5255,7 +5255,7 @@ const coros = [
   {
     "ID": 190,
     "numero": 191,
-    "titulo": "Com o Senhor marchamos",
+    "titulo": "#LDC - Com o Senhor marchamos",
     "letra": {
       "estrofes": [
         [
@@ -5295,7 +5295,7 @@ const coros = [
   {
     "ID": 191,
     "numero": 192,
-    "titulo": "Cristo é o meu sol",
+    "titulo": "#LDC - Cristo é o meu sol",
     "letra": {
       "estrofes": [
         [
@@ -5321,7 +5321,7 @@ const coros = [
   {
     "ID": 192,
     "numero": 193,
-    "titulo": "Rei das nações",
+    "titulo": "#LDC - Rei das nações",
     "letra": {
       "estrofes": [
         [
@@ -5353,7 +5353,7 @@ const coros = [
   {
     "ID": 193,
     "numero": 194,
-    "titulo": "Jesus virá",
+    "titulo": "#LDC - Jesus virá",
     "letra": {
       "estrofes": [
         [
@@ -5386,7 +5386,7 @@ const coros = [
   {
     "ID": 194,
     "numero": 195,
-    "titulo": "Tudo aqui mudou",
+    "titulo": "#LDC - Tudo aqui mudou",
     "letra": {
       "estrofes": [
         [
@@ -5411,7 +5411,7 @@ const coros = [
   {
     "ID": 195,
     "numero": 196,
-    "titulo": "Bem aventurado",
+    "titulo": "#LDC - Bem aventurado",
     "letra": {
       "estrofes": [
         [
@@ -5445,7 +5445,7 @@ const coros = [
   {
     "ID": 196,
     "numero": 197,
-    "titulo": "O caminho para o céu é Jesus",
+    "titulo": "#LDC - O caminho para o céu é Jesus",
     "letra": {
       "estrofes": [
         [
@@ -5466,7 +5466,7 @@ const coros = [
   {
     "ID": 197,
     "numero": 198,
-    "titulo": "Senhor Tu és",
+    "titulo": "#LDC - Senhor Tu és",
     "letra": {
       "estrofes": [
         [
@@ -5490,7 +5490,7 @@ const coros = [
   {
     "ID": 198,
     "numero": 199,
-    "titulo": "Agradeço-Te, Senhor",
+    "titulo": "#LDC - Agradeço-Te, Senhor",
     "letra": {
       "estrofes": [
         [
@@ -5509,7 +5509,7 @@ const coros = [
   {
     "ID": 199,
     "numero": 200,
-    "titulo": "A começar em mim",
+    "titulo": "#LDC - A começar em mim",
     "letra": {
       "estrofes": [
         [
@@ -5534,7 +5534,7 @@ const coros = [
   {
     "ID": 200,
     "numero": 201,
-    "titulo": "Jesus Cristo mudou meu viver",
+    "titulo": "#LDC - Jesus Cristo mudou meu viver",
     "letra": {
       "estrofes": [
         [
@@ -5567,7 +5567,7 @@ const coros = [
   {
     "ID": 201,
     "numero": 202,
-    "titulo": "Se o Meu povo",
+    "titulo": "#LDC - Se o Meu povo",
     "letra": {
       "estrofes": [
         [
@@ -5596,7 +5596,7 @@ const coros = [
   {
     "ID": 202,
     "numero": 203,
-    "titulo": "Linda canção",
+    "titulo": "#LDC - Linda canção",
     "letra": {
       "estrofes": [
         [
@@ -5621,7 +5621,7 @@ const coros = [
   {
     "ID": 203,
     "numero": 204,
-    "titulo": "Jesus é maravilhoso",
+    "titulo": "#LDC - Jesus é maravilhoso",
     "letra": {
       "estrofes": [
         [
@@ -5641,7 +5641,7 @@ const coros = [
   {
     "ID": 204,
     "numero": 205,
-    "titulo": "Quem tem Jesus, tem tudo",
+    "titulo": "#LDC - Quem tem Jesus, tem tudo",
     "letra": {
       "estrofes": [
         [
@@ -5674,7 +5674,7 @@ const coros = [
   {
     "ID": 205,
     "numero": 206,
-    "titulo": "Eu sou crente em Jesus",
+    "titulo": "#LDC - Eu sou crente em Jesus",
     "letra": {
       "estrofes": [
         [
@@ -5695,7 +5695,7 @@ const coros = [
   {
     "ID": 206,
     "numero": 207,
-    "titulo": "Jesus é a aliança",
+    "titulo": "#LDC - Jesus é a aliança",
     "letra": {
       "estrofes": [
         [
@@ -5719,7 +5719,7 @@ const coros = [
   {
     "ID": 207,
     "numero": 208,
-    "titulo": "Jesus me ama",
+    "titulo": "#LDC - Jesus me ama",
     "letra": {
       "estrofes": [
         [
@@ -5754,7 +5754,7 @@ const coros = [
   {
     "ID": 208,
     "numero": 209,
-    "titulo": "Sabes tu porque eu amo a Cristo?",
+    "titulo": "#LDC - Sabes tu porque eu amo a Cristo?",
     "letra": {
       "estrofes": [
         [
@@ -5778,7 +5778,7 @@ const coros = [
   {
     "ID": 209,
     "numero": 210,
-    "titulo": "Tu que estás assentado",
+    "titulo": "#LDC - Tu que estás assentado",
     "letra": {
       "estrofes": [
         [
@@ -5813,7 +5813,7 @@ const coros = [
   {
     "ID": 210,
     "numero": 211,
-    "titulo": "Falemos de Cristo",
+    "titulo": "#LDC - Falemos de Cristo",
     "letra": {
       "estrofes": [
         [
@@ -5834,7 +5834,7 @@ const coros = [
   {
     "ID": 211,
     "numero": 212,
-    "titulo": "Eu celebrarei",
+    "titulo": "#LDC - Eu celebrarei",
     "letra": {
       "estrofes": [
         [
@@ -5867,7 +5867,7 @@ const coros = [
   {
     "ID": 212,
     "numero": 213,
-    "titulo": "Não a nós Senhor",
+    "titulo": "#LDC - Não a nós Senhor",
     "letra": {
       "estrofes": [
         [
@@ -5904,7 +5904,7 @@ const coros = [
   {
     "ID": 213,
     "numero": 214,
-    "titulo": "Felicidades",
+    "titulo": "#LDC - Felicidades",
     "letra": {
       "estrofes": [
         [
@@ -5925,7 +5925,7 @@ const coros = [
   {
     "ID": 214,
     "numero": 215,
-    "titulo": "Adoramos",
+    "titulo": "#LDC - Adoramos",
     "letra": {
       "estrofes": [
         [
@@ -5953,7 +5953,7 @@ const coros = [
   {
     "ID": 215,
     "numero": 216,
-    "titulo": "Louvemos ao Senhor",
+    "titulo": "#LDC - Louvemos ao Senhor",
     "letra": {
       "estrofes": [
         [
@@ -6001,7 +6001,7 @@ const coros = [
   {
     "ID": 216,
     "numero": 217,
-    "titulo": "Adorai",
+    "titulo": "#LDC - Adorai",
     "letra": {
       "estrofes": [
         [
@@ -6034,7 +6034,7 @@ const coros = [
   {
     "ID": 217,
     "numero": 218,
-    "titulo": "O que ouvimos e aprendemos",
+    "titulo": "#LDC - O que ouvimos e aprendemos",
     "letra": {
       "estrofes": [
         [
@@ -6075,7 +6075,7 @@ const coros = [
   {
     "ID": 218,
     "numero": 219,
-    "titulo": "Quero Te adorar ó Deus",
+    "titulo": "#LDC - Quero Te adorar ó Deus",
     "letra": {
       "estrofes": [
         [
@@ -6097,7 +6097,7 @@ const coros = [
   {
     "ID": 219,
     "numero": 220,
-    "titulo": "A Ti, Senhor",
+    "titulo": "#LDC - A Ti, Senhor",
     "letra": {
       "estrofes": [
         [
@@ -6124,7 +6124,7 @@ const coros = [
   {
     "ID": 220,
     "numero": 221,
-    "titulo": "Há uma linda canção de amor",
+    "titulo": "#LDC - Há uma linda canção de amor",
     "letra": {
       "estrofes": [
         [
@@ -6151,7 +6151,7 @@ const coros = [
   {
     "ID": 221,
     "numero": 222,
-    "titulo": "Esperança",
+    "titulo": "#LDC - Esperança",
     "letra": {
       "estrofes": [
         [
@@ -6184,7 +6184,7 @@ const coros = [
   {
     "ID": 222,
     "numero": 223,
-    "titulo": "Quero Te adorar",
+    "titulo": "#LDC - Quero Te adorar",
     "letra": {
       "estrofes": [
         [
@@ -6208,7 +6208,7 @@ const coros = [
   {
     "ID": 223,
     "numero": 224,
-    "titulo": "Quem é Deus",
+    "titulo": "#LDC - Quem é Deus",
     "letra": {
       "estrofes": [
         [
@@ -6237,7 +6237,7 @@ const coros = [
   {
     "ID": 224,
     "numero": 225,
-    "titulo": "O meu louvor",
+    "titulo": "#LDC - O meu louvor",
     "letra": {
       "estrofes": [
         [
@@ -6270,7 +6270,7 @@ const coros = [
   {
     "ID": 225,
     "numero": 226,
-    "titulo": "Pai abre o meu coração",
+    "titulo": "#LDC - Pai abre o meu coração",
     "letra": {
       "estrofes": [
         [
@@ -6298,7 +6298,7 @@ const coros = [
   {
     "ID": 226,
     "numero": 227,
-    "titulo": "Teu povo, oh Deus!",
+    "titulo": "#LDC - Teu povo, oh Deus!",
     "letra": {
       "estrofes": [
         [
@@ -6329,7 +6329,7 @@ const coros = [
   {
     "ID": 227,
     "numero": 228,
-    "titulo": "Grande é o Senhor",
+    "titulo": "#LDC - Grande é o Senhor",
     "letra": {
       "estrofes": [
         [
@@ -6363,7 +6363,7 @@ const coros = [
   {
     "ID": 228,
     "numero": 229,
-    "titulo": "Diante de Tuas obras",
+    "titulo": "#LDC - Diante de Tuas obras",
     "letra": {
       "estrofes": [
         [
@@ -6395,7 +6395,7 @@ const coros = [
   {
     "ID": 229,
     "numero": 230,
-    "titulo": "Amigo de Deus",
+    "titulo": "#LDC - Amigo de Deus",
     "letra": {
       "estrofes": [
         [
@@ -6417,7 +6417,7 @@ const coros = [
   {
     "ID": 230,
     "numero": 231,
-    "titulo": "Tributai ao Senhor",
+    "titulo": "#LDC - Tributai ao Senhor",
     "letra": {
       "estrofes": [
         [
@@ -6442,7 +6442,7 @@ const coros = [
   {
     "ID": 231,
     "numero": 232,
-    "titulo": "A Lei do Senhor é perfeita",
+    "titulo": "#LDC - A Lei do Senhor é perfeita",
     "letra": {
       "estrofes": [
         [
@@ -6480,7 +6480,7 @@ const coros = [
   {
     "ID": 232,
     "numero": 233,
-    "titulo": "Quem nos separará?",
+    "titulo": "#LDC - Quem nos separará?",
     "letra": {
       "estrofes": [
         [
@@ -6517,7 +6517,7 @@ const coros = [
   {
     "ID": 233,
     "numero": 234,
-    "titulo": "Leão de judá",
+    "titulo": "#LDC - Leão de judá",
     "letra": {
       "estrofes": [
         [
@@ -6553,7 +6553,7 @@ const coros = [
   {
     "ID": 234,
     "numero": 235,
-    "titulo": "Rio de Vida",
+    "titulo": "#LDC - Rio de Vida",
     "letra": {
       "estrofes": [
         [
@@ -6581,7 +6581,7 @@ const coros = [
   {
     "ID": 235,
     "numero": 236,
-    "titulo": "Estrela da manhã",
+    "titulo": "#LDC - Estrela da manhã",
     "letra": {
       "estrofes": [
         [
@@ -6611,7 +6611,7 @@ const coros = [
   {
     "ID": 236,
     "numero": 237,
-    "titulo": "Em Espírito, em verdade",
+    "titulo": "#LDC - Em Espírito, em verdade",
     "letra": {
       "estrofes": [
         [
@@ -6641,7 +6641,7 @@ const coros = [
   {
     "ID": 237,
     "numero": 238,
-    "titulo": "Declarando Sua glória",
+    "titulo": "#LDC - Declarando Sua glória",
     "letra": {
       "estrofes": [
         [
@@ -6680,7 +6680,7 @@ const coros = [
   {
     "ID": 238,
     "numero": 239,
-    "titulo": "Louvado seja",
+    "titulo": "#LDC - Louvado seja",
     "letra": {
       "estrofes": [
         [
@@ -6712,7 +6712,7 @@ const coros = [
   {
     "ID": 239,
     "numero": 240,
-    "titulo": "Brilha Jesus",
+    "titulo": "#LDC - Brilha Jesus",
     "letra": {
       "estrofes": [
         [
@@ -6754,7 +6754,7 @@ const coros = [
   {
     "ID": 240,
     "numero": 241,
-    "titulo": "Os que confiam no Senhor",
+    "titulo": "#LDC - Os que confiam no Senhor",
     "letra": {
       "estrofes": [
         [
@@ -6786,7 +6786,7 @@ const coros = [
   {
     "ID": 241,
     "numero": 242,
-    "titulo": "Consagração",
+    "titulo": "#LDC - Consagração",
     "letra": {
       "estrofes": [
         [
@@ -6821,7 +6821,7 @@ const coros = [
   {
     "ID": 242,
     "numero": 243,
-    "titulo": "Sereis testemunhas",
+    "titulo": "#LDC - Sereis testemunhas",
     "letra": {
       "estrofes": [
         [
@@ -6848,7 +6848,7 @@ const coros = [
   {
     "ID": 243,
     "numero": 244,
-    "titulo": "Flui em mim",
+    "titulo": "#LDC - Flui em mim",
     "letra": {
       "estrofes": [
         [
@@ -6871,7 +6871,7 @@ const coros = [
   {
     "ID": 244,
     "numero": 245,
-    "titulo": "A voz do Senhor",
+    "titulo": "#LDC - A voz do Senhor",
     "letra": {
       "estrofes": [
         [
@@ -6898,7 +6898,7 @@ const coros = [
   {
     "ID": 245,
     "numero": 246,
-    "titulo": "Nossa missão",
+    "titulo": "#LDC - Nossa missão",
     "letra": {
       "estrofes": [
         [
@@ -6928,7 +6928,7 @@ const coros = [
   {
     "ID": 246,
     "numero": 247,
-    "titulo": "Jesus me transformou",
+    "titulo": "#LDC - Jesus me transformou",
     "letra": {
       "estrofes": [
         [
@@ -6961,7 +6961,7 @@ const coros = [
   {
     "ID": 247,
     "numero": 248,
-    "titulo": "Noite de paz",
+    "titulo": "#LDC - Noite de paz",
     "letra": {
       "estrofes": [
         [
@@ -6997,7 +6997,7 @@ const coros = [
   {
     "ID": 248,
     "numero": 249,
-    "titulo": "Santo! Santo! Santo! (C.C.#9)",
+    "titulo": "#LDC - Santo! Santo! Santo! (C.C.#9)",
     "letra": {
       "estrofes": [
         [
@@ -7036,7 +7036,7 @@ const coros = [
   {
     "ID": 249,
     "numero": 250,
-    "titulo": "A Deus demos glória (C.C.#15)",
+    "titulo": "#LDC - A Deus demos glória (C.C.#15)",
     "letra": {
       "estrofes": [
         [
@@ -7075,7 +7075,7 @@ const coros = [
   {
     "ID": 250,
     "numero": 251,
-    "titulo": "Cantai que o Salvador chegou (C.C.#26)",
+    "titulo": "#LDC - Cantai que o Salvador chegou (C.C.#26)",
     "letra": {
       "estrofes": [
         [
@@ -7114,7 +7114,7 @@ const coros = [
   {
     "ID": 251,
     "numero": 252,
-    "titulo": "Nasceu o Redentor (C.C.#28)",
+    "titulo": "#LDC - Nasceu o Redentor (C.C.#28)",
     "letra": {
       "estrofes": [
         [
@@ -7165,7 +7165,7 @@ const coros = [
   {
     "ID": 252,
     "numero": 253,
-    "titulo": "Eis entronizado (C.C.#67)",
+    "titulo": "#LDC - Eis entronizado (C.C.#67)",
     "letra": {
       "estrofes": [
         [
@@ -7202,7 +7202,7 @@ const coros = [
   {
     "ID": 253,
     "numero": 254,
-    "titulo": "Morri na cruz por ti (C.C.#92)",
+    "titulo": "#LDC - Morri na cruz por ti (C.C.#92)",
     "letra": {
       "estrofes": [
         [
@@ -7237,7 +7237,7 @@ const coros = [
   {
     "ID": 254,
     "numero": 255,
-    "titulo": "Achei um grande amigo (C.C.#73)",
+    "titulo": "#LDC - Achei um grande amigo (C.C.#73)",
     "letra": {
       "estrofes": [
         [
@@ -7288,7 +7288,7 @@ const coros = [
   {
     "ID": 255,
     "numero": 256,
-    "titulo": "O poder do sangue (C.C.#89)",
+    "titulo": "#LDC - O poder do sangue (C.C.#89)",
     "letra": {
       "estrofes": [
         [
@@ -7333,7 +7333,7 @@ const coros = [
   {
     "ID": 256,
     "numero": 257,
-    "titulo": "Louvamos-Te ó Deus (C.C.#135)",
+    "titulo": "#LDC - Louvamos-Te ó Deus (C.C.#135)",
     "letra": {
       "estrofes": [
         [
@@ -7368,7 +7368,7 @@ const coros = [
   {
     "ID": 257,
     "numero": 258,
-    "titulo": "Deslumbrante (C.C.#96)",
+    "titulo": "#LDC - Deslumbrante (C.C.#96)",
     "letra": {
       "estrofes": [
         [
@@ -7413,7 +7413,7 @@ const coros = [
   {
     "ID": 258,
     "numero": 259,
-    "titulo": "Glória ao Salvador (C.C.#282)",
+    "titulo": "#LDC - Glória ao Salvador (C.C.#282)",
     "letra": {
       "estrofes": [
         [
@@ -7444,7 +7444,7 @@ const coros = [
   {
     "ID": 259,
     "numero": 260,
-    "titulo": "Quando se fizer chamada (C.C.#108)",
+    "titulo": "#LDC - Quando se fizer chamada (C.C.#108)",
     "letra": {
       "estrofes": [
         [
@@ -7487,7 +7487,7 @@ const coros = [
   {
     "ID": 260,
     "numero": 261,
-    "titulo": "Ouve-nos, Pastor Divino (C.C.#152)",
+    "titulo": "#LDC - Ouve-nos, Pastor Divino (C.C.#152)",
     "letra": {
       "estrofes": [
         [
@@ -7522,7 +7522,7 @@ const coros = [
   {
     "ID": 261,
     "numero": 262,
-    "titulo": "Vencendo vem Jesus (C.C.#112)",
+    "titulo": "#LDC - Vencendo vem Jesus (C.C.#112)",
     "letra": {
       "estrofes": [
         [
@@ -7577,7 +7577,7 @@ const coros = [
   {
     "ID": 262,
     "numero": 263,
-    "titulo": "Seja bendito o Cordeiro (C.C.#123)",
+    "titulo": "#LDC - Seja bendito o Cordeiro (C.C.#123)",
     "letra": {
       "estrofes": [
         [
@@ -7627,7 +7627,7 @@ const coros = [
   {
     "ID": 263,
     "numero": 264,
-    "titulo": "Firme nas promessas (C.C.#154)",
+    "titulo": "#LDC - Firme nas promessas (C.C.#154)",
     "letra": {
       "estrofes": [
         [
@@ -7672,7 +7672,7 @@ const coros = [
   {
     "ID": 264,
     "numero": 265,
-    "titulo": "Em Jesus amigo temos (C.C.#155)",
+    "titulo": "#LDC - Em Jesus amigo temos (C.C.#155)",
     "letra": {
       "estrofes": [
         [
@@ -7705,7 +7705,7 @@ const coros = [
   {
     "ID": 265,
     "numero": 266,
-    "titulo": "Chuvas de bênçãos (C.C.#168)",
+    "titulo": "#LDC - Chuvas de bênçãos (C.C.#168)",
     "letra": {
       "estrofes": [
         [
@@ -7740,7 +7740,7 @@ const coros = [
   {
     "ID": 266,
     "numero": 267,
-    "titulo": "Jesus tem o poder (C.C.#202)",
+    "titulo": "#LDC - Jesus tem o poder (C.C.#202)",
     "letra": {
       "estrofes": [
         [
@@ -7779,7 +7779,7 @@ const coros = [
   {
     "ID": 267,
     "numero": 268,
-    "titulo": "Manso e suave (C.C.#222)",
+    "titulo": "#LDC - Manso e suave (C.C.#222)",
     "letra": {
       "estrofes": [
         [
@@ -7823,7 +7823,7 @@ const coros = [
   {
     "ID": 268,
     "numero": 269,
-    "titulo": "Tendes vós lugar vazio (C.C.#229)",
+    "titulo": "#LDC - Tendes vós lugar vazio (C.C.#229)",
     "letra": {
       "estrofes": [
         [
@@ -7855,7 +7855,7 @@ const coros = [
   {
     "ID": 269,
     "numero": 270,
-    "titulo": "Cristo salva o pecador (C.C.#234)",
+    "titulo": "#LDC - Cristo salva o pecador (C.C.#234)",
     "letra": {
       "estrofes": [
         [
@@ -7886,7 +7886,7 @@ const coros = [
   {
     "ID": 270,
     "numero": 271,
-    "titulo": "Deixa a luz do céu entrar (C.C.#239)",
+    "titulo": "#LDC - Deixa a luz do céu entrar (C.C.#239)",
     "letra": {
       "estrofes": [
         [
@@ -7924,7 +7924,7 @@ const coros = [
   {
     "ID": 271,
     "numero": 272,
-    "titulo": "A última hora (C.C.#259)",
+    "titulo": "#LDC - A última hora (C.C.#259)",
     "letra": {
       "estrofes": [
         [
@@ -7975,7 +7975,7 @@ const coros = [
   {
     "ID": 272,
     "numero": 273,
-    "titulo": "Mais perto (C.C.#283)",
+    "titulo": "#LDC - Mais perto (C.C.#283)",
     "letra": {
       "estrofes": [
         [
@@ -8014,7 +8014,7 @@ const coros = [
   {
     "ID": 273,
     "numero": 274,
-    "titulo": "O caminho da cruz (C.C.#306)",
+    "titulo": "#LDC - O caminho da cruz (C.C.#306)",
     "letra": {
       "estrofes": [
         [
@@ -8052,7 +8052,7 @@ const coros = [
   {
     "ID": 274,
     "numero": 275,
-    "titulo": "Crer e observar (C.C.#301)",
+    "titulo": "#LDC - Crer e observar (C.C.#301)",
     "letra": {
       "estrofes": [
         [
@@ -8095,7 +8095,7 @@ const coros = [
   {
     "ID": 275,
     "numero": 276,
-    "titulo": "Seguirei a meu bom Mestre (C.C.#308)",
+    "titulo": "#LDC - Seguirei a meu bom Mestre (C.C.#308)",
     "letra": {
       "estrofes": [
         [
@@ -8130,7 +8130,7 @@ const coros = [
   {
     "ID": 276,
     "numero": 277,
-    "titulo": "Castelo forte (C.C.#323)",
+    "titulo": "#LDC - Castelo forte (C.C.#323)",
     "letra": {
       "estrofes": [
         [
@@ -8173,7 +8173,7 @@ const coros = [
   {
     "ID": 277,
     "numero": 278,
-    "titulo": "Não sei porque (C.C.#377)",
+    "titulo": "#LDC - Não sei porque (C.C.#377)",
     "letra": {
       "estrofes": [
         [
@@ -8209,7 +8209,7 @@ const coros = [
   {
     "ID": 278,
     "numero": 279,
-    "titulo": "Seguro estou (C.C.#324)",
+    "titulo": "#LDC - Seguro estou (C.C.#324)",
     "letra": {
       "estrofes": [
         [
@@ -8260,7 +8260,7 @@ const coros = [
   {
     "ID": 279,
     "numero": 280,
-    "titulo": "Conta as bênçãos (C.C.#329)",
+    "titulo": "#LDC - Conta as bênçãos (C.C.#329)",
     "letra": {
       "estrofes": [
         [
@@ -8305,7 +8305,7 @@ const coros = [
   {
     "ID": 280,
     "numero": 281,
-    "titulo": "Firmeza (C.C.#366)",
+    "titulo": "#LDC - Firmeza (C.C.#366)",
     "letra": {
       "estrofes": [
         [
@@ -8340,7 +8340,7 @@ const coros = [
   {
     "ID": 281,
     "numero": 282,
-    "titulo": "Jesus, Pastor amado",
+    "titulo": "#LDC - Jesus, Pastor amado",
     "letra": {
       "estrofes": [
         [
@@ -8379,7 +8379,7 @@ const coros = [
   {
     "ID": 282,
     "numero": 283,
-    "titulo": "Brilha no viver (C.C.#417)",
+    "titulo": "#LDC - Brilha no viver (C.C.#417)",
     "letra": {
       "estrofes": [
         [
@@ -8417,7 +8417,7 @@ const coros = [
   {
     "ID": 283,
     "numero": 284,
-    "titulo": "Vamos à igreja (C.C.#382)",
+    "titulo": "#LDC - Vamos à igreja (C.C.#382)",
     "letra": {
       "estrofes": [
         [
@@ -8463,7 +8463,7 @@ const coros = [
   {
     "ID": 284,
     "numero": 285,
-    "titulo": "Minha pátria para Cristo (C.C.#439)",
+    "titulo": "#LDC - Minha pátria para Cristo (C.C.#439)",
     "letra": {
       "estrofes": [
         [
@@ -8495,7 +8495,7 @@ const coros = [
   {
     "ID": 285,
     "numero": 286,
-    "titulo": "Vamos nós louvar a Deus (C.C.#385)",
+    "titulo": "#LDC - Vamos nós louvar a Deus (C.C.#385)",
     "letra": {
       "estrofes": [
         [
@@ -8540,7 +8540,7 @@ const coros = [
   {
     "ID": 286,
     "numero": 287,
-    "titulo": "Grandioso és tu",
+    "titulo": "#LDC - Grandioso és tu",
     "letra": {
       "estrofes": [
         [
@@ -8571,7 +8571,7 @@ const coros = [
   {
     "ID": 287,
     "numero": 288,
-    "titulo": "Foi na cruz (C.C.#396)",
+    "titulo": "#LDC - Foi na cruz (C.C.#396)",
     "letra": {
       "estrofes": [
         [
@@ -8616,7 +8616,7 @@ const coros = [
   {
     "ID": 288,
     "numero": 289,
-    "titulo": "Das maravilhas",
+    "titulo": "#LDC - Das maravilhas",
     "letra": {
       "estrofes": [
         [
@@ -8643,7 +8643,7 @@ const coros = [
   {
     "ID": 289,
     "numero": 290,
-    "titulo": "Sou feliz (C.C.#398)",
+    "titulo": "#LDC - Sou feliz (C.C.#398)",
     "letra": {
       "estrofes": [
         [
@@ -8686,7 +8686,7 @@ const coros = [
   {
     "ID": 290,
     "numero": 291,
-    "titulo": "O estandarte (C.C.#456)",
+    "titulo": "#LDC - O estandarte (C.C.#456)",
     "letra": {
       "estrofes": [
         [
@@ -8723,7 +8723,7 @@ const coros = [
   {
     "ID": 291,
     "numero": 292,
-    "titulo": "No serviço do meu Rei (C.C.#410)",
+    "titulo": "#LDC - No serviço do meu Rei (C.C.#410)",
     "letra": {
       "estrofes": [
         [
@@ -8768,7 +8768,7 @@ const coros = [
   {
     "ID": 292,
     "numero": 293,
-    "titulo": "Vamos batalhar (C.C.#475)",
+    "titulo": "#LDC - Vamos batalhar (C.C.#475)",
     "letra": {
       "estrofes": [
         [
@@ -8804,7 +8804,7 @@ const coros = [
   {
     "ID": 293,
     "numero": 294,
-    "titulo": "Onde os obreiros (C.C.#434)",
+    "titulo": "#LDC - Onde os obreiros (C.C.#434)",
     "letra": {
       "estrofes": [
         [
@@ -8843,7 +8843,7 @@ const coros = [
   {
     "ID": 294,
     "numero": 295,
-    "titulo": "Terra feliz (C.C.#508)",
+    "titulo": "#LDC - Terra feliz (C.C.#508)",
     "letra": {
       "estrofes": [
         [
@@ -8880,7 +8880,7 @@ const coros = [
   {
     "ID": 295,
     "numero": 296,
-    "titulo": "Hei de ver meu Redentor (C.C.#509)",
+    "titulo": "#LDC - Hei de ver meu Redentor (C.C.#509)",
     "letra": {
       "estrofes": [
         [
@@ -8925,7 +8925,7 @@ const coros = [
   {
     "ID": 296,
     "numero": 297,
-    "titulo": "Se isto não for amor",
+    "titulo": "#LDC - Se isto não for amor",
     "letra": {
       "estrofes": [
         [
@@ -8961,7 +8961,7 @@ const coros = [
   {
     "ID": 297,
     "numero": 298,
-    "titulo": "Dai-nos luz (C.C.#436)",
+    "titulo": "#LDC - Dai-nos luz (C.C.#436)",
     "letra": {
       "estrofes": [
         [
@@ -9006,7 +9006,7 @@ const coros = [
   {
     "ID": 298,
     "numero": 299,
-    "titulo": "Boa noite",
+    "titulo": "#LDC - Boa noite",
     "letra": {
       "estrofes": [
         [
@@ -9027,7 +9027,7 @@ const coros = [
   {
     "ID": 299,
     "numero": 300,
-    "titulo": "Olhando para Cristo (C.C.#579)",
+    "titulo": "#LDC - Olhando para Cristo (C.C.#579)",
     "letra": {
       "estrofes": [
         [
@@ -9066,7 +9066,7 @@ const coros = [
   {
     "ID": 300,
     "numero": 301,
-    "titulo": "Vamos à escola (C.C.#545)",
+    "titulo": "#LDC - Vamos à escola (C.C.#545)",
     "letra": {
       "estrofes": [
         [
@@ -9105,7 +9105,7 @@ const coros = [
   {
     "ID": 301,
     "numero": 302,
-    "titulo": "Tudo entregarei (C.C.#295)",
+    "titulo": "#LDC - Tudo entregarei (C.C.#295)",
     "letra": {
       "estrofes": [
         [
@@ -9156,11 +9156,11 @@ const coros = [
   {
     "ID": 302,
     "numero": 303,
-    "titulo": "Fidelidade (C.C.#119)",
+    "titulo": "#LDC - Fidelidade (C.C.#119)",
     "letra": {
       "estrofes": [
         [
-          "<br>Por meus delitos expirou",
+          "Por meus delitos expirou",
           "Jesus, a Vida e Luz;",
           "Ele o castigo meu levou",
           "na ensangüentada cruz."

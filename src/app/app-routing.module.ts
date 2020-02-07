@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { PreloadAllModules, RouterModule, Routes } from '@angular/router';
 import { DataResolverService } from './services/dataResolver/data-resolver.service';
+import { LoaderService } from './services/loader/loader.service';
 
 const routes: Routes = [
   {
@@ -10,6 +11,7 @@ const routes: Routes = [
   },
   {
     path: 'home',
+    resolve: { loader: LoaderService },
     loadChildren: './pages/home/home.module#HomePageModule'
   },
   {

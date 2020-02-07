@@ -1,5 +1,4 @@
 import { PopoverPage } from '../shared/popover/popover';
-import { SongsService } from '../../services/songs.service';
 import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { List } from '../../models/list.model';
 import { Component, OnInit } from '@angular/core';
@@ -35,7 +34,6 @@ export class ListsPage implements OnInit {
   constructor(
     public toastCtrl: ToastController,
     public popoverCtrl: PopoverController,
-    public songsService: SongsService,
     public navCtrl: NavController,
     public listsDaoProvider: ListsDaoProvider,
     public alertCtrl: AlertController,

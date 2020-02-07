@@ -10,12 +10,9 @@ import { Storage } from '@ionic/storage';
 @Injectable({ providedIn: 'root' })
 export class DataStorageProvider {
 
-  constructor(public storage: Storage) {
-    console.log('Hello DataStorageProvider Provider');
-  }
+  constructor(public storage: Storage) { }
 
   public async insert(key: string, value: any) {
-    console.log('gravou no banco!');
     return await this.save(key, value);
   }
 
@@ -28,7 +25,6 @@ export class DataStorageProvider {
   }
 
   public async get(key: string) {
-    console.log('recuperou do banco!');
     return await this.storage.get(key);
   }
 

@@ -1,8 +1,8 @@
 const hinos = [
   {
-    "ID": 0,
+    "ID": 303,
     "numero": 1,
-    "titulo": "Antífona",
+    "titulo": "#CC - Antífona",
     "letra": {
       "estrofes": [
         [
@@ -44,9 +44,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 1,
+    "ID": 304,
     "numero": 2,
-    "titulo": "Justo és senhor",
+    "titulo": "#CC - Justo és senhor",
     "letra": {
       "estrofes": [
         [
@@ -82,9 +82,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 2,
+    "ID": 305,
     "numero": 3,
-    "titulo": "Louvor ao senhor",
+    "titulo": "#CC - Louvor ao senhor",
     "letra": {
       "estrofes": [
         [
@@ -120,9 +120,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 3,
+    "ID": 306,
     "numero": 4,
-    "titulo": "Ao deus santo",
+    "titulo": "#CC - Ao deus santo",
     "letra": {
       "estrofes": [
         [
@@ -147,9 +147,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 4,
+    "ID": 307,
     "numero": 5,
-    "titulo": "Presença divina",
+    "titulo": "#CC - Presença divina",
     "letra": {
       "estrofes": [
         [
@@ -187,9 +187,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 5,
+    "ID": 308,
     "numero": 6,
-    "titulo": "Glória ao senhor",
+    "titulo": "#CC - Glória ao senhor",
     "letra": {
       "estrofes": [
         [
@@ -228,9 +228,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 6,
+    "ID": 309,
     "numero": 7,
-    "titulo": "Maravilhas divinas",
+    "titulo": "#CC - Maravilhas divinas",
     "letra": {
       "estrofes": [
         [
@@ -278,9 +278,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 7,
+    "ID": 310,
     "numero": 8,
-    "titulo": "A deus supremo",
+    "titulo": "#CC - A deus supremo",
     "letra": {
       "estrofes": [
         [
@@ -307,9 +307,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 8,
+    "ID": 311,
     "numero": 9,
-    "titulo": "Santo santo",
+    "titulo": "#CC - Santo santo",
     "letra": {
       "estrofes": [
         [
@@ -351,9 +351,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 9,
+    "ID": 312,
     "numero": 10,
-    "titulo": "Auxílio divino",
+    "titulo": "#CC - Auxílio divino",
     "letra": {
       "estrofes": [
         [
@@ -383,9 +383,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 10,
+    "ID": 313,
     "numero": 11,
-    "titulo": "Ao deus trino",
+    "titulo": "#CC - Ao deus trino",
     "letra": {
       "estrofes": [
         [
@@ -426,9 +426,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 11,
+    "ID": 314,
     "numero": 12,
-    "titulo": "Louvamos",
+    "titulo": "#CC - Louvamos",
     "letra": {
       "estrofes": [
         [
@@ -474,9 +474,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 12,
+    "ID": 315,
     "numero": 13,
-    "titulo": "Bendigam a deus",
+    "titulo": "#CC - Bendigam a deus",
     "letra": {
       "estrofes": [
         [
@@ -505,9 +505,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 13,
+    "ID": 316,
     "numero": 14,
-    "titulo": "O deus de abraão",
+    "titulo": "#CC - O deus de abraão",
     "letra": {
       "estrofes": [
         [
@@ -550,9 +550,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 14,
+    "ID": 317,
     "numero": 15,
-    "titulo": "Exultação",
+    "titulo": "#CC - Exultação",
     "letra": {
       "estrofes": [
         [
@@ -594,9 +594,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 15,
+    "ID": 318,
     "numero": 16,
-    "titulo": "Vinde adorar",
+    "titulo": "#CC - Vinde adorar",
     "letra": {
       "estrofes": [
         [
@@ -626,9 +626,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 16,
+    "ID": 319,
     "numero": 17,
-    "titulo": "O amor de deus",
+    "titulo": "#CC - O amor de deus",
     "letra": {
       "estrofes": [
         [
@@ -670,9 +670,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 17,
+    "ID": 320,
     "numero": 18,
-    "titulo": "Amor sem igual",
+    "titulo": "#CC - Amor sem igual",
     "letra": {
       "estrofes": [
         [
@@ -723,9 +723,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 18,
+    "ID": 321,
     "numero": 19,
-    "titulo": "Alegre nova nos chegou",
+    "titulo": "#CC - Alegre nova nos chegou",
     "letra": {
       "estrofes": [
         [
@@ -763,9 +763,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 19,
+    "ID": 322,
     "numero": 20,
-    "titulo": "Amor perene",
+    "titulo": "#CC - Amor perene",
     "letra": {
       "estrofes": [
         [
@@ -811,9 +811,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 20,
+    "ID": 323,
     "numero": 21,
-    "titulo": "Do mundo deus se condoeu",
+    "titulo": "#CC - Do mundo deus se condoeu",
     "letra": {
       "estrofes": [
         [
@@ -855,9 +855,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 21,
+    "ID": 324,
     "numero": 22,
-    "titulo": "Sublime amor",
+    "titulo": "#CC - Sublime amor",
     "letra": {
       "estrofes": [
         [
@@ -891,9 +891,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 22,
+    "ID": 325,
     "numero": 23,
-    "titulo": "Deus fonte da vida",
+    "titulo": "#CC - Deus fonte da vida",
     "letra": {
       "estrofes": [
         [
@@ -939,9 +939,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 23,
+    "ID": 326,
     "numero": 24,
-    "titulo": "Deus é amor",
+    "titulo": "#CC - Deus é amor",
     "letra": {
       "estrofes": [
         [
@@ -979,9 +979,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 24,
+    "ID": 327,
     "numero": 25,
-    "titulo": "Que grande amor",
+    "titulo": "#CC - Que grande amor",
     "letra": {
       "estrofes": [
         [
@@ -1022,9 +1022,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 25,
+    "ID": 328,
     "numero": 26,
-    "titulo": "Rei excelso",
+    "titulo": "#CC - Rei excelso",
     "letra": {
       "estrofes": [
         [
@@ -1062,9 +1062,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 26,
+    "ID": 329,
     "numero": 27,
-    "titulo": "Natal",
+    "titulo": "#CC - Natal",
     "letra": {
       "estrofes": [
         [
@@ -1104,9 +1104,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 27,
+    "ID": 330,
     "numero": 28,
-    "titulo": "Nasceu o redentor",
+    "titulo": "#CC - Nasceu o redentor",
     "letra": {
       "estrofes": [
         [
@@ -1153,9 +1153,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 28,
+    "ID": 331,
     "numero": 29,
-    "titulo": "é Jesus que nasce",
+    "titulo": "#CC - é Jesus que nasce",
     "letra": {
       "estrofes": [
         [
@@ -1199,9 +1199,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 29,
+    "ID": 332,
     "numero": 30,
-    "titulo": "Noite de paz",
+    "titulo": "#CC - Noite de paz",
     "letra": {
       "estrofes": [
         [
@@ -1243,9 +1243,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 30,
+    "ID": 333,
     "numero": 31,
-    "titulo": "Lugar para cristo",
+    "titulo": "#CC - Lugar para cristo",
     "letra": {
       "estrofes": [
         [
@@ -1290,9 +1290,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 31,
+    "ID": 334,
     "numero": 32,
-    "titulo": "Novas tenho",
+    "titulo": "#CC - Novas tenho",
     "letra": {
       "estrofes": [
         [
@@ -1330,9 +1330,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 32,
+    "ID": 335,
     "numero": 33,
-    "titulo": "Nasceu jesus",
+    "titulo": "#CC - Nasceu jesus",
     "letra": {
       "estrofes": [
         [
@@ -1380,9 +1380,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 33,
+    "ID": 336,
     "numero": 34,
-    "titulo": "Plena graça",
+    "titulo": "#CC - Plena graça",
     "letra": {
       "estrofes": [
         [
@@ -1401,9 +1401,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 34,
+    "ID": 337,
     "numero": 35,
-    "titulo": "Incomparável",
+    "titulo": "#CC - Incomparável",
     "letra": {
       "estrofes": [
         [
@@ -1446,9 +1446,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 35,
+    "ID": 338,
     "numero": 36,
-    "titulo": "O amor de jesus",
+    "titulo": "#CC - O amor de jesus",
     "letra": {
       "estrofes": [
         [
@@ -1496,9 +1496,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 36,
+    "ID": 339,
     "numero": 37,
-    "titulo": "Amor glorioso",
+    "titulo": "#CC - Amor glorioso",
     "letra": {
       "estrofes": [
         [
@@ -1546,9 +1546,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 37,
+    "ID": 340,
     "numero": 38,
-    "titulo": "Divino amor",
+    "titulo": "#CC - Divino amor",
     "letra": {
       "estrofes": [
         [
@@ -1590,9 +1590,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 38,
+    "ID": 341,
     "numero": 39,
-    "titulo": "A ovelha perdida",
+    "titulo": "#CC - A ovelha perdida",
     "letra": {
       "estrofes": [
         [
@@ -1650,9 +1650,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 39,
+    "ID": 342,
     "numero": 40,
-    "titulo": "Amor de cristo",
+    "titulo": "#CC - Amor de cristo",
     "letra": {
       "estrofes": [
         [
@@ -1671,9 +1671,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 40,
+    "ID": 343,
     "numero": 41,
-    "titulo": "Reconhecimento",
+    "titulo": "#CC - Reconhecimento",
     "letra": {
       "estrofes": [
         [
@@ -1692,9 +1692,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 41,
+    "ID": 344,
     "numero": 42,
-    "titulo": "éS tu jesus meu salvador",
+    "titulo": "#CC - éS tu jesus meu salvador",
     "letra": {
       "estrofes": [
         [
@@ -1732,9 +1732,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 42,
+    "ID": 345,
     "numero": 43,
-    "titulo": "Preciosas palavras",
+    "titulo": "#CC - Preciosas palavras",
     "letra": {
       "estrofes": [
         [
@@ -1776,9 +1776,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 43,
+    "ID": 346,
     "numero": 44,
-    "titulo": "A linda história",
+    "titulo": "#CC - A linda história",
     "letra": {
       "estrofes": [
         [
@@ -1821,9 +1821,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 44,
+    "ID": 347,
     "numero": 45,
-    "titulo": "Por amor de nós",
+    "titulo": "#CC - Por amor de nós",
     "letra": {
       "estrofes": [
         [
@@ -1860,9 +1860,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 45,
+    "ID": 348,
     "numero": 46,
-    "titulo": "Jesus me transformou",
+    "titulo": "#CC - Jesus me transformou",
     "letra": {
       "estrofes": [
         [
@@ -1904,9 +1904,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 46,
+    "ID": 349,
     "numero": 47,
-    "titulo": "Alegria perene",
+    "titulo": "#CC - Alegria perene",
     "letra": {
       "estrofes": [
         [
@@ -1948,9 +1948,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 47,
+    "ID": 350,
     "numero": 48,
-    "titulo": "Salvação",
+    "titulo": "#CC - Salvação",
     "letra": {
       "estrofes": [
         [
@@ -1985,9 +1985,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 48,
+    "ID": 351,
     "numero": 49,
-    "titulo": "Tudo fez jesus",
+    "titulo": "#CC - Tudo fez jesus",
     "letra": {
       "estrofes": [
         [
@@ -2010,9 +2010,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 49,
+    "ID": 352,
     "numero": 50,
-    "titulo": "A velha história",
+    "titulo": "#CC - A velha história",
     "letra": {
       "estrofes": [
         [
@@ -2051,9 +2051,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 50,
+    "ID": 353,
     "numero": 51,
-    "titulo": "Vida na graça",
+    "titulo": "#CC - Vida na graça",
     "letra": {
       "estrofes": [
         [
@@ -2090,9 +2090,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 51,
+    "ID": 354,
     "numero": 52,
-    "titulo": "Jesus glorioso",
+    "titulo": "#CC - Jesus glorioso",
     "letra": {
       "estrofes": [
         [
@@ -2137,9 +2137,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 52,
+    "ID": 355,
     "numero": 53,
-    "titulo": "Os filhos de sião",
+    "titulo": "#CC - Os filhos de sião",
     "letra": {
       "estrofes": [
         [
@@ -2190,9 +2190,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 53,
+    "ID": 356,
     "numero": 54,
-    "titulo": "Glória e honra",
+    "titulo": "#CC - Glória e honra",
     "letra": {
       "estrofes": [
         [
@@ -2212,9 +2212,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 54,
+    "ID": 357,
     "numero": 55,
-    "titulo": "Hosana nas alturas",
+    "titulo": "#CC - Hosana nas alturas",
     "letra": {
       "estrofes": [
         [
@@ -2260,9 +2260,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 55,
+    "ID": 358,
     "numero": 56,
-    "titulo": "Rei da glória",
+    "titulo": "#CC - Rei da glória",
     "letra": {
       "estrofes": [
         [
@@ -2307,9 +2307,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 56,
+    "ID": 359,
     "numero": 57,
-    "titulo": "Bendito o rei",
+    "titulo": "#CC - Bendito o rei",
     "letra": {
       "estrofes": [
         [
@@ -2346,9 +2346,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 57,
+    "ID": 360,
     "numero": 58,
-    "titulo": "O nome de jesus",
+    "titulo": "#CC - O nome de jesus",
     "letra": {
       "estrofes": [
         [
@@ -2385,9 +2385,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 58,
+    "ID": 361,
     "numero": 59,
-    "titulo": "Saudai emanuel",
+    "titulo": "#CC - Saudai emanuel",
     "letra": {
       "estrofes": [
         [
@@ -2437,9 +2437,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 59,
+    "ID": 362,
     "numero": 60,
-    "titulo": "Coroai",
+    "titulo": "#CC - Coroai",
     "letra": {
       "estrofes": [
         [
@@ -2477,9 +2477,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 60,
+    "ID": 363,
     "numero": 61,
-    "titulo": "Glória a jesus",
+    "titulo": "#CC - Glória a jesus",
     "letra": {
       "estrofes": [
         [
@@ -2498,9 +2498,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 61,
+    "ID": 364,
     "numero": 62,
-    "titulo": "Nome precioso",
+    "titulo": "#CC - Nome precioso",
     "letra": {
       "estrofes": [
         [
@@ -2538,9 +2538,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 62,
+    "ID": 365,
     "numero": 63,
-    "titulo": "Jesus o senhor",
+    "titulo": "#CC - Jesus o senhor",
     "letra": {
       "estrofes": [
         [
@@ -2569,9 +2569,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 63,
+    "ID": 366,
     "numero": 64,
-    "titulo": "Jubiloso",
+    "titulo": "#CC - Jubiloso",
     "letra": {
       "estrofes": [
         [
@@ -2620,9 +2620,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 64,
+    "ID": 367,
     "numero": 65,
-    "titulo": "Jesus, o bem amado",
+    "titulo": "#CC - Jesus, o bem amado",
     "letra": {
       "estrofes": [
         [
@@ -2665,9 +2665,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 65,
+    "ID": 368,
     "numero": 66,
-    "titulo": "Coroai-o ó remidos",
+    "titulo": "#CC - Coroai-o ó remidos",
     "letra": {
       "estrofes": [
         [
@@ -2705,9 +2705,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 66,
+    "ID": 369,
     "numero": 67,
-    "titulo": "Cristo exaltado",
+    "titulo": "#CC - Cristo exaltado",
     "letra": {
       "estrofes": [
         [
@@ -2747,9 +2747,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 67,
+    "ID": 370,
     "numero": 68,
-    "titulo": "Bem-aventurados",
+    "titulo": "#CC - Bem-aventurados",
     "letra": {
       "estrofes": [
         [
@@ -2786,9 +2786,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 68,
+    "ID": 371,
     "numero": 69,
-    "titulo": "Aleluia",
+    "titulo": "#CC - Aleluia",
     "letra": {
       "estrofes": [
         [
@@ -2829,9 +2829,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 69,
+    "ID": 372,
     "numero": 70,
-    "titulo": "Nome adorável",
+    "titulo": "#CC - Nome adorável",
     "letra": {
       "estrofes": [
         [
@@ -2868,9 +2868,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 70,
+    "ID": 373,
     "numero": 71,
-    "titulo": "Amigo eterno",
+    "titulo": "#CC - Amigo eterno",
     "letra": {
       "estrofes": [
         [
@@ -2919,9 +2919,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 71,
+    "ID": 374,
     "numero": 72,
-    "titulo": "Amigo sem igual",
+    "titulo": "#CC - Amigo sem igual",
     "letra": {
       "estrofes": [
         [
@@ -2950,9 +2950,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 72,
+    "ID": 375,
     "numero": 73,
-    "titulo": "Um grande amigo",
+    "titulo": "#CC - Um grande amigo",
     "letra": {
       "estrofes": [
         [
@@ -3001,9 +3001,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 73,
+    "ID": 376,
     "numero": 74,
-    "titulo": "Graça a deus",
+    "titulo": "#CC - Graça a deus",
     "letra": {
       "estrofes": [
         [
@@ -3028,9 +3028,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 74,
+    "ID": 377,
     "numero": 75,
-    "titulo": "Que grande amigo",
+    "titulo": "#CC - Que grande amigo",
     "letra": {
       "estrofes": [
         [
@@ -3073,9 +3073,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 75,
+    "ID": 378,
     "numero": 76,
-    "titulo": "Amigo verdadeiro",
+    "titulo": "#CC - Amigo verdadeiro",
     "letra": {
       "estrofes": [
         [
@@ -3112,9 +3112,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 76,
+    "ID": 379,
     "numero": 77,
-    "titulo": "O melhor amigo",
+    "titulo": "#CC - O melhor amigo",
     "letra": {
       "estrofes": [
         [
@@ -3158,9 +3158,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 77,
+    "ID": 380,
     "numero": 78,
-    "titulo": "Tudo de graça",
+    "titulo": "#CC - Tudo de graça",
     "letra": {
       "estrofes": [
         [
@@ -3179,9 +3179,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 78,
+    "ID": 381,
     "numero": 79,
-    "titulo": "Um bom amigo",
+    "titulo": "#CC - Um bom amigo",
     "letra": {
       "estrofes": [
         [
@@ -3221,9 +3221,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 79,
+    "ID": 382,
     "numero": 80,
-    "titulo": "Coração purificado",
+    "titulo": "#CC - Coração purificado",
     "letra": {
       "estrofes": [
         [
@@ -3242,9 +3242,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 80,
+    "ID": 383,
     "numero": 81,
-    "titulo": "Amigo incomparável",
+    "titulo": "#CC - Amigo incomparável",
     "letra": {
       "estrofes": [
         [
@@ -3292,9 +3292,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 81,
+    "ID": 384,
     "numero": 82,
-    "titulo": "O gólgota",
+    "titulo": "#CC - O gólgota",
     "letra": {
       "estrofes": [
         [
@@ -3337,9 +3337,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 82,
+    "ID": 385,
     "numero": 83,
-    "titulo": "A cruz de cristo",
+    "titulo": "#CC - A cruz de cristo",
     "letra": {
       "estrofes": [
         [
@@ -3382,9 +3382,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 83,
+    "ID": 386,
     "numero": 84,
-    "titulo": "A cruz",
+    "titulo": "#CC - A cruz",
     "letra": {
       "estrofes": [
         [
@@ -3421,9 +3421,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 84,
+    "ID": 387,
     "numero": 85,
-    "titulo": "Cantai louvores",
+    "titulo": "#CC - Cantai louvores",
     "letra": {
       "estrofes": [
         [
@@ -3465,9 +3465,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 85,
+    "ID": 388,
     "numero": 86,
-    "titulo": "Sangue precioso",
+    "titulo": "#CC - Sangue precioso",
     "letra": {
       "estrofes": [
         [
@@ -3510,9 +3510,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 86,
+    "ID": 389,
     "numero": 87,
-    "titulo": "Calvário",
+    "titulo": "#CC - Calvário",
     "letra": {
       "estrofes": [
         [
@@ -3549,9 +3549,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 87,
+    "ID": 390,
     "numero": 88,
-    "titulo": "Que fazes por mim",
+    "titulo": "#CC - Que fazes por mim",
     "letra": {
       "estrofes": [
         [
@@ -3596,9 +3596,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 88,
+    "ID": 391,
     "numero": 89,
-    "titulo": "O poder do sangue",
+    "titulo": "#CC - O poder do sangue",
     "letra": {
       "estrofes": [
         [
@@ -3645,9 +3645,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 89,
+    "ID": 392,
     "numero": 90,
-    "titulo": "Contemplação",
+    "titulo": "#CC - Contemplação",
     "letra": {
       "estrofes": [
         [
@@ -3684,9 +3684,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 90,
+    "ID": 393,
     "numero": 91,
-    "titulo": "Sangue de jesus",
+    "titulo": "#CC - Sangue de jesus",
     "letra": {
       "estrofes": [
         [
@@ -3705,9 +3705,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 91,
+    "ID": 394,
     "numero": 92,
-    "titulo": "Substituição",
+    "titulo": "#CC - Substituição",
     "letra": {
       "estrofes": [
         [
@@ -3755,9 +3755,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 92,
+    "ID": 395,
     "numero": 93,
-    "titulo": "Só no sangue",
+    "titulo": "#CC - Só no sangue",
     "letra": {
       "estrofes": [
         [
@@ -3806,9 +3806,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 93,
+    "ID": 396,
     "numero": 94,
-    "titulo": "Jesus na cruz",
+    "titulo": "#CC - Jesus na cruz",
     "letra": {
       "estrofes": [
         [
@@ -3851,9 +3851,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 94,
+    "ID": 397,
     "numero": 95,
-    "titulo": "Vitória do rejeitado",
+    "titulo": "#CC - Vitória do rejeitado",
     "letra": {
       "estrofes": [
         [
@@ -3892,9 +3892,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 95,
+    "ID": 398,
     "numero": 96,
-    "titulo": "Deslumbrante",
+    "titulo": "#CC - Deslumbrante",
     "letra": {
       "estrofes": [
         [
@@ -3942,9 +3942,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 96,
+    "ID": 399,
     "numero": 97,
-    "titulo": "Jesus veio aqui",
+    "titulo": "#CC - Jesus veio aqui",
     "letra": {
       "estrofes": [
         [
@@ -3982,9 +3982,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 97,
+    "ID": 400,
     "numero": 98,
-    "titulo": "Jesus triunfou",
+    "titulo": "#CC - Jesus triunfou",
     "letra": {
       "estrofes": [
         [
@@ -4021,9 +4021,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 98,
+    "ID": 401,
     "numero": 99,
-    "titulo": "Ressurreição",
+    "titulo": "#CC - Ressurreição",
     "letra": {
       "estrofes": [
         [
@@ -4059,9 +4059,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 99,
+    "ID": 402,
     "numero": 100,
-    "titulo": "Jesus ressuscitado",
+    "titulo": "#CC - Jesus ressuscitado",
     "letra": {
       "estrofes": [
         [
@@ -4104,9 +4104,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 100,
+    "ID": 403,
     "numero": 101,
-    "titulo": "Ressurgiu",
+    "titulo": "#CC - Ressurgiu",
     "letra": {
       "estrofes": [
         [
@@ -4141,9 +4141,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 101,
+    "ID": 404,
     "numero": 102,
-    "titulo": "Cristo volta",
+    "titulo": "#CC - Cristo volta",
     "letra": {
       "estrofes": [
         [
@@ -4181,9 +4181,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 102,
+    "ID": 405,
     "numero": 103,
-    "titulo": "Jesus vindo",
+    "titulo": "#CC - Jesus vindo",
     "letra": {
       "estrofes": [
         [
@@ -4226,9 +4226,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 103,
+    "ID": 406,
     "numero": 104,
-    "titulo": "O bom porvir",
+    "titulo": "#CC - O bom porvir",
     "letra": {
       "estrofes": [
         [
@@ -4267,9 +4267,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 104,
+    "ID": 407,
     "numero": 105,
-    "titulo": "Feliz",
+    "titulo": "#CC - Feliz",
     "letra": {
       "estrofes": [
         [
@@ -4292,9 +4292,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 105,
+    "ID": 408,
     "numero": 106,
-    "titulo": "O desejado",
+    "titulo": "#CC - O desejado",
     "letra": {
       "estrofes": [
         [
@@ -4337,9 +4337,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 106,
+    "ID": 409,
     "numero": 107,
-    "titulo": "Esperando",
+    "titulo": "#CC - Esperando",
     "letra": {
       "estrofes": [
         [
@@ -4382,9 +4382,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 107,
+    "ID": 410,
     "numero": 108,
-    "titulo": "Chamada final",
+    "titulo": "#CC - Chamada final",
     "letra": {
       "estrofes": [
         [
@@ -4425,9 +4425,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 108,
+    "ID": 411,
     "numero": 109,
-    "titulo": "Por pouco tempo",
+    "titulo": "#CC - Por pouco tempo",
     "letra": {
       "estrofes": [
         [
@@ -4458,9 +4458,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 109,
+    "ID": 412,
     "numero": 110,
-    "titulo": "Quando cristo vier",
+    "titulo": "#CC - Quando cristo vier",
     "letra": {
       "estrofes": [
         [
@@ -4503,9 +4503,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 110,
+    "ID": 413,
     "numero": 111,
-    "titulo": "Não tardará",
+    "titulo": "#CC - Não tardará",
     "letra": {
       "estrofes": [
         [
@@ -4548,9 +4548,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 111,
+    "ID": 414,
     "numero": 112,
-    "titulo": "Vencendo vem jesus",
+    "titulo": "#CC - Vencendo vem jesus",
     "letra": {
       "estrofes": [
         [
@@ -4608,9 +4608,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 112,
+    "ID": 415,
     "numero": 113,
-    "titulo": "O dia glorioso",
+    "titulo": "#CC - O dia glorioso",
     "letra": {
       "estrofes": [
         [
@@ -4651,9 +4651,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 113,
+    "ID": 416,
     "numero": 114,
-    "titulo": "A vinda do senhor",
+    "titulo": "#CC - A vinda do senhor",
     "letra": {
       "estrofes": [
         [
@@ -4702,9 +4702,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 114,
+    "ID": 417,
     "numero": 115,
-    "titulo": "Breve com jesus",
+    "titulo": "#CC - Breve com jesus",
     "letra": {
       "estrofes": [
         [
@@ -4723,9 +4723,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 115,
+    "ID": 418,
     "numero": 116,
-    "titulo": "Desejo da alma",
+    "titulo": "#CC - Desejo da alma",
     "letra": {
       "estrofes": [
         [
@@ -4763,9 +4763,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 116,
+    "ID": 419,
     "numero": 117,
-    "titulo": "Espírito santo",
+    "titulo": "#CC - Espírito santo",
     "letra": {
       "estrofes": [
         [
@@ -4802,9 +4802,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 117,
+    "ID": 420,
     "numero": 118,
-    "titulo": "Santo espírito",
+    "titulo": "#CC - Santo espírito",
     "letra": {
       "estrofes": [
         [
@@ -4827,9 +4827,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 118,
+    "ID": 421,
     "numero": 119,
-    "titulo": "Fidelidade",
+    "titulo": "#CC - Fidelidade",
     "letra": {
       "estrofes": [
         [
@@ -4866,9 +4866,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 119,
+    "ID": 422,
     "numero": 120,
-    "titulo": "Louvai ao senhor",
+    "titulo": "#CC - Louvai ao senhor",
     "letra": {
       "estrofes": [
         [
@@ -4905,9 +4905,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 120,
+    "ID": 423,
     "numero": 121,
-    "titulo": "Ecos de louvor",
+    "titulo": "#CC - Ecos de louvor",
     "letra": {
       "estrofes": [
         [
@@ -4950,9 +4950,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 121,
+    "ID": 424,
     "numero": 122,
-    "titulo": "Motivos de louvor",
+    "titulo": "#CC - Motivos de louvor",
     "letra": {
       "estrofes": [
         [
@@ -4995,9 +4995,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 122,
+    "ID": 425,
     "numero": 123,
-    "titulo": "Bendito cordeiro",
+    "titulo": "#CC - Bendito cordeiro",
     "letra": {
       "estrofes": [
         [
@@ -5047,9 +5047,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 123,
+    "ID": 426,
     "numero": 124,
-    "titulo": "Cantarei",
+    "titulo": "#CC - Cantarei",
     "letra": {
       "estrofes": [
         [
@@ -5092,9 +5092,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 124,
+    "ID": 427,
     "numero": 125,
-    "titulo": "Redenção",
+    "titulo": "#CC - Redenção",
     "letra": {
       "estrofes": [
         [
@@ -5148,9 +5148,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 125,
+    "ID": 428,
     "numero": 126,
-    "titulo": "Louvai",
+    "titulo": "#CC - Louvai",
     "letra": {
       "estrofes": [
         [
@@ -5196,9 +5196,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 126,
+    "ID": 429,
     "numero": 127,
-    "titulo": "Jesus bondoso",
+    "titulo": "#CC - Jesus bondoso",
     "letra": {
       "estrofes": [
         [
@@ -5241,9 +5241,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 127,
+    "ID": 430,
     "numero": 128,
-    "titulo": "A redenção",
+    "titulo": "#CC - A redenção",
     "letra": {
       "estrofes": [
         [
@@ -5280,9 +5280,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 128,
+    "ID": 431,
     "numero": 129,
-    "titulo": "Luz bendita",
+    "titulo": "#CC - Luz bendita",
     "letra": {
       "estrofes": [
         [
@@ -5330,9 +5330,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 129,
+    "ID": 432,
     "numero": 130,
-    "titulo": "Beneficência",
+    "titulo": "#CC - Beneficência",
     "letra": {
       "estrofes": [
         [
@@ -5377,9 +5377,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 130,
+    "ID": 433,
     "numero": 131,
-    "titulo": "Bendize",
+    "titulo": "#CC - Bendize",
     "letra": {
       "estrofes": [
         [
@@ -5416,9 +5416,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 131,
+    "ID": 434,
     "numero": 132,
-    "titulo": "Ebenezer",
+    "titulo": "#CC - Ebenezer",
     "letra": {
       "estrofes": [
         [
@@ -5460,9 +5460,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 132,
+    "ID": 435,
     "numero": 133,
-    "titulo": "Exultação",
+    "titulo": "#CC - Exultação",
     "letra": {
       "estrofes": [
         [
@@ -5505,9 +5505,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 133,
+    "ID": 436,
     "numero": 134,
-    "titulo": "Reino universal",
+    "titulo": "#CC - Reino universal",
     "letra": {
       "estrofes": [
         [
@@ -5540,9 +5540,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 134,
+    "ID": 437,
     "numero": 135,
-    "titulo": "Louvor",
+    "titulo": "#CC - Louvor",
     "letra": {
       "estrofes": [
         [
@@ -5590,9 +5590,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 135,
+    "ID": 438,
     "numero": 136,
-    "titulo": "Estudo bíblico",
+    "titulo": "#CC - Estudo bíblico",
     "letra": {
       "estrofes": [
         [
@@ -5645,9 +5645,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 136,
+    "ID": 439,
     "numero": 137,
-    "titulo": "O pão da vida",
+    "titulo": "#CC - O pão da vida",
     "letra": {
       "estrofes": [
         [
@@ -5672,9 +5672,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 137,
+    "ID": 440,
     "numero": 138,
-    "titulo": "A lei do senhor",
+    "titulo": "#CC - A lei do senhor",
     "letra": {
       "estrofes": [
         [
@@ -5707,9 +5707,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 138,
+    "ID": 441,
     "numero": 139,
-    "titulo": "Dia do senhor",
+    "titulo": "#CC - Dia do senhor",
     "letra": {
       "estrofes": [
         [
@@ -5754,9 +5754,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 139,
+    "ID": 442,
     "numero": 140,
-    "titulo": "Domingo",
+    "titulo": "#CC - Domingo",
     "letra": {
       "estrofes": [
         [
@@ -5793,9 +5793,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 140,
+    "ID": 443,
     "numero": 141,
-    "titulo": "Descanso aos domingos",
+    "titulo": "#CC - Descanso aos domingos",
     "letra": {
       "estrofes": [
         [
@@ -5832,9 +5832,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 141,
+    "ID": 444,
     "numero": 142,
-    "titulo": "Pão da vida",
+    "titulo": "#CC - Pão da vida",
     "letra": {
       "estrofes": [
         [
@@ -5865,9 +5865,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 142,
+    "ID": 445,
     "numero": 143,
-    "titulo": "A ceia do senhor",
+    "titulo": "#CC - A ceia do senhor",
     "letra": {
       "estrofes": [
         [
@@ -5904,9 +5904,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 143,
+    "ID": 446,
     "numero": 144,
-    "titulo": "Vera páscoa",
+    "titulo": "#CC - Vera páscoa",
     "letra": {
       "estrofes": [
         [
@@ -5941,9 +5941,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 144,
+    "ID": 447,
     "numero": 145,
-    "titulo": "Batismo",
+    "titulo": "#CC - Batismo",
     "letra": {
       "estrofes": [
         [
@@ -5986,9 +5986,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 145,
+    "ID": 448,
     "numero": 146,
-    "titulo": "Alegria verdadeira",
+    "titulo": "#CC - Alegria verdadeira",
     "letra": {
       "estrofes": [
         [
@@ -6013,9 +6013,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 146,
+    "ID": 449,
     "numero": 147,
-    "titulo": "Obediência no batismo",
+    "titulo": "#CC - Obediência no batismo",
     "letra": {
       "estrofes": [
         [
@@ -6068,9 +6068,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 147,
+    "ID": 450,
     "numero": 148,
-    "titulo": "Hora bendita",
+    "titulo": "#CC - Hora bendita",
     "letra": {
       "estrofes": [
         [
@@ -6109,9 +6109,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 148,
+    "ID": 451,
     "numero": 149,
-    "titulo": "Persistência em oração",
+    "titulo": "#CC - Persistência em oração",
     "letra": {
       "estrofes": [
         [
@@ -6148,9 +6148,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 149,
+    "ID": 452,
     "numero": 150,
-    "titulo": "Pai nosso",
+    "titulo": "#CC - Pai nosso",
     "letra": {
       "estrofes": [
         [
@@ -6193,9 +6193,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 150,
+    "ID": 453,
     "numero": 151,
-    "titulo": "Comunhão",
+    "titulo": "#CC - Comunhão",
     "letra": {
       "estrofes": [
         [
@@ -6248,9 +6248,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 151,
+    "ID": 454,
     "numero": 152,
-    "titulo": "Pastor divino",
+    "titulo": "#CC - Pastor divino",
     "letra": {
       "estrofes": [
         [
@@ -6295,9 +6295,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 152,
+    "ID": 455,
     "numero": 153,
-    "titulo": "Perdão",
+    "titulo": "#CC - Perdão",
     "letra": {
       "estrofes": [
         [
@@ -6340,9 +6340,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 153,
+    "ID": 456,
     "numero": 154,
-    "titulo": "Firmes nas promessas",
+    "titulo": "#CC - Firmes nas promessas",
     "letra": {
       "estrofes": [
         [
@@ -6389,9 +6389,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 154,
+    "ID": 457,
     "numero": 155,
-    "titulo": "O grande amigo",
+    "titulo": "#CC - O grande amigo",
     "letra": {
       "estrofes": [
         [
@@ -6427,9 +6427,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 155,
+    "ID": 458,
     "numero": 156,
-    "titulo": "Orando sempre",
+    "titulo": "#CC - Orando sempre",
     "letra": {
       "estrofes": [
         [
@@ -6474,9 +6474,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 156,
+    "ID": 459,
     "numero": 157,
-    "titulo": "Vivifica-nos, senhor",
+    "titulo": "#CC - Vivifica-nos, senhor",
     "letra": {
       "estrofes": [
         [
@@ -6495,9 +6495,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 157,
+    "ID": 460,
     "numero": 158,
-    "titulo": "Em oração",
+    "titulo": "#CC - Em oração",
     "letra": {
       "estrofes": [
         [
@@ -6546,9 +6546,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 158,
+    "ID": 461,
     "numero": 159,
-    "titulo": "Minha oração",
+    "titulo": "#CC - Minha oração",
     "letra": {
       "estrofes": [
         [
@@ -6590,9 +6590,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 159,
+    "ID": 462,
     "numero": 160,
-    "titulo": "A fé contemplada",
+    "titulo": "#CC - A fé contemplada",
     "letra": {
       "estrofes": [
         [
@@ -6648,9 +6648,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 160,
+    "ID": 463,
     "numero": 161,
-    "titulo": "Poder espiritual",
+    "titulo": "#CC - Poder espiritual",
     "letra": {
       "estrofes": [
         [
@@ -6687,9 +6687,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 161,
+    "ID": 464,
     "numero": 162,
-    "titulo": "Vigiar e orar",
+    "titulo": "#CC - Vigiar e orar",
     "letra": {
       "estrofes": [
         [
@@ -6730,9 +6730,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 162,
+    "ID": 465,
     "numero": 163,
-    "titulo": "Desejos",
+    "titulo": "#CC - Desejos",
     "letra": {
       "estrofes": [
         [
@@ -6775,9 +6775,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 163,
+    "ID": 466,
     "numero": 164,
-    "titulo": "Vivificação",
+    "titulo": "#CC - Vivificação",
     "letra": {
       "estrofes": [
         [
@@ -6822,9 +6822,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 164,
+    "ID": 467,
     "numero": 165,
-    "titulo": "Oração",
+    "titulo": "#CC - Oração",
     "letra": {
       "estrofes": [
         [
@@ -6867,9 +6867,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 165,
+    "ID": 468,
     "numero": 166,
-    "titulo": "As promessas de deus",
+    "titulo": "#CC - As promessas de deus",
     "letra": {
       "estrofes": [
         [
@@ -6906,9 +6906,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 166,
+    "ID": 469,
     "numero": 167,
-    "titulo": "Vem inflama",
+    "titulo": "#CC - Vem inflama",
     "letra": {
       "estrofes": [
         [
@@ -6944,9 +6944,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 167,
+    "ID": 470,
     "numero": 168,
-    "titulo": "Chuvas de bençãos",
+    "titulo": "#CC - Chuvas de bençãos",
     "letra": {
       "estrofes": [
         [
@@ -6988,9 +6988,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 168,
+    "ID": 471,
     "numero": 169,
-    "titulo": "Mais de cristo",
+    "titulo": "#CC - Mais de cristo",
     "letra": {
       "estrofes": [
         [
@@ -7026,9 +7026,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 169,
+    "ID": 472,
     "numero": 170,
-    "titulo": "Oração de consagração",
+    "titulo": "#CC - Oração de consagração",
     "letra": {
       "estrofes": [
         [
@@ -7063,9 +7063,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 170,
+    "ID": 473,
     "numero": 171,
-    "titulo": "Avivamento",
+    "titulo": "#CC - Avivamento",
     "letra": {
       "estrofes": [
         [
@@ -7098,9 +7098,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 171,
+    "ID": 474,
     "numero": 172,
-    "titulo": "Cada dia",
+    "titulo": "#CC - Cada dia",
     "letra": {
       "estrofes": [
         [
@@ -7131,9 +7131,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 172,
+    "ID": 475,
     "numero": 173,
-    "titulo": "Mais amor",
+    "titulo": "#CC - Mais amor",
     "letra": {
       "estrofes": [
         [
@@ -7164,9 +7164,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 173,
+    "ID": 476,
     "numero": 174,
-    "titulo": "Faça-se a luz",
+    "titulo": "#CC - Faça-se a luz",
     "letra": {
       "estrofes": [
         [
@@ -7215,9 +7215,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 174,
+    "ID": 477,
     "numero": 175,
-    "titulo": "Minha aspiração",
+    "titulo": "#CC - Minha aspiração",
     "letra": {
       "estrofes": [
         [
@@ -7248,9 +7248,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 175,
+    "ID": 478,
     "numero": 176,
-    "titulo": "Tempo de ser santo",
+    "titulo": "#CC - Tempo de ser santo",
     "letra": {
       "estrofes": [
         [
@@ -7287,9 +7287,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 176,
+    "ID": 479,
     "numero": 177,
-    "titulo": "Alvorada",
+    "titulo": "#CC - Alvorada",
     "letra": {
       "estrofes": [
         [
@@ -7332,9 +7332,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 177,
+    "ID": 480,
     "numero": 178,
-    "titulo": "O culto findou",
+    "titulo": "#CC - O culto findou",
     "letra": {
       "estrofes": [
         [
@@ -7359,9 +7359,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 178,
+    "ID": 481,
     "numero": 179,
-    "titulo": "Fim do culto",
+    "titulo": "#CC - Fim do culto",
     "letra": {
       "estrofes": [
         [
@@ -7386,9 +7386,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 179,
+    "ID": 482,
     "numero": 180,
-    "titulo": "Despedida",
+    "titulo": "#CC - Despedida",
     "letra": {
       "estrofes": [
         [
@@ -7415,9 +7415,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 180,
+    "ID": 483,
     "numero": 181,
-    "titulo": "Bênção",
+    "titulo": "#CC - Bênção",
     "letra": {
       "estrofes": [
         [
@@ -7436,9 +7436,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 181,
+    "ID": 484,
     "numero": 182,
-    "titulo": "Despedida do culto",
+    "titulo": "#CC - Despedida do culto",
     "letra": {
       "estrofes": [
         [
@@ -7475,9 +7475,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 182,
+    "ID": 485,
     "numero": 183,
-    "titulo": "A luz do mundo",
+    "titulo": "#CC - A luz do mundo",
     "letra": {
       "estrofes": [
         [
@@ -7520,9 +7520,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 183,
+    "ID": 486,
     "numero": 184,
-    "titulo": "Há livre perdão",
+    "titulo": "#CC - Há livre perdão",
     "letra": {
       "estrofes": [
         [
@@ -7572,9 +7572,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 184,
+    "ID": 487,
     "numero": 185,
-    "titulo": "Somente cristo",
+    "titulo": "#CC - Somente cristo",
     "letra": {
       "estrofes": [
         [
@@ -7617,9 +7617,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 185,
+    "ID": 488,
     "numero": 186,
-    "titulo": "é Jesus quem salva",
+    "titulo": "#CC - é Jesus quem salva",
     "letra": {
       "estrofes": [
         [
@@ -7666,9 +7666,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 186,
+    "ID": 489,
     "numero": 187,
-    "titulo": "Teus pecados",
+    "titulo": "#CC - Teus pecados",
     "letra": {
       "estrofes": [
         [
@@ -7711,9 +7711,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 187,
+    "ID": 490,
     "numero": 188,
-    "titulo": "O evangelho",
+    "titulo": "#CC - O evangelho",
     "letra": {
       "estrofes": [
         [
@@ -7772,9 +7772,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 188,
+    "ID": 491,
     "numero": 189,
-    "titulo": "Graça inefável",
+    "titulo": "#CC - Graça inefável",
     "letra": {
       "estrofes": [
         [
@@ -7808,9 +7808,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 189,
+    "ID": 492,
     "numero": 190,
-    "titulo": "Para salvar-te",
+    "titulo": "#CC - Para salvar-te",
     "letra": {
       "estrofes": [
         [
@@ -7869,9 +7869,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 190,
+    "ID": 493,
     "numero": 191,
-    "titulo": "Eis a nova",
+    "titulo": "#CC - Eis a nova",
     "letra": {
       "estrofes": [
         [
@@ -7921,9 +7921,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 191,
+    "ID": 494,
     "numero": 192,
-    "titulo": "Só por jesus",
+    "titulo": "#CC - Só por jesus",
     "letra": {
       "estrofes": [
         [
@@ -7976,9 +7976,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 192,
+    "ID": 495,
     "numero": 193,
-    "titulo": "Proclamação",
+    "titulo": "#CC - Proclamação",
     "letra": {
       "estrofes": [
         [
@@ -8021,9 +8021,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 193,
+    "ID": 496,
     "numero": 194,
-    "titulo": "A mensagem celeste",
+    "titulo": "#CC - A mensagem celeste",
     "letra": {
       "estrofes": [
         [
@@ -8066,9 +8066,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 194,
+    "ID": 497,
     "numero": 195,
-    "titulo": "Vida por um olhar",
+    "titulo": "#CC - Vida por um olhar",
     "letra": {
       "estrofes": [
         [
@@ -8116,9 +8116,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 195,
+    "ID": 498,
     "numero": 196,
-    "titulo": "Conta-me",
+    "titulo": "#CC - Conta-me",
     "letra": {
       "estrofes": [
         [
@@ -8161,9 +8161,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 196,
+    "ID": 499,
     "numero": 197,
-    "titulo": "Inabalável",
+    "titulo": "#CC - Inabalável",
     "letra": {
       "estrofes": [
         [
@@ -8208,9 +8208,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 197,
+    "ID": 500,
     "numero": 198,
-    "titulo": "Aleluia",
+    "titulo": "#CC - Aleluia",
     "letra": {
       "estrofes": [
         [
@@ -8253,9 +8253,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 198,
+    "ID": 501,
     "numero": 199,
-    "titulo": "Cordeiro divino",
+    "titulo": "#CC - Cordeiro divino",
     "letra": {
       "estrofes": [
         [
@@ -8300,9 +8300,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 199,
+    "ID": 502,
     "numero": 200,
-    "titulo": "Cristo meu salvador",
+    "titulo": "#CC - Cristo meu salvador",
     "letra": {
       "estrofes": [
         [
@@ -8345,9 +8345,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 200,
+    "ID": 503,
     "numero": 201,
-    "titulo": "Novo nascimento",
+    "titulo": "#CC - Novo nascimento",
     "letra": {
       "estrofes": [
         [
@@ -8389,9 +8389,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 201,
+    "ID": 504,
     "numero": 202,
-    "titulo": "Jesus tem o poder",
+    "titulo": "#CC - Jesus tem o poder",
     "letra": {
       "estrofes": [
         [
@@ -8428,9 +8428,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 202,
+    "ID": 505,
     "numero": 203,
-    "titulo": "Olha para cristo",
+    "titulo": "#CC - Olha para cristo",
     "letra": {
       "estrofes": [
         [
@@ -8467,9 +8467,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 203,
+    "ID": 506,
     "numero": 204,
-    "titulo": "Reconciliai-vos",
+    "titulo": "#CC - Reconciliai-vos",
     "letra": {
       "estrofes": [
         [
@@ -8507,9 +8507,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 204,
+    "ID": 507,
     "numero": 205,
-    "titulo": "ó Minha alma sem demora",
+    "titulo": "#CC - ó Minha alma sem demora",
     "letra": {
       "estrofes": [
         [
@@ -8554,9 +8554,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 205,
+    "ID": 508,
     "numero": 206,
-    "titulo": "Promessa gloriosa",
+    "titulo": "#CC - Promessa gloriosa",
     "letra": {
       "estrofes": [
         [
@@ -8599,9 +8599,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 206,
+    "ID": 509,
     "numero": 207,
-    "titulo": "Mensagem real",
+    "titulo": "#CC - Mensagem real",
     "letra": {
       "estrofes": [
         [
@@ -8643,9 +8643,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 207,
+    "ID": 510,
     "numero": 208,
-    "titulo": "Justificação",
+    "titulo": "#CC - Justificação",
     "letra": {
       "estrofes": [
         [
@@ -8686,9 +8686,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 208,
+    "ID": 511,
     "numero": 209,
-    "titulo": "Venham escutar",
+    "titulo": "#CC - Venham escutar",
     "letra": {
       "estrofes": [
         [
@@ -8749,9 +8749,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 209,
+    "ID": 512,
     "numero": 210,
-    "titulo": "Cristo te chama",
+    "titulo": "#CC - Cristo te chama",
     "letra": {
       "estrofes": [
         [
@@ -8801,9 +8801,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 210,
+    "ID": 513,
     "numero": 211,
-    "titulo": "Vem, pecador",
+    "titulo": "#CC - Vem, pecador",
     "letra": {
       "estrofes": [
         [
@@ -8828,9 +8828,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 211,
+    "ID": 514,
     "numero": 212,
-    "titulo": "Oh, vinde já",
+    "titulo": "#CC - Oh, vinde já",
     "letra": {
       "estrofes": [
         [
@@ -8867,9 +8867,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 212,
+    "ID": 515,
     "numero": 213,
-    "titulo": "Quem ouvir as novas",
+    "titulo": "#CC - Quem ouvir as novas",
     "letra": {
       "estrofes": [
         [
@@ -8902,9 +8902,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 213,
+    "ID": 516,
     "numero": 214,
-    "titulo": "Cristo chama por ti",
+    "titulo": "#CC - Cristo chama por ti",
     "letra": {
       "estrofes": [
         [
@@ -8943,9 +8943,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 214,
+    "ID": 517,
     "numero": 215,
-    "titulo": "Fonte bendita",
+    "titulo": "#CC - Fonte bendita",
     "letra": {
       "estrofes": [
         [
@@ -8988,9 +8988,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 215,
+    "ID": 518,
     "numero": 216,
-    "titulo": "Descanso em jesus",
+    "titulo": "#CC - Descanso em jesus",
     "letra": {
       "estrofes": [
         [
@@ -9027,9 +9027,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 216,
+    "ID": 519,
     "numero": 217,
-    "titulo": "Segue-me",
+    "titulo": "#CC - Segue-me",
     "letra": {
       "estrofes": [
         [
@@ -9082,9 +9082,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 217,
+    "ID": 520,
     "numero": 218,
-    "titulo": "Vinde a mim",
+    "titulo": "#CC - Vinde a mim",
     "letra": {
       "estrofes": [
         [
@@ -9125,9 +9125,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 218,
+    "ID": 521,
     "numero": 219,
-    "titulo": "Vem já",
+    "titulo": "#CC - Vem já",
     "letra": {
       "estrofes": [
         [
@@ -9168,9 +9168,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 219,
+    "ID": 522,
     "numero": 220,
-    "titulo": "Perdão e salvação",
+    "titulo": "#CC - Perdão e salvação",
     "letra": {
       "estrofes": [
         [
@@ -9213,9 +9213,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 220,
+    "ID": 523,
     "numero": 221,
-    "titulo": "Convite",
+    "titulo": "#CC - Convite",
     "letra": {
       "estrofes": [
         [
@@ -9252,9 +9252,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 221,
+    "ID": 524,
     "numero": 222,
-    "titulo": "Manso e suave",
+    "titulo": "#CC - Manso e suave",
     "letra": {
       "estrofes": [
         [
@@ -9301,9 +9301,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 222,
+    "ID": 525,
     "numero": 223,
-    "titulo": "Abrigo",
+    "titulo": "#CC - Abrigo",
     "letra": {
       "estrofes": [
         [
@@ -9344,9 +9344,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 223,
+    "ID": 526,
     "numero": 224,
-    "titulo": "Um passo só",
+    "titulo": "#CC - Um passo só",
     "letra": {
       "estrofes": [
         [
@@ -9417,9 +9417,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 224,
+    "ID": 527,
     "numero": 225,
-    "titulo": "Voz de ternura",
+    "titulo": "#CC - Voz de ternura",
     "letra": {
       "estrofes": [
         [
@@ -9461,9 +9461,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 225,
+    "ID": 528,
     "numero": 226,
-    "titulo": "Dá teu coração",
+    "titulo": "#CC - Dá teu coração",
     "letra": {
       "estrofes": [
         [
@@ -9512,9 +9512,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 226,
+    "ID": 529,
     "numero": 227,
-    "titulo": "Despertado coração",
+    "titulo": "#CC - Despertado coração",
     "letra": {
       "estrofes": [
         [
@@ -9557,9 +9557,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 227,
+    "ID": 530,
     "numero": 228,
-    "titulo": "Ouvi a chamada",
+    "titulo": "#CC - Ouvi a chamada",
     "letra": {
       "estrofes": [
         [
@@ -9602,9 +9602,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 228,
+    "ID": 531,
     "numero": 229,
-    "titulo": "Régio hospede",
+    "titulo": "#CC - Régio hospede",
     "letra": {
       "estrofes": [
         [
@@ -9638,9 +9638,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 229,
+    "ID": 532,
     "numero": 230,
-    "titulo": "Deus chamando",
+    "titulo": "#CC - Deus chamando",
     "letra": {
       "estrofes": [
         [
@@ -9685,9 +9685,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 230,
+    "ID": 533,
     "numero": 231,
-    "titulo": "Vem filho vem",
+    "titulo": "#CC - Vem filho vem",
     "letra": {
       "estrofes": [
         [
@@ -9737,9 +9737,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 231,
+    "ID": 534,
     "numero": 232,
-    "titulo": "Cristo à porta",
+    "titulo": "#CC - Cristo à porta",
     "letra": {
       "estrofes": [
         [
@@ -9782,9 +9782,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 232,
+    "ID": 535,
     "numero": 233,
-    "titulo": "Por que não já",
+    "titulo": "#CC - Por que não já",
     "letra": {
       "estrofes": [
         [
@@ -9819,9 +9819,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 233,
+    "ID": 536,
     "numero": 234,
-    "titulo": "Cristo salva",
+    "titulo": "#CC - Cristo salva",
     "letra": {
       "estrofes": [
         [
@@ -9858,9 +9858,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 234,
+    "ID": 537,
     "numero": 235,
-    "titulo": "Chamada",
+    "titulo": "#CC - Chamada",
     "letra": {
       "estrofes": [
         [
@@ -9897,9 +9897,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 235,
+    "ID": 538,
     "numero": 236,
-    "titulo": "Atribulado coração",
+    "titulo": "#CC - Atribulado coração",
     "letra": {
       "estrofes": [
         [
@@ -9938,9 +9938,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 236,
+    "ID": 539,
     "numero": 237,
-    "titulo": "Tão perto",
+    "titulo": "#CC - Tão perto",
     "letra": {
       "estrofes": [
         [
@@ -9988,9 +9988,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 237,
+    "ID": 540,
     "numero": 238,
-    "titulo": "A água da vida",
+    "titulo": "#CC - A água da vida",
     "letra": {
       "estrofes": [
         [
@@ -10044,9 +10044,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 238,
+    "ID": 541,
     "numero": 239,
-    "titulo": "A luz do céu",
+    "titulo": "#CC - A luz do céu",
     "letra": {
       "estrofes": [
         [
@@ -10094,9 +10094,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 239,
+    "ID": 542,
     "numero": 240,
-    "titulo": "Oh! vem a cristo",
+    "titulo": "#CC - Oh! vem a cristo",
     "letra": {
       "estrofes": [
         [
@@ -10138,9 +10138,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 240,
+    "ID": 543,
     "numero": 241,
-    "titulo": "Palavra abençoada",
+    "titulo": "#CC - Palavra abençoada",
     "letra": {
       "estrofes": [
         [
@@ -10206,9 +10206,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 241,
+    "ID": 544,
     "numero": 242,
-    "titulo": "Vinde já",
+    "titulo": "#CC - Vinde já",
     "letra": {
       "estrofes": [
         [
@@ -10246,9 +10246,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 242,
+    "ID": 545,
     "numero": 243,
-    "titulo": "Vida eterna",
+    "titulo": "#CC - Vida eterna",
     "letra": {
       "estrofes": [
         [
@@ -10297,9 +10297,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 243,
+    "ID": 546,
     "numero": 244,
-    "titulo": "Graça admirável",
+    "titulo": "#CC - Graça admirável",
     "letra": {
       "estrofes": [
         [
@@ -10340,9 +10340,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 244,
+    "ID": 547,
     "numero": 245,
-    "titulo": "Cristo vai passar",
+    "titulo": "#CC - Cristo vai passar",
     "letra": {
       "estrofes": [
         [
@@ -10393,9 +10393,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 245,
+    "ID": 548,
     "numero": 246,
-    "titulo": "Vem agora",
+    "titulo": "#CC - Vem agora",
     "letra": {
       "estrofes": [
         [
@@ -10453,9 +10453,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 246,
+    "ID": 549,
     "numero": 247,
-    "titulo": "Vem filho perdido",
+    "titulo": "#CC - Vem filho perdido",
     "letra": {
       "estrofes": [
         [
@@ -10505,9 +10505,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 247,
+    "ID": 550,
     "numero": 248,
-    "titulo": "Filho pródigo",
+    "titulo": "#CC - Filho pródigo",
     "letra": {
       "estrofes": [
         [
@@ -10548,9 +10548,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 248,
+    "ID": 551,
     "numero": 249,
-    "titulo": "Banquete do belsazar",
+    "titulo": "#CC - Banquete do belsazar",
     "letra": {
       "estrofes": [
         [
@@ -10611,9 +10611,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 249,
+    "ID": 552,
     "numero": 250,
-    "titulo": "Quase induzido",
+    "titulo": "#CC - Quase induzido",
     "letra": {
       "estrofes": [
         [
@@ -10648,9 +10648,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 250,
+    "ID": 553,
     "numero": 251,
-    "titulo": "Quase achegado",
+    "titulo": "#CC - Quase achegado",
     "letra": {
       "estrofes": [
         [
@@ -10685,9 +10685,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 251,
+    "ID": 554,
     "numero": 252,
-    "titulo": "A porta franca",
+    "titulo": "#CC - A porta franca",
     "letra": {
       "estrofes": [
         [
@@ -10732,9 +10732,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 252,
+    "ID": 555,
     "numero": 253,
-    "titulo": "Não havia lugar",
+    "titulo": "#CC - Não havia lugar",
     "letra": {
       "estrofes": [
         [
@@ -10781,9 +10781,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 253,
+    "ID": 556,
     "numero": 254,
-    "titulo": "Não venhas tarde",
+    "titulo": "#CC - Não venhas tarde",
     "letra": {
       "estrofes": [
         [
@@ -10830,9 +10830,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 254,
+    "ID": 557,
     "numero": 255,
-    "titulo": "Qual é teu refúgio",
+    "titulo": "#CC - Qual é teu refúgio",
     "letra": {
       "estrofes": [
         [
@@ -10880,9 +10880,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 255,
+    "ID": 558,
     "numero": 256,
-    "titulo": "Inda há lugar",
+    "titulo": "#CC - Inda há lugar",
     "letra": {
       "estrofes": [
         [
@@ -10919,9 +10919,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 256,
+    "ID": 559,
     "numero": 257,
-    "titulo": "Quem é que vai",
+    "titulo": "#CC - Quem é que vai",
     "letra": {
       "estrofes": [
         [
@@ -10974,9 +10974,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 257,
+    "ID": 560,
     "numero": 258,
-    "titulo": "Chora agora",
+    "titulo": "#CC - Chora agora",
     "letra": {
       "estrofes": [
         [
@@ -11019,9 +11019,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 258,
+    "ID": 561,
     "numero": 259,
-    "titulo": "A última hora",
+    "titulo": "#CC - A última hora",
     "letra": {
       "estrofes": [
         [
@@ -11062,9 +11062,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 259,
+    "ID": 562,
     "numero": 260,
-    "titulo": "Agora",
+    "titulo": "#CC - Agora",
     "letra": {
       "estrofes": [
         [
@@ -11107,9 +11107,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 260,
+    "ID": 563,
     "numero": 261,
-    "titulo": "Alma ansiosa",
+    "titulo": "#CC - Alma ansiosa",
     "letra": {
       "estrofes": [
         [
@@ -11152,9 +11152,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 261,
+    "ID": 564,
     "numero": 262,
-    "titulo": "Contrição",
+    "titulo": "#CC - Contrição",
     "letra": {
       "estrofes": [
         [
@@ -11173,9 +11173,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 262,
+    "ID": 565,
     "numero": 263,
-    "titulo": "Luz divina",
+    "titulo": "#CC - Luz divina",
     "letra": {
       "estrofes": [
         [
@@ -11218,9 +11218,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 263,
+    "ID": 566,
     "numero": 264,
-    "titulo": "Das trevas",
+    "titulo": "#CC - Das trevas",
     "letra": {
       "estrofes": [
         [
@@ -11257,9 +11257,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 264,
+    "ID": 567,
     "numero": 265,
-    "titulo": "Resgate",
+    "titulo": "#CC - Resgate",
     "letra": {
       "estrofes": [
         [
@@ -11302,9 +11302,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 265,
+    "ID": 568,
     "numero": 266,
-    "titulo": "Tal qual estou",
+    "titulo": "#CC - Tal qual estou",
     "letra": {
       "estrofes": [
         [
@@ -11346,9 +11346,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 266,
+    "ID": 569,
     "numero": 267,
-    "titulo": "Salvação pela fé",
+    "titulo": "#CC - Salvação pela fé",
     "letra": {
       "estrofes": [
         [
@@ -11367,9 +11367,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 267,
+    "ID": 570,
     "numero": 268,
-    "titulo": "Como estou",
+    "titulo": "#CC - Como estou",
     "letra": {
       "estrofes": [
         [
@@ -11418,9 +11418,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 268,
+    "ID": 571,
     "numero": 269,
-    "titulo": "Confissão",
+    "titulo": "#CC - Confissão",
     "letra": {
       "estrofes": [
         [
@@ -11473,9 +11473,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 269,
+    "ID": 572,
     "numero": 270,
-    "titulo": "Resolução",
+    "titulo": "#CC - Resolução",
     "letra": {
       "estrofes": [
         [
@@ -11518,9 +11518,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 270,
+    "ID": 573,
     "numero": 271,
-    "titulo": "Substituição",
+    "titulo": "#CC - Substituição",
     "letra": {
       "estrofes": [
         [
@@ -11557,9 +11557,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 271,
+    "ID": 574,
     "numero": 272,
-    "titulo": "Só um passo",
+    "titulo": "#CC - Só um passo",
     "letra": {
       "estrofes": [
         [
@@ -11602,9 +11602,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 272,
+    "ID": 575,
     "numero": 273,
-    "titulo": "Salvador benigno",
+    "titulo": "#CC - Salvador benigno",
     "letra": {
       "estrofes": [
         [
@@ -11647,9 +11647,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 273,
+    "ID": 576,
     "numero": 274,
-    "titulo": "Côro santo",
+    "titulo": "#CC - Côro santo",
     "letra": {
       "estrofes": [
         [
@@ -11687,9 +11687,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 274,
+    "ID": 577,
     "numero": 275,
-    "titulo": "Contentamento",
+    "titulo": "#CC - Contentamento",
     "letra": {
       "estrofes": [
         [
@@ -11723,9 +11723,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 275,
+    "ID": 578,
     "numero": 276,
-    "titulo": "Coro celeste",
+    "titulo": "#CC - Coro celeste",
     "letra": {
       "estrofes": [
         [
@@ -11784,9 +11784,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 276,
+    "ID": 579,
     "numero": 277,
-    "titulo": "Convencido",
+    "titulo": "#CC - Convencido",
     "letra": {
       "estrofes": [
         [
@@ -11823,9 +11823,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 277,
+    "ID": 580,
     "numero": 278,
-    "titulo": "Cantai",
+    "titulo": "#CC - Cantai",
     "letra": {
       "estrofes": [
         [
@@ -11868,9 +11868,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 278,
+    "ID": 581,
     "numero": 279,
-    "titulo": "A doce luz",
+    "titulo": "#CC - A doce luz",
     "letra": {
       "estrofes": [
         [
@@ -11913,9 +11913,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 279,
+    "ID": 582,
     "numero": 280,
-    "titulo": "Fiquei curado",
+    "titulo": "#CC - Fiquei curado",
     "letra": {
       "estrofes": [
         [
@@ -11946,9 +11946,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 280,
+    "ID": 583,
     "numero": 281,
-    "titulo": "Fonte divina",
+    "titulo": "#CC - Fonte divina",
     "letra": {
       "estrofes": [
         [
@@ -11985,9 +11985,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 281,
+    "ID": 584,
     "numero": 282,
-    "titulo": "Maravilha",
+    "titulo": "#CC - Maravilha",
     "letra": {
       "estrofes": [
         [
@@ -12017,9 +12017,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 282,
+    "ID": 585,
     "numero": 283,
-    "titulo": "Mais perto",
+    "titulo": "#CC - Mais perto",
     "letra": {
       "estrofes": [
         [
@@ -12061,9 +12061,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 283,
+    "ID": 586,
     "numero": 284,
-    "titulo": "Companhia divina",
+    "titulo": "#CC - Companhia divina",
     "letra": {
       "estrofes": [
         [
@@ -12094,9 +12094,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 284,
+    "ID": 587,
     "numero": 285,
-    "titulo": "O alvo supremo",
+    "titulo": "#CC - O alvo supremo",
     "letra": {
       "estrofes": [
         [
@@ -12139,9 +12139,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 285,
+    "ID": 588,
     "numero": 286,
-    "titulo": "Junto a ti",
+    "titulo": "#CC - Junto a ti",
     "letra": {
       "estrofes": [
         [
@@ -12183,9 +12183,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 286,
+    "ID": 589,
     "numero": 287,
-    "titulo": "Com jesus",
+    "titulo": "#CC - Com jesus",
     "letra": {
       "estrofes": [
         [
@@ -12228,9 +12228,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 287,
+    "ID": 590,
     "numero": 288,
-    "titulo": "Perto do senhor",
+    "titulo": "#CC - Perto do senhor",
     "letra": {
       "estrofes": [
         [
@@ -12283,9 +12283,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 288,
+    "ID": 591,
     "numero": 289,
-    "titulo": "Ao pé da cruz",
+    "titulo": "#CC - Ao pé da cruz",
     "letra": {
       "estrofes": [
         [
@@ -12328,9 +12328,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 289,
+    "ID": 592,
     "numero": 290,
-    "titulo": "Cristo, meu mestre",
+    "titulo": "#CC - Cristo, meu mestre",
     "letra": {
       "estrofes": [
         [
@@ -12365,9 +12365,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 290,
+    "ID": 593,
     "numero": 291,
-    "titulo": "Comunhão celeste",
+    "titulo": "#CC - Comunhão celeste",
     "letra": {
       "estrofes": [
         [
@@ -12410,9 +12410,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 291,
+    "ID": 594,
     "numero": 292,
-    "titulo": "Perto de jesus",
+    "titulo": "#CC - Perto de jesus",
     "letra": {
       "estrofes": [
         [
@@ -12449,9 +12449,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 292,
+    "ID": 595,
     "numero": 293,
-    "titulo": "Desejos espirituais",
+    "titulo": "#CC - Desejos espirituais",
     "letra": {
       "estrofes": [
         [
@@ -12488,9 +12488,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 293,
+    "ID": 596,
     "numero": 294,
-    "titulo": "Necessitado",
+    "titulo": "#CC - Necessitado",
     "letra": {
       "estrofes": [
         [
@@ -12527,9 +12527,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 294,
+    "ID": 597,
     "numero": 295,
-    "titulo": "Tudo entregarei",
+    "titulo": "#CC - Tudo entregarei",
     "letra": {
       "estrofes": [
         [
@@ -12577,9 +12577,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 295,
+    "ID": 598,
     "numero": 296,
-    "titulo": "Consagração",
+    "titulo": "#CC - Consagração",
     "letra": {
       "estrofes": [
         [
@@ -12628,9 +12628,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 296,
+    "ID": 599,
     "numero": 297,
-    "titulo": "Súplica",
+    "titulo": "#CC - Súplica",
     "letra": {
       "estrofes": [
         [
@@ -12683,9 +12683,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 297,
+    "ID": 600,
     "numero": 298,
-    "titulo": "Estou pronto",
+    "titulo": "#CC - Estou pronto",
     "letra": {
       "estrofes": [
         [
@@ -12734,9 +12734,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 298,
+    "ID": 601,
     "numero": 299,
-    "titulo": "Onde quer que seja",
+    "titulo": "#CC - Onde quer que seja",
     "letra": {
       "estrofes": [
         [
@@ -12771,9 +12771,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 299,
+    "ID": 602,
     "numero": 300,
-    "titulo": "Tudo por cristo",
+    "titulo": "#CC - Tudo por cristo",
     "letra": {
       "estrofes": [
         [
@@ -12816,9 +12816,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 300,
+    "ID": 603,
     "numero": 301,
-    "titulo": "Crer e observar",
+    "titulo": "#CC - Crer e observar",
     "letra": {
       "estrofes": [
         [
@@ -12874,9 +12874,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 301,
+    "ID": 604,
     "numero": 302,
-    "titulo": "Como a neve",
+    "titulo": "#CC - Como a neve",
     "letra": {
       "estrofes": [
         [
@@ -12913,9 +12913,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 302,
+    "ID": 605,
     "numero": 303,
-    "titulo": "Amor a jesus",
+    "titulo": "#CC - Amor a jesus",
     "letra": {
       "estrofes": [
         [
@@ -12946,9 +12946,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 303,
+    "ID": 606,
     "numero": 304,
-    "titulo": "Um vaso de benção",
+    "titulo": "#CC - Um vaso de benção",
     "letra": {
       "estrofes": [
         [
@@ -13001,9 +13001,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 304,
+    "ID": 607,
     "numero": 305,
-    "titulo": "Consagrar tudo",
+    "titulo": "#CC - Consagrar tudo",
     "letra": {
       "estrofes": [
         [
@@ -13040,9 +13040,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 305,
+    "ID": 608,
     "numero": 306,
-    "titulo": "O caminho da cruz",
+    "titulo": "#CC - O caminho da cruz",
     "letra": {
       "estrofes": [
         [
@@ -13080,9 +13080,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 306,
+    "ID": 609,
     "numero": 307,
-    "titulo": "Reconhecimento",
+    "titulo": "#CC - Reconhecimento",
     "letra": {
       "estrofes": [
         [
@@ -13125,9 +13125,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 307,
+    "ID": 610,
     "numero": 308,
-    "titulo": "Para onde for, irei",
+    "titulo": "#CC - Para onde for, irei",
     "letra": {
       "estrofes": [
         [
@@ -13168,9 +13168,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 308,
+    "ID": 611,
     "numero": 309,
-    "titulo": "Consagrando-nos",
+    "titulo": "#CC - Consagrando-nos",
     "letra": {
       "estrofes": [
         [
@@ -13207,9 +13207,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 309,
+    "ID": 612,
     "numero": 310,
-    "titulo": "Em teus braços",
+    "titulo": "#CC - Em teus braços",
     "letra": {
       "estrofes": [
         [
@@ -13248,9 +13248,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 310,
+    "ID": 613,
     "numero": 311,
-    "titulo": "Confiança",
+    "titulo": "#CC - Confiança",
     "letra": {
       "estrofes": [
         [
@@ -13274,9 +13274,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 311,
+    "ID": 614,
     "numero": 312,
-    "titulo": "Amparo",
+    "titulo": "#CC - Amparo",
     "letra": {
       "estrofes": [
         [
@@ -13325,9 +13325,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 312,
+    "ID": 615,
     "numero": 313,
-    "titulo": "Proteção",
+    "titulo": "#CC - Proteção",
     "letra": {
       "estrofes": [
         [
@@ -13372,9 +13372,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 313,
+    "ID": 616,
     "numero": 314,
-    "titulo": "Estou seguro",
+    "titulo": "#CC - Estou seguro",
     "letra": {
       "estrofes": [
         [
@@ -13417,9 +13417,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 314,
+    "ID": 617,
     "numero": 315,
-    "titulo": "Meu clamor",
+    "titulo": "#CC - Meu clamor",
     "letra": {
       "estrofes": [
         [
@@ -13462,9 +13462,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 315,
+    "ID": 618,
     "numero": 316,
-    "titulo": "Deus é por mim",
+    "titulo": "#CC - Deus é por mim",
     "letra": {
       "estrofes": [
         [
@@ -13523,9 +13523,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 316,
+    "ID": 619,
     "numero": 317,
-    "titulo": "Abrigo",
+    "titulo": "#CC - Abrigo",
     "letra": {
       "estrofes": [
         [
@@ -13562,9 +13562,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 317,
+    "ID": 620,
     "numero": 318,
-    "titulo": "Deus me esconde",
+    "titulo": "#CC - Deus me esconde",
     "letra": {
       "estrofes": [
         [
@@ -13607,9 +13607,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 318,
+    "ID": 621,
     "numero": 319,
-    "titulo": "Abrigo perfeito",
+    "titulo": "#CC - Abrigo perfeito",
     "letra": {
       "estrofes": [
         [
@@ -13665,9 +13665,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 319,
+    "ID": 622,
     "numero": 320,
-    "titulo": "Abrigo feliz",
+    "titulo": "#CC - Abrigo feliz",
     "letra": {
       "estrofes": [
         [
@@ -13707,9 +13707,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 320,
+    "ID": 623,
     "numero": 321,
-    "titulo": "Abrigo seguro",
+    "titulo": "#CC - Abrigo seguro",
     "letra": {
       "estrofes": [
         [
@@ -13740,9 +13740,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 321,
+    "ID": 624,
     "numero": 322,
-    "titulo": "Cristo valerá",
+    "titulo": "#CC - Cristo valerá",
     "letra": {
       "estrofes": [
         [
@@ -13784,9 +13784,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 322,
+    "ID": 625,
     "numero": 323,
-    "titulo": "Castelo forte",
+    "titulo": "#CC - Castelo forte",
     "letra": {
       "estrofes": [
         [
@@ -13832,9 +13832,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 323,
+    "ID": 626,
     "numero": 324,
-    "titulo": "Refúgio verdadeiro",
+    "titulo": "#CC - Refúgio verdadeiro",
     "letra": {
       "estrofes": [
         [
@@ -13894,9 +13894,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 324,
+    "ID": 627,
     "numero": 325,
-    "titulo": "Naufrágio",
+    "titulo": "#CC - Naufrágio",
     "letra": {
       "estrofes": [
         [
@@ -13939,9 +13939,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 325,
+    "ID": 628,
     "numero": 326,
-    "titulo": "Refúgio",
+    "titulo": "#CC - Refúgio",
     "letra": {
       "estrofes": [
         [
@@ -13994,9 +13994,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 326,
+    "ID": 629,
     "numero": 327,
-    "titulo": "O piloto",
+    "titulo": "#CC - O piloto",
     "letra": {
       "estrofes": [
         [
@@ -14033,9 +14033,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 327,
+    "ID": 630,
     "numero": 328,
-    "titulo": "Sossegai",
+    "titulo": "#CC - Sossegai",
     "letra": {
       "estrofes": [
         [
@@ -14079,9 +14079,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 328,
+    "ID": 631,
     "numero": 329,
-    "titulo": "Conta as bênçãos",
+    "titulo": "#CC - Conta as bênçãos",
     "letra": {
       "estrofes": [
         [
@@ -14124,9 +14124,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 329,
+    "ID": 632,
     "numero": 330,
-    "titulo": "O segredo do viver",
+    "titulo": "#CC - O segredo do viver",
     "letra": {
       "estrofes": [
         [
@@ -14169,9 +14169,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 330,
+    "ID": 633,
     "numero": 331,
-    "titulo": "Glória no porvir",
+    "titulo": "#CC - Glória no porvir",
     "letra": {
       "estrofes": [
         [
@@ -14220,9 +14220,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 331,
+    "ID": 634,
     "numero": 332,
-    "titulo": "Meu deus é sabedor",
+    "titulo": "#CC - Meu deus é sabedor",
     "letra": {
       "estrofes": [
         [
@@ -14275,9 +14275,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 332,
+    "ID": 635,
     "numero": 333,
-    "titulo": "Deus é sabedor",
+    "titulo": "#CC - Deus é sabedor",
     "letra": {
       "estrofes": [
         [
@@ -14314,9 +14314,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 333,
+    "ID": 636,
     "numero": 334,
-    "titulo": "Alívio",
+    "titulo": "#CC - Alívio",
     "letra": {
       "estrofes": [
         [
@@ -14347,9 +14347,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 334,
+    "ID": 637,
     "numero": 335,
-    "titulo": "O gozo da vida",
+    "titulo": "#CC - O gozo da vida",
     "letra": {
       "estrofes": [
         [
@@ -14392,9 +14392,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 335,
+    "ID": 638,
     "numero": 336,
-    "titulo": "Fonte de consolação",
+    "titulo": "#CC - Fonte de consolação",
     "letra": {
       "estrofes": [
         [
@@ -14431,9 +14431,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 336,
+    "ID": 639,
     "numero": 337,
-    "titulo": "Nada de desanimo",
+    "titulo": "#CC - Nada de desanimo",
     "letra": {
       "estrofes": [
         [
@@ -14476,9 +14476,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 337,
+    "ID": 640,
     "numero": 338,
-    "titulo": "Redentor",
+    "titulo": "#CC - Redentor",
     "letra": {
       "estrofes": [
         [
@@ -14515,9 +14515,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 338,
+    "ID": 641,
     "numero": 339,
-    "titulo": "Não consintas",
+    "titulo": "#CC - Não consintas",
     "letra": {
       "estrofes": [
         [
@@ -14559,9 +14559,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 339,
+    "ID": 642,
     "numero": 340,
-    "titulo": "Importará",
+    "titulo": "#CC - Importará",
     "letra": {
       "estrofes": [
         [
@@ -14604,9 +14604,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 340,
+    "ID": 643,
     "numero": 341,
-    "titulo": "Socorro divino",
+    "titulo": "#CC - Socorro divino",
     "letra": {
       "estrofes": [
         [
@@ -14649,9 +14649,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 341,
+    "ID": 644,
     "numero": 342,
-    "titulo": "A minha cruz",
+    "titulo": "#CC - A minha cruz",
     "letra": {
       "estrofes": [
         [
@@ -14698,9 +14698,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 342,
+    "ID": 645,
     "numero": 343,
-    "titulo": "Sempre firme",
+    "titulo": "#CC - Sempre firme",
     "letra": {
       "estrofes": [
         [
@@ -14747,9 +14747,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 343,
+    "ID": 646,
     "numero": 344,
-    "titulo": "Deus cuidará de ti",
+    "titulo": "#CC - Deus cuidará de ti",
     "letra": {
       "estrofes": [
         [
@@ -14803,9 +14803,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 344,
+    "ID": 647,
     "numero": 345,
-    "titulo": "Contar a jesus",
+    "titulo": "#CC - Contar a jesus",
     "letra": {
       "estrofes": [
         [
@@ -14848,9 +14848,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 345,
+    "ID": 648,
     "numero": 346,
-    "titulo": "Meu deus proverá",
+    "titulo": "#CC - Meu deus proverá",
     "letra": {
       "estrofes": [
         [
@@ -14903,9 +14903,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 346,
+    "ID": 649,
     "numero": 347,
-    "titulo": "O coração em paz",
+    "titulo": "#CC - O coração em paz",
     "letra": {
       "estrofes": [
         [
@@ -14959,9 +14959,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 347,
+    "ID": 650,
     "numero": 348,
-    "titulo": "Confiando",
+    "titulo": "#CC - Confiando",
     "letra": {
       "estrofes": [
         [
@@ -15004,9 +15004,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 348,
+    "ID": 651,
     "numero": 349,
-    "titulo": "Rica promessa",
+    "titulo": "#CC - Rica promessa",
     "letra": {
       "estrofes": [
         [
@@ -15049,9 +15049,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 349,
+    "ID": 652,
     "numero": 350,
-    "titulo": "Quero o salvador",
+    "titulo": "#CC - Quero o salvador",
     "letra": {
       "estrofes": [
         [
@@ -15094,9 +15094,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 350,
+    "ID": 653,
     "numero": 351,
-    "titulo": "Direção divina",
+    "titulo": "#CC - Direção divina",
     "letra": {
       "estrofes": [
         [
@@ -15139,9 +15139,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 351,
+    "ID": 654,
     "numero": 352,
-    "titulo": "Seguindo a cristo",
+    "titulo": "#CC - Seguindo a cristo",
     "letra": {
       "estrofes": [
         [
@@ -15160,9 +15160,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 352,
+    "ID": 655,
     "numero": 353,
-    "titulo": "Sou pecador",
+    "titulo": "#CC - Sou pecador",
     "letra": {
       "estrofes": [
         [
@@ -15211,9 +15211,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 353,
+    "ID": 656,
     "numero": 354,
-    "titulo": "Cada momento",
+    "titulo": "#CC - Cada momento",
     "letra": {
       "estrofes": [
         [
@@ -15251,9 +15251,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 354,
+    "ID": 657,
     "numero": 355,
-    "titulo": "Luz benigna",
+    "titulo": "#CC - Luz benigna",
     "letra": {
       "estrofes": [
         [
@@ -15290,9 +15290,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 355,
+    "ID": 658,
     "numero": 356,
-    "titulo": "Jesus como guia",
+    "titulo": "#CC - Jesus como guia",
     "letra": {
       "estrofes": [
         [
@@ -15335,9 +15335,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 356,
+    "ID": 659,
     "numero": 357,
-    "titulo": "Guia-me",
+    "titulo": "#CC - Guia-me",
     "letra": {
       "estrofes": [
         [
@@ -15374,9 +15374,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 357,
+    "ID": 660,
     "numero": 358,
-    "titulo": "Não há perigo",
+    "titulo": "#CC - Não há perigo",
     "letra": {
       "estrofes": [
         [
@@ -15413,9 +15413,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 358,
+    "ID": 661,
     "numero": 359,
-    "titulo": "Jesus como guia",
+    "titulo": "#CC - Jesus como guia",
     "letra": {
       "estrofes": [
         [
@@ -15458,9 +15458,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 359,
+    "ID": 662,
     "numero": 360,
-    "titulo": "Companheiro",
+    "titulo": "#CC - Companheiro",
     "letra": {
       "estrofes": [
         [
@@ -15513,9 +15513,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 360,
+    "ID": 663,
     "numero": 361,
-    "titulo": "Por mim",
+    "titulo": "#CC - Por mim",
     "letra": {
       "estrofes": [
         [
@@ -15558,9 +15558,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 361,
+    "ID": 664,
     "numero": 362,
-    "titulo": "Nunca sozinho",
+    "titulo": "#CC - Nunca sozinho",
     "letra": {
       "estrofes": [
         [
@@ -15608,9 +15608,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 362,
+    "ID": 665,
     "numero": 363,
-    "titulo": "Sê tu meu guia",
+    "titulo": "#CC - Sê tu meu guia",
     "letra": {
       "estrofes": [
         [
@@ -15647,9 +15647,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 363,
+    "ID": 666,
     "numero": 364,
-    "titulo": "Filhos de deus",
+    "titulo": "#CC - Filhos de deus",
     "letra": {
       "estrofes": [
         [
@@ -15686,9 +15686,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 364,
+    "ID": 667,
     "numero": 365,
-    "titulo": "Fé persistente",
+    "titulo": "#CC - Fé persistente",
     "letra": {
       "estrofes": [
         [
@@ -15725,9 +15725,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 365,
+    "ID": 668,
     "numero": 366,
-    "titulo": "Firmeza",
+    "titulo": "#CC - Firmeza",
     "letra": {
       "estrofes": [
         [
@@ -15765,9 +15765,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 366,
+    "ID": 669,
     "numero": 367,
-    "titulo": "Firme na rocha",
+    "titulo": "#CC - Firme na rocha",
     "letra": {
       "estrofes": [
         [
@@ -15816,9 +15816,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 367,
+    "ID": 670,
     "numero": 368,
-    "titulo": "Confiança",
+    "titulo": "#CC - Confiança",
     "letra": {
       "estrofes": [
         [
@@ -15860,9 +15860,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 368,
+    "ID": 671,
     "numero": 369,
-    "titulo": "Só jesus",
+    "titulo": "#CC - Só jesus",
     "letra": {
       "estrofes": [
         [
@@ -15914,9 +15914,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 369,
+    "ID": 672,
     "numero": 370,
-    "titulo": "Crendo em cristo",
+    "titulo": "#CC - Crendo em cristo",
     "letra": {
       "estrofes": [
         [
@@ -15959,9 +15959,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 370,
+    "ID": 673,
     "numero": 371,
-    "titulo": "Rocha eterna",
+    "titulo": "#CC - Rocha eterna",
     "letra": {
       "estrofes": [
         [
@@ -15994,9 +15994,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 371,
+    "ID": 674,
     "numero": 372,
-    "titulo": "Salvo estou",
+    "titulo": "#CC - Salvo estou",
     "letra": {
       "estrofes": [
         [
@@ -16039,9 +16039,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 372,
+    "ID": 675,
     "numero": 373,
-    "titulo": "Certeza",
+    "titulo": "#CC - Certeza",
     "letra": {
       "estrofes": [
         [
@@ -16078,9 +16078,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 373,
+    "ID": 676,
     "numero": 374,
-    "titulo": "Salvo",
+    "titulo": "#CC - Salvo",
     "letra": {
       "estrofes": [
         [
@@ -16127,9 +16127,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 374,
+    "ID": 677,
     "numero": 375,
-    "titulo": "Segurança",
+    "titulo": "#CC - Segurança",
     "letra": {
       "estrofes": [
         [
@@ -16183,9 +16183,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 375,
+    "ID": 678,
     "numero": 376,
-    "titulo": "Salvação perfeita",
+    "titulo": "#CC - Salvação perfeita",
     "letra": {
       "estrofes": [
         [
@@ -16229,9 +16229,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 376,
+    "ID": 679,
     "numero": 377,
-    "titulo": "Não sei porque",
+    "titulo": "#CC - Não sei porque",
     "letra": {
       "estrofes": [
         [
@@ -16271,9 +16271,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 377,
+    "ID": 680,
     "numero": 378,
-    "titulo": "Já certo estou",
+    "titulo": "#CC - Já certo estou",
     "letra": {
       "estrofes": [
         [
@@ -16304,9 +16304,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 378,
+    "ID": 681,
     "numero": 379,
-    "titulo": "Laços benditos",
+    "titulo": "#CC - Laços benditos",
     "letra": {
       "estrofes": [
         [
@@ -16343,9 +16343,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 379,
+    "ID": 682,
     "numero": 380,
-    "titulo": "Amor",
+    "titulo": "#CC - Amor",
     "letra": {
       "estrofes": [
         [
@@ -16408,9 +16408,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 380,
+    "ID": 683,
     "numero": 381,
-    "titulo": "Amor fraternal",
+    "titulo": "#CC - Amor fraternal",
     "letra": {
       "estrofes": [
         [
@@ -16452,9 +16452,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 381,
+    "ID": 684,
     "numero": 382,
-    "titulo": "Vamos à igreja",
+    "titulo": "#CC - Vamos à igreja",
     "letra": {
       "estrofes": [
         [
@@ -16497,9 +16497,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 382,
+    "ID": 685,
     "numero": 383,
-    "titulo": "Satisfação",
+    "titulo": "#CC - Satisfação",
     "letra": {
       "estrofes": [
         [
@@ -16542,9 +16542,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 383,
+    "ID": 686,
     "numero": 384,
-    "titulo": "Que doce voz",
+    "titulo": "#CC - Que doce voz",
     "letra": {
       "estrofes": [
         [
@@ -16581,9 +16581,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 384,
+    "ID": 687,
     "numero": 385,
-    "titulo": "Louvor",
+    "titulo": "#CC - Louvor",
     "letra": {
       "estrofes": [
         [
@@ -16645,9 +16645,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 385,
+    "ID": 688,
     "numero": 386,
-    "titulo": "Ah! se eu tivesse mil vozes",
+    "titulo": "#CC - Ah! se eu tivesse mil vozes",
     "letra": {
       "estrofes": [
         [
@@ -16689,9 +16689,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 386,
+    "ID": 689,
     "numero": 387,
-    "titulo": "Contentamento",
+    "titulo": "#CC - Contentamento",
     "letra": {
       "estrofes": [
         [
@@ -16729,9 +16729,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 387,
+    "ID": 690,
     "numero": 388,
-    "titulo": "O homem feliz",
+    "titulo": "#CC - O homem feliz",
     "letra": {
       "estrofes": [
         [
@@ -16780,9 +16780,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 388,
+    "ID": 691,
     "numero": 389,
-    "titulo": "Ventura",
+    "titulo": "#CC - Ventura",
     "letra": {
       "estrofes": [
         [
@@ -16819,9 +16819,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 389,
+    "ID": 692,
     "numero": 390,
-    "titulo": "Nada falta",
+    "titulo": "#CC - Nada falta",
     "letra": {
       "estrofes": [
         [
@@ -16858,9 +16858,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 390,
+    "ID": 693,
     "numero": 391,
-    "titulo": "Estou contente",
+    "titulo": "#CC - Estou contente",
     "letra": {
       "estrofes": [
         [
@@ -16918,9 +16918,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 391,
+    "ID": 694,
     "numero": 392,
-    "titulo": "Extraviado",
+    "titulo": "#CC - Extraviado",
     "letra": {
       "estrofes": [
         [
@@ -16969,9 +16969,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 392,
+    "ID": 695,
     "numero": 393,
-    "titulo": "Cristo para mim",
+    "titulo": "#CC - Cristo para mim",
     "letra": {
       "estrofes": [
         [
@@ -17024,9 +17024,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 393,
+    "ID": 696,
     "numero": 394,
-    "titulo": "Realidade",
+    "titulo": "#CC - Realidade",
     "letra": {
       "estrofes": [
         [
@@ -17069,9 +17069,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 394,
+    "ID": 697,
     "numero": 395,
-    "titulo": "Cristo satisfaz",
+    "titulo": "#CC - Cristo satisfaz",
     "letra": {
       "estrofes": [
         [
@@ -17119,9 +17119,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 395,
+    "ID": 698,
     "numero": 396,
-    "titulo": "Foi na cruz foi na cruz",
+    "titulo": "#CC - Foi na cruz foi na cruz",
     "letra": {
       "estrofes": [
         [
@@ -17169,9 +17169,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 396,
+    "ID": 699,
     "numero": 397,
-    "titulo": "Achei descanso",
+    "titulo": "#CC - Achei descanso",
     "letra": {
       "estrofes": [
         [
@@ -17214,9 +17214,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 397,
+    "ID": 700,
     "numero": 398,
-    "titulo": "Sou feliz",
+    "titulo": "#CC - Sou feliz",
     "letra": {
       "estrofes": [
         [
@@ -17262,9 +17262,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 398,
+    "ID": 701,
     "numero": 399,
-    "titulo": "Cantarei de cristo",
+    "titulo": "#CC - Cantarei de cristo",
     "letra": {
       "estrofes": [
         [
@@ -17307,9 +17307,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 399,
+    "ID": 702,
     "numero": 400,
-    "titulo": "Júbilo",
+    "titulo": "#CC - Júbilo",
     "letra": {
       "estrofes": [
         [
@@ -17344,9 +17344,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 400,
+    "ID": 703,
     "numero": 401,
-    "titulo": "Eu sou de jesus",
+    "titulo": "#CC - Eu sou de jesus",
     "letra": {
       "estrofes": [
         [
@@ -17386,9 +17386,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 401,
+    "ID": 704,
     "numero": 402,
-    "titulo": "Escrava resgatada",
+    "titulo": "#CC - Escrava resgatada",
     "letra": {
       "estrofes": [
         [
@@ -17435,9 +17435,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 402,
+    "ID": 705,
     "numero": 403,
-    "titulo": "Eu alegre vou",
+    "titulo": "#CC - Eu alegre vou",
     "letra": {
       "estrofes": [
         [
@@ -17485,9 +17485,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 403,
+    "ID": 706,
     "numero": 404,
-    "titulo": "Substituição",
+    "titulo": "#CC - Substituição",
     "letra": {
       "estrofes": [
         [
@@ -17530,9 +17530,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 404,
+    "ID": 707,
     "numero": 405,
-    "titulo": "Gozo e paz",
+    "titulo": "#CC - Gozo e paz",
     "letra": {
       "estrofes": [
         [
@@ -17569,9 +17569,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 405,
+    "ID": 708,
     "numero": 406,
-    "titulo": "Confiar em cristo",
+    "titulo": "#CC - Confiar em cristo",
     "letra": {
       "estrofes": [
         [
@@ -17608,9 +17608,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 406,
+    "ID": 709,
     "numero": 407,
-    "titulo": "Ditoso dia",
+    "titulo": "#CC - Ditoso dia",
     "letra": {
       "estrofes": [
         [
@@ -17655,9 +17655,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 407,
+    "ID": 710,
     "numero": 408,
-    "titulo": "Descanso verdadeiro",
+    "titulo": "#CC - Descanso verdadeiro",
     "letra": {
       "estrofes": [
         [
@@ -17688,9 +17688,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 408,
+    "ID": 711,
     "numero": 409,
-    "titulo": "Plena paz",
+    "titulo": "#CC - Plena paz",
     "letra": {
       "estrofes": [
         [
@@ -17709,9 +17709,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 409,
+    "ID": 712,
     "numero": 410,
-    "titulo": "No serviço do meu rei",
+    "titulo": "#CC - No serviço do meu rei",
     "letra": {
       "estrofes": [
         [
@@ -17749,9 +17749,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 410,
+    "ID": 713,
     "numero": 411,
-    "titulo": "Que alegria neste dia",
+    "titulo": "#CC - Que alegria neste dia",
     "letra": {
       "estrofes": [
         [
@@ -17788,9 +17788,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 411,
+    "ID": 714,
     "numero": 412,
-    "titulo": "A música dos salvos",
+    "titulo": "#CC - A música dos salvos",
     "letra": {
       "estrofes": [
         [
@@ -17833,9 +17833,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 412,
+    "ID": 715,
     "numero": 413,
-    "titulo": "Lealdade",
+    "titulo": "#CC - Lealdade",
     "letra": {
       "estrofes": [
         [
@@ -17887,9 +17887,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 413,
+    "ID": 716,
     "numero": 414,
-    "titulo": "Acordai",
+    "titulo": "#CC - Acordai",
     "letra": {
       "estrofes": [
         [
@@ -17941,9 +17941,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 414,
+    "ID": 717,
     "numero": 415,
-    "titulo": "Alerta",
+    "titulo": "#CC - Alerta",
     "letra": {
       "estrofes": [
         [
@@ -17979,9 +17979,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 415,
+    "ID": 718,
     "numero": 416,
-    "titulo": "Filhos da luz",
+    "titulo": "#CC - Filhos da luz",
     "letra": {
       "estrofes": [
         [
@@ -18039,9 +18039,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 416,
+    "ID": 719,
     "numero": 417,
-    "titulo": "Brilha no meio do teu viver",
+    "titulo": "#CC - Brilha no meio do teu viver",
     "letra": {
       "estrofes": [
         [
@@ -18092,9 +18092,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 417,
+    "ID": 720,
     "numero": 418,
-    "titulo": "Disposição de trabalhar",
+    "titulo": "#CC - Disposição de trabalhar",
     "letra": {
       "estrofes": [
         [
@@ -18137,9 +18137,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 418,
+    "ID": 721,
     "numero": 419,
-    "titulo": "Mãos ao trabalho",
+    "titulo": "#CC - Mãos ao trabalho",
     "letra": {
       "estrofes": [
         [
@@ -18182,9 +18182,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 419,
+    "ID": 722,
     "numero": 420,
-    "titulo": "Servir alegremente",
+    "titulo": "#CC - Servir alegremente",
     "letra": {
       "estrofes": [
         [
@@ -18233,9 +18233,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 420,
+    "ID": 723,
     "numero": 421,
-    "titulo": "Conversação cristã",
+    "titulo": "#CC - Conversação cristã",
     "letra": {
       "estrofes": [
         [
@@ -18278,9 +18278,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 421,
+    "ID": 724,
     "numero": 422,
-    "titulo": "Trabalho cristão",
+    "titulo": "#CC - Trabalho cristão",
     "letra": {
       "estrofes": [
         [
@@ -18322,9 +18322,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 422,
+    "ID": 725,
     "numero": 423,
-    "titulo": "Oh, buscai",
+    "titulo": "#CC - Oh, buscai",
     "letra": {
       "estrofes": [
         [
@@ -18373,9 +18373,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 423,
+    "ID": 726,
     "numero": 424,
-    "titulo": "Vamos à colheita",
+    "titulo": "#CC - Vamos à colheita",
     "letra": {
       "estrofes": [
         [
@@ -18426,9 +18426,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 424,
+    "ID": 727,
     "numero": 425,
-    "titulo": "Luz após trevas",
+    "titulo": "#CC - Luz após trevas",
     "letra": {
       "estrofes": [
         [
@@ -18459,9 +18459,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 425,
+    "ID": 728,
     "numero": 426,
-    "titulo": "Gratidão na luta",
+    "titulo": "#CC - Gratidão na luta",
     "letra": {
       "estrofes": [
         [
@@ -18503,9 +18503,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 426,
+    "ID": 729,
     "numero": 427,
-    "titulo": "Conquistar o mundo",
+    "titulo": "#CC - Conquistar o mundo",
     "letra": {
       "estrofes": [
         [
@@ -18554,9 +18554,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 427,
+    "ID": 730,
     "numero": 428,
-    "titulo": "Luz nas trevas",
+    "titulo": "#CC - Luz nas trevas",
     "letra": {
       "estrofes": [
         [
@@ -18593,9 +18593,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 428,
+    "ID": 731,
     "numero": 429,
-    "titulo": "Ceifando",
+    "titulo": "#CC - Ceifando",
     "letra": {
       "estrofes": [
         [
@@ -18632,9 +18632,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 429,
+    "ID": 732,
     "numero": 430,
-    "titulo": "Em cada lugar",
+    "titulo": "#CC - Em cada lugar",
     "letra": {
       "estrofes": [
         [
@@ -18677,9 +18677,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 430,
+    "ID": 733,
     "numero": 431,
-    "titulo": "Acode em tempo",
+    "titulo": "#CC - Acode em tempo",
     "letra": {
       "estrofes": [
         [
@@ -18722,9 +18722,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 431,
+    "ID": 734,
     "numero": 432,
-    "titulo": "Avante com deus",
+    "titulo": "#CC - Avante com deus",
     "letra": {
       "estrofes": [
         [
@@ -18779,9 +18779,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 432,
+    "ID": 735,
     "numero": 433,
-    "titulo": "A colheita além",
+    "titulo": "#CC - A colheita além",
     "letra": {
       "estrofes": [
         [
@@ -18839,9 +18839,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 433,
+    "ID": 736,
     "numero": 434,
-    "titulo": "Onde os obreiros",
+    "titulo": "#CC - Onde os obreiros",
     "letra": {
       "estrofes": [
         [
@@ -18878,9 +18878,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 434,
+    "ID": 737,
     "numero": 435,
-    "titulo": "Ainda há lugar",
+    "titulo": "#CC - Ainda há lugar",
     "letra": {
       "estrofes": [
         [
@@ -18917,9 +18917,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 435,
+    "ID": 738,
     "numero": 436,
-    "titulo": "Dai-nos luz",
+    "titulo": "#CC - Dai-nos luz",
     "letra": {
       "estrofes": [
         [
@@ -18966,9 +18966,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 436,
+    "ID": 739,
     "numero": 437,
-    "titulo": "As boas-novas",
+    "titulo": "#CC - As boas-novas",
     "letra": {
       "estrofes": [
         [
@@ -19021,9 +19021,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 437,
+    "ID": 740,
     "numero": 438,
-    "titulo": "Disse jesus",
+    "titulo": "#CC - Disse jesus",
     "letra": {
       "estrofes": [
         [
@@ -19065,9 +19065,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 438,
+    "ID": 741,
     "numero": 439,
-    "titulo": "Oração pela pátria",
+    "titulo": "#CC - Oração pela pátria",
     "letra": {
       "estrofes": [
         [
@@ -19113,9 +19113,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 439,
+    "ID": 742,
     "numero": 440,
-    "titulo": "A pátria feliz",
+    "titulo": "#CC - A pátria feliz",
     "letra": {
       "estrofes": [
         [
@@ -19158,9 +19158,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 440,
+    "ID": 743,
     "numero": 441,
-    "titulo": "Graça e salvação",
+    "titulo": "#CC - Graça e salvação",
     "letra": {
       "estrofes": [
         [
@@ -19211,9 +19211,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 441,
+    "ID": 744,
     "numero": 442,
-    "titulo": "O missionário",
+    "titulo": "#CC - O missionário",
     "letra": {
       "estrofes": [
         [
@@ -19266,9 +19266,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 442,
+    "ID": 745,
     "numero": 443,
-    "titulo": "Eis os milhões",
+    "titulo": "#CC - Eis os milhões",
     "letra": {
       "estrofes": [
         [
@@ -19311,9 +19311,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 443,
+    "ID": 746,
     "numero": 444,
-    "titulo": "Brasil",
+    "titulo": "#CC - Brasil",
     "letra": {
       "estrofes": [
         [
@@ -19356,9 +19356,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 444,
+    "ID": 747,
     "numero": 445,
-    "titulo": "Deves divulgar",
+    "titulo": "#CC - Deves divulgar",
     "letra": {
       "estrofes": [
         [
@@ -19407,9 +19407,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 445,
+    "ID": 748,
     "numero": 446,
-    "titulo": "Avançai",
+    "titulo": "#CC - Avançai",
     "letra": {
       "estrofes": [
         [
@@ -19443,9 +19443,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 446,
+    "ID": 749,
     "numero": 447,
-    "titulo": "Nunca ouvir de cristo",
+    "titulo": "#CC - Nunca ouvir de cristo",
     "letra": {
       "estrofes": [
         [
@@ -19488,9 +19488,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 447,
+    "ID": 750,
     "numero": 448,
-    "titulo": "Ide",
+    "titulo": "#CC - Ide",
     "letra": {
       "estrofes": [
         [
@@ -19525,9 +19525,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 448,
+    "ID": 751,
     "numero": 449,
-    "titulo": "Ousados proclamai",
+    "titulo": "#CC - Ousados proclamai",
     "letra": {
       "estrofes": [
         [
@@ -19580,9 +19580,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 449,
+    "ID": 752,
     "numero": 450,
-    "titulo": "Igreja, alerta",
+    "titulo": "#CC - Igreja, alerta",
     "letra": {
       "estrofes": [
         [
@@ -19630,9 +19630,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 450,
+    "ID": 753,
     "numero": 451,
-    "titulo": "Os que confiam",
+    "titulo": "#CC - Os que confiam",
     "letra": {
       "estrofes": [
         [
@@ -19673,9 +19673,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 451,
+    "ID": 754,
     "numero": 452,
-    "titulo": "Decisão",
+    "titulo": "#CC - Decisão",
     "letra": {
       "estrofes": [
         [
@@ -19718,9 +19718,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 452,
+    "ID": 755,
     "numero": 453,
-    "titulo": "à Peleja",
+    "titulo": "#CC - à Peleja",
     "letra": {
       "estrofes": [
         [
@@ -19757,9 +19757,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 453,
+    "ID": 756,
     "numero": 454,
-    "titulo": "Vitórias nas lutas",
+    "titulo": "#CC - Vitórias nas lutas",
     "letra": {
       "estrofes": [
         [
@@ -19796,9 +19796,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 454,
+    "ID": 757,
     "numero": 455,
-    "titulo": "Heróis",
+    "titulo": "#CC - Heróis",
     "letra": {
       "estrofes": [
         [
@@ -19834,9 +19834,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 455,
+    "ID": 758,
     "numero": 456,
-    "titulo": "O estandarte",
+    "titulo": "#CC - O estandarte",
     "letra": {
       "estrofes": [
         [
@@ -19885,9 +19885,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 456,
+    "ID": 759,
     "numero": 457,
-    "titulo": "Confiança em deus",
+    "titulo": "#CC - Confiança em deus",
     "letra": {
       "estrofes": [
         [
@@ -19924,9 +19924,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 457,
+    "ID": 760,
     "numero": 458,
-    "titulo": "Cristo vos conduz",
+    "titulo": "#CC - Cristo vos conduz",
     "letra": {
       "estrofes": [
         [
@@ -19979,9 +19979,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 458,
+    "ID": 761,
     "numero": 459,
-    "titulo": "Companheiras",
+    "titulo": "#CC - Companheiras",
     "letra": {
       "estrofes": [
         [
@@ -20018,9 +20018,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 459,
+    "ID": 762,
     "numero": 460,
-    "titulo": "Vitória",
+    "titulo": "#CC - Vitória",
     "letra": {
       "estrofes": [
         [
@@ -20055,9 +20055,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 460,
+    "ID": 763,
     "numero": 461,
-    "titulo": "Fujamos da tentação",
+    "titulo": "#CC - Fujamos da tentação",
     "letra": {
       "estrofes": [
         [
@@ -20094,9 +20094,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 461,
+    "ID": 764,
     "numero": 462,
-    "titulo": "Unidos",
+    "titulo": "#CC - Unidos",
     "letra": {
       "estrofes": [
         [
@@ -20133,9 +20133,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 462,
+    "ID": 765,
     "numero": 463,
-    "titulo": "Triunfo",
+    "titulo": "#CC - Triunfo",
     "letra": {
       "estrofes": [
         [
@@ -20152,9 +20152,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 463,
+    "ID": 766,
     "numero": 464,
-    "titulo": "Sempre fiéis",
+    "titulo": "#CC - Sempre fiéis",
     "letra": {
       "estrofes": [
         [
@@ -20199,9 +20199,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 464,
+    "ID": 767,
     "numero": 465,
-    "titulo": "Igual a daniel",
+    "titulo": "#CC - Igual a daniel",
     "letra": {
       "estrofes": [
         [
@@ -20238,9 +20238,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 465,
+    "ID": 768,
     "numero": 466,
-    "titulo": "Lutai por cristo",
+    "titulo": "#CC - Lutai por cristo",
     "letra": {
       "estrofes": [
         [
@@ -20299,9 +20299,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 466,
+    "ID": 769,
     "numero": 467,
-    "titulo": "Avante com alegria",
+    "titulo": "#CC - Avante com alegria",
     "letra": {
       "estrofes": [
         [
@@ -20321,9 +20321,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 467,
+    "ID": 770,
     "numero": 468,
-    "titulo": "Testemunhos",
+    "titulo": "#CC - Testemunhos",
     "letra": {
       "estrofes": [
         [
@@ -20372,9 +20372,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 468,
+    "ID": 771,
     "numero": 469,
-    "titulo": "Corajosos",
+    "titulo": "#CC - Corajosos",
     "letra": {
       "estrofes": [
         [
@@ -20411,9 +20411,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 469,
+    "ID": 772,
     "numero": 470,
-    "titulo": "O combate",
+    "titulo": "#CC - O combate",
     "letra": {
       "estrofes": [
         [
@@ -20450,9 +20450,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 470,
+    "ID": 773,
     "numero": 471,
-    "titulo": "Vitorioso",
+    "titulo": "#CC - Vitorioso",
     "letra": {
       "estrofes": [
         [
@@ -20501,9 +20501,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 471,
+    "ID": 774,
     "numero": 472,
-    "titulo": "Frente ousada",
+    "titulo": "#CC - Frente ousada",
     "letra": {
       "estrofes": [
         [
@@ -20546,9 +20546,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 472,
+    "ID": 775,
     "numero": 473,
-    "titulo": "Firmes na fé",
+    "titulo": "#CC - Firmes na fé",
     "letra": {
       "estrofes": [
         [
@@ -20591,9 +20591,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 473,
+    "ID": 776,
     "numero": 474,
-    "titulo": "Eia, ao combate",
+    "titulo": "#CC - Eia, ao combate",
     "letra": {
       "estrofes": [
         [
@@ -20634,9 +20634,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 474,
+    "ID": 777,
     "numero": 475,
-    "titulo": "Lutar",
+    "titulo": "#CC - Lutar",
     "letra": {
       "estrofes": [
         [
@@ -20673,9 +20673,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 475,
+    "ID": 778,
     "numero": 476,
-    "titulo": "Brilho celeste",
+    "titulo": "#CC - Brilho celeste",
     "letra": {
       "estrofes": [
         [
@@ -20718,9 +20718,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 476,
+    "ID": 779,
     "numero": 477,
-    "titulo": "Como andar",
+    "titulo": "#CC - Como andar",
     "letra": {
       "estrofes": [
         [
@@ -20765,9 +20765,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 477,
+    "ID": 780,
     "numero": 478,
-    "titulo": "O peregrino",
+    "titulo": "#CC - O peregrino",
     "letra": {
       "estrofes": [
         [
@@ -20810,9 +20810,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 478,
+    "ID": 781,
     "numero": 479,
-    "titulo": "Vou à pátria",
+    "titulo": "#CC - Vou à pátria",
     "letra": {
       "estrofes": [
         [
@@ -20847,9 +20847,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 479,
+    "ID": 782,
     "numero": 480,
-    "titulo": "Favor",
+    "titulo": "#CC - Favor",
     "letra": {
       "estrofes": [
         [
@@ -20893,9 +20893,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 480,
+    "ID": 783,
     "numero": 481,
-    "titulo": "Ao lar celestial",
+    "titulo": "#CC - Ao lar celestial",
     "letra": {
       "estrofes": [
         [
@@ -20934,9 +20934,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 481,
+    "ID": 784,
     "numero": 482,
-    "titulo": "Guia, ó deus",
+    "titulo": "#CC - Guia, ó deus",
     "letra": {
       "estrofes": [
         [
@@ -20979,9 +20979,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 482,
+    "ID": 785,
     "numero": 483,
-    "titulo": "Pátria celestial",
+    "titulo": "#CC - Pátria celestial",
     "letra": {
       "estrofes": [
         [
@@ -21026,9 +21026,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 483,
+    "ID": 786,
     "numero": 484,
-    "titulo": "Da linda pátria estou mui longe",
+    "titulo": "#CC - Da linda pátria estou mui longe",
     "letra": {
       "estrofes": [
         [
@@ -21070,9 +21070,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 484,
+    "ID": 787,
     "numero": 485,
-    "titulo": "Livro da vida",
+    "titulo": "#CC - Livro da vida",
     "letra": {
       "estrofes": [
         [
@@ -21121,9 +21121,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 485,
+    "ID": 788,
     "numero": 486,
-    "titulo": "Doce porvir",
+    "titulo": "#CC - Doce porvir",
     "letra": {
       "estrofes": [
         [
@@ -21158,9 +21158,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 486,
+    "ID": 789,
     "numero": 487,
-    "titulo": "Precioso é jesus",
+    "titulo": "#CC - Precioso é jesus",
     "letra": {
       "estrofes": [
         [
@@ -21197,9 +21197,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 487,
+    "ID": 790,
     "numero": 488,
-    "titulo": "Cada vez mais",
+    "titulo": "#CC - Cada vez mais",
     "letra": {
       "estrofes": [
         [
@@ -21248,9 +21248,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 488,
+    "ID": 791,
     "numero": 489,
-    "titulo": "Céu pra mim",
+    "titulo": "#CC - Céu pra mim",
     "letra": {
       "estrofes": [
         [
@@ -21295,9 +21295,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 489,
+    "ID": 792,
     "numero": 490,
-    "titulo": "Aleluia sim é céu",
+    "titulo": "#CC - Aleluia sim é céu",
     "letra": {
       "estrofes": [
         [
@@ -21331,9 +21331,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 490,
+    "ID": 793,
     "numero": 491,
-    "titulo": "Como há de ser",
+    "titulo": "#CC - Como há de ser",
     "letra": {
       "estrofes": [
         [
@@ -21406,9 +21406,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 491,
+    "ID": 794,
     "numero": 492,
-    "titulo": "Meu canto celestial",
+    "titulo": "#CC - Meu canto celestial",
     "letra": {
       "estrofes": [
         [
@@ -21457,9 +21457,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 492,
+    "ID": 795,
     "numero": 493,
-    "titulo": "No paraíso",
+    "titulo": "#CC - No paraíso",
     "letra": {
       "estrofes": [
         [
@@ -21502,9 +21502,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 493,
+    "ID": 796,
     "numero": 494,
-    "titulo": "Além",
+    "titulo": "#CC - Além",
     "letra": {
       "estrofes": [
         [
@@ -21541,9 +21541,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 494,
+    "ID": 797,
     "numero": 495,
-    "titulo": "Redenção",
+    "titulo": "#CC - Redenção",
     "letra": {
       "estrofes": [
         [
@@ -21600,9 +21600,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 495,
+    "ID": 798,
     "numero": 496,
-    "titulo": "Rio da vida",
+    "titulo": "#CC - Rio da vida",
     "letra": {
       "estrofes": [
         [
@@ -21639,9 +21639,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 496,
+    "ID": 799,
     "numero": 497,
-    "titulo": "Tantos remidos",
+    "titulo": "#CC - Tantos remidos",
     "letra": {
       "estrofes": [
         [
@@ -21684,9 +21684,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 497,
+    "ID": 800,
     "numero": 498,
-    "titulo": "Bela cidade",
+    "titulo": "#CC - Bela cidade",
     "letra": {
       "estrofes": [
         [
@@ -21738,9 +21738,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 498,
+    "ID": 801,
     "numero": 499,
-    "titulo": "Tudo feliz",
+    "titulo": "#CC - Tudo feliz",
     "letra": {
       "estrofes": [
         [
@@ -21784,9 +21784,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 499,
+    "ID": 802,
     "numero": 500,
-    "titulo": "Glória prá mim",
+    "titulo": "#CC - Glória prá mim",
     "letra": {
       "estrofes": [
         [
@@ -21839,9 +21839,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 500,
+    "ID": 803,
     "numero": 501,
-    "titulo": "O nosso lar",
+    "titulo": "#CC - O nosso lar",
     "letra": {
       "estrofes": [
         [
@@ -21889,9 +21889,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 501,
+    "ID": 804,
     "numero": 502,
-    "titulo": "Um pouco mais",
+    "titulo": "#CC - Um pouco mais",
     "letra": {
       "estrofes": [
         [
@@ -21934,9 +21934,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 502,
+    "ID": 805,
     "numero": 503,
-    "titulo": "Face a face",
+    "titulo": "#CC - Face a face",
     "letra": {
       "estrofes": [
         [
@@ -21977,9 +21977,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 503,
+    "ID": 806,
     "numero": 504,
-    "titulo": "Lá no céu",
+    "titulo": "#CC - Lá no céu",
     "letra": {
       "estrofes": [
         [
@@ -22032,9 +22032,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 504,
+    "ID": 807,
     "numero": 505,
-    "titulo": "Jerusalém",
+    "titulo": "#CC - Jerusalém",
     "letra": {
       "estrofes": [
         [
@@ -22077,9 +22077,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 505,
+    "ID": 808,
     "numero": 506,
-    "titulo": "Junto ao trono",
+    "titulo": "#CC - Junto ao trono",
     "letra": {
       "estrofes": [
         [
@@ -22129,9 +22129,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 506,
+    "ID": 809,
     "numero": 507,
-    "titulo": "Minha coroa",
+    "titulo": "#CC - Minha coroa",
     "letra": {
       "estrofes": [
         [
@@ -22169,9 +22169,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 507,
+    "ID": 810,
     "numero": 508,
-    "titulo": "Terra feliz",
+    "titulo": "#CC - Terra feliz",
     "letra": {
       "estrofes": [
         [
@@ -22214,9 +22214,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 508,
+    "ID": 811,
     "numero": 509,
-    "titulo": "Verei meu redentor",
+    "titulo": "#CC - Verei meu redentor",
     "letra": {
       "estrofes": [
         [
@@ -22274,9 +22274,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 509,
+    "ID": 812,
     "numero": 510,
-    "titulo": "Fonte de amor",
+    "titulo": "#CC - Fonte de amor",
     "letra": {
       "estrofes": [
         [
@@ -22319,9 +22319,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 510,
+    "ID": 813,
     "numero": 511,
-    "titulo": "Com jesus",
+    "titulo": "#CC - Com jesus",
     "letra": {
       "estrofes": [
         [
@@ -22360,9 +22360,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 511,
+    "ID": 814,
     "numero": 512,
-    "titulo": "O doce lar",
+    "titulo": "#CC - O doce lar",
     "letra": {
       "estrofes": [
         [
@@ -22403,9 +22403,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 512,
+    "ID": 815,
     "numero": 513,
-    "titulo": "Triunfo",
+    "titulo": "#CC - Triunfo",
     "letra": {
       "estrofes": [
         [
@@ -22454,9 +22454,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 513,
+    "ID": 816,
     "numero": 514,
-    "titulo": "Paz real",
+    "titulo": "#CC - Paz real",
     "letra": {
       "estrofes": [
         [
@@ -22493,9 +22493,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 514,
+    "ID": 817,
     "numero": 515,
-    "titulo": "Na glória",
+    "titulo": "#CC - Na glória",
     "letra": {
       "estrofes": [
         [
@@ -22544,9 +22544,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 515,
+    "ID": 818,
     "numero": 516,
-    "titulo": "Além da morte",
+    "titulo": "#CC - Além da morte",
     "letra": {
       "estrofes": [
         [
@@ -22589,9 +22589,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 516,
+    "ID": 819,
     "numero": 517,
-    "titulo": "Querido lar",
+    "titulo": "#CC - Querido lar",
     "letra": {
       "estrofes": [
         [
@@ -22639,9 +22639,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 517,
+    "ID": 820,
     "numero": 518,
-    "titulo": "Glória",
+    "titulo": "#CC - Glória",
     "letra": {
       "estrofes": [
         [
@@ -22677,9 +22677,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 518,
+    "ID": 821,
     "numero": 519,
-    "titulo": "Perante o rei",
+    "titulo": "#CC - Perante o rei",
     "letra": {
       "estrofes": [
         [
@@ -22723,9 +22723,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 519,
+    "ID": 822,
     "numero": 520,
-    "titulo": "Canaã celeste",
+    "titulo": "#CC - Canaã celeste",
     "letra": {
       "estrofes": [
         [
@@ -22758,9 +22758,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 520,
+    "ID": 823,
     "numero": 521,
-    "titulo": "Jerusalém",
+    "titulo": "#CC - Jerusalém",
     "letra": {
       "estrofes": [
         [
@@ -22814,9 +22814,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 521,
+    "ID": 824,
     "numero": 522,
-    "titulo": "Um bom amigo",
+    "titulo": "#CC - Um bom amigo",
     "letra": {
       "estrofes": [
         [
@@ -22889,9 +22889,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 522,
+    "ID": 825,
     "numero": 523,
-    "titulo": "Cordeirinhos",
+    "titulo": "#CC - Cordeirinhos",
     "letra": {
       "estrofes": [
         [
@@ -22924,9 +22924,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 523,
+    "ID": 826,
     "numero": 524,
-    "titulo": "Jóias preciosas",
+    "titulo": "#CC - Jóias preciosas",
     "letra": {
       "estrofes": [
         [
@@ -22963,9 +22963,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 524,
+    "ID": 827,
     "numero": 525,
-    "titulo": "Vinde meninos",
+    "titulo": "#CC - Vinde meninos",
     "letra": {
       "estrofes": [
         [
@@ -23014,9 +23014,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 525,
+    "ID": 828,
     "numero": 526,
-    "titulo": "Os meninos",
+    "titulo": "#CC - Os meninos",
     "letra": {
       "estrofes": [
         [
@@ -23053,9 +23053,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 526,
+    "ID": 829,
     "numero": 527,
-    "titulo": "A bênção",
+    "titulo": "#CC - A bênção",
     "letra": {
       "estrofes": [
         [
@@ -23092,9 +23092,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 527,
+    "ID": 830,
     "numero": 528,
-    "titulo": "Aspiração infantil",
+    "titulo": "#CC - Aspiração infantil",
     "letra": {
       "estrofes": [
         [
@@ -23137,9 +23137,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 528,
+    "ID": 831,
     "numero": 529,
-    "titulo": "Vai buscar",
+    "titulo": "#CC - Vai buscar",
     "letra": {
       "estrofes": [
         [
@@ -23176,9 +23176,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 529,
+    "ID": 832,
     "numero": 530,
-    "titulo": "Soldado infantil",
+    "titulo": "#CC - Soldado infantil",
     "letra": {
       "estrofes": [
         [
@@ -23221,9 +23221,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 530,
+    "ID": 833,
     "numero": 531,
-    "titulo": "Teu cantinho",
+    "titulo": "#CC - Teu cantinho",
     "letra": {
       "estrofes": [
         [
@@ -23259,9 +23259,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 531,
+    "ID": 834,
     "numero": 532,
-    "titulo": "ó Meninos, vinde",
+    "titulo": "#CC - ó Meninos, vinde",
     "letra": {
       "estrofes": [
         [
@@ -23298,9 +23298,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 532,
+    "ID": 835,
     "numero": 533,
-    "titulo": "Pequenos guerreiros",
+    "titulo": "#CC - Pequenos guerreiros",
     "letra": {
       "estrofes": [
         [
@@ -23331,9 +23331,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 533,
+    "ID": 836,
     "numero": 534,
-    "titulo": "Cantam glória",
+    "titulo": "#CC - Cantam glória",
     "letra": {
       "estrofes": [
         [
@@ -23380,9 +23380,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 534,
+    "ID": 837,
     "numero": 535,
-    "titulo": "Hosana infantil",
+    "titulo": "#CC - Hosana infantil",
     "letra": {
       "estrofes": [
         [
@@ -23431,9 +23431,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 535,
+    "ID": 838,
     "numero": 536,
-    "titulo": "A lição",
+    "titulo": "#CC - A lição",
     "letra": {
       "estrofes": [
         [
@@ -23466,9 +23466,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 536,
+    "ID": 839,
     "numero": 537,
-    "titulo": "Desejo infantil",
+    "titulo": "#CC - Desejo infantil",
     "letra": {
       "estrofes": [
         [
@@ -23505,9 +23505,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 537,
+    "ID": 840,
     "numero": 538,
-    "titulo": "Oh, vinde, meninos",
+    "titulo": "#CC - Oh, vinde, meninos",
     "letra": {
       "estrofes": [
         [
@@ -23560,9 +23560,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 538,
+    "ID": 841,
     "numero": 539,
-    "titulo": "Brilhando",
+    "titulo": "#CC - Brilhando",
     "letra": {
       "estrofes": [
         [
@@ -23611,9 +23611,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 539,
+    "ID": 842,
     "numero": 540,
-    "titulo": "Oração de criança",
+    "titulo": "#CC - Oração de criança",
     "letra": {
       "estrofes": [
         [
@@ -23656,9 +23656,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 540,
+    "ID": 843,
     "numero": 541,
-    "titulo": "Pequenos raios",
+    "titulo": "#CC - Pequenos raios",
     "letra": {
       "estrofes": [
         [
@@ -23707,9 +23707,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 541,
+    "ID": 844,
     "numero": 542,
-    "titulo": "Jesus e as crianças",
+    "titulo": "#CC - Jesus e as crianças",
     "letra": {
       "estrofes": [
         [
@@ -23750,9 +23750,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 542,
+    "ID": 845,
     "numero": 543,
-    "titulo": "Cântico escolar",
+    "titulo": "#CC - Cântico escolar",
     "letra": {
       "estrofes": [
         [
@@ -23787,9 +23787,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 543,
+    "ID": 846,
     "numero": 544,
-    "titulo": "Avante mocidade",
+    "titulo": "#CC - Avante mocidade",
     "letra": {
       "estrofes": [
         [
@@ -23843,9 +23843,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 544,
+    "ID": 847,
     "numero": 545,
-    "titulo": "Vamos à escola",
+    "titulo": "#CC - Vamos à escola",
     "letra": {
       "estrofes": [
         [
@@ -23882,9 +23882,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 545,
+    "ID": 848,
     "numero": 546,
-    "titulo": "Mocidade, avante",
+    "titulo": "#CC - Mocidade, avante",
     "letra": {
       "estrofes": [
         [
@@ -23933,9 +23933,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 546,
+    "ID": 849,
     "numero": 547,
-    "titulo": "Semeando e segando",
+    "titulo": "#CC - Semeando e segando",
     "letra": {
       "estrofes": [
         [
@@ -23978,9 +23978,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 547,
+    "ID": 850,
     "numero": 548,
-    "titulo": "Jovens lutadores",
+    "titulo": "#CC - Jovens lutadores",
     "letra": {
       "estrofes": [
         [
@@ -24017,9 +24017,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 548,
+    "ID": 851,
     "numero": 549,
-    "titulo": "Alerta, mocidade",
+    "titulo": "#CC - Alerta, mocidade",
     "letra": {
       "estrofes": [
         [
@@ -24062,9 +24062,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 549,
+    "ID": 852,
     "numero": 550,
-    "titulo": "Juventude",
+    "titulo": "#CC - Juventude",
     "letra": {
       "estrofes": [
         [
@@ -24122,9 +24122,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 550,
+    "ID": 853,
     "numero": 551,
-    "titulo": "Mocidade",
+    "titulo": "#CC - Mocidade",
     "letra": {
       "estrofes": [
         [
@@ -24163,9 +24163,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 551,
+    "ID": 854,
     "numero": 552,
-    "titulo": "Mocidade crente",
+    "titulo": "#CC - Mocidade crente",
     "letra": {
       "estrofes": [
         [
@@ -24202,9 +24202,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 552,
+    "ID": 855,
     "numero": 553,
-    "titulo": "Lealdade a cristo",
+    "titulo": "#CC - Lealdade a cristo",
     "letra": {
       "estrofes": [
         [
@@ -24257,9 +24257,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 553,
+    "ID": 856,
     "numero": 554,
-    "titulo": "Agora",
+    "titulo": "#CC - Agora",
     "letra": {
       "estrofes": [
         [
@@ -24302,9 +24302,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 554,
+    "ID": 857,
     "numero": 555,
-    "titulo": "Alerta, jovens",
+    "titulo": "#CC - Alerta, jovens",
     "letra": {
       "estrofes": [
         [
@@ -24352,9 +24352,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 555,
+    "ID": 858,
     "numero": 556,
-    "titulo": "Oração para a noite",
+    "titulo": "#CC - Oração para a noite",
     "letra": {
       "estrofes": [
         [
@@ -24396,9 +24396,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 556,
+    "ID": 859,
     "numero": 557,
-    "titulo": "O anoitecer",
+    "titulo": "#CC - O anoitecer",
     "letra": {
       "estrofes": [
         [
@@ -24427,9 +24427,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 557,
+    "ID": 860,
     "numero": 558,
-    "titulo": "Hino vespertino",
+    "titulo": "#CC - Hino vespertino",
     "letra": {
       "estrofes": [
         [
@@ -24462,9 +24462,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 558,
+    "ID": 861,
     "numero": 559,
-    "titulo": "Fim do ano",
+    "titulo": "#CC - Fim do ano",
     "letra": {
       "estrofes": [
         [
@@ -24507,9 +24507,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 559,
+    "ID": 862,
     "numero": 560,
-    "titulo": "Ano novo",
+    "titulo": "#CC - Ano novo",
     "letra": {
       "estrofes": [
         [
@@ -24551,9 +24551,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 560,
+    "ID": 863,
     "numero": 561,
-    "titulo": "Salve, ano novo",
+    "titulo": "#CC - Salve, ano novo",
     "letra": {
       "estrofes": [
         [
@@ -24594,9 +24594,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 561,
+    "ID": 864,
     "numero": 562,
-    "titulo": "Templo novo",
+    "titulo": "#CC - Templo novo",
     "letra": {
       "estrofes": [
         [
@@ -24639,9 +24639,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 562,
+    "ID": 865,
     "numero": 563,
-    "titulo": "Consagração de templo",
+    "titulo": "#CC - Consagração de templo",
     "letra": {
       "estrofes": [
         [
@@ -24679,9 +24679,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 563,
+    "ID": 866,
     "numero": 564,
-    "titulo": "Mais um templo",
+    "titulo": "#CC - Mais um templo",
     "letra": {
       "estrofes": [
         [
@@ -24724,9 +24724,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 564,
+    "ID": 867,
     "numero": 565,
-    "titulo": "Separação",
+    "titulo": "#CC - Separação",
     "letra": {
       "estrofes": [
         [
@@ -24774,9 +24774,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 565,
+    "ID": 868,
     "numero": 566,
-    "titulo": "Saudação",
+    "titulo": "#CC - Saudação",
     "letra": {
       "estrofes": [
         [
@@ -24819,9 +24819,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 566,
+    "ID": 869,
     "numero": 567,
-    "titulo": "União vital",
+    "titulo": "#CC - União vital",
     "letra": {
       "estrofes": [
         [
@@ -24863,9 +24863,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 567,
+    "ID": 870,
     "numero": 568,
-    "titulo": "Casamento",
+    "titulo": "#CC - Casamento",
     "letra": {
       "estrofes": [
         [
@@ -24896,9 +24896,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 568,
+    "ID": 871,
     "numero": 569,
-    "titulo": "O ministério santo",
+    "titulo": "#CC - O ministério santo",
     "letra": {
       "estrofes": [
         [
@@ -24951,9 +24951,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 569,
+    "ID": 872,
     "numero": 570,
-    "titulo": "Mais um obreiro",
+    "titulo": "#CC - Mais um obreiro",
     "letra": {
       "estrofes": [
         [
@@ -25006,9 +25006,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 570,
+    "ID": 873,
     "numero": 571,
-    "titulo": "Morte do crente",
+    "titulo": "#CC - Morte do crente",
     "letra": {
       "estrofes": [
         [
@@ -25045,9 +25045,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 571,
+    "ID": 874,
     "numero": 572,
-    "titulo": "Dormir em cristo",
+    "titulo": "#CC - Dormir em cristo",
     "letra": {
       "estrofes": [
         [
@@ -25084,9 +25084,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 572,
+    "ID": 875,
     "numero": 573,
-    "titulo": "Dormindo no senhor",
+    "titulo": "#CC - Dormindo no senhor",
     "letra": {
       "estrofes": [
         [
@@ -25135,9 +25135,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 573,
+    "ID": 876,
     "numero": 574,
-    "titulo": "Pátria brasileira",
+    "titulo": "#CC - Pátria brasileira",
     "letra": {
       "estrofes": [
         [
@@ -25174,9 +25174,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 574,
+    "ID": 877,
     "numero": 575,
-    "titulo": "Republica do brasil",
+    "titulo": "#CC - Republica do brasil",
     "letra": {
       "estrofes": [
         [
@@ -25235,9 +25235,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 575,
+    "ID": 878,
     "numero": 576,
-    "titulo": "Hino à bandeira nacional",
+    "titulo": "#CC - Hino à bandeira nacional",
     "letra": {
       "estrofes": [
         [
@@ -25280,9 +25280,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 576,
+    "ID": 879,
     "numero": 577,
-    "titulo": "Hino nacional brasileiro",
+    "titulo": "#CC - Hino nacional brasileiro",
     "letra": {
       "estrofes": [
         [
@@ -25373,9 +25373,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 577,
+    "ID": 880,
     "numero": 578,
-    "titulo": "Sonda-me, ó deus",
+    "titulo": "#CC - Sonda-me, ó deus",
     "letra": {
       "estrofes": [
         [
@@ -25412,9 +25412,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 578,
+    "ID": 881,
     "numero": 579,
-    "titulo": "Olhando para cristo",
+    "titulo": "#CC - Olhando para cristo",
     "letra": {
       "estrofes": [
         [
@@ -25451,9 +25451,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 579,
+    "ID": 882,
     "numero": 580,
-    "titulo": "Vem visita a tua igreja",
+    "titulo": "#CC - Vem visita a tua igreja",
     "letra": {
       "estrofes": [
         [
@@ -25487,9 +25487,9 @@ const hinos = [
     "favorit": false
   },
   {
-    "ID": 580,
+    "ID": 883,
     "numero": 581,
-    "titulo": "A única esperança",
+    "titulo": "#CC - A única esperança",
     "letra": {
       "estrofes": [
         [

@@ -1,5 +1,5 @@
 import { Songs } from './../../models/songs.model';
-import { SongsService } from './../../services/songs.service';
+import { SongsService } from '../../services/songs/songs.service';
 import { Injectable } from '@angular/core';
 import { DataStorageProvider } from '../data-storage/data-storage';
 
@@ -14,7 +14,7 @@ export class SongsDaoProvider {
 
   // #ACTIONS
   async getSongs() {
-    if (this.songs.length) {
+    if (!!this.songs.length) {
       return this.songs;
     }
 

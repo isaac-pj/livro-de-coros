@@ -2,7 +2,6 @@ import { RandomPage } from '../random/random.page';
 import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
 import { List } from '../../models/list.model';
 
-import { SongsService } from '../../services/songs.service';
 import { Songs } from '../../models/songs.model';
 import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { Component, ViewChild, OnInit } from '@angular/core';
@@ -32,7 +31,6 @@ export class SelectPage implements OnInit {
     public toastCtrl: ToastController,
     public navCtrl: NavController,
     public modalCtrl: ModalController,
-    public songsService: SongsService,
     public listsDaoProvider: ListsDaoProvider,
     public songsDaoProvider: SongsDaoProvider,
     public dataSetService: DataSetService,
