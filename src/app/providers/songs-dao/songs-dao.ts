@@ -1,75 +1,101 @@
 import { Songs } from './../../models/songs.model';
-import { SongsService } from '../../services/songs/songs.service';
 import { Injectable } from '@angular/core';
 import { DataStorageProvider } from '../data-storage/data-storage';
+import BOOKS from 'src/app/enums/books.enum';
+import DBKEYS from 'src/app/enums/dbkeys.enum';
 
 @Injectable({ providedIn: 'root' })
 export class SongsDaoProvider {
 
-  private songs: Songs[] = [];
+  private songs: Songs[];
+  private favorits: number[];
+  private book: string;
 
   constructor(
     private dataStorageProvider: DataStorageProvider,
-    public songsService: SongsService) {}
+  ) {}
 
-  // #ACTIONS
-  async getSongs() {
-    if (!!this.songs.length) {
-      return this.songs;
-    }
+  // #SONGS
 
-    this.songs = await this.updateSongs();
+  public async getSongs(book?: string) {
+    this.book = book ? book : this.book;
+    this.songs = await this.updateSongs(this.book);
     return this.songs;
   }
 
-  // recebe um indice e retorno o coro correspondente
-  getSong(index: number) {
-    return (this.songs[index]);
+  public getSong(ID: number) {
+    const [first] = this.songs.filter(song => song.ID === ID);
+    return first;
   }
 
-  // retorna a quantidade de musicas na lista
-  getAmountOfSongs() {
-    if (this.songs) {
-      return this.songs.length;
+  public getAmountOfSongs() {
+    return this.songs ? this.songs.length : null;
+  }
+
+  private async updateSongs(book: string) {
+    let songs = [];
+    if (book === BOOKS.ALL) {
+      const labels = Object.values(BOOKS).slice(1);
+      for (const lable of labels) {
+        songs = [...songs, ...await this.dataStorageProvider.get(lable)];
+      }
+    } else {
+      songs = [...songs, ...await this.dataStorageProvider.get(book)];
     }
+
+    return this.parseSongs(songs);
   }
 
-  // atualiza a lista de musicas
-  async updateSongs() {
-    return await this.dataStorageProvider.get('Songs');
-  }
-
-  // grava uma música favorita no banco
-  public favorit(index: number) {
-    this.songs[index].favorit = !this.songs[index].favorit;
-    return this.dataStorageProvider.insert('Songs', this.songs)
-    .then(() => this.updateSongs());
-  }
-
-  // apaga a chave Songs
   public clear() {
-    this.dataStorageProvider.remove('Songs');
+    this.dataStorageProvider.remove(BOOKS.LDC);
+    this.dataStorageProvider.remove(BOOKS.CC);
   }
+
+  private async parseSongs(songs: Songs[]) {
+    await this.getFavorits();
+    return songs.map(song => {
+      song.favorit = this.favorits && this.isFavorit(song.ID) ? true : false;
+      return song;
+    });
+  }
+
+  // #FAVORITS
+
+  private isFavorit(ID: number): boolean {
+    return this.favorits.includes(ID);
+  }
+
+  private async getFavorits() {
+    return this.favorits = await this.dataStorageProvider.get(DBKEYS.FAVORITS);
+  }
+
+  public async favorit(ID: number) {
+    const index = this.favorits.findIndex(value => value === ID);
+    this.isFavorit(ID) ? this.favorits.splice(index, 1) : this.favorits.push(ID);
+    await this.dataStorageProvider.update(DBKEYS.FAVORITS, this.favorits);
+    return this.updateSongs(this.book);
+  }
+
 
   // #SEARCH
-  isDuplicated(arr: Array<Songs>, song: Songs) {
+
+  private isDuplicated(arr: Array<Songs>, song: Songs) {
     arr = arr.filter(value => value.ID === song.ID);
     return !!arr.length;
   }
 
-  isValid(value) {
+  private isValid(value) {
     return value && value.trim() !== '' ? true : false;
   }
 
-  nomalizeQuery(query): string {
+  private nomalizeQuery(query): string {
     return query.toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^\s\w#]/, ' ')
     .replace(/[^\s\w#]/g, '');
   }
 
-  // retorno o resultado de uma busca que bater com o numero passado
-  searchByNumber(value: number) {
+  public searchByNumber(value: number) {
     if (!this.isValid(value)) { return this.songs; }
 
     const searchResult: Songs[] = this.songs.filter( song => {
@@ -81,8 +107,7 @@ export class SongsDaoProvider {
     return searchResult;
   }
 
-  // retorno o resultado de uma busca que bater com a string passada
-  searchByString(value: string) {
+  public searchByString(value: string) {
     if (!this.isValid(value)) { return this.songs; }
     const query = this.nomalizeQuery(value);
 

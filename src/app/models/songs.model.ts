@@ -3,7 +3,7 @@ export class Songs {
               public numero: number,
               public titulo: string,
               public letra: {
-                estrofes: string[],
+                estrofes: Array<string[]>,
                 coro: boolean
               },
               public cifra: string,
