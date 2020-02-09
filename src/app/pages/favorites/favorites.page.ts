@@ -132,15 +132,29 @@ export class FavoritesPage implements OnInit {
   async filter() {
     const alert = await this.alertCtrl.create({
       header: 'Filtrar',
-      inputs: Object.values(BOOKS).map((label, index) => {
-        return {
-          name: 'radio' + index,
+      inputs: [
+        {
+          name: 'radio1',
           type: 'radio',
-          label: BOOKS_LONG[label],
-          value: label,
-          checked: label === this.book ? true : false
-        };
-      }),
+          label: BOOKS_LONG.ALL,
+          value: BOOKS.ALL,
+          checked: this.book === BOOKS.ALL
+        },
+        {
+          name: 'radio2',
+          type: 'radio',
+          label: BOOKS_LONG.LDC,
+          value: BOOKS.LDC,
+          checked: this.book === BOOKS.LDC
+        },
+        {
+          name: 'radio3',
+          type: 'radio',
+          label: BOOKS_LONG.CC,
+          value: BOOKS.CC,
+          checked: this.book === BOOKS.CC
+        }
+      ],
       buttons: [
         {
           text: 'Cancelar',
