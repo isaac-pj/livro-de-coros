@@ -29,7 +29,10 @@
   <div *ngIf="!sliding">
     <h2>{{song.titulo}}</h2>
     <section [style.font-size]="getFontSize()">
-      <p *ngFor="let estrofe of song.letra.estrofes">
+      <p *ngFor="let estrofe of song.letra.estrofes; let i = index"
+      [ngClass]="{'focus': hasFocus == i, 'bold': song.letra.coro == i}"
+      (click)="getFocus(i)"
+      >
         <span *ngFor="let linha of estrofe">{{linha}}<br/></span>
       </p>
     </section>

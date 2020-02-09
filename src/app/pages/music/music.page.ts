@@ -47,6 +47,7 @@ export class MusicPage implements OnInit {
   current: number;
   fontSize = 16;
   fontSizeSlide = 32;
+  hasFocus: any = null;
 
   constructor(
     private songsDao: SongsDaoProvider,
@@ -128,6 +129,10 @@ export class MusicPage implements OnInit {
       letra = letra.concat(this.song.letra[i]);
     }
     return letra;
+  }
+
+  getFocus(index: number) {
+    this.hasFocus = index;
   }
 
   slideMode() {
@@ -219,6 +224,7 @@ export class MusicPage implements OnInit {
       this.inListIndex++;
       this.getSong();
       this.sliding ? this.goToSlide(0, 0) : null;
+      this.hasFocus = null;
     } else {
       // this.index--;
       // this.inListIndex--;
@@ -240,6 +246,7 @@ export class MusicPage implements OnInit {
       this.inListIndex--;
       this.getSong();
       this.sliding ? this.goToSlide(0, 0) : null;
+      this.hasFocus = null;
     } else {
       // this.index++;
       // this.inListIndex++;
