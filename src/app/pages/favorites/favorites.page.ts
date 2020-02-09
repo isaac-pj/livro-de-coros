@@ -6,7 +6,7 @@ import { PopoverPage } from '../shared/popover/popover';
 import { ModalMusicPage } from '../modal-music/modal-music.page';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { noBubble } from 'src/app/utils/utils';
-import BOOKS from 'src/app/enums/books.enum';
+import { BOOKS, BOOKS_LONG } from 'src/app/enums/books.enum';
 
 @Component({
   selector: 'app-favorites',
@@ -16,6 +16,7 @@ import BOOKS from 'src/app/enums/books.enum';
 
 export class FavoritesPage implements OnInit {
   favorites: Songs[] = [];
+  book: string = BOOKS.ALL;
 
   constructor(
     public toastCtrl: ToastController,
@@ -32,7 +33,11 @@ export class FavoritesPage implements OnInit {
   }
 
   async start() {
-    const songs = await this.songsDaoProvider.getSongs(BOOKS.ALL);
+    this.list(this.book);
+  }
+
+  async list(book?: string) {
+    const songs = await this.songsDaoProvider.getSongs(book);
     this.favorites = songs.filter(song => song.favorit);
   }
 
@@ -77,7 +82,7 @@ export class FavoritesPage implements OnInit {
         'todas os itens existentes serão removidos da lista de favoritos');
         break;
       case 1:
-        // alert("opção: "+value);
+        this.filter();
         break;
       default:
         // alert("opção: "+value);
@@ -122,6 +127,40 @@ export class FavoritesPage implements OnInit {
     });
 
     toast.present();
+  }
+
+  async filter() {
+    const alert = await this.alertCtrl.create({
+      header: 'Filtrar',
+      inputs: Object.values(BOOKS).map((label, index) => {
+        return {
+          name: 'radio' + index,
+          type: 'radio',
+          label: BOOKS_LONG[label],
+          value: label,
+          checked: label === this.book ? true : false
+        };
+      }),
+      buttons: [
+        {
+          text: 'Cancelar',
+          role: 'cancel',
+          cssClass: 'secondary',
+          handler: () => {
+            console.log('Confirm Cancel');
+          }
+        }, {
+          text: 'Aplicar',
+          handler: option => {
+            console.log('Confirm Ok');
+            this.book = option;
+            this.list(this.book);
+          }
+        }
+      ]
+    });
+
+    await alert.present();
   }
 
 }
