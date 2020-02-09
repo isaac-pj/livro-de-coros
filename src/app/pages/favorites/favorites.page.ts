@@ -5,6 +5,8 @@ import { Songs } from 'src/app/models/songs.model';
 import { PopoverPage } from '../shared/popover/popover';
 import { ModalMusicPage } from '../modal-music/modal-music.page';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
+import { noBubble } from 'src/app/utils/utils';
+import BOOKS from 'src/app/enums/books.enum';
 
 @Component({
   selector: 'app-favorites',
@@ -18,7 +20,7 @@ export class FavoritesPage implements OnInit {
   constructor(
     public toastCtrl: ToastController,
     public alertCtrl: AlertController,
-    public songsDao: SongsDaoProvider,
+    public songsDaoProvider: SongsDaoProvider,
     public modalCtrl: ModalController,
     public navCtrl: NavController,
     public dataSetService: DataSetService,
@@ -30,41 +32,21 @@ export class FavoritesPage implements OnInit {
   }
 
   async start() {
-    const songs = await this.songsDao.getSongs();
+    const songs = await this.songsDaoProvider.getSongs(BOOKS.ALL);
     this.favorites = songs.filter(song => song.favorit);
   }
 
   // remover item dos favoritos
-  remove(index: number, event?: Event) {
-    // this.songs.splice(index, 1);
-    // this.songs[index].favorit = !this.songs[index].favorit;
-    event.preventDefault();
-    event.stopPropagation();
-    this.songsDao.favorit(index);
+  remove(ID: number, event?: Event) {
+    noBubble(event);
+    this.songsDaoProvider.favorit(ID);
     this.start();
   }
-
-  // ### DEPRECATED
-  // mudar para a pagina de musica
-  // pushPageMusic(index:number){
-  //   // this.presentProfileModal(index);
-
-  //   this.navCtrl.push(RightNavPage, {index: index});
-  //   return true;
-  // }
 
   // mudar para a pagina de musica
   goToMusic(index: number) {
     this.dataSetService.setData(index, {index});
-    // this.router.navigate(['/music/', index], {relativeTo: this.route});
   }
-
-  // ### CHANGES
-  // mudar para a pagina de musica por modal  
-  // presentProfileModal(index:number) {
-  //   let profileModal = this.modalCtrl.create(RightNavPage, {index: index});
-  //   profileModal.present();
-  // }
 
   async presentProfileModal(index: number) {
     const profileModal = await this.modalCtrl.create({
@@ -75,17 +57,8 @@ export class FavoritesPage implements OnInit {
   }
 
   clearAll() {
-    // tslint:disable-next-line: forin
-    for (const i in this.favorites) {
-      this.remove(this.favorites[0].ID);
-    }
+    this.favorites.forEach(song => this.remove(song.ID));
   }
-
-  // more(event, options:string[]) {
-  //   const popover = this.popoverCtrl.create(PopoverPage, {data:options});
-  //   popover.present({ev:event});
-  //   popover.onDidDismiss((data) => this.popoverResponse(data ? data.idx : null));
-  // }
 
   async more(ev, options: string[]) {
     const popover = await this.popoverCtrl.create({
@@ -99,10 +72,11 @@ export class FavoritesPage implements OnInit {
   }
 
   popoverResponse(value: number) {
-    if (value != 0 && !value) { return false; }
+    if (value !== 0 && !value) { return false; }
     switch (value) {
       case 0:
-        this.showConfirm('Deseja mesmo remover?', 'todas os itens existentes serão removidos da lista de favoritos');
+        this.showConfirm('Deseja mesmo remover?',
+        'todas os itens existentes serão removidos da lista de favoritos');
         break;
       case 1:
         // alert("opção: "+value);
@@ -130,10 +104,6 @@ export class FavoritesPage implements OnInit {
             console.log('Agree clicked');
             this.clearAll();
             this.showToast('Todos os favoritos foram apagadas!', 3000, 'bottom');
-            // setTimeout(() => {
-            //   window.location.reload();
-            //   // document.location.href = 'index.html';
-            // },3000);
           }
         }
       ]
@@ -150,6 +120,7 @@ export class FavoritesPage implements OnInit {
 
     toast.onDidDismiss().then(() => {
       console.log('Dismissed toast');
+      // document.location.href = 'index.html';
     });
 
     toast.present();

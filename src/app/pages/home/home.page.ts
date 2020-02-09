@@ -4,7 +4,7 @@ import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
 import { ActivatedRoute, Router } from '@angular/router';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { Songs } from 'src/app/models/songs.model';
-import { animateCSS } from 'src/app/utils/utils';
+import { animateCSS, noBubble } from 'src/app/utils/utils';
 import BOOKS from 'src/app/enums/books.enum';
 
 @Component({
@@ -68,14 +68,11 @@ export class HomePage implements OnInit {
   }
 
    // favoritar uma musica
-  favorit(event, index: number ) {
-    // interrompendo a propagação do evento
-    event.preventDefault();
-    event.stopPropagation();
-
+  favorit(event, song: Songs ) {
+    noBubble(event);
     const element = event.target;
-    this.songs[index].favorit = !this.songs[index].favorit;
-    this.songsDaoProvider.favorit(index);
+    song.favorit = !song.favorit;
+    this.songsDaoProvider.favorit(song.ID);
     animateCSS(element, 'bounceIn');
   }
 

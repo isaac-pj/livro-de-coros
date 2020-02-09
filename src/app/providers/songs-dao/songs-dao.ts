@@ -18,8 +18,8 @@ export class SongsDaoProvider {
 
   // #SONGS
   async getSongs(book?: string) {
-    this.book = book;
-    this.songs = await this.updateSongs(book);
+    this.book = book ? book : this.book;
+    this.songs = await this.updateSongs(this.book);
     return this.songs;
   }
 

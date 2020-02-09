@@ -41,3 +41,10 @@ export function isEquals(A, B) {
 export function cloneArray(arr) {
   return arr.map( elem => elem );
 }
+
+export function noBubble(event: Event) {
+  if (event) {
+    event.preventDefault();
+    event.stopPropagation();
+  }
+}
