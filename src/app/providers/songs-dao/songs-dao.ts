@@ -38,11 +38,14 @@ export class SongsDaoProvider {
   async updateSongs(book: string) {
     let songs = [];
     if (book === BOOKS.ALL) {
-      songs = [...songs, ...await this.dataStorageProvider.get(BOOKS.LDC)];
-      songs = [...songs, ...await this.dataStorageProvider.get(BOOKS.CC)];
+      const labels = Object.values(BOOKS).slice(1);
+      for (const lable of labels) {
+        songs = [...songs, ...await this.dataStorageProvider.get(lable)];
+      }
     } else {
       songs = [...songs, ...await this.dataStorageProvider.get(book)];
     }
+
     return this.parseSongs(songs);
   }
 
