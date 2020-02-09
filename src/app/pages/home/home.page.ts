@@ -5,6 +5,7 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { Songs } from 'src/app/models/songs.model';
 import { animateCSS } from 'src/app/utils/utils';
+import BOOKS from 'src/app/enums/books.enum';
 
 @Component({
   selector: 'page-home',
@@ -18,6 +19,8 @@ export class HomePage implements OnInit {
   searching = false;
   type = 'search';
   songs: Songs[] = [];
+  BOOKS: any = BOOKS;
+  book: string = BOOKS.ALL;
 
   constructor(
     public songsDaoProvider: SongsDaoProvider,
@@ -31,14 +34,19 @@ export class HomePage implements OnInit {
   // #LIFECYCLE
 
   ngOnInit(): void {
-    this.list();
+    this.list(this.book);
   }
 
   // #ACTIONS
 
+  public select(option: any) {
+    this.book = option;
+    this.list(option);
+  }
+
   // recuperar lista de musicas
-  public async list() {
-    this.songs = await this.songsDaoProvider.getSongs();
+  public async list(book: string) {
+    this.songs = await this.songsDaoProvider.getSongs(book);
   }
 
   // ativar o modo de busca
@@ -55,7 +63,7 @@ export class HomePage implements OnInit {
 
   // encerrar todas as atividades de busca
   private searchClose() {
-    this.list();
+    this.list(this.book);
     this.searching = false;
   }
 
@@ -66,13 +74,8 @@ export class HomePage implements OnInit {
     event.stopPropagation();
 
     const element = event.target;
-    // this.songs[index].favorit = !this.songs[index].favorit;
-    this.songsDaoProvider.favorit(index).catch((err) => {
-      // futuramente implementar um toast para mostrar o erro
-      console.log(err);
-      this.list();
-    });
-
+    this.songs[index].favorit = !this.songs[index].favorit;
+    this.songsDaoProvider.favorit(index);
     animateCSS(element, 'bounceIn');
   }
 

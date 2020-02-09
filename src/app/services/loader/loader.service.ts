@@ -1,11 +1,15 @@
 import { Injectable } from '@angular/core';
 import { DataStorageProvider } from 'src/app/providers/data-storage/data-storage';
 import { SongsService } from '../songs/songs.service';
+import BOOKS from 'src/app/enums/books.enum';
+import DBKEYS from 'src/app/enums/dbkeys.enum';
 
 @Injectable({
   providedIn: 'root'
 })
 export class LoaderService {
+
+  availableBooks = [BOOKS.LDC, BOOKS.CC];
 
   constructor(
     public dataStorageProvider: DataStorageProvider,
@@ -17,8 +21,11 @@ export class LoaderService {
   }
 
   async start() {
-    await this.check('Songs', () => this.songsService.getSongs());
-    await this.check('Lists', () => []);
+    this.availableBooks.forEach(async book => {
+      await this.check(book, () => this.songsService.getBook(BOOKS[book]));
+    });
+    await this.check(DBKEYS.LISTS, () => []);
+    await this.check(DBKEYS.FAVORITS, () => []);
     return true;
   }
 

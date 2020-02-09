@@ -2,54 +2,83 @@ import { Songs } from './../../models/songs.model';
 import { SongsService } from '../../services/songs/songs.service';
 import { Injectable } from '@angular/core';
 import { DataStorageProvider } from '../data-storage/data-storage';
+import BOOKS from 'src/app/enums/books.enum';
+import DBKEYS from 'src/app/enums/dbkeys.enum';
 
 @Injectable({ providedIn: 'root' })
 export class SongsDaoProvider {
 
-  private songs: Songs[] = [];
+  private songs: Songs[];
+  private favorits: number[];
+  private book: string;
 
   constructor(
     private dataStorageProvider: DataStorageProvider,
     public songsService: SongsService) {}
 
-  // #ACTIONS
-  async getSongs() {
-    if (!!this.songs.length) {
-      return this.songs;
-    }
-
-    this.songs = await this.updateSongs();
+  // #SONGS
+  async getSongs(book?: string) {
+    this.book = book;
+    this.songs = await this.updateSongs(book);
     return this.songs;
   }
 
   // recebe um indice e retorno o coro correspondente
-  getSong(index: number) {
-    return (this.songs[index]);
+  getSong(ID: number) {
+    const [first] = this.songs.filter(song => song.ID === ID);
+    return first;
   }
 
   // retorna a quantidade de musicas na lista
   getAmountOfSongs() {
-    if (this.songs) {
-      return this.songs.length;
-    }
+    return this.songs ? this.songs.length : null;
   }
 
   // atualiza a lista de musicas
-  async updateSongs() {
-    return await this.dataStorageProvider.get('Songs');
-  }
-
-  // grava uma música favorita no banco
-  public favorit(index: number) {
-    this.songs[index].favorit = !this.songs[index].favorit;
-    return this.dataStorageProvider.insert('Songs', this.songs)
-    .then(() => this.updateSongs());
+  async updateSongs(book: string) {
+    let songs = [];
+    if (book === BOOKS.ALL) {
+      songs = [...songs, ...await this.dataStorageProvider.get(BOOKS.LDC)];
+      songs = [...songs, ...await this.dataStorageProvider.get(BOOKS.CC)];
+    } else {
+      songs = [...songs, ...await this.dataStorageProvider.get(book)];
+    }
+    return this.parseSongs(songs);
   }
 
   // apaga a chave Songs
   public clear() {
-    this.dataStorageProvider.remove('Songs');
+    this.dataStorageProvider.remove(BOOKS.LDC);
+    this.dataStorageProvider.remove(BOOKS.CC);
   }
+
+  private async parseSongs(songs: Songs[]) {
+    await this.getFavorits();
+    return songs.map((song, index, book) => {
+      song.favorit = this.favorits && this.isFavorit(song.ID) ? true : false;
+      return song;
+    });
+  }
+
+  // #FAVORITS
+
+  private isFavorit(ID: number): boolean {
+    return this.favorits.includes(ID);
+  }
+
+  private async getFavorits() {
+    this.favorits = await this.dataStorageProvider.get(DBKEYS.FAVORITS);
+    return this.favorits;
+  }
+
+  // grava uma música favorita no banco
+  public async favorit(ID: number) {
+    const index = this.favorits.findIndex(value => value === ID);
+    this.isFavorit(ID) ? this.favorits.splice(index, 1) : this.favorits.push(ID);
+    await this.dataStorageProvider.update(DBKEYS.FAVORITS, this.favorits);
+    return this.updateSongs(this.book);
+  }
+
 
   // #SEARCH
   isDuplicated(arr: Array<Songs>, song: Songs) {

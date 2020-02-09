@@ -4,14 +4,16 @@ import CC from './resouces/hinos';
 
 export class SongsService {
 
-  private songs: Songs[] = [...LDC, ...CC];
+  private songs = { LDC, CC };
 
-  getSongs() {
-    return this.songs;
+  getBook(name: string) {
+    return this.songs[name];
   }
 
-  getSong(index: number) {
-    return (this.songs[index]);
+  getBooks(names?: string[]) {
+    return names ?
+    names.map( name => this.getBook(name)) :
+    Object.values(this.songs);
   }
 
 }

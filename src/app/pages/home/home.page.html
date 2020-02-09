@@ -3,7 +3,20 @@
     <ion-buttons slot="start" *ngIf="!searching">
       <ion-menu-button></ion-menu-button>
     </ion-buttons>
-    <ion-title *ngIf="!searching" >Início</ion-title>
+
+      <ion-title *ngIf="!searching" >
+          <ion-select 
+            interface="action-sheet" 
+            cancelText="Cancelar" 
+            okText="Ok!"
+            [value]="book" 
+            (ionChange)="select($event.target.value)" 
+          ><ion-select-option [value]="BOOKS.ALL">Todos os Hinários</ion-select-option>
+            <ion-select-option [value]="BOOKS.LDC">Livro de Coros</ion-select-option>
+            <ion-select-option [value]="BOOKS.CC">Cantor Cristão</ion-select-option>
+            <!-- <ion-select-option value="CUSTOM">Personalizar</ion-select-option> -->
+          </ion-select>
+      </ion-title>
 
     <app-search
       [songs]="songs" 
