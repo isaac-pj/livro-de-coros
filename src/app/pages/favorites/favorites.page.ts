@@ -36,14 +36,12 @@ export class FavoritesPage implements OnInit {
     this.favorites = songs.filter(song => song.favorit);
   }
 
-  // remover item dos favoritos
   remove(ID: number, event?: Event) {
     noBubble(event);
     this.songsDaoProvider.favorit(ID);
     this.start();
   }
 
-  // mudar para a pagina de musica
   goToMusic(index: number) {
     this.dataSetService.setData(index, {index});
   }

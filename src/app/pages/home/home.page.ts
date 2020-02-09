@@ -19,7 +19,6 @@ export class HomePage implements OnInit {
   searching = false;
   type = 'search';
   songs: Songs[] = [];
-  favorits: number[] = [];
   BOOKS: any = BOOKS;
   book: string = BOOKS.ALL;
 
@@ -48,7 +47,6 @@ export class HomePage implements OnInit {
   // recuperar lista de musicas
   public async list(book: string) {
     this.songs = await this.songsDaoProvider.getSongs(book);
-    this.favorits = await this.songsDaoProvider.getFavorits();
   }
 
   // ativar o modo de busca
@@ -69,18 +67,12 @@ export class HomePage implements OnInit {
     this.searching = false;
   }
 
-  isFavorit(ID: number) {
-    return this.favorits.includes(ID);
-  }
-
    // favoritar uma musica
   favorit(event, song: Songs ) {
     noBubble(event);
     const element = event.target;
     song.favorit = !song.favorit;
-    this.songsDaoProvider.favorit(song.ID).then(async () => {
-      this.favorits = await this.songsDaoProvider.getFavorits();
-    });
+    this.songsDaoProvider.favorit(song.ID);
     animateCSS(element, 'bounceIn');
   }
 
