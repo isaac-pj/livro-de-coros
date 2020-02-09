@@ -54,7 +54,7 @@
       <ion-icon
         #icon
         id="{{i}}"
-        [ngClass]="song.favorit ? 'favorite-color' : 'normal-color'"
+        [ngClass]="isFavorit(song.ID) ? 'favorite-color' : 'normal-color'"
         (click)="favorit($event, song)"
         slot="start"
         name="heart">

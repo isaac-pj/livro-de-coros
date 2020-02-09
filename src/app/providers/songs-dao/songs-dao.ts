@@ -1,5 +1,4 @@
 import { Songs } from './../../models/songs.model';
-import { SongsService } from '../../services/songs/songs.service';
 import { Injectable } from '@angular/core';
 import { DataStorageProvider } from '../data-storage/data-storage';
 import BOOKS from 'src/app/enums/books.enum';
@@ -14,28 +13,26 @@ export class SongsDaoProvider {
 
   constructor(
     private dataStorageProvider: DataStorageProvider,
-    public songsService: SongsService) {}
+  ) {}
 
   // #SONGS
-  async getSongs(book?: string) {
+
+  public async getSongs(book?: string) {
     this.book = book ? book : this.book;
     this.songs = await this.updateSongs(this.book);
     return this.songs;
   }
 
-  // recebe um indice e retorno o coro correspondente
-  getSong(ID: number) {
+  public getSong(ID: number) {
     const [first] = this.songs.filter(song => song.ID === ID);
     return first;
   }
 
-  // retorna a quantidade de musicas na lista
-  getAmountOfSongs() {
+  public getAmountOfSongs() {
     return this.songs ? this.songs.length : null;
   }
 
-  // atualiza a lista de musicas
-  async updateSongs(book: string) {
+  private async updateSongs(book: string) {
     let songs = [];
     if (book === BOOKS.ALL) {
       const labels = Object.values(BOOKS).slice(1);
@@ -49,7 +46,6 @@ export class SongsDaoProvider {
     return this.parseSongs(songs);
   }
 
-  // apaga a chave Songs
   public clear() {
     this.dataStorageProvider.remove(BOOKS.LDC);
     this.dataStorageProvider.remove(BOOKS.CC);
@@ -57,7 +53,7 @@ export class SongsDaoProvider {
 
   private async parseSongs(songs: Songs[]) {
     await this.getFavorits();
-    return songs.map((song, index, book) => {
+    return songs.map(song => {
       song.favorit = this.favorits && this.isFavorit(song.ID) ? true : false;
       return song;
     });
@@ -69,12 +65,10 @@ export class SongsDaoProvider {
     return this.favorits.includes(ID);
   }
 
-  private async getFavorits() {
-    this.favorits = await this.dataStorageProvider.get(DBKEYS.FAVORITS);
-    return this.favorits;
+  public async getFavorits() {
+    return this.favorits = await this.dataStorageProvider.get(DBKEYS.FAVORITS);
   }
 
-  // grava uma música favorita no banco
   public async favorit(ID: number) {
     const index = this.favorits.findIndex(value => value === ID);
     this.isFavorit(ID) ? this.favorits.splice(index, 1) : this.favorits.push(ID);
@@ -84,24 +78,24 @@ export class SongsDaoProvider {
 
 
   // #SEARCH
-  isDuplicated(arr: Array<Songs>, song: Songs) {
+
+  private isDuplicated(arr: Array<Songs>, song: Songs) {
     arr = arr.filter(value => value.ID === song.ID);
     return !!arr.length;
   }
 
-  isValid(value) {
+  private isValid(value) {
     return value && value.trim() !== '' ? true : false;
   }
 
-  nomalizeQuery(query): string {
+  private nomalizeQuery(query): string {
     return query.toLowerCase()
     .normalize('NFD').replace(/[\u0300-\u036f]/g, '')
     .replace(/[^\s\w#]/, ' ')
     .replace(/[^\s\w#]/g, '');
   }
 
-  // retorno o resultado de uma busca que bater com o numero passado
-  searchByNumber(value: number) {
+  public searchByNumber(value: number) {
     if (!this.isValid(value)) { return this.songs; }
 
     const searchResult: Songs[] = this.songs.filter( song => {
@@ -113,8 +107,7 @@ export class SongsDaoProvider {
     return searchResult;
   }
 
-  // retorno o resultado de uma busca que bater com a string passada
-  searchByString(value: string) {
+  public searchByString(value: string) {
     if (!this.isValid(value)) { return this.songs; }
     const query = this.nomalizeQuery(value);
 
