@@ -78,11 +78,11 @@ export class FavoritesPage implements OnInit {
     if (value !== 0 && !value) { return false; }
     switch (value) {
       case 0:
-        this.showConfirm('Deseja mesmo remover?',
-        'todas os itens existentes serão removidos da lista de favoritos');
+        this.filter();
         break;
       case 1:
-        this.filter();
+        this.showConfirm('Deseja mesmo remover?',
+        'todas os itens existentes serão removidos da lista de favoritos');
         break;
       default:
         // alert("opção: "+value);
