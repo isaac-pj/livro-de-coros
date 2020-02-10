@@ -65,7 +65,7 @@ export class SongsDaoProvider {
     return this.favorits.includes(ID);
   }
 
-  private async getFavorits() {
+  public async getFavorits() {
     return this.favorits = await this.dataStorageProvider.get(DBKEYS.FAVORITS);
   }
 

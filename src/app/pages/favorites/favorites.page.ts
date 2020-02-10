@@ -33,10 +33,19 @@ export class FavoritesPage implements OnInit {
   }
 
   async start() {
-    this.list(this.book);
+    this.list();
   }
 
   async list(book?: string) {
+    if (book) {
+      this.filter(book);
+      return;
+    }
+    const favorits = await this.songsDaoProvider.getFavorits();
+    this.favorites = favorits.map(ID => this.songsDaoProvider.getSong(ID)).reverse();
+  }
+
+  async filter(book: string) {
     const songs = await this.songsDaoProvider.getSongs(book);
     this.favorites = songs.filter(song => song.favorit);
   }
@@ -78,7 +87,7 @@ export class FavoritesPage implements OnInit {
     if (value !== 0 && !value) { return false; }
     switch (value) {
       case 0:
-        this.filter();
+        this.showAlertFilter();
         break;
       case 1:
         this.showConfirm('Deseja mesmo remover?',
@@ -129,7 +138,7 @@ export class FavoritesPage implements OnInit {
     toast.present();
   }
 
-  async filter() {
+  async showAlertFilter() {
     const alert = await this.alertCtrl.create({
       header: 'Filtrar',
       inputs: [
