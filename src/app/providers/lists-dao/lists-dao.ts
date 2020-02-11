@@ -46,9 +46,9 @@ export class ListsDaoProvider {
   }
 
   // atualiza algo na lista recebendo o index da lista
-  public update(index: number, list: List) {
+  public async update(index: number, list: List) {
     this.lists[index] = list;
-    this.dataStorageProvider.insert('Lists', this.lists);
+    return await this.dataStorageProvider.insert('Lists', this.lists);
   }
 
 }
