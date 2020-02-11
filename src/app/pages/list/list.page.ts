@@ -75,10 +75,8 @@ export class ListPage implements OnInit {
 
   addMusic() {
     if (this.songsTemp.length < 20) {
-      this.songsTemp = cloneArray(this.songs);
       this.songsTemp.push(this.songsDaoProvider.getSong(
         getRandomInt(0, this.songsDaoProvider.getAmountOfSongs())));
-      this.saveChanges();
     }
   }
 
@@ -113,10 +111,8 @@ export class ListPage implements OnInit {
     // this.songs = this.songsTemp;
   }
 
-  saveChanges() {
-
+  async saveChanges() {
     let hasChanges = false;
-
     if (!isEquals(this.songs, this.songsTemp)) {
       this.songs = this.list.songs = cloneArray(this.songsTemp);
       hasChanges = true;
@@ -125,8 +121,8 @@ export class ListPage implements OnInit {
       this.list.name = this.listName;
       hasChanges = true;
     }
-    if (!!this.index && hasChanges) {
-      this.listsDaoProvider.update(this.index, this.list);
+    if (this.index !== null  && hasChanges) {
+      await this.listsDaoProvider.update(this.index, this.list);
     }
     this.editing = false;
   }
@@ -164,6 +160,7 @@ export class ListPage implements OnInit {
   }
 
   // #ITERFACE
+
   expandItem(event) {
     event.stopPropagation();
     this.expanded = !this.expanded;
@@ -198,10 +195,7 @@ export class ListPage implements OnInit {
   }
 
   updateList() {
-    this.songs = this.list.songs.filter((elem, index, songs) => {
-      // return array.indexOf( elem ) === index;
-      return (this.songsCheckeds.indexOf(elem) === -1);
-    });
+    this.songs = this.list.songs.filter(elem => this.songsCheckeds.indexOf(elem) === -1);
   }
 
   // #NAVIGATION
@@ -212,11 +206,4 @@ export class ListPage implements OnInit {
   }
 
 }
-
-/*
-
-  ES6
-  array.filter( ( elem, index, arr ) => arr.indexOf( elem ) === index );
-
-*/
 
