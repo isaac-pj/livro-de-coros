@@ -1,0 +1,63 @@
+<ion-header (mouseover)="isFullscreen = false" (mouseout)="showToolbars()" class="translucent" [ngClass]="{fullscreen: isFullscreen}">
+  <ion-toolbar color="white">
+    <ion-buttons slot="start">
+      <ion-back-button ></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{song.numero}}. {{song.titulo}}</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="smallText()" icon-only >
+        <ion-icon name="remove-circle"></ion-icon>
+      </ion-button>
+      <ion-button (click)="bigText()" icon-only >
+        <ion-icon name="add-circle"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content (mousemove)="showToolbars();hideToolbars()">
+  <ion-slides pager shouldEnableKeyboard="false" [options]="slideOpts">
+    <ion-slide>
+      <h1 [style.font-size]="getFontSize()">{{song.numero}}. {{song.titulo}}</h1>
+    </ion-slide>
+    <ion-slide *ngFor="let estrofe of song.letra.estrofes">
+      <section>
+        <h1 [style.font-size]="getFontSize()" *ngFor="let linha of estrofe">{{linha}}</h1>
+      </section>
+    </ion-slide>
+  </ion-slides>
+</ion-content>
+
+<ion-footer (mouseover)="showToolbars()" (mouseout)="hideToolbars()" class="translucent" [ngClass]="{fullscreen: isFullscreen}">
+  <ion-toolbar color="white">
+    <ion-row>
+      <ion-col class="no-padding">
+        <ion-button (click)="slidePrev()" color="dark" icon-only clear>
+          <ion-icon name="skip-backward"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col class="ion-text-right no-padding">
+        <ion-button (click)="prev()" [disabled]="hasPrev() == false" icon-only color="dark" clear>
+          <ion-icon name="rewind"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col class="ion-text-center no-padding">
+        <ion-button (click)="close()"  icon-only clear color="dark">
+          <ion-icon name="close"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col class="ion-text-left no-padding">
+        <ion-button (click)="next()" [disabled]="hasNext() == false" icon-only color="dark" clear>
+          <ion-icon name="fastforward"></ion-icon>
+        </ion-button>
+      </ion-col>
+      <ion-col class="ion-text-right no-padding">
+        <ion-button (click)="slideNext()" color="dark" icon-only clear>
+          <ion-icon name="skip-forward"></ion-icon>              
+        </ion-button>
+      </ion-col>
+    </ion-row>
+  </ion-toolbar>
+</ion-footer>
+
+

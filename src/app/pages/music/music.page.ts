@@ -84,9 +84,9 @@ export class MusicPage implements OnInit {
   // #NAVIGATION
 
   goToSlidePage() {
-    const { index } = this;
-    this.dataSetService.setData(index, {index});
-    // this.navCtrl.navigateForward('/slide/' + index);
+    const ID = this.list.findIndex(song => song.ID === this.index);
+    this.dataSetService.setData(this.index, {index: ID !== -1 ? ID : this.index, list: this.list});
+    this.navCtrl.navigateForward('/slide/' + this.index);
   }
 
   // #INTERFACE

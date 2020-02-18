@@ -117,6 +117,7 @@
   // Props for toolbar
   --ion-toolbar-background: var(--ion-color-secondary);
   --ion-toolbar-color: var(--ion-color-secondary-contrast);
+  --min-height-toolbar: 56px;
 
   // no padding in buttons wapper check boxes
   ion-button.wrapper{
