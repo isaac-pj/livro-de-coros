@@ -70,8 +70,8 @@
       [disabled]="editing">
       <ion-item 
         *ngFor="let song of editing ? songsTemp : songs; let i = index;"
-        (click)="goToMusic(song.ID)"
-        [routerLink]="['/music/'+song.ID]"
+        (click)="goToMusic(i)"
+        [routerLink]="['/music/'+i]"
         [routerDirection]="'forward'"
         routerLinkActive="router-link-active">
         <ion-buttons slot="start">

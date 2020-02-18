@@ -20,6 +20,11 @@ const routes: Routes = [
     loadChildren: './pages/music/music.module#MusicPageModule'
   },
   {
+    path: 'slide/:id',
+    resolve: { data: DataResolverService },
+    loadChildren: './pages/slide/slide.module#SlidePageModule'
+  },
+  {
     path: 'lists',
     loadChildren: './pages/lists/lists.module#ListsPageModule'
   },
@@ -28,7 +33,7 @@ const routes: Routes = [
     loadChildren: './pages/select/select.module#SelectPageModule'
   },
   { path: 'modal-music',
-    loadChildren: './pages/modal-music/modal-music.module#ModalMusicPageModule' 
+    loadChildren: './pages/modal-music/modal-music.module#ModalMusicPageModule'
   },
   {
     path: 'list/:key',

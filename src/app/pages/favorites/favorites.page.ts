@@ -48,7 +48,7 @@ export class FavoritesPage implements OnInit {
   }
 
   goToMusic(index: number) {
-    this.dataSetService.setData(index, {index});
+    this.dataSetService.setData(index, {index, list: this.favorites});
   }
 
   async presentProfileModal(index: number) {

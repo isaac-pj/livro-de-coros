@@ -1,0 +1,19 @@
+.translucent{
+    opacity: 0.2;
+}
+
+ion-header, ion-footer{
+    transition: transform ease-out .2s;
+}
+
+ion-header.fullscreen {
+    transform: translateY(calc(var(--min-height-toolbar)*-1));
+}
+
+ion-footer.fullscreen {
+    transform: translateY(calc(var(--min-height-toolbar)));
+}
+
+.swiper-slide {
+    height: calc(100vh - (var(--min-height-toolbar)*2));
+}

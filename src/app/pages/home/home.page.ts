@@ -85,11 +85,8 @@ export class HomePage implements OnInit {
 
   // #NAVIGATION
 
-  // mudar para a pagina de musica
   goToMusic(index: number) {
     this.dataSetService.setData(index, {index});
-    // this.router.navigate(['/music/', index], {relativeTo: this.route});
-
     if (this.type === 'numeric') { this.searchClose(); }
     return false;
   }

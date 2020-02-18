@@ -2,12 +2,12 @@
     padding: 0 !important;
 }
 
-.translucent{
-    opacity: 0.2;
-}
-
 .bold{
     font-weight: bold;
+}
+
+#lyrics p{
+    transition: all ease-out .2s;
 }
 
 .focus{
@@ -15,7 +15,6 @@
     padding: 16px;
     font-size: 1.05em;
     border-left: solid 5px #ffc107;
-    transition: all ease-out .2s;
 }
 
 // .translucent .toolbar-background, .translucent .toolbar-background:hover,{
@@ -28,6 +27,7 @@
 .translucent .bar-button-md-default:hover:not(.disable-hover){
         color: black !important;
 }
+
 .xxx-small{
     font-size: 14px !important;
 }
