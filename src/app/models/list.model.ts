@@ -5,6 +5,7 @@ export class List {
               public date: string,
               public time: string,
               public songs: Array<Songs>,
+              public sung: Array<number>,
               public comments?: string) {
   }
 }

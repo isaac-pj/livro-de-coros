@@ -5,7 +5,7 @@ import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
 import { NavController, IonReorderGroup, ToastController } from '@ionic/angular';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { ActivatedRoute } from '@angular/router';
-import { getRandomInt } from 'src/app/utils/utils';
+import { getRandomInt, noBubble } from 'src/app/utils/utils';
 import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
 import { isEquals, cloneArray } from 'src/app/utils/utils';
 
@@ -61,6 +61,7 @@ export class ListPage implements OnInit {
     this.getParams();
     this.songs = this.list.songs;
     this.comments = this.list.comments;
+    this.updateList();
 
     if (this.index === null ) { this.creating = true; this.editList(); }
   }
@@ -81,15 +82,13 @@ export class ListPage implements OnInit {
   }
 
   updateMusic(event: Event, index: number) {
-    event.preventDefault();
-    event.stopPropagation();
+    noBubble(event);
     this.songsTemp[index] = this.songsDaoProvider.getSong(
       getRandomInt(0, this.songsDaoProvider.getAmountOfSongs()));
   }
 
   removeMusic(event: Event, index: number) {
-    event.preventDefault();
-    event.stopPropagation();
+    noBubble(event);
     if (this.songsTemp.length > 2) {
       // this.songs.splice(index, 1);
       this.songsTemp = this.songsTemp.filter(
@@ -182,20 +181,26 @@ export class ListPage implements OnInit {
 
   // #ACTIONS
 
-  check(event, song: Songs) {
-    event.preventDefault();
-    event.stopPropagation();
-    this.songsCheckeds.unshift(song);
+  async check(event, song: Songs) {
+    noBubble(event);
+    this.list.sung.push(song.ID);
+    await this.listsDaoProvider.update(this.index, this.list);
     this.updateList();
   }
 
-  uncheck(index) {
-    this.songsCheckeds.splice(index, 1);
+  async uncheck(index) {
+    this.list.sung.splice(index, 1);
+    await this.listsDaoProvider.update(this.index, this.list);
     this.updateList();
   }
 
   updateList() {
-    this.songs = this.list.songs.filter(elem => this.songsCheckeds.indexOf(elem) === -1);
+    this.songsCheckeds = [];
+    this.list.sung.forEach(ID => {
+      const checked = this.list.songs.find(song => song.ID === ID);
+      this.songsCheckeds.push(checked);
+    });
+    this.songs = this.list.songs.filter(song => !this.list.sung.includes(song.ID));
   }
 
   // #NAVIGATION
@@ -206,4 +211,3 @@ export class ListPage implements OnInit {
   }
 
 }
-
