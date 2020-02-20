@@ -2,6 +2,7 @@ import { Component, OnInit, ViewChild, HostListener, ChangeDetectorRef, OnDestro
 import { Songs } from 'src/app/models/songs.model';
 import { ActivatedRoute } from '@angular/router';
 import { NavController, IonSlides, IonContent, MenuController } from '@ionic/angular';
+import { PreferencesProvider, CONFIGS } from 'src/app/providers/preferences/preferences';
 
 @Component({
   selector: 'app-slide',
@@ -20,7 +21,7 @@ export class SlidePage implements OnInit, OnDestroy {
   fullscreen: any;
   fullscreenTimer = 3000;
   isFullscreen = true;
-  fontSizeSlide = 32;
+  fontSizeSlide = this.preferencesProvider.getPreference(CONFIGS.SLIDE.FONT_SIZE);
 
   slideOpts = {
     initialSlide: 0,
@@ -32,6 +33,7 @@ export class SlidePage implements OnInit, OnDestroy {
     private navCtrl: NavController,
     private changeDetector: ChangeDetectorRef,
     private menuCtrl: MenuController,
+    private preferencesProvider: PreferencesProvider,
   ) { }
 
   ngOnInit() {
@@ -145,10 +147,12 @@ export class SlidePage implements OnInit, OnDestroy {
 
   smallText() {
     this.fontSizeSlide = this.fontSizeSlide > 10 ? this.fontSizeSlide -= 2 : this.fontSizeSlide;
+    this.preferencesProvider.setPreference(CONFIGS.SLIDE.FONT_SIZE, this.fontSizeSlide);
   }
 
   bigText() {
     this.fontSizeSlide = this.fontSizeSlide < 56 ? this.fontSizeSlide += 2 : this.fontSizeSlide;
+    this.preferencesProvider.setPreference(CONFIGS.SLIDE.FONT_SIZE, this.fontSizeSlide);
   }
 
   // #NAVIGATIONS

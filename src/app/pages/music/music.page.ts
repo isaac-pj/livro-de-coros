@@ -5,6 +5,7 @@ import { SongsDaoProvider } from './../../providers/songs-dao/songs-dao';
 import { ActivatedRoute } from '@angular/router';
 import { PopoverPage } from '../shared/popover/popover';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
+import { PreferencesProvider, CONFIGS } from 'src/app/providers/preferences/preferences';
 
 @Component({
   selector: 'app-music',
@@ -19,7 +20,7 @@ export class MusicPage implements OnInit {
   song: Songs;
   index: number;
   hasFocus: any = null;
-  fontSize = 16;
+  fontSize = this.preferencesProvider.getPreference(CONFIGS.MUSIC.FONT_SIZE);
 
   constructor(
     private songsDao: SongsDaoProvider,
@@ -28,6 +29,7 @@ export class MusicPage implements OnInit {
     private alertCtrl: AlertController,
     private popoverCtrl: PopoverController,
     private navCtrl: NavController,
+    private preferencesProvider: PreferencesProvider,
   ) { }
 
   ngOnInit(): void {
@@ -97,10 +99,12 @@ export class MusicPage implements OnInit {
 
   smallText() {
     this.fontSize = this.fontSize > 10 ? this.fontSize -= 2 : this.fontSize;
+    this.preferencesProvider.getPreference(CONFIGS.MUSIC.FONT_SIZE);
   }
 
   bigText() {
     this.fontSize = this.fontSize < 56 ? this.fontSize += 2 : this.fontSize;
+    this.preferencesProvider.setPreference(CONFIGS.MUSIC.FONT_SIZE, this.fontSize);
   }
 
   getFocus(index: number) {
