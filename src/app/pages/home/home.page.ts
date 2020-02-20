@@ -7,13 +7,14 @@ import { Songs } from 'src/app/models/songs.model';
 import { animateCSS, noBubble } from 'src/app/utils/utils';
 import BOOKS from 'src/app/enums/books.enum';
 import { PreferencesProvider, CONFIGS } from 'src/app/providers/preferences/preferences';
+import { Search } from 'src/app/interfaces/search/search';
 
 @Component({
   selector: 'page-home',
   templateUrl: 'home.page.html',
   styleUrls: ['home.page.scss'],
 })
-export class HomePage implements OnInit {
+export class HomePage implements OnInit, Search {
 
   @ViewChild('searchbar') searchbar;
 
@@ -59,13 +60,13 @@ export class HomePage implements OnInit {
   }
 
   // tratar resultado da busca
-  onSearch(event) {
+  public onSearch(event) {
     const { result } = event;
     result ? this.songs = result : this.searchClose();
   }
 
   // encerrar todas as atividades de busca
-  private searchClose() {
+  public searchClose() {
     this.list(this.book);
     this.searching = false;
   }
