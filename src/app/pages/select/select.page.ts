@@ -11,6 +11,7 @@ import { inicialize } from 'src/app/utils/utils';
 import { ModalMusicPage } from '../modal-music/modal-music.page';
 import { Router } from '@angular/router';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
+import { Search } from 'src/app/interfaces/search/search';
 
 @Component({
   selector: 'page-select',
@@ -18,7 +19,7 @@ import { DataSetService } from 'src/app/services/dataSet/data-set.service';
   styleUrls: ['select.page.scss'],
   providers: [DatePipe]
 })
-export class SelectPage implements OnInit {
+export class SelectPage implements OnInit, Search {
   @ViewChild('searchbar') searchbar;
 
   searching = false;
@@ -37,9 +38,8 @@ export class SelectPage implements OnInit {
     private datePipe: DatePipe,
     public router: Router,
   ) {
-
-    this.checked = inicialize(this.checked, this.songs.length, false);
-  }
+      this.checked = inicialize(this.checked, this.songs.length, false);
+    }
 
   // #INICIALIZAÇÂO
 
@@ -139,13 +139,13 @@ export class SelectPage implements OnInit {
   }
 
   // tratar resultado da busca
-  onSearch(event) {
+  public onSearch(event) {
     const { result } = event;
     result ? this.songs = result : this.searchClose();
   }
 
   // encerrar todas as atividades de busca
-  private searchClose() {
+  public searchClose() {
     this.list();
     this.searching = false;
   }
