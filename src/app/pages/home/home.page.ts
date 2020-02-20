@@ -6,6 +6,7 @@ import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { Songs } from 'src/app/models/songs.model';
 import { animateCSS, noBubble } from 'src/app/utils/utils';
 import BOOKS from 'src/app/enums/books.enum';
+import { PreferencesProvider, CONFIGS } from 'src/app/providers/preferences/preferences';
 
 @Component({
   selector: 'page-home',
@@ -20,7 +21,7 @@ export class HomePage implements OnInit {
   type = 'search';
   songs: Songs[] = [];
   BOOKS: any = BOOKS;
-  book: string = BOOKS.ALL;
+  book: string = this.preferencesProvider.getPreference(CONFIGS.HOME.SELECTED_BOOK);
 
   constructor(
     public songsDaoProvider: SongsDaoProvider,
@@ -29,6 +30,7 @@ export class HomePage implements OnInit {
     public router: Router,
     public route: ActivatedRoute,
     public dataSetService: DataSetService,
+    private preferencesProvider: PreferencesProvider,
   ) { }
 
   // #LIFECYCLE
@@ -42,6 +44,7 @@ export class HomePage implements OnInit {
   public select(option: any) {
     this.book = option;
     this.list(option);
+    this.preferencesProvider.setPreference(CONFIGS.HOME.SELECTED_BOOK, this.book);
   }
 
   // recuperar lista de musicas
