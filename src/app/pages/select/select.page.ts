@@ -79,7 +79,7 @@ export class SelectPage implements OnInit {
     const list = new List(null,
       this.datePipe.transform(new Date(), 'longDate'),
       this.datePipe.transform(new Date(), 'HH:mm'),
-      this.songsList);
+      this.songsList, []);
     this.dataSetService.setData('temp', {index: null, list});
   }
 
