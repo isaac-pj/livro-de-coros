@@ -207,7 +207,7 @@ export class ListPage implements OnInit {
 
   // mudar para a pagina de musica
   goToMusic(index: number) {
-    this.dataSetService.setData(index, {index, list: this.list.songs});
+    this.dataSetService.setData(index, {index, list: this.songs});
   }
 
 }
