@@ -1,0 +1,35 @@
+ion-textarea{
+    padding: 0 16px;
+}
+
+.cantadas{
+    opacity: 0.5;
+}
+
+.cantadas ion-label{
+    text-decoration: line-through;
+}
+
+.rotate{
+    transform: rotate(180deg);
+}
+
+.expand-wrapper {
+    transition: 0.3s linear;
+    overflow: hidden;
+    background-color: var(--ion-color-light);
+}   
+
+.collapsed {
+    height: auto !important;
+    max-height: 0px !important;
+}
+
+.expanded {
+    max-height: 500px !important;
+}
+
+ion-toolbar > ion-item > ion-label {
+    font-size: 14px;
+    font-weight: 500;
+}

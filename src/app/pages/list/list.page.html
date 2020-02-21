@@ -1,0 +1,134 @@
+<ion-header>
+
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref='/lists'></ion-back-button>
+    </ion-buttons>
+    <ion-title *ngIf="!editing">{{list.name}}</ion-title>
+    <ion-input *ngIf="editing" placeholder="Como devo chamar?" type="text" [(ngModel)]="listName" autofocus></ion-input>
+    <ion-buttons slot="end">
+      <ion-button *ngIf="editing && list.name" (click)="cancelChanges($event)">
+        <ion-icon name="close"></ion-icon>
+      </ion-button>
+      <ion-button *ngIf="editing" (click)="saveChanges($event)" [disabled]="!listName">
+        <ion-icon name="checkmark"></ion-icon>
+      </ion-button>
+      <ion-button
+        *ngIf="creating && !editing"
+        (click)="saveList()"
+        [routerLink]="['/lists']"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
+          salvar
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+  
+</ion-header>
+
+<ion-content class="scroll-content">
+
+  <ion-toolbar color="light">
+    <ion-item lines="none" color="light" (click)="expandItem($event)">
+      <ion-label color="dark">
+        COMENTÀRIOS
+      </ion-label>
+      <ion-buttons slot="end">
+        <ion-button [class.rotate]="expanded" color="dark" (click)="expandItem($event)">
+          <ion-icon name="arrow-dropdown"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-toolbar>
+
+  <div class="expand-wrapper" [class.collapsed]="!expanded" [class.expanded]="expanded">
+
+    <!--<ion-input type="text-area" placeholder="Escreva um lembrete ou comentário!  :)"></ion-input>-->
+    <ion-textarea #input [disabled]="!commentsEditing" [value]="comments" rows="3" maxLength="250" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
+    <ion-toolbar color="light" class="ion-text-right">
+      <ion-button *ngIf="!commentsEditing" color="dark" fill="clear" (click)="clear()">
+        Limpar
+      </ion-button>
+      <ion-button *ngIf="!commentsEditing" color="secondary" fill="clear" (click)="edit();">
+        Editar
+      </ion-button>
+      <ion-button *ngIf="commentsEditing" color="dark" fill="clear" (click)="cancel(input.value); input.value = comments;">
+        Cancelar
+      </ion-button>
+      <ion-button *ngIf="commentsEditing" color="secondary" fill="clear" (click)="save(input.value);">
+        Salvar
+      </ion-button>
+    </ion-toolbar>
+
+  </div>
+  <ion-list lines="none">
+    <ion-reorder-group 
+      (ionItemReorder)="reorderMusic($event)" 
+      [disabled]="editing">
+      <ion-item 
+        *ngFor="let song of editing ? songsTemp : songs; let i = index;"
+        (click)="goToMusic(i)"
+        [routerLink]="['/music/'+i]"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
+        <ion-buttons slot="start">
+          <ion-reorder slot="start"></ion-reorder>
+          <ion-button *ngIf="editing" (click)="removeMusic($event, i)">
+            <ion-icon name="remove-circle-outline"></ion-icon>
+          </ion-button>
+        </ion-buttons>
+        <ion-label>
+          {{song.numero}}. {{song.titulo}}
+        </ion-label>
+        <ion-buttons slot="end">
+          <ion-button *ngIf="editing" (click)="updateMusic($event, i)">
+            <ion-icon name="refresh"></ion-icon>
+          </ion-button>
+          <ion-button *ngIf="!editing">
+            <ion-checkbox
+              color="dark" 
+              (click)="check($event, song)" 
+              [checked]="unchecked">
+            </ion-checkbox>
+          </ion-button> 
+        </ion-buttons>
+      </ion-item>
+    </ion-reorder-group>
+  </ion-list>
+
+  <ion-list lines="none" *ngIf="songsCheckeds.length > 0 && !editing" >
+    <ion-list-header>
+        <ion-label color="medium">cantadas</ion-label>
+    </ion-list-header>
+    <ion-item class="cantadas" *ngFor="let song of songsCheckeds; let i = index;">
+      <ion-label>
+        {{song.numero}}. {{song.titulo}}
+      </ion-label>
+      <!--<ion-checkbox item-end color="dark" [(ngModel)]="songsCheckeds[song.ID]" (ionChange)="isChecked()" ></ion-checkbox>-->
+      <ion-buttons slot="end">
+        <ion-button
+          (click)="uncheck(i); $event.stopPropagation();">
+          <ion-checkbox item-end color="dark" [checked]="checked" ></ion-checkbox>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+
+  <ion-fab *ngIf="editing" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button>
+      <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+    <ion-fab-list side="top">
+      <ion-fab-button (click)="addSelectedSongs()"><ion-icon name="checkbox-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="addSongsFromFavorites()"><ion-icon name="heart-empty"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="addRandomSong()"><ion-icon name="shuffle"></ion-icon></ion-fab-button>
+    </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab *ngIf="!editing" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="editList($event)">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

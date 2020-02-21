@@ -1,0 +1,42 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Favoritos</ion-title>
+    <ion-buttons slot="end">
+      <ion-button slot="icon-only" (click)="more($event, ['Filtrar','Remover todos'])">
+        <ion-icon name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+
+  <section class="ion-padding" *ngIf="favorites.length == 0" >
+    <h2>Ainda não há favoritos! :(</h2>
+    <p>Vá em frente, toque no botão de ♥ na tela inicial para adicionar alguns favoritos a sua lista</p>      
+  </section>
+
+  <ion-virtual-scroll [items]="favorites">
+    <ion-item 
+      lines="none" 
+      *virtualItem="let song; let i = index" 
+      (click)="goToMusic(i)"
+      [routerLink]="['/music/'+i]"
+      [routerDirection]="'forward'"
+      routerLinkActive="router-link-active">
+      <ion-buttons slot="start">
+        <ion-button slot="incon-only" (click)="remove(song.ID, $event)">
+          <ion-icon name="remove-circle" color="gray"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-label>
+        <h2>{{song.numero+". "}}{{song.titulo}}</h2>
+        <p>{{song.tags}}</p>
+      </ion-label>
+    </ion-item>
+  </ion-virtual-scroll>
+
+</ion-content>

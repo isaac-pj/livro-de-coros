@@ -1,0 +1,22 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Cofigurações</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item class="ion-activatable" lines="none" (click)="reset()">
+      <ion-ripple-effect bounded ></ion-ripple-effect>
+      <ion-icon class="start" name="trash"></ion-icon>
+      <ion-label>
+        <h2>Apagar todos os dados pessoais</h2>
+        <p>Todos os dados no app serão excluidos</p>
+      </ion-label>
+    </ion-item>
+  </ion-list>
+</ion-content>
+

@@ -1,0 +1,106 @@
+<!--
+  Generated template for the SelectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+
+<ion-header>
+  <ion-toolbar >
+    <ion-buttons slot="start" *ngIf="!searching">
+      <ion-back-button></ion-back-button>
+    </ion-buttons>
+
+    <ion-title *ngIf="!searching" >Nova Lista ({{songsList.length}})</ion-title>
+
+    <app-search
+      [songs]="songs" 
+      [active]="searching"
+      [type]="type"
+      (result)="onSearch($event)"
+    ></app-search>
+
+    <ion-buttons *ngIf="!searching" slot="end">
+      <ion-button (click)="pushPageGenerate()" icon-only color="royal">
+        <ion-icon name="shuffle"></ion-icon>
+      </ion-button>
+      <ion-button (click)="search('search')" ion-button icon-only color="royal">
+        <ion-icon name="search"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>  
+
+<ion-content class="scroll-content">
+
+  <section class="ion-padding" *ngIf="searching && songs.length == 0" >
+    <h2>Sinto muito! Nenhum resultado correspondente :(</h2>
+    <p>Tente novamente. Você pode buscar por número, 
+      título ou mesmo por um trecho na música</p>      
+  </section>
+  
+  <ion-virtual-scroll 
+    [items]="songs"
+    approxItemHeight="65px">
+
+    <ion-item
+      lines="none"
+      *virtualItem="let song; let i = index"
+      (click)="pushPageMusic(song.ID)">
+      
+      <ion-icon 
+        slot="start"
+        name="heart"
+        [ngClass]="song.favorit ? 'favorite-color' : 'normal-color'">
+      </ion-icon>
+
+      <ion-label>
+        <h2>{{song.numero+". "}}{{song.titulo}}</h2>
+        <p>{{getSubtitle(song.letra)}}</p>
+      </ion-label>
+
+      <ion-button 
+        class="wrapper" 
+        slot="end" 
+        shape="round"
+        color="dark" 
+        fill="clear">
+        <ion-checkbox
+          slot="end"
+          color="dark"
+          (click)="check(song, $event)"
+          [(ngModel)]="checked[song.ID]"
+          (ionChange)="isEmpty()">
+        </ion-checkbox>          
+      </ion-button>
+      
+    </ion-item>
+
+  </ion-virtual-scroll>
+  
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="search('numeric')">
+      <ion-icon name="keypad"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar color="light" class="ion-text-right">
+      <ion-button color="dark" fill="clear" (click)="cancel()">
+        Cancelar
+      </ion-button>
+      <ion-button
+        color="secondary"
+        fill="clear"
+        [disabled]="isEmpty()"
+        (click)="goToList()"
+        [routerLink]="['/list/temp']"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
+        Criar Lista
+      </ion-button>
+  </ion-toolbar>
+</ion-footer>
+

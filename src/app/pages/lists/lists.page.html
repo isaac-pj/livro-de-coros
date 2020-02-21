@@ -1,0 +1,96 @@
+<!--
+  Generated template for the ListPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+
+  <ion-toolbar >
+    <ion-buttons slot="start">
+      <ion-menu-button></ion-menu-button>
+    </ion-buttons>
+    <ion-title>Listas</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="more($event, ['Apagar todas'])" slot="icon-only" color="royal">
+        <ion-icon name="more"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+
+</ion-header>
+
+
+<ion-content class="ion-padding scroll-content">
+
+  <section class="ion-padding" *ngIf="lists.length == 0" >
+    <h2>Ainda não há listas! :(</h2>
+    <p>Vá em frente, toque no botão de + para criar uma lista com músicas de sua escolha</p>      
+  </section>
+
+  <ion-row class="ion-align-items-start ion-justify-content-start ion-no-padding">
+    <ion-col class="ion-no-padding"
+    sizeXs="12" sizeSm="6" sizeMd="4" sizeLg="4" sizeXl="4" 
+    *ngFor="let list of lists; let i = index">
+      <ion-card
+        class="no-margin-bottom"
+        (click)="goToList(i)"
+        [routerLink]="['/list/'+i]"
+        [routerDirection]="'forward'"
+        routerLinkActive="router-link-active">
+        <ion-card-header>
+          <ion-card-title>
+            {{list.name}}
+          </ion-card-title>
+          <ion-card-subtitle>
+            <ion-row>
+              <ion-col size="9">
+                <span>{{list.date}}</span>
+              </ion-col>
+              <ion-col size="3" class="ion-text-right">
+                <span>{{list.time}}</span>
+              </ion-col>
+            </ion-row>
+          </ion-card-subtitle>
+        </ion-card-header>
+        <ion-card-content>
+          <ion-list class="expand-wrapper" [class.collapsed]="!expanded[i]" [class.expanded]="expanded[i]" >
+            <ion-item lines="none" *ngFor="let song of list.songs; let i = index" >
+              {{song.numero}}. {{song.titulo}}
+            </ion-item>
+          </ion-list>
+        </ion-card-content> 
+        <ion-toolbar color="white">
+          <ion-buttons slot="start">
+            <ion-button [class.rotate]="expanded[i]" slot="icon-only" color="secondaryTextColor" (click)="expandItem($event, i);">
+              <ion-icon name="arrow-dropdown"></ion-icon>
+            </ion-button>
+          </ion-buttons>
+          <ion-buttons slot="end">
+            <ion-button 
+              slot="icon-only" 
+              color="secondaryTextColor" 
+              (click)="deleteListConfirm(i, $event)">
+              <ion-icon name="trash"></ion-icon>
+            </ion-button>
+            <!--<ion-button slot="icon-only" color="secondaryTextColor">
+              <ion-icon name="document"></ion-icon>
+            </ion-button>
+            <ion-button slot="icon-only" color="secondaryTextColor">
+              <ion-icon name="share"></ion-icon>
+            </ion-button>-->
+          </ion-buttons>
+        </ion-toolbar>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button 
+      [routerLink]="['/select']"
+      [routerDirection]="'forward'"
+      routerLinkActive="router-link-active">       
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
