@@ -51,7 +51,7 @@ const routes: Routes = [
   },
   {
     path: 'random',
-    loadChildren: './pages/random/random.module#RandomPageModule'
+    loadChildren: './pages/modal-random/random.module#RandomPageModule'
   },
   {
     path: 'settings',

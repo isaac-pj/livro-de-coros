@@ -1,17 +1,16 @@
 import { NgModule } from '@angular/core';
-import { SelectPage } from './select.page';
+import { ModalSelectPage } from './modal-select.page';
 import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { ComponentsModule } from 'src/app/components/components.module';
 import { ModalMusicPageModule } from '../modal-music/modal-music.module';
-import { RandomPageModule } from '../modal-random/random.module';
 
 const routes: Routes = [
   {
-    path: '',
-    component: SelectPage
+    path: 'songs',
+    component: ModalSelectPage
   }
 ];
 
@@ -22,11 +21,10 @@ const routes: Routes = [
     IonicModule,
     ComponentsModule,
     ModalMusicPageModule,
-    RandomPageModule,
     RouterModule.forChild(routes)
   ],
   declarations: [
-    SelectPage,
+    ModalSelectPage,
   ],
 })
-export class SelectPageModule {}
+export class ModalSelectPageModule {}

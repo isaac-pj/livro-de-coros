@@ -2,12 +2,14 @@ import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { Songs } from '../../models/songs.model';
 import { List } from '../../models/list.model';
 import { Component, ViewChild, ElementRef, OnInit } from '@angular/core';
-import { NavController, IonReorderGroup, ToastController } from '@ionic/angular';
+import { NavController, IonReorderGroup, ToastController, ModalController } from '@ionic/angular';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
 import { ActivatedRoute } from '@angular/router';
 import { getRandomInt, noBubble } from 'src/app/utils/utils';
 import { SongsDaoProvider } from '../../providers/songs-dao/songs-dao';
 import { isEquals, cloneArray } from 'src/app/utils/utils';
+import { ModalSelectPage } from '../modal-select/modal-select.page';
+import BOOKS from 'src/app/enums/books.enum';
 
 @Component({
   selector: 'page-list',
@@ -40,7 +42,9 @@ export class ListPage implements OnInit {
     private songsDaoProvider: SongsDaoProvider,
     private dataSetService: DataSetService,
     public route: ActivatedRoute,
-    public toastCtrl: ToastController
+    public toastCtrl: ToastController,
+    private modalCtrl: ModalController,
+
   ) {}
 
   ngOnInit(): void {
@@ -74,17 +78,25 @@ export class ListPage implements OnInit {
     this.songsTemp = cloneArray(this.songs);
   }
 
-  addMusic() {
+  async addRandomSong() {
     if (this.songsTemp.length < 20) {
-      this.songsTemp.push(this.songsDaoProvider.getSong(
-        getRandomInt(0, this.songsDaoProvider.getAmountOfSongs())));
+      const [first, last] = await this.songsDaoProvider.getBookInterval();
+      this.songsTemp.push(this.songsDaoProvider.getSong(getRandomInt(first, last)));
     }
   }
 
-  updateMusic(event: Event, index: number) {
+  addSongsFromFavorites() {
+    this.presentSelectModal('favorites');
+  }
+
+  addSelectedSongs() {
+    this.presentSelectModal();
+  }
+
+  async updateMusic(event: Event, index: number) {
     noBubble(event);
-    this.songsTemp[index] = this.songsDaoProvider.getSong(
-      getRandomInt(0, this.songsDaoProvider.getAmountOfSongs()));
+    const [first, last] = await this.songsDaoProvider.getBookInterval();
+    this.songsTemp[index] = this.songsDaoProvider.getSong(getRandomInt(first, last));
   }
 
   removeMusic(event: Event, index: number) {
@@ -112,8 +124,9 @@ export class ListPage implements OnInit {
 
   async saveChanges() {
     let hasChanges = false;
+
     if (!isEquals(this.songs, this.songsTemp)) {
-      this.songs = this.list.songs = cloneArray(this.songsTemp);
+      this.list.songs = this.songsCheckeds.concat(cloneArray(this.songsTemp));
       hasChanges = true;
     }
     if (this.list.name !== this.listName) {
@@ -122,6 +135,7 @@ export class ListPage implements OnInit {
     }
     if (this.index !== null  && hasChanges) {
       await this.listsDaoProvider.update(this.index, this.list);
+      this.updateList();
     }
     this.editing = false;
   }
@@ -179,6 +193,18 @@ export class ListPage implements OnInit {
     await toast.present();
   }
 
+  async presentSelectModal(filter?: string) {
+    const selectModal = await this.modalCtrl.create({
+      component: ModalSelectPage,
+      componentProps: {
+        filter,
+        name: this.listName,
+        songs: this.songsTemp,
+      }
+    });
+    selectModal.present();
+  }
+
   // #ACTIONS
 
   async check(event, song: Songs) {
@@ -207,7 +233,7 @@ export class ListPage implements OnInit {
 
   // mudar para a pagina de musica
   goToMusic(index: number) {
-    this.dataSetService.setData(index, {index, list: this.songs});
+    this.dataSetService.setData(index, {index, list: this.editing ? this.songsTemp : this.songs});
   }
 
 }

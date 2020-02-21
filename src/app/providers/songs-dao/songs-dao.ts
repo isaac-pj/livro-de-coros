@@ -28,8 +28,14 @@ export class SongsDaoProvider {
     return first;
   }
 
-  public getAmountOfSongs() {
-    return this.songs ? this.songs.length : null;
+  public async getAmountOfSongs(book?: string) {
+    const songs = book ? await this.getSongs(book) : this.songs;
+    return songs ? songs.length : null;
+  }
+
+  public async getBookInterval(book?: string) {
+    const songs = book ? await this.getSongs(book) : this.songs;
+    return [songs[0].ID, songs[songs.length - 1].ID];
   }
 
   private async updateSongs(book: string) {

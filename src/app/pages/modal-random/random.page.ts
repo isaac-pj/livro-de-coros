@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { AlertController, ToastController, NavController, NavParams, ModalController } from '@ionic/angular';
-import { ViewController } from '@ionic/core';
+import { AlertController, ToastController, NavController, ModalController } from '@ionic/angular';
 import { Songs } from 'src/app/models/songs.model';
 import { getRandomInt } from 'src/app/utils/utils';
 
@@ -20,7 +19,6 @@ export class RandomPage implements OnInit {
     public toastCtrl: ToastController,
     public modalCtrl: ModalController,
     public navCtrl: NavController,
-    public navParams: NavParams,
   ) { }
 
   ngOnInit() {

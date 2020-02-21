@@ -9,7 +9,7 @@ import { ModalMusicPage } from './modal-music.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'page',
     component: ModalMusicPage
   }
 ];

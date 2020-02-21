@@ -2,7 +2,7 @@
 
   <ion-toolbar>
     <ion-buttons slot="start">
-      <ion-back-button></ion-back-button>
+      <ion-back-button defaultHref='/lists'></ion-back-button>
     </ion-buttons>
     <ion-title *ngIf="!editing">{{list.name}}</ion-title>
     <ion-input *ngIf="editing" placeholder="Como devo chamar?" type="text" [(ngModel)]="listName" autofocus></ion-input>
@@ -12,9 +12,6 @@
       </ion-button>
       <ion-button *ngIf="editing" (click)="saveChanges($event)" [disabled]="!listName">
         <ion-icon name="checkmark"></ion-icon>
-      </ion-button>
-      <ion-button *ngIf="!editing" (click)="editList($event)">
-        <ion-icon name="create"></ion-icon>
       </ion-button>
       <ion-button
         *ngIf="creating && !editing"
@@ -50,7 +47,7 @@
     <ion-textarea #input [disabled]="!commentsEditing" [value]="comments" rows="3" maxLength="250" placeholder="Escreva um lembrete ou comentário!  :)"></ion-textarea>
     <ion-toolbar color="light" class="ion-text-right">
       <ion-button *ngIf="!commentsEditing" color="dark" fill="clear" (click)="clear()">
-        Limapar
+        Limpar
       </ion-button>
       <ion-button *ngIf="!commentsEditing" color="secondary" fill="clear" (click)="edit();">
         Editar
@@ -122,11 +119,16 @@
       <ion-icon name="add"></ion-icon>
     </ion-fab-button>
     <ion-fab-list side="top">
-      <ion-fab-button (click)="null"><ion-icon name="checkbox-outline"></ion-icon></ion-fab-button>
-      <ion-fab-button (click)="null"><ion-icon name="heart-empty"></ion-icon></ion-fab-button>
-      <ion-fab-button (click)="addMusic()"><ion-icon name="shuffle"></ion-icon></ion-fab-button>
-      <ion-fab-button (click)="null"><ion-icon name="search"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="addSelectedSongs()"><ion-icon name="checkbox-outline"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="addSongsFromFavorites()"><ion-icon name="heart-empty"></ion-icon></ion-fab-button>
+      <ion-fab-button (click)="addRandomSong()"><ion-icon name="shuffle"></ion-icon></ion-fab-button>
     </ion-fab-list>
+  </ion-fab>
+
+  <ion-fab *ngIf="!editing" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="editList($event)">
+      <ion-icon name="create"></ion-icon>
+    </ion-fab-button>
   </ion-fab>
 
 </ion-content>

@@ -12,8 +12,6 @@ import { AppRoutingModule } from './app-routing.module';
 
 import { SongsService } from './services/songs/songs.service';
 
-
-
 import localePtBr from '@angular/common/locales/pt';
 import { registerLocaleData } from '@angular/common';
 import { PopoverPage } from './pages/shared/popover/popover';

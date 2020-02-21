@@ -10,7 +10,7 @@ import { RandomPageModule } from '../modal-random/random.module';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'songs',
     component: SelectPage
   }
 ];

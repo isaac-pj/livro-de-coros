@@ -9,7 +9,7 @@ import { RandomPage } from './random.page';
 
 const routes: Routes = [
   {
-    path: '',
+    path: 'page',
     component: RandomPage
   }
 ];

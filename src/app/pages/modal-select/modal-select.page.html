@@ -1,17 +1,10 @@
-<!--
-  Generated template for the SelectPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
-
 <ion-header>
   <ion-toolbar >
     <ion-buttons slot="start" *ngIf="!searching">
       <ion-back-button></ion-back-button>
     </ion-buttons>
 
-    <ion-title *ngIf="!searching" >Nova Lista ({{songsList.length}})</ion-title>
+    <ion-title *ngIf="!searching" >{{listName}} ({{songsList.length}})</ion-title>
 
     <app-search
       [songs]="songs" 
@@ -21,9 +14,6 @@
     ></app-search>
 
     <ion-buttons *ngIf="!searching" slot="end">
-      <ion-button (click)="pushPageGenerate()" icon-only color="royal">
-        <ion-icon name="shuffle"></ion-icon>
-      </ion-button>
       <ion-button (click)="search('search')" ion-button icon-only color="royal">
         <ion-icon name="search"></ion-icon>
       </ion-button>
@@ -95,11 +85,9 @@
         color="secondary"
         fill="clear"
         [disabled]="isEmpty()"
-        (click)="goToList()"
-        [routerLink]="['/list/temp']"
-        [routerDirection]="'forward'"
-        routerLinkActive="router-link-active">
-        Criar Lista
+        (click)="addToList()"
+        >
+        Adicionar
       </ion-button>
   </ion-toolbar>
 </ion-footer>
