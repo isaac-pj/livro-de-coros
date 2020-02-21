@@ -66,9 +66,14 @@
     </ion-item>
   </ion-virtual-scroll>
 
-  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+  <ion-fab *ngIf="type == 'search'" vertical="bottom" horizontal="end" slot="fixed">
     <ion-fab-button (click)="search('numeric')">       
         <ion-icon name="keypad"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+  <ion-fab *ngIf="type == 'numeric'" vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="search('search')">       
+        <ion-icon name="search"></ion-icon>
     </ion-fab-button>
   </ion-fab>
 
