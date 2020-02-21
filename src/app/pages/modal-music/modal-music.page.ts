@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { Songs } from 'src/app/models/songs.model';
 import { NavParams, ModalController, AlertController } from '@ionic/angular';
 import { SongsDaoProvider } from 'src/app/providers/songs-dao/songs-dao';
+import { Songs } from 'src/app/models/songs.model';
 
 @Component({
   selector: 'app-modal-music',

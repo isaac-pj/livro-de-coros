@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonicModule } from '@ionic/angular';
 import { RouterModule } from '@angular/router';
+import { ModalSelectPageModule } from '../modal-select/modal-select.module';
 
 const routes = [
   {
@@ -17,6 +18,7 @@ const routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    ModalSelectPageModule,
     RouterModule.forChild(routes)
   ],
   declarations: [

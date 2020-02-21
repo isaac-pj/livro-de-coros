@@ -5,9 +5,9 @@ import { List } from '../../models/list.model';
 import { Songs } from '../../models/songs.model';
 import { ListsDaoProvider } from '../../providers/lists-dao/lists-dao';
 import { Component, ViewChild, OnInit } from '@angular/core';
-import { NavController, ModalController, ToastController } from '@ionic/angular';
+import { NavController, ModalController, ToastController, NavParams } from '@ionic/angular';
 import { DatePipe } from '@angular/common';
-import { inicialize } from 'src/app/utils/utils';
+import { inicialize, noBubble } from 'src/app/utils/utils';
 import { ModalMusicPage } from '../modal-music/modal-music.page';
 import { Router } from '@angular/router';
 import { DataSetService } from 'src/app/services/dataSet/data-set.service';
@@ -15,11 +15,11 @@ import { Search } from 'src/app/interfaces/search/search';
 
 @Component({
   selector: 'page-select',
-  templateUrl: 'select.page.html',
-  styleUrls: ['select.page.scss'],
+  templateUrl: 'modal-select.page.html',
+  styleUrls: ['modal-select.page.scss'],
   providers: [DatePipe]
 })
-export class SelectPage implements OnInit, Search {
+export class ModalSelectPage implements OnInit, Search {
   @ViewChild('searchbar') searchbar;
 
   searching = false;
@@ -27,6 +27,7 @@ export class SelectPage implements OnInit, Search {
   songs: Songs[] = [];
   songsList: Songs[] = [];
   checked: boolean[] = [];
+  listName: string;
 
   constructor(
     public toastCtrl: ToastController,
@@ -37,6 +38,7 @@ export class SelectPage implements OnInit, Search {
     public dataSetService: DataSetService,
     private datePipe: DatePipe,
     public router: Router,
+    private navParams: NavParams,
   ) {
       this.checked = inicialize(this.checked, this.songs.length, false);
     }
@@ -44,29 +46,14 @@ export class SelectPage implements OnInit, Search {
   // #INICIALIZAÇÂO
 
   ngOnInit() {
-    this.list();
+    this.listName = this.navParams.get('name');
+    this.songsList = this.navParams.get('songs');
+    const filter = this.navParams.get('filter');
+    this.list(filter);
+    this.updateCheckeds(this.songsList);
   }
 
   // #NAVEGAÇÂO
-
-  // mudar para a pagina de gerar lista
-  async pushPageGenerate() {
-    const generateList = await this.modalCtrl.create({
-      component: RandomPage,
-      componentProps: { songs: this.songs },
-    });
-
-    generateList.present();
-    generateList.onDidDismiss().then((props) => {
-      if (props.data.list) {
-        props.data.list.forEach(song => this.check(song));
-        this.updateCheckeds(this.songsList);
-        this.goToList();
-        this.router.navigateByUrl('/list/temp');
-      }
-    });
-    return false;
-  }
 
   // mudar para a pagina de musica
   pushPageMusic(index: number) {
@@ -75,12 +62,8 @@ export class SelectPage implements OnInit, Search {
   }
 
   // cria uma nova lista e seta os dados dessa lista para o dataSetService
-  goToList() {
-    const list = new List(null,
-      this.datePipe.transform(new Date(), 'longDate'),
-      this.datePipe.transform(new Date(), 'HH:mm'),
-      this.songsList, []);
-    this.dataSetService.setData('temp', {index: null, list});
+  addToList() {
+    this.modalCtrl.dismiss({songs: this.songsList});
   }
 
 
@@ -114,10 +97,8 @@ export class SelectPage implements OnInit, Search {
     await toast.present();
   }
 
-  cancel(event: any) {
-    this.searchClose();
-    this.navCtrl.pop();
-    return false;
+  cancel(event?: any) {
+    this.modalCtrl.dismiss(false);
   }
 
   getSubtitle(letra: any) {
@@ -127,9 +108,19 @@ export class SelectPage implements OnInit, Search {
 
   // #AÇÕES
 
+  private applyFilters(filter: string) {
+    switch (filter) {
+      case 'favorites':
+        return this.songs.filter(song => song.favorit);
+      default:
+        return this.songs;
+    }
+  }
+
   // recuperar lista de musicas
-  public async list() {
+  public async list(filter?: string) {
     this.songs = await this.songsDaoProvider.getSongs();
+    this.songs = this.applyFilters(filter);
   }
 
   // ativar o modo de busca
@@ -152,11 +143,8 @@ export class SelectPage implements OnInit, Search {
 
   // adiciona uma música na lista
   check(song: Songs, event?) {
-    if (event) {
-      event.preventDefault();
-      event.stopPropagation();
-    }
-    const index = this.songsList.indexOf(song);
+    noBubble(event);
+    const index = this.songsList.findIndex(elem => elem.ID === song.ID );
     index === -1 ? this.add(song) : this.remove(index);
   }
 
