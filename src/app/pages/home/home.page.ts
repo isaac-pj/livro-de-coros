@@ -68,6 +68,7 @@ export class HomePage implements OnInit, Search {
   // encerrar todas as atividades de busca
   public searchClose() {
     this.list(this.book);
+    this.type = 'search';
     this.searching = false;
   }
 
