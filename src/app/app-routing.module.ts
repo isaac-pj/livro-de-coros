@@ -65,6 +65,14 @@ const routes: Routes = [
     path: 'about',
     loadChildren: './pages/about/about.module#AboutPageModule'
   },
+  {
+    path: 'modal-backup',
+    loadChildren: './pages/modal-backup/modal-backup.module#ModalBackupPageModule'
+  },
+  {
+    path: 'backups',
+    loadChildren: './pages/backups/backups.module#BackupsPageModule'
+  },
 
 ];
 

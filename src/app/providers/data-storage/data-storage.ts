@@ -28,6 +28,10 @@ export class DataStorageProvider {
     return await this.storage.get(key);
   }
 
+  public async getCollections(keys: string[]) {
+    return await Promise.all(keys.map(async key => ({key: [key], value: await this.get(key)})));
+  }
+
   public async remove(key: string) {
     return await this.storage.remove(key);
   }
