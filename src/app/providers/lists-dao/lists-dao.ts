@@ -15,10 +15,6 @@ export class ListsDaoProvider {
 
   // recupera todas as listas do banco
   async getLists() {
-    if (this.lists.length) {
-      return this.lists;
-    }
-
     this.lists = await this.updateLists();
     return this.lists;
   }

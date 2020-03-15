@@ -5,13 +5,13 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { IonicModule } from '@ionic/angular';
 
-import { SettingsPage } from './settings.page';
+import { BackupsPage } from './backups.page';
 import { ModalBackupPageModule } from '../modal-backup/modal-backup.module';
 
 const routes: Routes = [
   {
     path: '',
-    component: SettingsPage
+    component: BackupsPage
   }
 ];
 
@@ -23,6 +23,6 @@ const routes: Routes = [
     ModalBackupPageModule,
     RouterModule.forChild(routes)
   ],
-  declarations: [SettingsPage]
+  declarations: [BackupsPage]
 })
-export class SettingsPageModule {}
+export class BackupsPageModule {}

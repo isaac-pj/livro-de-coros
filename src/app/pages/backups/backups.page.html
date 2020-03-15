@@ -1,0 +1,36 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/settings"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Backups</ion-title>
+  </ion-toolbar>
+
+</ion-header>
+
+<ion-content>
+  <section class="ion-padding" *ngIf="backups.length == 0" >
+    <h2>Ainda não há backups! :(</h2>
+    <p>Vá até o menu de configurações e salve um backup local ou toque no botão de + logo abaixo para importar um backup externo</p>      
+  </section>
+  <ion-list>
+    <ion-item button (click)="selectBackup(file)" lines="none" *ngFor="let file of backups">
+      <ion-buttons slot="start">
+        <ion-button slot="incon-only" (click)="deleteBackup(file, $event)">
+          <ion-icon name="trash" color="gray"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+      <ion-label>{{file.name}}</ion-label>
+      <ion-buttons slot="end">
+        <ion-button slot="incon-only" (click)="shareBackup(file, $event)">
+          <ion-icon name="share" color="gray"></ion-icon>
+        </ion-button>
+      </ion-buttons>
+    </ion-item>
+  </ion-list>
+  <ion-fab vertical="bottom" horizontal="end" slot="fixed">
+    <ion-fab-button (click)="chooseBackup()">       
+        <ion-icon name="add"></ion-icon>
+    </ion-fab-button>
+  </ion-fab>
+</ion-content>
