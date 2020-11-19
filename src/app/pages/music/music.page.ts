@@ -99,7 +99,7 @@ export class MusicPage implements OnInit {
 
   smallText() {
     this.fontSize = this.fontSize > 10 ? this.fontSize -= 2 : this.fontSize;
-    this.preferencesProvider.getPreference(CONFIGS.MUSIC.FONT_SIZE);
+    this.preferencesProvider.setPreference(CONFIGS.MUSIC.FONT_SIZE, this.fontSize);
   }
 
   bigText() {

@@ -1,0 +1,33 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Importar</ion-title>
+    <ion-buttons slot="end">
+      <ion-button (click)="close()" icon-only>
+        <ion-icon name="close"></ion-icon>
+      </ion-button>      
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <ion-list>
+    <ion-item button lines="none" *ngFor="let module of modules; let i = index">
+      <ion-button 
+        class="wrapper" 
+        slot="start" 
+        shape="round"
+        color="dark" 
+        fill="clear">
+        <ion-checkbox
+          slot="end"
+          color="dark"
+          [(ngModel)]="checked[i]">
+        </ion-checkbox>          
+      </ion-button>
+      <ion-label>{{module}}</ion-label>
+    </ion-item>
+  </ion-list>
+  <section class="content-footer">
+    <ion-button [disabled]="isEmpty()" (click)="importBackup()" expand="block">{{type}}</ion-button>
+  </section>
+</ion-content>

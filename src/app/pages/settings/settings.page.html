@@ -17,6 +17,22 @@
         <p>Todos os dados no app serão excluidos</p>
       </ion-label>
     </ion-item>
+    <ion-item class="ion-activatable" lines="none" (click)="export()">
+      <ion-ripple-effect bounded ></ion-ripple-effect>
+      <ion-icon class="start" name="backup"></ion-icon>
+      <ion-label>
+        <h2>Exportar dados para arquivo</h2>
+        <p>Todos os dados no app serão exportados para um arquivo de backup</p>
+      </ion-label>
+    </ion-item>
+    <ion-item class="ion-activatable" lines="none" (click)="import()">
+      <ion-ripple-effect bounded ></ion-ripple-effect>
+      <ion-icon class="start" name="document"></ion-icon>
+      <ion-label>
+        <h2>Importar dados de arquivo</h2>
+        <p>Importa os dados no de um arquivo de backup .hsn</p>
+      </ion-label>
+    </ion-item>
   </ion-list>
 </ion-content>
 

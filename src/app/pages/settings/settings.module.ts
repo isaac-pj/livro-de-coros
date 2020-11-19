@@ -6,6 +6,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
 
 import { SettingsPage } from './settings.page';
+import { ModalBackupPageModule } from '../modal-backup/modal-backup.module';
 
 const routes: Routes = [
   {
@@ -19,6 +20,7 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
+    ModalBackupPageModule,
     RouterModule.forChild(routes)
   ],
   declarations: [SettingsPage]
